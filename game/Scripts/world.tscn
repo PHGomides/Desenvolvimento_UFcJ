@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq14wiqv14l8v"]
+
+[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="1_eg6h4"]
+[ext_resource type="Texture2D" uid="uid://pra1kn7a86jl" path="res://Assests/MapaEstacionamento/_0004_cenario.png" id="2_3acbp"]
+[ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="3_gr7cu"]
+[ext_resource type="Texture2D" uid="uid://dskf4ptooihtn" path="res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png" id="4_eyphc"]
+[ext_resource type="Texture2D" uid="uid://bwn4f7nlitoc6" path="res://Assests/MapaEstacionamento/_0002_carros-atrás.png" id="5_7iq0v"]
+[ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="6_5ddiv"]
+[ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="7_lc5ff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
+size = Vector2(1504, 103)
+
+[node name="world" type="Node2D"]
+position = Vector2(12, 10)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(734, 778)
+scale = Vector2(1, 1.17258)
+texture = ExtResource("3_gr7cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(747, 818)
+shape = SubResource("RectangleShape2D_oof4l")
+
+[node name="player" parent="." instance=ExtResource("1_eg6h4")]
+position = Vector2(605, 506)
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-245, -12)
+motion_scale = Vector2(0.3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/05"]
+position = Vector2(1001, 464)
+texture = ExtResource("2_3acbp")
+
+[node name="04" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-245, -12)
+motion_scale = Vector2(0.4, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/04"]
+position = Vector2(976, 439)
+texture = ExtResource("4_eyphc")
+
+[node name="03" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-245, -12)
+motion_scale = Vector2(0.5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/03"]
+position = Vector2(984, 551)
+texture = ExtResource("5_7iq0v")
+
+[node name="02" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(885, 1295)
+motion_scale = Vector2(0.6, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/02"]
+position = Vector2(-121, -909)
+texture = ExtResource("6_5ddiv")
+
+[node name="09" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-245, -12)
+motion_scale = Vector2(0.7, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/09"]
+position = Vector2(998, 677)
+texture = ExtResource("7_lc5ff")

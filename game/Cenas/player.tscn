@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=42 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://dt2vsigtmcjd2" path="res://Assests/Michel Sprites/Michel idle/1.png" id="2_jwyp1"]
@@ -34,10 +34,14 @@
 [ext_resource type="Texture2D" uid="uid://jprjtr1suo08" path="res://Assests/Michel Sprites/Michel golpe 1/4.png" id="21_lwrax"]
 [ext_resource type="Texture2D" uid="uid://cyadgaekm5ikr" path="res://Assests/Michel Sprites/Michel golpe 1/5.png" id="22_f8dlf"]
 [ext_resource type="Texture2D" uid="uid://cvamid404kb7i" path="res://Assests/Michel Sprites/Michel Andando/12.png" id="22_p4xm4"]
+[ext_resource type="Texture2D" uid="uid://ct20hbpbpn7nl" path="res://Assests/Michel Sprites/Michel golpe 2/_0000_Camada-5.png" id="23_k888p"]
+[ext_resource type="Texture2D" uid="uid://cax1k2omlxn2p" path="res://Assests/Michel Sprites/Michel golpe 2/_0001_Camada-4.png" id="24_huuxi"]
+[ext_resource type="Texture2D" uid="uid://css0vhrhe4anw" path="res://Assests/Michel Sprites/Michel golpe 2/_0002_Camada-3.png" id="25_ogvv2"]
+[ext_resource type="Texture2D" uid="uid://1wtxp84op7t4" path="res://Assests/Michel Sprites/Michel golpe 2/_0003_Camada-2.png" id="26_05dqn"]
+[ext_resource type="Texture2D" uid="uid://b8cpf8i4x1l6q" path="res://Assests/Michel Sprites/Michel golpe 2/_0004_Camada-1.png" id="27_lxf4v"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7woi1"]
-radius = 52.0
-height = 192.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
+size = Vector2(233, 429)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_16flq"]
 animations = [{
@@ -117,7 +121,27 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 15.0
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_k888p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_huuxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ogvv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_05dqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lxf4v")
+}],
+"loop": false,
+"name": &"punch2",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 0.01,
@@ -162,21 +186,23 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
+position = Vector2(6, 2)
 script = ExtResource("1_o6lrx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_7woi1")
+position = Vector2(117.5, -98.5)
+shape = SubResource("RectangleShape2D_m024i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2, 0)
-zoom = Vector2(2, 2)
+texture_filter = 1
+position = Vector2(107, -148)
+zoom = Vector2(0.8, 0.8)
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.99998, 11)
-scale = Vector2(0.200521, 0.219072)
+position = Vector2(156, -94)
+scale = Vector2(0.811237, 0.554847)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"punch1"
+animation = &"punch2"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
