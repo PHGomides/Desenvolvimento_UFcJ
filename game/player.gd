@@ -8,6 +8,15 @@ var is_jumping = false
 
 # Variável booleana que indica se o personagem está atacando
 var is_attacking = false
+# Variável que alterna entre os estados da animação de ataque
+var attack_state = 0
+
+# Variável para decidir se o especial pode ser usado
+var using_special = false
+var special_could = true
+
+#variavel para usar ataque opcional
+var opcional_attack = false
 
 # Referência ao nó AnimatedSprite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
@@ -19,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Lógica para o pulo.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_attacking:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 	elif is_on_floor():
@@ -28,14 +37,36 @@ func _physics_process(delta: float) -> void:
 	# Lógica para ataque.
 	if Input.is_action_just_pressed("ui_punch") and not is_attacking:
 		print("1 foi pressionado")
-		animation.play("punch1")  # Reproduz a animação de soco
 		is_attacking = true  # Marca que o personagem está atacando
+		
+		# Alterna entre as animações de punch
+		if attack_state == 0:
+			animation.play("punch1")
+			attack_state = 1 
+		elif attack_state == 1:
+			animation.play("punch2")
+			attack_state = 2
+		else:
+			animation.play("punch3")
+			attack_state = 0
+	
+	#logica para usar ataque opcional
+	if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
+		print("2 foi pressionado")
+		animation.play("opcional")
 
-	# Captura a direção horizontal com base na entrada do jogador (teclas esquerda/direita)
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if !is_attacking:
-	# Direita retorna 1, esquerda retorna -1
-		if direction:
+	# Lógica para o ataque especial
+	if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
+		print("3 foi pressionado")
+		animation.play("especial")
+		is_attacking = true
+		using_special = true # Marca o especial como usado
+
+	# Movimento só é permitido se não estiver atacando
+	if not is_attacking:
+		var direction := Input.get_axis("ui_left", "ui_right")
+		
+		if direction != 0:
 			velocity.x = direction * SPEED
 			# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 			animation.scale.x = abs(animation.scale.x) * direction
@@ -46,12 +77,15 @@ func _physics_process(delta: float) -> void:
 		else:
 			animation.play("idle")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
 
 # Função que é chamada automaticamente quando a animação termina
-
 func _on_anim_animation_finished() -> void:
-	# Verifica se a animação que acabou de terminar é a de soco
-	if animation.animation == "punch1":
-		is_attacking = false  # Permite que o personagem volte a se mover após o soco
+	# Verifica se a animação que acabou de terminar é de ataque
+	if animation.animation in ["punch1", "punch2", "punch3", "especial"]:
+		is_attacking = false  # Permite que o personagem volte a se mover após o ataque
+		
+		if animation.animation == "especial":
+			# Opcional: permite o uso do especial mais de uma vez se necessário
+			using_special = false
