@@ -15,7 +15,7 @@ var attack_state = 0
 var using_special = false
 var special_could = true
 
-#variavel para usar ataque opcional
+# Variável para controlar o ataque opcional
 var opcional_attack = false
 
 # Referência ao nó AnimatedSprite2D, que controla as animações do personagem
@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_punch") and not is_attacking:
 		print("1 foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
+		velocity.x = 0  # Para o movimento horizontal durante o ataque
 		
 		# Alterna entre as animações de punch
 		if attack_state == 0:
@@ -50,17 +51,21 @@ func _physics_process(delta: float) -> void:
 			animation.play("punch3")
 			attack_state = 0
 	
-	#logica para usar ataque opcional
-	if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
+	# Lógica para o ataque opcional
+	elif Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
 		print("2 foi pressionado")
 		animation.play("opcional")
+		is_attacking = true
+		opcional_attack = true  # Marca que o ataque opcional está em execução
+		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 
 	# Lógica para o ataque especial
-	if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
+	elif Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("3 foi pressionado")
 		animation.play("especial")
 		is_attacking = true
-		using_special = true # Marca o especial como usado
+		using_special = true  # Marca o especial como usado
+		velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
@@ -83,9 +88,10 @@ func _physics_process(delta: float) -> void:
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
-	if animation.animation in ["punch1", "punch2", "punch3", "especial"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
 		is_attacking = false  # Permite que o personagem volte a se mover após o ataque
 		
 		if animation.animation == "especial":
-			# Opcional: permite o uso do especial mais de uma vez se necessário
-			using_special = false
+			using_special = false  # Permite o uso do especial novamente
+		elif animation.animation == "opcional":
+			opcional_attack = false  # Permite o uso do ataque opcional novamente
