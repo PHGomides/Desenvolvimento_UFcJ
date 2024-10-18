@@ -1,0 +1,381 @@
+[gd_scene load_steps=74 format=3 uid="uid://msmkx04o1khs"]
+
+[ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ujqhl"]
+[ext_resource type="Texture2D" uid="uid://dq64vuan350t1" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png" id="2_6o6dn"]
+[ext_resource type="Texture2D" uid="uid://c51p20bsmgynd" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png" id="3_6h1g4"]
+[ext_resource type="Texture2D" uid="uid://ce3k0x6jnxgho" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png" id="4_0wp3v"]
+[ext_resource type="Texture2D" uid="uid://b6loebjjbs6ti" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png" id="5_afh21"]
+[ext_resource type="Texture2D" uid="uid://cwnqw7ng2ctst" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png" id="6_p20bc"]
+[ext_resource type="Texture2D" uid="uid://dty5vcvf1kftj" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png" id="7_vaqut"]
+[ext_resource type="Texture2D" uid="uid://dqs1sojvx4401" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png" id="8_petnc"]
+[ext_resource type="Texture2D" uid="uid://chbqr6wt6ougs" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png" id="9_5r6b4"]
+[ext_resource type="Texture2D" uid="uid://ci6v5kgadovh3" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0002_9.png" id="10_3evtn"]
+[ext_resource type="Texture2D" uid="uid://bmy3gawueosn3" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0001_10.png" id="11_fa5hb"]
+[ext_resource type="Texture2D" uid="uid://cr75llsfp0s23" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0000_11.png" id="12_xq60t"]
+[ext_resource type="Texture2D" uid="uid://cy4gbn0dld1w4" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png" id="13_wdkw1"]
+[ext_resource type="Texture2D" uid="uid://hx2syxuny46m" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png" id="14_1halj"]
+[ext_resource type="Texture2D" uid="uid://blcotdbte6b5d" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png" id="15_ycucs"]
+[ext_resource type="Texture2D" uid="uid://dkbco23w5krbx" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png" id="16_1lprj"]
+[ext_resource type="Texture2D" uid="uid://bb3ltido73l78" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png" id="17_16cf4"]
+[ext_resource type="Texture2D" uid="uid://ccil2enkh6vtg" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png" id="18_6kjlw"]
+[ext_resource type="Texture2D" uid="uid://c2fqwdbbxtgmh" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png" id="19_s83y6"]
+[ext_resource type="Texture2D" uid="uid://qd455g1remr3" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png" id="20_vxsww"]
+[ext_resource type="Texture2D" uid="uid://pxxtu6fq0w7t" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png" id="21_mndwl"]
+[ext_resource type="Texture2D" uid="uid://bgovyep7ijfp" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0006_1.png" id="22_jqmnu"]
+[ext_resource type="Texture2D" uid="uid://dy08xxglgh2gj" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0005_2.png" id="23_nwsu5"]
+[ext_resource type="Texture2D" uid="uid://cfc5k26h51wsq" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0004_3.png" id="24_if1y8"]
+[ext_resource type="Texture2D" uid="uid://c817rp6g2ehkw" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0003_4.png" id="25_d4tt4"]
+[ext_resource type="Texture2D" uid="uid://c130ydaanwpjj" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0002_5.png" id="26_y0fy5"]
+[ext_resource type="Texture2D" uid="uid://cm1tbi2hlpuyl" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0001_6.png" id="27_54l4a"]
+[ext_resource type="Texture2D" uid="uid://cmgp684xp1ynu" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0000_7.png" id="28_hd8fv"]
+[ext_resource type="Texture2D" uid="uid://dpextd03iie42" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0010_11.png" id="29_43gk1"]
+[ext_resource type="Texture2D" uid="uid://d06mln2f5rcjs" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0009_10.png" id="30_r570e"]
+[ext_resource type="Texture2D" uid="uid://rrh76y74eon7" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0008_9.png" id="31_fu440"]
+[ext_resource type="Texture2D" uid="uid://cmctuh3sj4tu6" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0007_8.png" id="32_53jog"]
+[ext_resource type="Texture2D" uid="uid://b1uyvk6f67fpc" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0006_7.png" id="33_qhe7l"]
+[ext_resource type="Texture2D" uid="uid://btvhihftey2in" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0005_6.png" id="34_iw20j"]
+[ext_resource type="Texture2D" uid="uid://gy2o1b8ymngy" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0004_5.png" id="35_o0q5l"]
+[ext_resource type="Texture2D" uid="uid://b3ndmjuuwgfd3" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0003_4.png" id="36_wfnpe"]
+[ext_resource type="Texture2D" uid="uid://hfgm7t4ovqe5" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0002_3.png" id="37_b2gnj"]
+[ext_resource type="Texture2D" uid="uid://qnbxiiqj84cv" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png" id="38_5bq6a"]
+[ext_resource type="Texture2D" uid="uid://dlwdx3mmufc82" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png" id="39_w83i3"]
+[ext_resource type="Texture2D" uid="uid://b1ayeypy31dle" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png" id="40_22ijr"]
+[ext_resource type="Texture2D" uid="uid://0tlnwkdjpcv6" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0003_2.png" id="41_5fhit"]
+[ext_resource type="Texture2D" uid="uid://b71fa4xv3dvul" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png" id="42_shwf5"]
+[ext_resource type="Texture2D" uid="uid://bsejqkrgng5lj" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0001_4.png" id="43_neduj"]
+[ext_resource type="Texture2D" uid="uid://c83q5p17urtbn" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png" id="44_5v0c0"]
+[ext_resource type="Texture2D" uid="uid://bl0v8xphaut7" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png" id="45_6rlti"]
+[ext_resource type="Texture2D" uid="uid://rqbdvpci64cd" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png" id="46_3nsrd"]
+[ext_resource type="Texture2D" uid="uid://cl1t713c4otje" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0002_3.png" id="47_xb24r"]
+[ext_resource type="Texture2D" uid="uid://b5vlscthj1ami" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0001_4.png" id="48_gm0yh"]
+[ext_resource type="Texture2D" uid="uid://dbavrmwtgt217" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0000_5.png" id="49_56apo"]
+[ext_resource type="Texture2D" uid="uid://bcvusksbdbm2g" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0008_1.png" id="50_iqsl1"]
+[ext_resource type="Texture2D" uid="uid://bhp0yicc82dt1" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0007_2.png" id="51_gt2pj"]
+[ext_resource type="Texture2D" uid="uid://4xqviberyej8" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0006_3.png" id="52_jpoec"]
+[ext_resource type="Texture2D" uid="uid://bevenbrnm7ewv" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0005_4.png" id="53_uepoo"]
+[ext_resource type="Texture2D" uid="uid://cd2ocbq0fu5wu" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0004_5.png" id="54_sh8oq"]
+[ext_resource type="Texture2D" uid="uid://s22h1nirpxl2" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0003_6.png" id="55_dp7yd"]
+[ext_resource type="Texture2D" uid="uid://co1a2muopaa06" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0002_7.png" id="56_4uj2y"]
+[ext_resource type="Texture2D" uid="uid://c8shhy2b1kr2k" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0001_8.png" id="57_qwdjb"]
+[ext_resource type="Texture2D" uid="uid://j1dnjlwt58a1" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0000_9.png" id="58_7o6hx"]
+[ext_resource type="Texture2D" uid="uid://88qeckqwprhb" path="res://Assests/Michel Sprites Pronto/Michel Andando/13.png" id="59_f3qee"]
+[ext_resource type="Texture2D" uid="uid://yr2h0u23yrl7" path="res://Assests/Michel Sprites Pronto/Michel Andando/12.png" id="60_slke2"]
+[ext_resource type="Texture2D" uid="uid://bymvcj3ql6048" path="res://Assests/Michel Sprites Pronto/Michel Andando/11.png" id="61_74mng"]
+[ext_resource type="Texture2D" uid="uid://djpbrcbvwfnyp" path="res://Assests/Michel Sprites Pronto/Michel Andando/10.png" id="62_l0fp7"]
+[ext_resource type="Texture2D" uid="uid://cc8x1sfy4h30f" path="res://Assests/Michel Sprites Pronto/Michel Andando/9.png" id="63_hkkkw"]
+[ext_resource type="Texture2D" uid="uid://lvpqx5rusglx" path="res://Assests/Michel Sprites Pronto/Michel Andando/8.png" id="64_llbr0"]
+[ext_resource type="Texture2D" uid="uid://dfh72r47sryi0" path="res://Assests/Michel Sprites Pronto/Michel Andando/7.png" id="65_if1b8"]
+[ext_resource type="Texture2D" uid="uid://b2l6nvqqm1yhq" path="res://Assests/Michel Sprites Pronto/Michel Andando/6.png" id="66_n30h6"]
+[ext_resource type="Texture2D" uid="uid://cmndawuoafrvt" path="res://Assests/Michel Sprites Pronto/Michel Andando/5.png" id="67_wuibt"]
+[ext_resource type="Texture2D" uid="uid://budc8rek5y1fv" path="res://Assests/Michel Sprites Pronto/Michel Andando/4.png" id="68_0atfq"]
+[ext_resource type="Texture2D" uid="uid://bnjydsuayujng" path="res://Assests/Michel Sprites Pronto/Michel Andando/3.png" id="69_8rrfc"]
+[ext_resource type="Texture2D" uid="uid://c267c6dp4t2c8" path="res://Assests/Michel Sprites Pronto/Michel Andando/1.png" id="70_fh2y7"]
+[ext_resource type="Texture2D" uid="uid://bnl11xgdnewml" path="res://Assests/Michel Sprites Pronto/Michel Andando/2.png" id="71_ldedh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
+size = Vector2(119, 280.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6o6dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6h1g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0wp3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_afh21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p20bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vaqut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_petnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5r6b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3evtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fa5hb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xq60t")
+}],
+"loop": false,
+"name": &"especial",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_wdkw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1halj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ycucs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lprj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_16cf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6kjlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s83y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vxsww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mndwl")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_jqmnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nwsu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_if1y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_d4tt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_y0fy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_54l4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hd8fv")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_43gk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_r570e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fu440")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_53jog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qhe7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_iw20j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_o0q5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wfnpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_b2gnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5bq6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_w83i3")
+}],
+"loop": false,
+"name": &"kick",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_22ijr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_5fhit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_shwf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_neduj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5v0c0")
+}],
+"loop": false,
+"name": &"punch1",
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_6rlti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3nsrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_xb24r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gm0yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_56apo")
+}],
+"loop": false,
+"name": &"punch2",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_iqsl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_gt2pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_jpoec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_uepoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_sh8oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_dp7yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_4uj2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qwdjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_7o6hx")
+}],
+"loop": false,
+"name": &"punch3",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_f3qee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_slke2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_74mng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_l0fp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_hkkkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_llbr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_if1b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_n30h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_wuibt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_0atfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_8rrfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_fh2y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ldedh")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 20.0
+}]
+
+[node name="player2" type="CharacterBody2D"]
+script = ExtResource("1_ujqhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(108, -159.75)
+shape = SubResource("RectangleShape2D_17xdv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+position = Vector2(111, -221)
+limit_left = 40
+limit_right = 1600
+limit_bottom = 4000
+limit_smoothed = true
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(127.702, -159.6)
+scale = Vector2(1.02681, 0.863823)
+sprite_frames = SubResource("SpriteFrames_nn853")
+animation = &"idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

@@ -27,20 +27,20 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Lógica para o pulo.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_attacking:
+	# Lógica para o pulo (W).
+	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 	elif is_on_floor():
 		is_jumping = false
 
-	# Lógica para ataque.
-	if Input.is_action_just_pressed("ui_punch") and not is_attacking:
-		print("1 foi pressionado")
+	# Lógica para ataque de soco (J).
+	if Input.is_action_just_pressed("ui_J") and not is_attacking:
+		print("J foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
 		
-		# Alterna entre as animações de punch
+		# Alterna entre as animações de socos
 		if attack_state == 0:
 			animation.play("punch1")
 			attack_state = 1 
@@ -51,17 +51,17 @@ func _physics_process(delta: float) -> void:
 			animation.play("punch3")
 			attack_state = 0
 	
-	# Lógica para o ataque opcional
-	elif Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
-		print("2 foi pressionado")
-		animation.play("opcional")
+	# Lógica para o chute (K)
+	elif Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack:
+		print("K foi pressionado")
+		animation.play("kick")
 		is_attacking = true
-		opcional_attack = true  # Marca que o ataque opcional está em execução
-		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
+		opcional_attack = true  # Marca que o chute está em execução
+		velocity.x = 0  # Para o movimento horizontal durante o chute
 
-	# Lógica para o ataque especial
-	elif Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
-		print("3 foi pressionado")
+	# Lógica para o ataque especial (L)
+	elif Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
+		print("L foi pressionado")
 		animation.play("especial")
 		is_attacking = true
 		using_special = true  # Marca o especial como usado
@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
-		var direction := Input.get_axis("ui_left", "ui_right")
+		var direction := Input.get_axis("ui_A", "ui_D")
 		
 		if direction != 0:
 			velocity.x = direction * SPEED
@@ -88,10 +88,10 @@ func _physics_process(delta: float) -> void:
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "kick"]:
 		is_attacking = false  # Permite que o personagem volte a se mover após o ataque
 		
 		if animation.animation == "especial":
 			using_special = false  # Permite o uso do especial novamente
-		elif animation.animation == "opcional":
-			opcional_attack = false  # Permite o uso do ataque opcional novamente
+		elif animation.animation == "kick":
+			opcional_attack = false  # Permite o uso do chute novamente
