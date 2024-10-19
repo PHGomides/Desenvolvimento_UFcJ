@@ -1,6 +1,6 @@
 [gd_scene load_steps=74 format=3 uid="uid://bqe2va7eeqr7s"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_o6lrx"]
+[ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://dq64vuan350t1" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png" id="2_mloxx"]
 [ext_resource type="Texture2D" uid="uid://c51p20bsmgynd" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png" id="3_5sx22"]
 [ext_resource type="Texture2D" uid="uid://ce3k0x6jnxgho" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png" id="4_kjnro"]

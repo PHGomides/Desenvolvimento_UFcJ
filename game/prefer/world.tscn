@@ -8,25 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://bwn4f7nlitoc6" path="res://Assests/MapaEstacionamento/_0002_carros-atrás.png" id="6_7vs72"]
 [ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="7_vdybe"]
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8oae"]
-size = Vector2(491.5, 1138)
+[ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(74, 992)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
-size = Vector2(2393, 128)
+size = Vector2(1727, 128)
 
 [node name="world" type="Node2D"]
 position = Vector2(20, 123)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(2102, 435)
-shape = SubResource("RectangleShape2D_i8oae")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(-234, -77)
@@ -35,15 +29,19 @@ position = Vector2(-234, -77)
 position = Vector2(117, 465)
 shape = SubResource("RectangleShape2D_3pt8k")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/CollisionShape2D"]
+position = Vector2(1789, 1)
+shape = SubResource("RectangleShape2D_3pt8k")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1187, 773)
-scale = Vector2(1.60067, 1.17258)
+[node name="Chão" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(855.249, 773)
+scale = Vector2(1.15834, 1.17258)
 texture = ExtResource("1_q68sy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1191.5, 796)
+position = Vector2(858.5, 796)
 shape = SubResource("RectangleShape2D_oof4l")
 
 [node name="player" parent="." instance=ExtResource("2_if2qb")]
@@ -60,7 +58,7 @@ texture_repeat = 2
 position = Vector2(-237, 101)
 motion_scale = Vector2(0.3, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/05"]
+[node name="Fundo05" type="Sprite2D" parent="Background/05"]
 position = Vector2(1001, 461)
 texture = ExtResource("4_hx6wh")
 
@@ -69,7 +67,7 @@ texture_repeat = 2
 position = Vector2(-237, 101)
 motion_scale = Vector2(0.4, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/04"]
+[node name="Fundo04" type="Sprite2D" parent="Background/04"]
 position = Vector2(976, 439)
 texture = ExtResource("5_0467r")
 
@@ -78,7 +76,7 @@ texture_repeat = 2
 position = Vector2(-237, 101)
 motion_scale = Vector2(0.5, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/03"]
+[node name="Fundo03" type="Sprite2D" parent="Background/03"]
 position = Vector2(984, 551)
 texture = ExtResource("6_7vs72")
 
@@ -87,7 +85,7 @@ texture_repeat = 2
 position = Vector2(277, 771)
 motion_scale = Vector2(0.6, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/02"]
+[node name="Fundo02" type="Sprite2D" parent="Background/02"]
 position = Vector2(495, -272)
 texture = ExtResource("7_vdybe")
 
@@ -99,3 +97,36 @@ motion_scale = Vector2(0.7, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Background/09"]
 position = Vector2(998, 677)
 texture = ExtResource("8_2vacx")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 8
+
+[node name="Tempo_container" type="HBoxContainer" parent="HUD/control/MarginContainer"]
+layout_mode = 2
+
+[node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("9_6viyd")
+theme_override_font_sizes/font_size = 55
+text = "60
+"
