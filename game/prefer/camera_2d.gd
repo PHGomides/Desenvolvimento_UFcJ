@@ -8,7 +8,6 @@ extends Camera2D
 @export var zoom_margin = Vector2(200, 100)  # Extra margin to anticipate zoom out
 
 var targets = []
-var focus_point = Vector2.ZERO  # Variable to store the focus point
 
 @onready var screen_size = get_viewport_rect().size
 
@@ -42,8 +41,6 @@ func _process(delta):
 	# For debug
 
 
-func _draw() -> void:
-	draw_circle(focus_point, 5, Color.RED)
 	
 func add_target(t):
 	if not t in targets:
