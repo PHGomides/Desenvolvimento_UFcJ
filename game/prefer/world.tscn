@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=15 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="7_vdybe"]
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
+[ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_f64d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(101.5, 992)
@@ -131,6 +132,10 @@ offset_right = 20.0
 offset_bottom = 40.0
 grow_horizontal = 2
 size_flags_horizontal = 4
+script = ExtResource("11_f64d2")
+
+[node name="clocktimer" type="Timer" parent="HUD/control"]
+autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
 layout_mode = 0
@@ -151,3 +156,5 @@ theme_override_fonts/font = ExtResource("9_6viyd")
 theme_override_font_sizes/font_size = 55
 text = "60
 "
+
+[connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]
