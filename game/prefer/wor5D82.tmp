@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
-size = Vector2(101.5, 992)
+size = Vector2(74, 992)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
 size = Vector2(1727, 128)
@@ -23,23 +23,9 @@ position = Vector2(20, 123)
 script = ExtResource("1_kywhc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -91.89)
+offset = Vector2(637.615, -396.75)
 zoom = Vector2(0.955, 0.955)
-limit_left = -1200
-limit_right = 2000
-limit_bottom = 1200
 script = ExtResource("2_1ilr7")
-margin = Vector2(0, 0)
-
-[node name="player" parent="." groups=["players"] instance=ExtResource("2_if2qb")]
-z_index = 1
-position = Vector2(628, 535)
-scale = Vector2(1.38, 1.38)
-
-[node name="player2" parent="." groups=["players"] instance=ExtResource("3_6vtsv")]
-z_index = 1
-position = Vector2(906.605, 539)
-scale = Vector2(1.26, 1.26)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
@@ -47,25 +33,33 @@ position = Vector2(-222, 11)
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(-234, -77)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(1997.25, 466)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(117, 465)
 shape = SubResource("RectangleShape2D_3pt8k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-51.5, 465)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/CollisionShape2D"]
+position = Vector2(1789, 1)
 shape = SubResource("RectangleShape2D_3pt8k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Chão" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(706, 965.98)
-scale = Vector2(2.45762, 2.48784)
+position = Vector2(835, 908)
+scale = Vector2(2.0259, 2.05081)
 texture = ExtResource("1_q68sy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(801.27, 1002.14)
+position = Vector2(801.27, 919.965)
 scale = Vector2(-1.87, -1.87)
 shape = SubResource("RectangleShape2D_oof4l")
+
+[node name="player" parent="." groups=["players"] instance=ExtResource("2_if2qb")]
+position = Vector2(628, 535)
+scale = Vector2(1.38, 1.38)
+
+[node name="player2" parent="." groups=["players"] instance=ExtResource("3_6vtsv")]
+position = Vector2(388, 539)
+scale = Vector2(1.26, 1.26)
 
 [node name="Background" type="ParallaxBackground" parent="."]
 
@@ -95,8 +89,8 @@ position = Vector2(-237, 101)
 motion_scale = Vector2(0.5, 1)
 
 [node name="Fundo03" type="Sprite2D" parent="Background/03"]
-position = Vector2(987.457, 570.031)
-scale = Vector2(1.86719, 1.86719)
+position = Vector2(1049, 578)
+scale = Vector2(1.43542, 1.43542)
 texture = ExtResource("6_7vs72")
 
 [node name="02" type="ParallaxLayer" parent="Background"]
@@ -115,8 +109,8 @@ position = Vector2(-237, 101)
 motion_scale = Vector2(0.7, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/09"]
-position = Vector2(875, 752)
-scale = Vector2(1.97213, 1.97213)
+position = Vector2(1026, 761.775)
+scale = Vector2(1.74978, 1.74978)
 texture = ExtResource("8_2vacx")
 
 [node name="HUD" type="CanvasLayer" parent="."]
