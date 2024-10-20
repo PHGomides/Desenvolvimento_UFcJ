@@ -73,7 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://bnl11xgdnewml" path="res://Assests/Michel Sprites Pronto/Michel Andando/2.png" id="71_ldedh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
-size = Vector2(119, 280.5)
+size = Vector2(155.745, 268.936)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
 animations = [{
@@ -359,19 +359,12 @@ animations = [{
 script = ExtResource("1_ujqhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(108, -159.75)
+position = Vector2(15.5, -11)
+scale = Vector2(1.175, 1.175)
 shape = SubResource("RectangleShape2D_17xdv")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-texture_filter = 1
-position = Vector2(111, -221)
-limit_left = 40
-limit_right = 1600
-limit_bottom = 4000
-limit_smoothed = true
-
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(127.702, -159.6)
+position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
 animation = &"idle"

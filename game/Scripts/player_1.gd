@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
+const SPEED = 700.0
 const JUMP_VELOCITY = -300.0
 
 # Variável para pulo
@@ -18,8 +18,10 @@ var special_could = true
 # Variável para controlar o ataque opcional
 var opcional_attack = false
 
-# Referência ao nó AnimatedSprite2D, que controla as animações do personagem
+
+# Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
+
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
