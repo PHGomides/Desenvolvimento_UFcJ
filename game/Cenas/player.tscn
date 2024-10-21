@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=91 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_4h448"]
@@ -47,9 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://qnbxiiqj84cv" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png" id="40_o63o3"]
 [ext_resource type="Texture2D" uid="uid://dlwdx3mmufc82" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png" id="41_oyh4r"]
 [ext_resource type="Texture2D" uid="uid://b1ayeypy31dle" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png" id="42_nrv7n"]
-[ext_resource type="Texture2D" uid="uid://0tlnwkdjpcv6" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0003_2.png" id="43_diqt3"]
 [ext_resource type="Texture2D" uid="uid://b71fa4xv3dvul" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png" id="44_3wwu2"]
-[ext_resource type="Texture2D" uid="uid://bsejqkrgng5lj" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0001_4.png" id="45_y7u0w"]
 [ext_resource type="Texture2D" uid="uid://c83q5p17urtbn" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png" id="46_1xocl"]
 [ext_resource type="Texture2D" uid="uid://bl0v8xphaut7" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png" id="47_lnoyr"]
 [ext_resource type="Texture2D" uid="uid://rqbdvpci64cd" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png" id="48_obwc0"]
@@ -287,20 +285,14 @@ animations = [{
 "texture": ExtResource("42_nrv7n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_diqt3")
-}, {
-"duration": 1.0,
 "texture": ExtResource("44_3wwu2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_y7u0w")
 }, {
 "duration": 1.0,
 "texture": ExtResource("46_1xocl")
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 40.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -452,14 +444,15 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"damage"
-frame = 6
+animation = &"punch1"
+frame = 2
 frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
 [node name="especial" type="AnimatedSprite2D" parent="."]
+z_index = 4
 position = Vector2(691.109, -406.827)
 scale = Vector2(2.212, 2.212)
 sprite_frames = SubResource("SpriteFrames_aku3l")

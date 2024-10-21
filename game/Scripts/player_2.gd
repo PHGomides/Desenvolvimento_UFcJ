@@ -18,8 +18,11 @@ var special_could = true
 # Variável para controlar o ataque opcional
 var opcional_attack = false
 
+var current_direction = 1 #direção do personagem olhando pra esquerda
+
 # Referência ao nó AnimatedSprite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
+@onready var animationEspecial := $especial as AnimatedSprite2D
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
@@ -41,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
 		
 		# Alterna entre as animações de socos
-		if attack_state == 0:
+		if attack_state == 0: 
 			animation.play("punch1")
 			attack_state = 1 
 		elif attack_state == 1:
@@ -62,7 +65,14 @@ func _physics_process(delta: float) -> void:
 	# Lógica para o ataque especial (L)
 	elif Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("L foi pressionado")
+		if current_direction == 1:
+			animationEspecial.position.x = 691.109
+		else:
+			animationEspecial.position.x = -691.109
 		animation.play("especial")
+		
+		animationEspecial.play("especialNeemias")
+
 		is_attacking = true
 		using_special = true  # Marca o especial como usado
 		velocity.x = 0  # Para o movimento horizontal durante o ataque especial
@@ -93,5 +103,6 @@ func _on_anim_animation_finished() -> void:
 		
 		if animation.animation == "especial":
 			using_special = false  # Permite o uso do especial novamente
+
 		elif animation.animation == "kick":
 			opcional_attack = false  # Permite o uso do chute novamente

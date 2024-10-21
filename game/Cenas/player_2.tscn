@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=86 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ujqhl"]
 [ext_resource type="Texture2D" uid="uid://bm80q03wldxbk" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png" id="2_4b023"]
@@ -36,9 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://cpbf1k76apanr" path="res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0006_20240905_161654_044.png" id="35_sv2sy"]
 [ext_resource type="Texture2D" uid="uid://d3eyt5x0ithk2" path="res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0007_20240905_161654_046.png" id="36_fxo8f"]
 [ext_resource type="Texture2D" uid="uid://ch3ont7n3aker" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0000_Layer-2.png" id="40_ic00w"]
-[ext_resource type="Texture2D" uid="uid://cnbudm8jrumbv" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0001_20240905_161523_026.png" id="41_1o020"]
-[ext_resource type="Texture2D" uid="uid://8ldv1hcsj3kv" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0002_20240905_161523_028.png" id="42_ereya"]
-[ext_resource type="Texture2D" uid="uid://bmgw00ftrakv0" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0003_20240905_161523_030.png" id="43_nd1d7"]
 [ext_resource type="Texture2D" uid="uid://t73g7bdxmbev" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0004_20240905_161523_032.png" id="44_8cjf7"]
 [ext_resource type="Texture2D" uid="uid://cw2537r06cn61" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0005_20240905_161523_036.png" id="45_f703v"]
 [ext_resource type="Texture2D" uid="uid://bu854alesr8lr" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0006_20240905_161523_042.png" id="46_rkjr4"]
@@ -61,17 +58,28 @@
 [ext_resource type="Texture2D" uid="uid://covryx2htq6ib" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0006_20240905_161532_045.png" id="63_8cwnj"]
 [ext_resource type="Texture2D" uid="uid://ccma5lhcj587m" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0007_20240905_161532_047.png" id="64_qpd8i"]
 [ext_resource type="Texture2D" uid="uid://cx5je4ci8ukln" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0008_20240905_161532_049.png" id="65_aiebs"]
+[ext_resource type="Texture2D" uid="uid://c1fj2fi6ps8kc" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png" id="72_1ol1k"]
 [ext_resource type="Texture2D" uid="uid://b2kcn4oy7soyx" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0000_20240905_161346_073.png" id="72_16fd1"]
 [ext_resource type="Texture2D" uid="uid://dcnsg72lo2vy6" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0001_20240905_161346_071.png" id="73_5kami"]
+[ext_resource type="Texture2D" uid="uid://dkrdbhxjwiyv5" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png" id="73_dth6p"]
+[ext_resource type="Texture2D" uid="uid://c5tnbi07nfwed" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png" id="74_uy1io"]
 [ext_resource type="Texture2D" uid="uid://di0lstbb0l40j" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0002_20240905_161346_069.png" id="74_w8oca"]
 [ext_resource type="Texture2D" uid="uid://c0qsrtgqjdpeu" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0003_20240905_161346_067.png" id="75_kq55d"]
+[ext_resource type="Texture2D" uid="uid://cjqmk5uk4oilp" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png" id="75_p64yf"]
 [ext_resource type="Texture2D" uid="uid://odsobpxu4f73" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0004_20240905_161346_065.png" id="76_wctw6"]
+[ext_resource type="Texture2D" uid="uid://blvro33urn2vh" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png" id="76_wrkv7"]
 [ext_resource type="Texture2D" uid="uid://dmjkwknyqwlqd" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0005_20240905_161346_063.png" id="77_8khab"]
+[ext_resource type="Texture2D" uid="uid://cdqyntllyw4ex" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png" id="77_bsq30"]
 [ext_resource type="Texture2D" uid="uid://dqpengdo4lbdg" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0006_20240905_161346_061.png" id="78_cad4p"]
+[ext_resource type="Texture2D" uid="uid://fhgixh3ti8ar" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png" id="78_u2mio"]
 [ext_resource type="Texture2D" uid="uid://cj05ruky8mkuu" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0007_20240905_161346_059.png" id="79_ua3cx"]
+[ext_resource type="Texture2D" uid="uid://b80vsyrmoy3i2" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png" id="79_w6kw1"]
+[ext_resource type="Texture2D" uid="uid://cd51gl614oxhi" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png" id="80_8x6oh"]
 [ext_resource type="Texture2D" uid="uid://2dt3saejp6tg" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0008_20240905_161346_057.png" id="80_fn3m0"]
+[ext_resource type="Texture2D" uid="uid://ctia6x4hnk2yq" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png" id="81_inp3m"]
 [ext_resource type="Texture2D" uid="uid://d13lk7ufufnrs" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0009_20240905_161346_055.png" id="81_lyref"]
 [ext_resource type="Texture2D" uid="uid://csuuxpp6txhfr" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0010_20240905_161346_053.png" id="82_bjym5"]
+[ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="82_hjvyp"]
 [ext_resource type="Texture2D" uid="uid://skhcq31iouhk" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0011_20240905_161346_051.png" id="83_5vxjk"]
 [ext_resource type="Texture2D" uid="uid://wmaamhm1d5mj" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0012_20240905_161346_047.png" id="84_4aicd"]
 
@@ -225,15 +233,6 @@ animations = [{
 "texture": ExtResource("40_ic00w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_1o020")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_ereya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_nd1d7")
-}, {
-"duration": 1.0,
 "texture": ExtResource("44_8cjf7")
 }, {
 "duration": 1.0,
@@ -358,6 +357,47 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_btty6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("82_hjvyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_1ol1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_dth6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_uy1io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_p64yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_wrkv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_bsq30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_u2mio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_w6kw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_8x6oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_inp3m")
+}],
+"loop": false,
+"name": &"especialNeemias",
+"speed": 5.0
+}]
+
 [node name="player2" type="CharacterBody2D"]
 script = ExtResource("1_ujqhl")
 
@@ -370,8 +410,17 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"idle"
+animation = &"punch1"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
+
+[node name="especial" type="AnimatedSprite2D" parent="."]
+z_index = 4
+position = Vector2(691.109, -406.827)
+scale = Vector2(2.212, 2.212)
+sprite_frames = SubResource("SpriteFrames_btty6")
+animation = &"especialNeemias"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
