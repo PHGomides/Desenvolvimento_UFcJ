@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=85 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ujqhl"]
 [ext_resource type="Texture2D" uid="uid://bm80q03wldxbk" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png" id="2_4b023"]
@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://g4e64by52k63" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png" id="17_2bpwn"]
 [ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="18_h1s75"]
 [ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="19_civ64"]
-[ext_resource type="Texture2D" uid="uid://cxhnxh2oe8wkf" path="res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0000_20240905_161421_030.png" id="22_as3au"]
 [ext_resource type="Texture2D" uid="uid://ntr5gjkgni0" path="res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0001_20240905_161421_034.png" id="23_3cyly"]
 [ext_resource type="Texture2D" uid="uid://ca7fs4kj3y1gs" path="res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0002_20240905_161421_038.png" id="24_n1t7h"]
 [ext_resource type="Texture2D" uid="uid://0pqbwra2gaee" path="res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0003_20240905_161421_042.png" id="25_1uqfm"]
@@ -160,9 +159,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_as3au")
-}, {
-"duration": 1.0,
 "texture": ExtResource("23_3cyly")
 }, {
 "duration": 1.0,
@@ -173,6 +169,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("26_f108f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_02p1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_02p1x")
 }, {
 "duration": 1.0,
 "texture": ExtResource("27_02p1x")
@@ -410,7 +412,7 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"punch1"
+animation = &"jump"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

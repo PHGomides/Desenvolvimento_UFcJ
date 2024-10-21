@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -2000.0
+var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 
 # Variável para pulo
 var is_jumping = false
@@ -28,7 +29,8 @@ var current_direction = 1 #direção do personagem olhando pra esquerda
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		print(get_gravity())
+		velocity.y += GRAVITY * delta
 
 	# Lógica para o pulo (W).
 	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking:
@@ -82,6 +84,7 @@ func _physics_process(delta: float) -> void:
 		var direction := Input.get_axis("ui_A", "ui_D")
 		
 		if direction != 0:
+			current_direction = direction
 			velocity.x = direction * SPEED
 			# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 			animation.scale.x = abs(animation.scale.x) * direction
@@ -92,8 +95,11 @@ func _physics_process(delta: float) -> void:
 		else:
 			animation.play("idle")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not is_on_floor() and not is_attacking:
+		animation.play("jump")
 	
 	move_and_slide()
+	
 
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:

@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -2000.0
+var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
+
+
 var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0#tempo atual da janela de combo
@@ -34,7 +37,8 @@ var current_direction = 1 #direção do personagem olhando pra direita
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		
+		velocity.y += GRAVITY * delta
 
 	# Lógica para o pulo
 	if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking:
@@ -100,7 +104,6 @@ func _physics_process(delta: float) -> void:
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
 		var direction := Input.get_axis("ui_left", "ui_right")
-		print(current_direction)
 
 		if direction != 0:
 			current_direction = direction
@@ -114,7 +117,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			animation.play("idle")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-	
+	if not is_on_floor() and not is_attacking:
+		animation.play("jump")
 	move_and_slide()
 
 # Função que é chamada automaticamente quando a animação termina

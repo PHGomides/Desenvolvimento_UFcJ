@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=89 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_4h448"]
@@ -28,8 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://c2fqwdbbxtgmh" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png" id="21_mfp7i"]
 [ext_resource type="Texture2D" uid="uid://qd455g1remr3" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png" id="22_sasio"]
 [ext_resource type="Texture2D" uid="uid://pxxtu6fq0w7t" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png" id="23_6c80q"]
-[ext_resource type="Texture2D" uid="uid://bgovyep7ijfp" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0006_1.png" id="24_tvovo"]
-[ext_resource type="Texture2D" uid="uid://dy08xxglgh2gj" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0005_2.png" id="25_73p32"]
 [ext_resource type="Texture2D" uid="uid://cfc5k26h51wsq" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0004_3.png" id="26_pp8f4"]
 [ext_resource type="Texture2D" uid="uid://c817rp6g2ehkw" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0003_4.png" id="27_pkpbf"]
 [ext_resource type="Texture2D" uid="uid://c130ydaanwpjj" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0002_5.png" id="28_2vy5f"]
@@ -218,12 +216,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("24_tvovo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_73p32")
-}, {
-"duration": 1.0,
 "texture": ExtResource("26_pp8f4")
 }, {
 "duration": 1.0,
@@ -234,6 +226,27 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_jnfsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gvhkb")
 }, {
 "duration": 1.0,
 "texture": ExtResource("30_gvhkb")
@@ -444,9 +457,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"punch1"
-frame = 2
-frame_progress = 1.0
+animation = &"jump"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
