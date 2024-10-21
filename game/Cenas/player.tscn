@@ -1,13 +1,20 @@
-[gd_scene load_steps=74 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=93 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
+[ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_4h448"]
 [ext_resource type="Texture2D" uid="uid://dq64vuan350t1" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png" id="2_mloxx"]
 [ext_resource type="Texture2D" uid="uid://c51p20bsmgynd" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png" id="3_5sx22"]
+[ext_resource type="Texture2D" uid="uid://calvfust52scc" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png" id="3_mflnd"]
+[ext_resource type="Texture2D" uid="uid://ygdt11fuw4gp" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png" id="4_54502"]
 [ext_resource type="Texture2D" uid="uid://ce3k0x6jnxgho" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png" id="4_kjnro"]
 [ext_resource type="Texture2D" uid="uid://b6loebjjbs6ti" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png" id="5_ituuj"]
+[ext_resource type="Texture2D" uid="uid://dq5gcs5h8q5lo" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0003_5.png" id="5_l44tm"]
+[ext_resource type="Texture2D" uid="uid://dhjqw6b3yhm06" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png" id="6_3eg5p"]
 [ext_resource type="Texture2D" uid="uid://cwnqw7ng2ctst" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png" id="6_wu3eu"]
 [ext_resource type="Texture2D" uid="uid://dty5vcvf1kftj" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png" id="7_h1u3o"]
+[ext_resource type="Texture2D" uid="uid://bk22uujqrel6g" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png" id="7_tiptr"]
 [ext_resource type="Texture2D" uid="uid://dqs1sojvx4401" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png" id="8_j8tu6"]
+[ext_resource type="Texture2D" uid="uid://bdts30urgbjhj" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png" id="8_ryjp2"]
 [ext_resource type="Texture2D" uid="uid://chbqr6wt6ougs" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png" id="9_dqp1f"]
 [ext_resource type="Texture2D" uid="uid://ci6v5kgadovh3" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0002_9.png" id="10_seawx"]
 [ext_resource type="Texture2D" uid="uid://bmy3gawueosn3" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0001_10.png" id="11_noy13"]
@@ -67,16 +74,53 @@
 [ext_resource type="Texture2D" uid="uid://dfh72r47sryi0" path="res://Assests/Michel Sprites Pronto/Michel Andando/7.png" id="69_sjeuy"]
 [ext_resource type="Texture2D" uid="uid://b2l6nvqqm1yhq" path="res://Assests/Michel Sprites Pronto/Michel Andando/6.png" id="70_jwjhl"]
 [ext_resource type="Texture2D" uid="uid://cmndawuoafrvt" path="res://Assests/Michel Sprites Pronto/Michel Andando/5.png" id="71_icy7e"]
+[ext_resource type="Texture2D" uid="uid://c1fj2fi6ps8kc" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png" id="72_2e24i"]
 [ext_resource type="Texture2D" uid="uid://budc8rek5y1fv" path="res://Assests/Michel Sprites Pronto/Michel Andando/4.png" id="72_y4pdh"]
 [ext_resource type="Texture2D" uid="uid://bnjydsuayujng" path="res://Assests/Michel Sprites Pronto/Michel Andando/3.png" id="73_j06tw"]
+[ext_resource type="Texture2D" uid="uid://dkrdbhxjwiyv5" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png" id="73_wrce1"]
+[ext_resource type="Texture2D" uid="uid://c5tnbi07nfwed" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png" id="74_3bv0g"]
 [ext_resource type="Texture2D" uid="uid://c267c6dp4t2c8" path="res://Assests/Michel Sprites Pronto/Michel Andando/1.png" id="74_y5mvq"]
 [ext_resource type="Texture2D" uid="uid://bnl11xgdnewml" path="res://Assests/Michel Sprites Pronto/Michel Andando/2.png" id="75_lkybm"]
+[ext_resource type="Texture2D" uid="uid://cjqmk5uk4oilp" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png" id="75_mxj1h"]
+[ext_resource type="Texture2D" uid="uid://blvro33urn2vh" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png" id="76_8daug"]
+[ext_resource type="Texture2D" uid="uid://cdqyntllyw4ex" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png" id="77_oy8xl"]
+[ext_resource type="Texture2D" uid="uid://fhgixh3ti8ar" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png" id="78_x2s11"]
+[ext_resource type="Texture2D" uid="uid://b80vsyrmoy3i2" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png" id="79_py8qw"]
+[ext_resource type="Texture2D" uid="uid://cd51gl614oxhi" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png" id="80_pbe7v"]
+[ext_resource type="Texture2D" uid="uid://ctia6x4hnk2yq" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png" id="81_7itis"]
+[ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="82_bqy6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(168, 288)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_16flq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4h448")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mflnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_54502")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l44tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3eg5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tiptr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ryjp2")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 14.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_mloxx")
@@ -355,6 +399,47 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_aku3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("72_2e24i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_wrce1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_3bv0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_mxj1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_8daug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_oy8xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_x2s11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_py8qw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_pbe7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_7itis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_bqy6j")
+}],
+"loop": false,
+"name": &"especialMichel",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_o6lrx")
@@ -367,11 +452,21 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"walk"
-frame = 12
+animation = &"damage"
+frame = 6
 frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
+
+[node name="especial" type="AnimatedSprite2D" parent="."]
+position = Vector2(691.109, -406.827)
+scale = Vector2(2.212, 2.212)
+sprite_frames = SubResource("SpriteFrames_aku3l")
+animation = &"especialMichel"
+frame = 10
+frame_progress = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

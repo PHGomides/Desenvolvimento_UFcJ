@@ -17,10 +17,11 @@ var special_could = true
 
 # Variável para controlar o ataque opcional
 var opcional_attack = false
-
+var current_direction = 1
 
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
+@onready var animationEspecial := $especial as AnimatedSprite2D
 
 
 # Função que processa a física do personagem a cada frame
@@ -64,7 +65,16 @@ func _physics_process(delta: float) -> void:
 	# Lógica para o ataque especial
 	elif Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("3 foi pressionado")
+		if current_direction==1:
+			animationEspecial.position.x = 691.109
+		else:
+			animationEspecial.position.x = -691.109
+			
 		animation.play("especial")
+		
+		
+		
+		animationEspecial.play("especialMichel")
 		is_attacking = true
 		using_special = true  # Marca o especial como usado
 		velocity.x = 0  # Para o movimento horizontal durante o ataque especial
@@ -72,8 +82,10 @@ func _physics_process(delta: float) -> void:
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
 		var direction := Input.get_axis("ui_left", "ui_right")
-		
+		print(current_direction)
+
 		if direction != 0:
+			current_direction = direction
 			velocity.x = direction * SPEED
 			# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 			animation.scale.x = abs(animation.scale.x) * direction
