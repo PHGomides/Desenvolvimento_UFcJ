@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_f64d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
-size = Vector2(101.5, 992)
+size = Vector2(247, 992)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
 size = Vector2(1727, 128)
@@ -26,8 +26,8 @@ script = ExtResource("1_kywhc")
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
-limit_left = -1200
-limit_right = 2000
+limit_left = -630
+limit_right = 1765
 limit_bottom = 1200
 script = ExtResource("2_1ilr7")
 margin = Vector2(0, 0)
@@ -53,7 +53,7 @@ position = Vector2(1997.25, 466)
 shape = SubResource("RectangleShape2D_3pt8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-51.5, 465)
+position = Vector2(-541, 427)
 shape = SubResource("RectangleShape2D_3pt8k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -76,8 +76,8 @@ position = Vector2(-237, 101)
 motion_scale = Vector2(0.3, 1)
 
 [node name="Fundo05" type="Sprite2D" parent="Background/05"]
-position = Vector2(1025, 417)
-scale = Vector2(1.635, 1.635)
+position = Vector2(1243, 427)
+scale = Vector2(1.66194, 1.66194)
 texture = ExtResource("4_hx6wh")
 
 [node name="04" type="ParallaxLayer" parent="Background"]
