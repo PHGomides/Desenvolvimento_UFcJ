@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -400.0
 
 # Variável para pulo
 var is_jumping = false
