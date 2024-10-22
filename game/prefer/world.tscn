@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=16 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="7_vdybe"]
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
+[ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
 [ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_f64d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
@@ -122,30 +123,47 @@ texture = ExtResource("8_2vacx")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_right = 510.0
+offset_bottom = 122.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_f6dt1")
+
 [node name="control" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+offset_left = -10.315
+offset_top = 46.16
+offset_right = 29.685
+offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("11_f64d2")
 
 [node name="clocktimer" type="Timer" parent="HUD/control"]
 autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 8
 
 [node name="Tempo_container" type="HBoxContainer" parent="HUD/control/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
 layout_mode = 2

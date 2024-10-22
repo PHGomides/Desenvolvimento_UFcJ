@@ -7,7 +7,7 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 
 var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
-var combo_window = 0.0#tempo atual da janela de combo
+var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
 
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado

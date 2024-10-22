@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=81 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ujqhl"]
 [ext_resource type="Texture2D" uid="uid://bm80q03wldxbk" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png" id="2_4b023"]
@@ -40,13 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://bu854alesr8lr" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0006_20240905_161523_042.png" id="46_rkjr4"]
 [ext_resource type="Texture2D" uid="uid://cmqptuteggp7d" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0000_20240905_161527_027.png" id="47_kpvim"]
 [ext_resource type="Texture2D" uid="uid://bta3a3005880w" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0001_20240905_161527_029.png" id="48_ik1sh"]
-[ext_resource type="Texture2D" uid="uid://wjf166w21mbu" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0002_20240905_161527_031.png" id="49_temsy"]
 [ext_resource type="Texture2D" uid="uid://3441hcv4svcu" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0003_20240905_161527_033.png" id="50_pfm46"]
-[ext_resource type="Texture2D" uid="uid://bjn1uuaaec3eu" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0004_20240905_161527_035.png" id="51_s5upb"]
 [ext_resource type="Texture2D" uid="uid://c6pqxw7chxe3n" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0005_20240905_161527_039.png" id="52_qp703"]
-[ext_resource type="Texture2D" uid="uid://bl0kocllmkppi" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0006_20240905_161527_041.png" id="53_ecnep"]
 [ext_resource type="Texture2D" uid="uid://bjbmnalxclaxl" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0007_20240905_161527_043.png" id="54_21bt7"]
-[ext_resource type="Texture2D" uid="uid://b21dl5bfnh1ws" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0008_20240905_161527_045.png" id="55_y0lpy"]
 [ext_resource type="Texture2D" uid="uid://lrcp3om7p3fr" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0009_20240905_161527_047.png" id="56_wlt1j"]
 [ext_resource type="Texture2D" uid="uid://2wwrtwolo66" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0000_20240905_161532_023.png" id="57_ru7h3"]
 [ext_resource type="Texture2D" uid="uid://do7im6y1nt6c0" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0001_20240905_161532_027.png" id="58_u40pw"]
@@ -227,7 +223,7 @@ animations = [{
 "texture": ExtResource("36_fxo8f")
 }],
 "loop": false,
-"name": &"kick",
+"name": &"opcional",
 "speed": 20.0
 }, {
 "frames": [{
@@ -255,25 +251,13 @@ animations = [{
 "texture": ExtResource("48_ik1sh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_temsy")
-}, {
-"duration": 1.0,
 "texture": ExtResource("50_pfm46")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_s5upb")
 }, {
 "duration": 1.0,
 "texture": ExtResource("52_qp703")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_ecnep")
-}, {
-"duration": 1.0,
 "texture": ExtResource("54_21bt7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_y0lpy")
 }, {
 "duration": 1.0,
 "texture": ExtResource("56_wlt1j")
@@ -412,7 +396,7 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"jump"
+animation = &"opcional"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

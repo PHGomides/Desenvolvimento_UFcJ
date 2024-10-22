@@ -4,13 +4,19 @@ const SPEED = 700.0
 const JUMP_VELOCITY = -2000.0
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 
+
+var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var attack_state = 0  # Estado do ataque
+var combo_window = 0.0 #tempo atual da janela de combo
+var is_attacking = false
+
+var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 # Variável para pulo
 var is_jumping = false
 
 # Variável booleana que indica se o personagem está atacando
-var is_attacking = false
-# Variável que alterna entre os estados da animação de ataque
-var attack_state = 0
+
+
 
 # Variável para decidir se o especial pode ser usado
 var using_special = false
@@ -18,63 +24,79 @@ var special_could = true
 
 # Variável para controlar o ataque opcional
 var opcional_attack = false
+var current_direction = 1 #direção do personagem olhando pra direita
 
-var current_direction = 1 #direção do personagem olhando pra esquerda
+# Janela de combo (tempo permitido para encadear ataques)
 
-# Referência ao nó AnimatedSprite2D, que controla as animações do personagem
+
+# Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
-	# Adiciona a gravidade.
+	# Adiciona a gravidade
 	if not is_on_floor():
-		print(get_gravity())
+		
 		velocity.y += GRAVITY * delta
 
-	# Lógica para o pulo (W).
+	# Lógica para o pulo
 	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 	elif is_on_floor():
 		is_jumping = false
 
-	# Lógica para ataque de soco (J).
-	if Input.is_action_just_pressed("ui_J") and not is_attacking:
+	# Atualiza a janela de combo, se aplicável
+	if combo_window > 0:
+		combo_window -= delta
+	else:
+		combo_ready = false  # Reseta a habilidade de encadear combos
+		if is_attacking and attack_state > 0:
+			COMBO_WINDOW_DURATION = 0.15#resetando a janela de combo
+			is_attacking = false  # Se o combo não for finalizado, retorna ao estado idle
+			attack_state = 0  # Reseta o estado de ataque
+			animation.play("idle")  # Volta à animação idle
+
+	# Lógica para ataque
+	if Input.is_action_just_pressed("ui_J") and (not is_attacking or combo_ready):
 		print("J foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
 		
-		# Alterna entre as animações de socos
-		if attack_state == 0: 
+		# Alterna entre as animações de punch
+		if attack_state == 0:
 			animation.play("punch1")
 			attack_state = 1 
 		elif attack_state == 1:
+			COMBO_WINDOW_DURATION=0.3
 			animation.play("punch2")
 			attack_state = 2
 		else:
 			animation.play("punch3")
 			attack_state = 0
+		
+		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
+		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 	
-	# Lógica para o chute (K)
+	# Lógica para o ataque opcional
 	elif Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack:
-		print("K foi pressionado")
-		animation.play("kick")
+		print("2 foi pressionado")
+		animation.play("opcional")
 		is_attacking = true
-		opcional_attack = true  # Marca que o chute está em execução
-		velocity.x = 0  # Para o movimento horizontal durante o chute
+		opcional_attack = true  # Marca que o ataque opcional está em execução
+		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 
-	# Lógica para o ataque especial (L)
+	# Lógica para o ataque especial
 	elif Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
-		print("L foi pressionado")
+		print("3 foi pressionado")
 		if current_direction == 1:
 			animationEspecial.position.x = 691.109
 		else:
 			animationEspecial.position.x = -691.109
+			
 		animation.play("especial")
-		
 		animationEspecial.play("especialNeemias")
-
 		is_attacking = true
 		using_special = true  # Marca o especial como usado
 		velocity.x = 0  # Para o movimento horizontal durante o ataque especial
@@ -82,7 +104,7 @@ func _physics_process(delta: float) -> void:
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
 		var direction := Input.get_axis("ui_A", "ui_D")
-		
+
 		if direction != 0:
 			current_direction = direction
 			velocity.x = direction * SPEED
@@ -97,18 +119,29 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	if not is_on_floor() and not is_attacking:
 		animation.play("jump")
-	
 	move_and_slide()
-	
 
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "kick"]:
-		is_attacking = false  # Permite que o personagem volte a se mover após o ataque
-		
+	
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
 		if animation.animation == "especial":
+			print("special");
 			using_special = false  # Permite o uso do especial novamente
-
-		elif animation.animation == "kick":
-			opcional_attack = false  # Permite o uso do chute novamente
+			
+		elif animation.animation == "opcional":
+			opcional_attack = false  # Permite o uso do ataque opcional novamente
+		
+		if combo_window > 0:
+			combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
+			
+			
+		else:
+			is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
+			animation.play("idle")
+			COMBO_WINDOW_DURATION = 0.15
+			
+			
+		
+			
