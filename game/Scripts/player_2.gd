@@ -33,6 +33,9 @@ var current_direction = 1 #direção do personagem olhando pra direita
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
 
+@onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
+
+
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
@@ -44,9 +47,19 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
+		#adicionando animação de fumaça quando pular
+		var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
+		get_parent().add_child(particulaPulo)
+		particulaPulo.global_position = self.global_position  # Define a posição no local do jogador
+		var fumaca_pulo = particulaPulo.get_node("fumaca_pulo")
+		fumaca_pulo.play("fumaca_pulo")  # Substitua pelo nome da animação correta
+		
+		
+		
+		
 	elif is_on_floor():
 		is_jumping = false
-
+		
 	# Atualiza a janela de combo, se aplicável
 	if combo_window > 0:
 		combo_window -= delta
@@ -124,6 +137,8 @@ func _physics_process(delta: float) -> void:
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
+
+		
 	
 	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
 		if animation.animation == "especial":
@@ -142,6 +157,14 @@ func _on_anim_animation_finished() -> void:
 			animation.play("idle")
 			COMBO_WINDOW_DURATION = 0.15
 			
-			
+			#retirando as animações de particulas do personagem
+	for child in get_parent().get_children():
+		print("Child:", child)  # Imprime o nó filho
+		if child is Sprite2D:
+			for grandchild in child.get_children():  # Itera sobre os filhos do Sprite2D
+				grandchild.queue_free()
 		
+		if child is AnimatedSprite2D and child.animation == "fumaca_pulo":  # Verifica se é a animação de fumaça
+			child.queue_free()  # Remove a animação do mundo		
+			
 			
