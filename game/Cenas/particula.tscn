@@ -70,7 +70,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"fumaca_pulo",
-"speed": 30.0
+"speed": 35.0
 }]
 
 [node name="Sprite2D" type="Sprite2D"]

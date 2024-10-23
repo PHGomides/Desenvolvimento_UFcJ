@@ -13,7 +13,9 @@ var is_attacking = false
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 # Variável para pulo
 var is_jumping = false
-
+var can_jump = true      # Indica se o jogador pode pular
+var jump_cooldown_time = 1.0  # Tempo de cooldown para pular
+var jump_timer = 0.0    # Temporizador para controlar o cooldo
 # Variável booleana que indica se o personagem está atacando
 
 
@@ -39,22 +41,26 @@ var current_direction = 1 #direção do personagem olhando pra direita
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
+	if not can_jump:
+		jump_timer -= delta
+		if jump_timer <= 0:
+			can_jump = true  # Permite pular novamente após o cooldown
 	if not is_on_floor():
 		
 		velocity.y += GRAVITY * delta
 
 	# Lógica para o pulo
-	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking:
+	if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
 		is_jumping = true
-		velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY 
+		can_jump = false  # Impede pulos até que o cooldown termine
+		jump_timer = jump_cooldown_time  # Reseta o temporizador para o cooldown
 		#adicionando animação de fumaça quando pular
 		var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
 		get_parent().add_child(particulaPulo)
 		particulaPulo.global_position = self.global_position  # Define a posição no local do jogador
 		var fumaca_pulo = particulaPulo.get_node("fumaca_pulo")
 		fumaca_pulo.play("fumaca_pulo")  # Substitua pelo nome da animação correta
-		
-		
 		
 		
 	elif is_on_floor():
@@ -137,8 +143,6 @@ func _physics_process(delta: float) -> void:
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
-
-		
 	
 	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
 		if animation.animation == "especial":
@@ -159,7 +163,6 @@ func _on_anim_animation_finished() -> void:
 			
 			#retirando as animações de particulas do personagem
 	for child in get_parent().get_children():
-		print("Child:", child)  # Imprime o nó filho
 		if child is Sprite2D:
 			for grandchild in child.get_children():  # Itera sobre os filhos do Sprite2D
 				grandchild.queue_free()
