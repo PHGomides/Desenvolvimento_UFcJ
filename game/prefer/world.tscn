@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=27 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -19,6 +19,68 @@ size = Vector2(247, 992)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
 size = Vector2(1727, 128)
+
+[sub_resource type="Gradient" id="Gradient_s6q3d"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.588235)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1on15"]
+gradient = SubResource("Gradient_s6q3d")
+
+[sub_resource type="Curve" id="Curve_jonkx"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0j3lb"]
+max_value = 30.0
+_data = [Vector2(0, 18.1319), 0.0, 108.791, 0, 0, Vector2(0.25, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_wyrej"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_x2upe"]
+curve_x = SubResource("Curve_jonkx")
+curve_y = SubResource("Curve_0j3lb")
+curve_z = SubResource("Curve_wyrej")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ybmjr"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(2000, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.2
+scale_over_velocity_curve = SubResource("CurveXYZTexture_x2upe")
+color_initial_ramp = SubResource("GradientTexture1D_1on15")
+collision_mode = 2
+sub_emitter_mode = 3
+sub_emitter_amount_at_collision = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_11rdb"]
+polygon = PackedVector2Array(-1141, 804, -1141, 1153, 826.389, 1157.26, 2551, 1161, 2530, 847, 789.26, 826.61)
+
+[sub_resource type="Curve" id="Curve_jeqtr"]
+_data = [Vector2(0, 0.021978), 0.0, 2.5033, 0, 0, Vector2(0.507463, 0.648352), 0.0490845, 0.0490845, 0, 0, Vector2(1, 0.043956), -3.82857, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_6fev4"]
+curve = SubResource("Curve_jeqtr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tfgtc"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -98.75, 0)
+direction = Vector3(1, -1, 0)
+spread = 0.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 200, 0)
+scale_min = 4.0
+scale_max = 4.0
+alpha_curve = SubResource("CurveTexture_6fev4")
+turbulence_noise_strength = 20.0
 
 [node name="world" type="Node2D"]
 position = Vector2(20, 123)
@@ -174,5 +236,26 @@ theme_override_fonts/font = ExtResource("9_6viyd")
 theme_override_font_sizes/font_size = 55
 text = "60
 "
+
+[node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
+position = Vector2(754, -173)
+amount = 2000
+sub_emitter = NodePath("../GPUParticles2D_SplashChão")
+process_material = SubResource("ParticleProcessMaterial_ybmjr")
+preprocess = 0.5
+collision_base_size = 80.0
+visibility_rect = Rect2(-350, -200, 700, 1000)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-86, 12)
+occluder = SubResource("OccluderPolygon2D_11rdb")
+
+[node name="GPUParticles2D_SplashChão" type="GPUParticles2D" parent="."]
+position = Vector2(803, 447)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_tfgtc")
+lifetime = 0.5
+speed_scale = 3.56
+visibility_rect = Rect2(-100, -133.255, 200, 574.265)
 
 [connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]
