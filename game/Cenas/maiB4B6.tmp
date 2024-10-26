@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=39 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://.godot/main_menu.gd" id="1_hk2d7"]
 [ext_resource type="VideoStream" path="res://.godot/menuvideo/menu main v3.ogv" id="1_tulvr"]
@@ -32,11 +32,9 @@
 [ext_resource type="Script" path="res://Cenas/menu_selecao_mapa.gd" id="26_f2vi0"]
 [ext_resource type="Texture2D" uid="uid://o60yxho17of0" path="res://Assests/menu main/MenuEscolhaMapa/mapaEstacionamento.png" id="26_rbb84"]
 [ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
-[ext_resource type="Script" path="res://Cenas/mapaPreview.gd" id="27_wmn3i"]
-[ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
+[ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="28_sq3sk"]
+[ext_resource type="Script" path="res://Cenas/BotaoSelecionarMapa.gd" id="29_wr7y3"]
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
-[ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
-[ext_resource type="Texture2D" uid="uid://cmsodir305fih" path="res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png" id="32_iq5tj"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -49,13 +47,6 @@ thickness = 10
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_21j1v"]
 color = Color(1, 1, 1, 1)
 thickness = 10
-
-[sub_resource type="GDScript" id="GDScript_gdy4j"]
-script/source = "extends TextureButton
-
-func _ready():
-	self.grab_focus()
-"
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -84,7 +75,6 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -690,6 +680,7 @@ clear_button_enabled = true
 caret_blink_interval = 0.1
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -698,20 +689,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("26_f2vi0")
 
-[node name="mapaPreview" type="Control" parent="MenuSelecaoMapa"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("27_wmn3i")
-
-[node name="TextureRect" type="TextureRect" parent="MenuSelecaoMapa/mapaPreview"]
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoMapa"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 666.0
+offset_left = -274.0
 offset_top = 171.255
-offset_right = 1214.0
+offset_right = 274.0
 offset_bottom = 585.255
 grow_horizontal = 2
 texture = ExtResource("26_rbb84")
@@ -730,7 +715,6 @@ offset_bottom = 179.455
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
-alignment = 1
 
 [node name="mapa1" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -738,32 +722,31 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_e4bqd")
-texture_focused = ExtResource("30_qvnfu")
-script = SubResource("GDScript_gdy4j")
+script = ExtResource("29_wr7y3")
+mapa_id = 1
+textura_selecionado = ExtResource("30_qvnfu")
+textura_normal = ExtResource("27_e4bqd")
 
 [node name="mapa2" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("30_ax1sj")
-texture_focused = ExtResource("30_qvnfu")
+texture_normal = ExtResource("27_e4bqd")
 
 [node name="mapa3" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("30_urfyc")
-texture_focused = ExtResource("30_qvnfu")
+texture_normal = ExtResource("28_sq3sk")
 
 [node name="mapa4" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("32_iq5tj")
-texture_focused = ExtResource("30_qvnfu")
+texture_normal = ExtResource("27_e4bqd")
 
 [node name="mapa5" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -771,7 +754,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_e4bqd")
-texture_focused = ExtResource("30_qvnfu")
 
 [node name="buttons" type="VBoxContainer" parent="MenuSelecaoMapa"]
 layout_mode = 1
@@ -876,19 +858,19 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [2]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [3]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [4]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [5]]
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_entered_btn"]
