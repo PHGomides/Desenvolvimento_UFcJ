@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=27 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -12,9 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
-[ext_resource type="Script" path="res://Scripts/HUD/Tempo_hud.gd" id="11_f64d2"]
-[ext_resource type="Texture2D" uid="uid://b03cm5lrwvljx" path="res://Assests/hud/lifeEmpty.png" id="14_cadfc"]
-[ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="15_vdnxh"]
+[ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_f64d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -238,27 +236,6 @@ theme_override_fonts/font = ExtResource("9_6viyd")
 theme_override_font_sizes/font_size = 55
 text = "60
 "
-
-[node name="TextureProgressBar_play1" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 2
-offset_left = -556.685
-offset_top = -0.16
-offset_right = -29.685
-offset_bottom = 55.84
-value = 50.0
-texture_under = ExtResource("14_cadfc")
-texture_progress = ExtResource("15_vdnxh")
-
-[node name="TextureProgressBar_play2" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 0
-offset_left = 64.315
-offset_top = -0.16
-offset_right = 591.315
-offset_bottom = 39.84
-value = 56.0
-fill_mode = 1
-texture_under = ExtResource("14_cadfc")
-texture_progress = ExtResource("15_vdnxh")
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)

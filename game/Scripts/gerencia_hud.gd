@@ -1,9 +1,12 @@
 extends Control
 
+
 @onready var tempo_label = $MarginContainer/Tempo_container/Tempo_label as Label
 @onready var clocktimer = $clocktimer as Timer
-@export_range(0,90) var default_seconds := 90
+
 var seconds = 0
+@export_range(0,90) var default_seconds := 90
+
 signal time_is_up()
   # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
