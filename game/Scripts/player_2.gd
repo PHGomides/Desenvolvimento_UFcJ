@@ -26,7 +26,7 @@ var special_could = true
 
 # Variável para controlar o ataque opcional
 var opcional_attack = false
-var current_direction = 1 #direção do personagem olhando pra direita
+var current_direction = -1 #direção do personagem olhando pra esquerda
 
 # Janela de combo (tempo permitido para encadear ataques)
 
@@ -37,7 +37,9 @@ var current_direction = 1 #direção do personagem olhando pra direita
 
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
 
-
+func _ready() -> void:#direçao inicial
+	# Ajusta a escala para que o personagem inicie virado para a esquerda
+	animation.scale.x = abs(animation.scale.x) * current_direction
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
@@ -110,9 +112,11 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("3 foi pressionado")
 		if current_direction == 1:
-			animationEspecial.position.x = 691.109
+			animationEspecial.position.x = 408
+			animationEspecial.flip_h = false
 		else:
-			animationEspecial.position.x = -691.109
+			animationEspecial.position.x = -350.45
+			animationEspecial.flip_h = true
 			
 		animation.play("especial")
 		animationEspecial.play("especialNeemias")
@@ -123,7 +127,7 @@ func _physics_process(delta: float) -> void:
 	# Movimento só é permitido se não estiver atacando
 	if not is_attacking:
 		var direction := Input.get_axis("ui_A", "ui_D")
-
+		
 		if direction != 0:
 			current_direction = direction
 			velocity.x = direction * SPEED
