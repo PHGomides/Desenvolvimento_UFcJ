@@ -1,0 +1,9 @@
+TextureRect
+Control
+GPUParticles2D
+LightOccluder2D
+AnimatedSprite2D
+Sprite2D
+AnimationPlayer
+AnimationTree
+Camera2D
