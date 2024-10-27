@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55oovk84y2kq"
-path="res://.godot/imported/lifeDamage.png-2ad327337893330f7f4325b8c9906137.ctex"
+uid="uid://cemfmdwx0pjsb"
+path="res://.godot/imported/_0000_chão.png-0f870511e9fdc3814bf20fb6d001a1c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/hud/lifeDamage.png"
-dest_files=["res://.godot/imported/lifeDamage.png-2ad327337893330f7f4325b8c9906137.ctex"]
+source_file="res://Assests/FachadaAccets/_0000_chão.png"
+dest_files=["res://.godot/imported/_0000_chão.png-0f870511e9fdc3814bf20fb6d001a1c1.ctex"]
 
 [params]
 

@@ -1,0 +1,174 @@
+[gd_scene load_steps=14 format=3 uid="uid://dsg2okkgyy5d8"]
+
+[ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_8y561"]
+[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_sfrg6"]
+[ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_c1046"]
+[ext_resource type="Texture2D" uid="uid://d4baqck52ii3v" path="res://Assests/FachadaAccets/_0004_fundo.png" id="5_5ns0x"]
+[ext_resource type="Texture2D" uid="uid://bbagw1ido3t40" path="res://Assests/FachadaAccets/_0003_arvores.png" id="6_hueqq"]
+[ext_resource type="Texture2D" uid="uid://pt8l4fpqa6gv" path="res://Assests/FachadaAccets/_0002_estruturaEntrada.png" id="7_71xp0"]
+[ext_resource type="Texture2D" uid="uid://dnhyt6usv2x36" path="res://Assests/FachadaAccets/_0001_arbustos.png" id="8_sqbmt"]
+[ext_resource type="Texture2D" uid="uid://cemfmdwx0pjsb" path="res://Assests/FachadaAccets/_0000_chão.png" id="9_txkvd"]
+[ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="10_4kfs0"]
+[ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_mbmho"]
+[ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="12_yawlf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyb1w"]
+size = Vector2(247, 992)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vjw4"]
+size = Vector2(1727, 128)
+
+[node name="FrenteUFj" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -91.89)
+zoom = Vector2(0.955, 0.955)
+limit_left = -630
+limit_right = 1765
+limit_bottom = 1200
+script = ExtResource("1_8y561")
+margin = Vector2(0, 0)
+
+[node name="player" parent="." groups=["players"] instance=ExtResource("2_sfrg6")]
+z_index = 1
+position = Vector2(628, 535)
+scale = Vector2(1.38, 1.38)
+
+[node name="player2" parent="." groups=["players"] instance=ExtResource("3_c1046")]
+z_index = 1
+position = Vector2(906.605, 539)
+scale = Vector2(1.26, 1.26)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-222, 11)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-234, -77)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1997.25, 466)
+shape = SubResource("RectangleShape2D_qyb1w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-541, 427)
+shape = SubResource("RectangleShape2D_qyb1w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Chão" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(434, 496)
+scale = Vector2(2.45762, 2.48784)
+texture = ExtResource("9_txkvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(801.27, 1002.14)
+scale = Vector2(-1.87, -1.87)
+shape = SubResource("RectangleShape2D_5vjw4")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.3, 1)
+
+[node name="Fundo05" type="Sprite2D" parent="Background/05"]
+position = Vector2(1243, 427)
+scale = Vector2(1.66194, 1.66194)
+texture = ExtResource("5_5ns0x")
+
+[node name="04" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.4, 1)
+
+[node name="Fundo04" type="Sprite2D" parent="Background/04"]
+position = Vector2(986, 396)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("6_hueqq")
+
+[node name="03" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.5, 1)
+
+[node name="Fundo03" type="Sprite2D" parent="Background/03"]
+position = Vector2(987.457, 570.031)
+scale = Vector2(1.86719, 1.86719)
+texture = ExtResource("7_71xp0")
+
+[node name="02" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(277, 771)
+motion_scale = Vector2(0.6, 1)
+
+[node name="Fundo02" type="Sprite2D" parent="Background/02"]
+position = Vector2(467.2, -281.413)
+scale = Vector2(1.41122, 1.41122)
+texture = ExtResource("8_sqbmt")
+
+[node name="09" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.7, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/09"]
+position = Vector2(1002, 606)
+scale = Vector2(1.97213, 1.97213)
+texture = ExtResource("9_txkvd")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_right = 510.0
+offset_bottom = 122.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_4kfs0")
+
+[node name="control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.315
+offset_top = 46.16
+offset_right = 29.685
+offset_bottom = 65.16
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("11_mbmho")
+
+[node name="clocktimer" type="Timer" parent="HUD/control"]
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 8
+
+[node name="Tempo_container" type="HBoxContainer" parent="HUD/control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("12_yawlf")
+theme_override_font_sizes/font_size = 55
+text = "60
+"
+
+[connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]

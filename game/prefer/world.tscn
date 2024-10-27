@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo_hud.gd" id="11_f64d2"]
-[ext_resource type="Texture2D" uid="uid://b03cm5lrwvljx" path="res://Assests/hud/lifeEmpty.png" id="14_cadfc"]
+[ext_resource type="Texture2D" uid="uid://kvu2wrgxjfsb" path="res://Assests/hud/lifeEmpty.png" id="14_cadfc"]
 [ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="15_vdnxh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
@@ -84,7 +84,7 @@ scale_max = 4.0
 alpha_curve = SubResource("CurveTexture_6fev4")
 turbulence_noise_strength = 20.0
 
-[node name="world" type="Node2D"]
+[node name="Estacionas" type="Node2D"]
 position = Vector2(20, 123)
 script = ExtResource("1_kywhc")
 
