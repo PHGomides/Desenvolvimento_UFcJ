@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730051629
+::res://::1730053897
 default_bus_layout.tres::AudioBusLayout::7673916110365846087::1729872169::0::1::::<><>::
 icon.svg::CompressedTexture2D::2478846410236958265::1729377650::1729385884::1::::<><>::
 mainMenuAudio.tscn::PackedScene::-1::1729209130::0::1::::<><>::
 ::res://Assests/::1729650916
 ::res://Assests/Fontes/::1729385884
 RevMiniPixel.ttf::FontFile::3555254568890963768::1729377650::1729385884::1::::<><>::
-::res://Assests/hud/::1730053374
+::res://Assests/hud/::1730053413
 HUD.png::CompressedTexture2D::349922385087773416::1730046389::1730051633::1::::<><>::
 life.png::CompressedTexture2D::3894482384699635451::1730053342::1730053413::1::::<><>::
 lifeFull.png::CompressedTexture2D::5065018781704272952::1730053374::1730053413::1::::<><>::
@@ -18,7 +18,7 @@ _0002_carros-atrás.png::CompressedTexture2D::3959183577633247955::1729401185::1
 _0003_arvores-atras-comp.png::CompressedTexture2D::8443661204948222031::1729377650::1729385885::1::::<><>::
 _0004_cenario.png::CompressedTexture2D::1087974053802254849::1729377650::1729385885::1::::<><>::
 _0005_chão.png::CompressedTexture2D::6237867066345999978::1729377650::1729385885::1::::<><>::
-::res://Assests/menu main/::1729602821
+::res://Assests/menu main/::1730053887
 _0002s_0000s_0000_1-vs-1.png::CompressedTexture2D::2780723799238957644::1728647674::1729602821::1::::<><>::
 _0002s_0000s_0001_Chaveamento.png::CompressedTexture2D::1237599902670646119::1728647682::1729602821::1::::<><>::
 _0002s_0000s_0002_opções.png::CompressedTexture2D::4820550055017129619::1728647691::1729602821::1::::<><>::
@@ -28,18 +28,21 @@ hover 1vs1.png::CompressedTexture2D::3511353287829319039::1728662778::1729602821
 hover Chaveamento.png::CompressedTexture2D::5108000902194792220::1728662801::1729602821::1::::<><>::
 hover opções.png::CompressedTexture2D::4100127562864712675::1728662808::1729602821::1::::<><>::
 hover sair.png::CompressedTexture2D::4493875509831095768::1728662820::1729602821::1::::<><>::
-::res://Assests/menu main/MenuEscolhaMapa/::1729968844
+::res://Assests/menu main/MenuEscolhaMapa/::1730053675
 mapa1Btn.png::CompressedTexture2D::4052322141901119388::1729385277::1729602821::1::::<><>::
 mapa2Btn.png::CompressedTexture2D::2044646967850241079::1729968750::1729968844::1::::<><>::
 mapa4Btn.png::CompressedTexture2D::5653122133651373547::1729968702::1729968844::1::::<><>::
+mapa5Btn - Copia.png::CompressedTexture2D::5836974116298626242::1729385708::1730053675::1::::<><>::
 mapa5Btn.png::CompressedTexture2D::9199101341968074576::1729968793::1729968844::1::::<><>::
-mapaHover.png::CompressedTexture2D::249954950679072724::1729385708::1729968844::1::::<><>::
 mapaRandomBtn.png::CompressedTexture2D::5298692772839957303::1729385328::1729602821::1::::<><>::
 ::res://Assests/menu main/MenuEscolhaMapa/Preview/::1729968844
 Preview_Estacionamento.png::CompressedTexture2D::5006441460357237855::1729968470::1729968844::1::::<><>::
 Preview_Fachada.png::CompressedTexture2D::22620888480999808::1729968456::1729968844::1::::<><>::
 Preview_FilaCaj.png::CompressedTexture2D::6183183650079589075::1729968464::1729968844::1::::<><>::
 Preview_RU.png::CompressedTexture2D::977484314633363464::1729968447::1729968844::1::::<><>::
+::res://Assests/menu main/menuvideo/::1729602798
+menu main v2.ogv::VideoStreamTheora::-1::1728589609::0::1::::<><>::
+menu main v3.ogv::VideoStreamTheora::-1::1728604646::0::1::::<><>::
 ::res://Assests/menu main/subMenu1v1/::1729602821
 btnIniciar.png::CompressedTexture2D::8068614289638420479::1729181130::1729602821::1::::<><>::
 btnVoltar.png::CompressedTexture2D::9138708841751658155::1729134248::1729602821::1::::<><>::
