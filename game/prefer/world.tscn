@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
-[ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="11_f64d2"]
+[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="11_f64d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
