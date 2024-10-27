@@ -1,329 +1,670 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730053897
-default_bus_layout.tres::AudioBusLayout::7673916110365846087::1729872169::0::1::::<><>::
-icon.svg::CompressedTexture2D::2478846410236958265::1729377650::1729385884::1::::<><>::
-mainMenuAudio.tscn::PackedScene::-1::1729209130::0::1::::<><>::
-::res://Assests/::1729650916
-::res://Assests/Fontes/::1729385884
-RevMiniPixel.ttf::FontFile::3555254568890963768::1729377650::1729385884::1::::<><>::
-::res://Assests/hud/::1730053413
-HUD.png::CompressedTexture2D::349922385087773416::1730046389::1730051633::1::::<><>::
-life.png::CompressedTexture2D::3894482384699635451::1730053342::1730053413::1::::<><>::
-lifeFull.png::CompressedTexture2D::5065018781704272952::1730053374::1730053413::1::::<><>::
-main_menu.tscn::PackedScene::-1::1729602555::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/menuvideo/menu main v3.ogv<>res://.godot/v_box_container.gd<>uid://bm57v7luifu4i::::res://assetss/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://assetss/menu main/_0002s_0000s_0000_1-vs-1.png<>uid://bqa6qf3mywvsx::::res://assetss/menu main/hover 1vs1.png<>res://.godot/button.gd<>uid://caxd0w6bke5dv::::res://assetss/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://assetss/menu main/hover opções.png<>uid://rvrdbs523s3x::::res://assetss/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://assetss/menu main/hover Chaveamento.png<>uid://cgibdukfg6s6n::::res://assetss/menu main/_0002s_0000s_0003_sair.png<>uid://b5a4qc5cq6mdk::::res://assetss/menu main/hover sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://crhxta14is3it::::res://assetss/menu main/subMenu1v1/VS.png<>uid://dm7q5sxcwioqh::::res://assetss/menu main/subMenu1v1/btnIniciar.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://d3g4g1s37w1el::::res://assetss/menu main/subMenu1v1/btnVoltar.png<>uid://c8edt864hgstm::::res://assetss/menu main/subMenu1v1/p1.png<>uid://t0bfd8edgial::::res://assetss/menu main/subMenu1v1/personagem.png<>uid://dkr0c7os2ki81::::res://assetss/menu main/subMenu1v1/p2.png<>uid://bexw55fgtu2wj::::res://assetss/menu main/subMenu1v1/personagemHover.png<>uid://mw0h4dd841jn::::res://assetss/menu main/subMenu1v1/personagem2Hover.png<>uid://b17d54hgcxd2b::::res://assetss/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://assetss/menu main/subMenuOpcoes/sliderGrab.png<>uid://o60yxho17of0::::res://assetss/menu main/MenuEscolhaMapa/mapaEstacionamento.png<>uid://dgewi5jlh3y7::::res://assetss/menu main/subMenu1v1/btnVoltarHover.png<>uid://bxy8fhudg4pjg::::res://assetss/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://6xellc821ygn::::res://assetss/menu main/subMenuChaveamento/MenuModoChaveamento.png<>uid://chqyxwmrjoy28::::res://assetss/menu main/MenuEscolhaMapa/mapaRandomBtn.png
-::res://Assests/MapaEstacionamento/::1729401187
-_0000_carros-frente.png::CompressedTexture2D::525638357989562737::1729400812::1729400819::1::::<><>::
-_0001_arvores.png::CompressedTexture2D::6884884410596471422::1729377650::1729385885::1::::<><>::
-_0002_carros-atrás.png::CompressedTexture2D::3959183577633247955::1729401185::1729401187::1::::<><>::
-_0003_arvores-atras-comp.png::CompressedTexture2D::8443661204948222031::1729377650::1729385885::1::::<><>::
-_0004_cenario.png::CompressedTexture2D::1087974053802254849::1729377650::1729385885::1::::<><>::
-_0005_chão.png::CompressedTexture2D::6237867066345999978::1729377650::1729385885::1::::<><>::
-::res://Assests/menu main/::1730053887
-_0002s_0000s_0000_1-vs-1.png::CompressedTexture2D::2780723799238957644::1728647674::1729602821::1::::<><>::
-_0002s_0000s_0001_Chaveamento.png::CompressedTexture2D::1237599902670646119::1728647682::1729602821::1::::<><>::
-_0002s_0000s_0002_opções.png::CompressedTexture2D::4820550055017129619::1728647691::1729602821::1::::<><>::
-_0002s_0000s_0003_sair.png::CompressedTexture2D::5210556591772838251::1728647699::1729602821::1::::<><>::
-_0002s_0000_Agrupar-2.png::CompressedTexture2D::3292600284071485594::1728647665::1729602821::1::::<><>::
-hover 1vs1.png::CompressedTexture2D::3511353287829319039::1728662778::1729602821::1::::<><>::
-hover Chaveamento.png::CompressedTexture2D::5108000902194792220::1728662801::1729602821::1::::<><>::
-hover opções.png::CompressedTexture2D::4100127562864712675::1728662808::1729602821::1::::<><>::
-hover sair.png::CompressedTexture2D::4493875509831095768::1728662820::1729602821::1::::<><>::
-::res://Assests/menu main/MenuEscolhaMapa/::1730053675
-mapa1Btn.png::CompressedTexture2D::4052322141901119388::1729385277::1729602821::1::::<><>::
-mapa2Btn.png::CompressedTexture2D::2044646967850241079::1729968750::1729968844::1::::<><>::
-mapa4Btn.png::CompressedTexture2D::5653122133651373547::1729968702::1729968844::1::::<><>::
-mapa5Btn - Copia.png::CompressedTexture2D::5836974116298626242::1729385708::1730053675::1::::<><>::
-mapa5Btn.png::CompressedTexture2D::9199101341968074576::1729968793::1729968844::1::::<><>::
-mapaRandomBtn.png::CompressedTexture2D::5298692772839957303::1729385328::1729602821::1::::<><>::
-::res://Assests/menu main/MenuEscolhaMapa/Preview/::1729968844
-Preview_Estacionamento.png::CompressedTexture2D::5006441460357237855::1729968470::1729968844::1::::<><>::
-Preview_Fachada.png::CompressedTexture2D::22620888480999808::1729968456::1729968844::1::::<><>::
-Preview_FilaCaj.png::CompressedTexture2D::6183183650079589075::1729968464::1729968844::1::::<><>::
-Preview_RU.png::CompressedTexture2D::977484314633363464::1729968447::1729968844::1::::<><>::
-::res://Assests/menu main/menuvideo/::1729602798
-menu main v2.ogv::VideoStreamTheora::-1::1728589609::0::1::::<><>::
-menu main v3.ogv::VideoStreamTheora::-1::1728604646::0::1::::<><>::
-::res://Assests/menu main/subMenu1v1/::1729602821
-btnIniciar.png::CompressedTexture2D::8068614289638420479::1729181130::1729602821::1::::<><>::
-btnVoltar.png::CompressedTexture2D::9138708841751658155::1729134248::1729602821::1::::<><>::
-btnVoltarHover.png::CompressedTexture2D::223235419830289864::1729289411::1729602821::1::::<><>::
-p1.png::CompressedTexture2D::7097548582006732890::1729523099::1729602821::1::::<><>::
-p2.png::CompressedTexture2D::7897768108914403164::1729523093::1729602821::1::::<><>::
-personagem2Hover.png::CompressedTexture2D::889214387615342527::1729177901::1729602821::1::::<><>::
-personagem.png::CompressedTexture2D::1385267327670992587::1729176877::1729602821::1::::<><>::
-personagemHover.png::CompressedTexture2D::2716047677969961905::1729177083::1729602821::1::::<><>::
-VS.png::CompressedTexture2D::5981932815922965699::1729135186::1729602821::1::::<><>::
-::res://Assests/menu main/subMenuChaveamento/::1729602821
-MenuModoChaveamento.png::CompressedTexture2D::2223597935209358809::1729363293::1729602821::1::::<><>::
-::res://Assests/menu main/subMenuOpcoes/::1729602821
-menuOpcoes.png::CompressedTexture2D::4277627965474280827::1729289666::1729602821::1::::<><>::
-sliderGrab.png::CompressedTexture2D::7721360842279616436::1729288989::1729602821::1::::<><>::
-::res://Assests/Michel Sprites Pronto/::1729483174
-::res://Assests/Michel Sprites Pronto/Michel Andando/::1729385884
-1.png::CompressedTexture2D::6733884004924597081::1729377650::1729385884::1::::<><>::
-2.png::CompressedTexture2D::3323210096195376459::1729377650::1729385884::1::::<><>::
-3.png::CompressedTexture2D::3318918592331429764::1729377650::1729385884::1::::<><>::
-4.png::CompressedTexture2D::3796571954471910535::1729377650::1729385884::1::::<><>::
-5.png::CompressedTexture2D::5642127739869771529::1729377650::1729385884::1::::<><>::
-6.png::CompressedTexture2D::4306134187762433390::1729377650::1729385884::1::::<><>::
-7.png::CompressedTexture2D::7526649012926806897::1729377650::1729385884::1::::<><>::
-8.png::CompressedTexture2D::816369795628616341::1729377650::1729385884::1::::<><>::
-9.png::CompressedTexture2D::4982787396295232399::1729377650::1729385884::1::::<><>::
-10.png::CompressedTexture2D::7822018493196901339::1729377650::1729385884::1::::<><>::
-11.png::CompressedTexture2D::4097004609198090887::1729377650::1729385884::1::::<><>::
-12.png::CompressedTexture2D::1721279873738801338::1729377650::1729385884::1::::<><>::
-13.png::CompressedTexture2D::2385335042250644363::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/michel chute/::1729385884
-_0000s_0000_1.png::CompressedTexture2D::7976980355688695277::1729377650::1729385884::1::::<><>::
-_0000s_0001_2.png::CompressedTexture2D::1149960632549435237::1729377650::1729385884::1::::<><>::
-_0000s_0002_3.png::CompressedTexture2D::502031237155651662::1729377650::1729385884::1::::<><>::
-_0000s_0003_4.png::CompressedTexture2D::4378749301410532262::1729377650::1729385884::1::::<><>::
-_0000s_0004_5.png::CompressedTexture2D::472343856528828120::1729377650::1729385884::1::::<><>::
-_0000s_0005_6.png::CompressedTexture2D::3763800327208642345::1729377650::1729385884::1::::<><>::
-_0000s_0006_7.png::CompressedTexture2D::4254113456253842404::1729377650::1729385884::1::::<><>::
-_0000s_0007_8.png::CompressedTexture2D::5620425997040372811::1729377650::1729385884::1::::<><>::
-_0000s_0008_9.png::CompressedTexture2D::1228788594811910274::1729377650::1729385884::1::::<><>::
-_0000s_0009_10.png::CompressedTexture2D::8978727824833326356::1729377650::1729385884::1::::<><>::
-_0000s_0010_11.png::CompressedTexture2D::8221782835057213189::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel comemoração/::1729385884
-_0000s_0000_10.png::CompressedTexture2D::7411550583080999469::1729377650::1729385884::1::::<><>::
-_0000s_0001_9.png::CompressedTexture2D::1354441946080419701::1729377650::1729385884::1::::<><>::
-_0000s_0002_8.png::CompressedTexture2D::8498373381678612550::1729377650::1729385884::1::::<><>::
-_0000s_0003_7.png::CompressedTexture2D::4496949868535144523::1729377650::1729385884::1::::<><>::
-_0000s_0004_6.png::CompressedTexture2D::7070428676148055316::1729377650::1729385884::1::::<><>::
-_0000s_0005_5.png::CompressedTexture2D::3068597573507146833::1729377650::1729385884::1::::<><>::
-_0000s_0006_4.png::CompressedTexture2D::3586025257604649808::1729377650::1729385884::1::::<><>::
-_0000s_0007_3.png::CompressedTexture2D::5023325344796954294::1729377650::1729385884::1::::<><>::
-_0000s_0008_2.png::CompressedTexture2D::3420120295415668068::1729377650::1729385884::1::::<><>::
-_0000s_0009_1.png::CompressedTexture2D::5854331153739087290::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel dano/::1729385884
-_0000s_0000_8.png::CompressedTexture2D::2637354644793779491::1729377650::1729385884::1::::<><>::
-_0000s_0001_7.png::CompressedTexture2D::3145723459235929408::1729377650::1729385884::1::::<><>::
-_0000s_0002_6.png::CompressedTexture2D::7670175746755451673::1729377650::1729385884::1::::<><>::
-_0000s_0003_5.png::CompressedTexture2D::8344583747581269228::1729377650::1729385884::1::::<><>::
-_0000s_0004_4.png::CompressedTexture2D::1697136000926449119::1729377650::1729385884::1::::<><>::
-_0000s_0005_3.png::CompressedTexture2D::4796834587676407462::1729377650::1729385884::1::::<><>::
-_0000s_0006_2.png::CompressedTexture2D::3473267372012491469::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel Defesa/::1729385884
-_0000s_0000_7.png::CompressedTexture2D::1686277281266109541::1729377650::1729385884::1::::<><>::
-_0000s_0001_6.png::CompressedTexture2D::1436383619954349329::1729377650::1729385884::1::::<><>::
-_0000s_0002_5.png::CompressedTexture2D::2135916243412614514::1729377650::1729385884::1::::<><>::
-_0000s_0003_4.png::CompressedTexture2D::3448751342757038079::1729377650::1729385884::1::::<><>::
-_0000s_0004_3.png::CompressedTexture2D::9046204879074253796::1729377650::1729385884::1::::<><>::
-_0000s_0005_2.png::CompressedTexture2D::436795033878815825::1729377650::1729385884::1::::<><>::
-_0000s_0006_1.png::CompressedTexture2D::1172266816338331496::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel especial/::1729385884
-_0000s_0000_11.png::CompressedTexture2D::6033953556690170834::1729377650::1729385884::1::::<><>::
-_0000s_0001_10.png::CompressedTexture2D::3279942698908137166::1729377650::1729385884::1::::<><>::
-_0000s_0002_9.png::CompressedTexture2D::5399676992038468606::1729377650::1729385884::1::::<><>::
-_0000s_0003_8.png::CompressedTexture2D::5267231144101959918::1729377650::1729385884::1::::<><>::
-_0000s_0004_7.png::CompressedTexture2D::8321053885179309080::1729377650::1729385884::1::::<><>::
-_0000s_0005_6.png::CompressedTexture2D::8544254295504264179::1729377650::1729385884::1::::<><>::
-_0000s_0006_5.png::CompressedTexture2D::6344845298714319619::1729377650::1729385884::1::::<><>::
-_0000s_0007_4.png::CompressedTexture2D::4585840239678701578::1729377650::1729385884::1::::<><>::
-_0000s_0008_3.png::CompressedTexture2D::5112052390180484988::1729377650::1729385884::1::::<><>::
-_0000s_0009_2.png::CompressedTexture2D::6933140784922352653::1729377650::1729385884::1::::<><>::
-_0000s_0010_1.png::CompressedTexture2D::8348078605222194132::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel golpe 1/::1729385884
-_0000s_0000_5.png::CompressedTexture2D::7147901659752872259::1729377650::1729385884::1::::<><>::
-_0000s_0001_4.png::CompressedTexture2D::3658652957616731895::1729377650::1729385884::1::::<><>::
-_0000s_0002_3.png::CompressedTexture2D::4686442646378883775::1729377650::1729385884::1::::<><>::
-_0000s_0003_2.png::CompressedTexture2D::1794636541629813337::1729377650::1729385884::1::::<><>::
-_0000s_0004_1.png::CompressedTexture2D::4212796254145320790::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel golpe 2/::1729385885
-_0000s_0000_5.png::CompressedTexture2D::7230756975199783384::1729377650::1729385884::1::::<><>::
-_0000s_0001_4.png::CompressedTexture2D::4536138091609128608::1729377650::1729385884::1::::<><>::
-_0000s_0002_3.png::CompressedTexture2D::5599804646269456514::1729377650::1729385884::1::::<><>::
-_0000s_0003_2.png::CompressedTexture2D::1226307586551220915::1729377650::1729385884::1::::<><>::
-_0000s_0004_1.png::CompressedTexture2D::94454194915820166::1729377650::1729385885::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel golpe 3/::1729385885
-_0000s_0000_9.png::CompressedTexture2D::685579271376095550::1729377650::1729385885::1::::<><>::
-_0000s_0001_8.png::CompressedTexture2D::7126670828871762740::1729377650::1729385884::1::::<><>::
-_0000s_0002_7.png::CompressedTexture2D::5809207878192073761::1729377650::1729385884::1::::<><>::
-_0000s_0003_6.png::CompressedTexture2D::1320790630282604469::1729377650::1729385884::1::::<><>::
-_0000s_0004_5.png::CompressedTexture2D::5039999785530063112::1729377650::1729385884::1::::<><>::
-_0000s_0005_4.png::CompressedTexture2D::2710794153765300273::1729377650::1729385884::1::::<><>::
-_0000s_0006_3.png::CompressedTexture2D::2083966549339593459::1729377650::1729385884::1::::<><>::
-_0000s_0007_2.png::CompressedTexture2D::2910269462755548756::1729377650::1729385884::1::::<><>::
-_0000s_0008_1.png::CompressedTexture2D::2571397341039517988::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel idle/::1729385884
-_0000s_0000_9.png::CompressedTexture2D::1101744862437189715::1729377650::1729385884::1::::<><>::
-_0000s_0001_8.png::CompressedTexture2D::1131030584251613054::1729377650::1729385884::1::::<><>::
-_0000s_0002_7.png::CompressedTexture2D::6679272952925326623::1729377650::1729385884::1::::<><>::
-_0000s_0003_6.png::CompressedTexture2D::4930450410691418312::1729377650::1729385884::1::::<><>::
-_0000s_0004_5.png::CompressedTexture2D::2515114346950618733::1729377650::1729385884::1::::<><>::
-_0000s_0005_4.png::CompressedTexture2D::7863362762738947949::1729377650::1729385884::1::::<><>::
-_0000s_0006_3.png::CompressedTexture2D::3163510847187194203::1729377650::1729385884::1::::<><>::
-_0000s_0007_2.png::CompressedTexture2D::540475393922547950::1729377650::1729385884::1::::<><>::
-_0000s_0008_1.png::CompressedTexture2D::6517607378892033497::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/Michel pulo/::1729385884
-_0000s_0000_7.png::CompressedTexture2D::5628461651205490830::1729377650::1729385884::1::::<><>::
-_0000s_0001_6.png::CompressedTexture2D::5669937183534494163::1729377650::1729385884::1::::<><>::
-_0000s_0002_5.png::CompressedTexture2D::6657114820549902071::1729377650::1729385884::1::::<><>::
-_0000s_0003_4.png::CompressedTexture2D::7144721167359783382::1729377650::1729385884::1::::<><>::
-_0000s_0004_3.png::CompressedTexture2D::5129755175185103260::1729377650::1729385884::1::::<><>::
-_0000s_0005_2.png::CompressedTexture2D::8897449694078674745::1729377650::1729385884::1::::<><>::
-_0000s_0006_1.png::CompressedTexture2D::83463917197364605::1729377650::1729385884::1::::<><>::
-::res://Assests/Michel Sprites Pronto/michel rochaEspecial/::1729483178
-_0000_1.png::CompressedTexture2D::6608668136520148538::1729221293::1729483178::1::::<><>::
-_0001_2.png::CompressedTexture2D::7896429249683461192::1729221295::1729483178::1::::<><>::
-_0002_3.png::CompressedTexture2D::6918521420832617883::1729221297::1729483178::1::::<><>::
-_0003_4.png::CompressedTexture2D::5438319073135957029::1729221299::1729483178::1::::<><>::
-_0004_5.png::CompressedTexture2D::3202908601378707765::1729221302::1729483178::1::::<><>::
-_0005_6.png::CompressedTexture2D::5017919380981675875::1729221304::1729483178::1::::<><>::
-_0006_7.png::CompressedTexture2D::365774670925037381::1729221306::1729483178::1::::<><>::
-_0007_8.png::CompressedTexture2D::4755570456125036283::1729221308::1729483178::1::::<><>::
-_0008_9.png::CompressedTexture2D::5046929214363890322::1729221310::1729483178::1::::<><>::
-_0009_10.png::CompressedTexture2D::6123001031324574188::1729221312::1729483178::1::::<><>::
-_0010_11.png::CompressedTexture2D::4213842031045606653::1729221314::1729483178::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/::1729483430
-::res://Assests/Neemias Sprites Prontos/Neemias andando/::1729483435
-_0000s_0000_20240905_161346_073.png::CompressedTexture2D::4302309434705223183::1728501478::1729483435::1::::<><>::
-_0000s_0001_20240905_161346_071.png::CompressedTexture2D::7327581992767879291::1728501483::1729483435::1::::<><>::
-_0000s_0002_20240905_161346_069.png::CompressedTexture2D::7773083274813543575::1728501489::1729483435::1::::<><>::
-_0000s_0003_20240905_161346_067.png::CompressedTexture2D::6561716774719756160::1728501493::1729483435::1::::<><>::
-_0000s_0004_20240905_161346_065.png::CompressedTexture2D::989954927947402168::1728501498::1729483435::1::::<><>::
-_0000s_0005_20240905_161346_063.png::CompressedTexture2D::8020754578344470463::1728501502::1729483435::1::::<><>::
-_0000s_0006_20240905_161346_061.png::CompressedTexture2D::8313515619340344856::1728501506::1729483435::1::::<><>::
-_0000s_0007_20240905_161346_059.png::CompressedTexture2D::5458003339309445332::1728501511::1729483435::1::::<><>::
-_0000s_0008_20240905_161346_057.png::CompressedTexture2D::1902496482195650960::1728501514::1729483435::1::::<><>::
-_0000s_0009_20240905_161346_055.png::CompressedTexture2D::9042662019538707856::1728501518::1729483435::1::::<><>::
-_0000s_0010_20240905_161346_053.png::CompressedTexture2D::6078784333524241631::1728501522::1729483435::1::::<><>::
-_0000s_0011_20240905_161346_051.png::CompressedTexture2D::1284472438383067000::1728501526::1729483435::1::::<><>::
-_0000s_0012_20240905_161346_047.png::CompressedTexture2D::1568927734759385233::1728501529::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias dano/::1729483435
-_0000s_0000_20240905_162052_032.png::CompressedTexture2D::9057024536638638468::1728502614::1729483435::1::::<><>::
-_0000s_0001_20240905_162052_031.png::CompressedTexture2D::4435574924983320319::1728502616::1729483435::1::::<><>::
-_0000s_0002_20240905_162052_029.png::CompressedTexture2D::5217466196390183692::1728502617::1729483435::1::::<><>::
-_0000s_0003_20240905_162052_027.png::CompressedTexture2D::8989485868510311126::1728502619::1729483435::1::::<><>::
-_0000s_0004_20240905_162052_025.png::CompressedTexture2D::5588306355150047664::1728502621::1729483435::1::::<><>::
-_0000s_0005_20240905_162052_023.png::CompressedTexture2D::5534836109505133176::1728502622::1729483435::1::::<><>::
-_0000s_0006_20240905_162052_019.png::CompressedTexture2D::2092447422936576345::1728502623::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias defesa/::1729483436
-_0000s_0000_1.png::CompressedTexture2D::9199500005528038249::1729307067::1729483435::1::::<><>::
-_0000s_0001_2.png::CompressedTexture2D::721069642272992299::1729307068::1729483435::1::::<><>::
-_0000s_0002_3.png::CompressedTexture2D::2763354038721079175::1729307070::1729483435::1::::<><>::
-_0000s_0003_4.png::CompressedTexture2D::1524525393430615048::1729307071::1729483435::1::::<><>::
-_0000s_0004_5.png::CompressedTexture2D::1979046633529166611::1729307073::1729483436::1::::<><>::
-_0000s_0005_6.png::CompressedTexture2D::6961191651780656318::1729307074::1729483436::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias especial/::1729483436
-_0000s_0000_20240905_162028_045.png::CompressedTexture2D::2326233359523895828::1728500779::1729483436::1::::<><>::
-_0000s_0001_20240905_162028_041.png::CompressedTexture2D::492398065009500193::1728500781::1729483436::1::::<><>::
-_0000s_0002_20240905_162028_039.png::CompressedTexture2D::5885755053968424654::1728500783::1729483436::1::::<><>::
-_0000s_0003_20240905_162028_037.png::CompressedTexture2D::4033521442075594021::1728500786::1729483436::1::::<><>::
-_0000s_0004_20240905_162028_035.png::CompressedTexture2D::4337070061824014718::1728500789::1729483436::1::::<><>::
-_0000s_0005_20240905_162028_031.png::CompressedTexture2D::8607838707362806261::1728500791::1729483436::1::::<><>::
-_0000s_0006_20240905_162028_029.png::CompressedTexture2D::269677241025411901::1728500793::1729483436::1::::<><>::
-_0000s_0007_20240905_162028_027.png::CompressedTexture2D::8121462648577571035::1728500796::1729483436::1::::<><>::
-_0000s_0008_20240905_162028_025.png::CompressedTexture2D::4289099768086669409::1728500798::1729483436::1::::<><>::
-_0000s_0009_20240905_162028_023.png::CompressedTexture2D::169065019030611636::1728500800::1729483436::1::::<><>::
-_0000s_0010_20240905_162028_019.png::CompressedTexture2D::6960998152302387556::1728500802::1729483436::1::::<><>::
-_0000s_0011_20240905_162028_017.png::CompressedTexture2D::5182783892390533933::1728500804::1729483436::1::::<><>::
-_0000s_0012_20240905_162028_015.png::CompressedTexture2D::3298359128107803024::1728500806::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/::1729483435
-_0002s_0000_Layer-2.png::CompressedTexture2D::5322840151191080353::1729460746::1729483435::1::::<><>::
-_0002s_0001_20240905_161523_026.png::CompressedTexture2D::5688581091362910839::1729460752::1729483435::1::::<><>::
-_0002s_0002_20240905_161523_028.png::CompressedTexture2D::2339161024536074433::1729460757::1729483435::1::::<><>::
-_0002s_0003_20240905_161523_030.png::CompressedTexture2D::3242454814256111675::1729460761::1729483435::1::::<><>::
-_0002s_0004_20240905_161523_032.png::CompressedTexture2D::1401360590272942481::1729460766::1729483435::1::::<><>::
-_0002s_0005_20240905_161523_036.png::CompressedTexture2D::6374607346981145932::1729460771::1729483435::1::::<><>::
-_0002s_0006_20240905_161523_042.png::CompressedTexture2D::3860195337343308275::1729460775::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/::1729483435
-_0001s_0000_20240905_161527_027.png::CompressedTexture2D::5649083300091537871::1729460695::1729483435::1::::<><>::
-_0001s_0001_20240905_161527_029.png::CompressedTexture2D::3721710299064403508::1729460701::1729483435::1::::<><>::
-_0001s_0002_20240905_161527_031.png::CompressedTexture2D::1563085652578097638::1729460706::1729483435::1::::<><>::
-_0001s_0003_20240905_161527_033.png::CompressedTexture2D::2026962171911084332::1729460711::1729483435::1::::<><>::
-_0001s_0004_20240905_161527_035.png::CompressedTexture2D::3046572595400654940::1729460716::1729483435::1::::<><>::
-_0001s_0005_20240905_161527_039.png::CompressedTexture2D::6980674936668757949::1729460721::1729483435::1::::<><>::
-_0001s_0006_20240905_161527_041.png::CompressedTexture2D::3210739701161070322::1729460726::1729483435::1::::<><>::
-_0001s_0007_20240905_161527_043.png::CompressedTexture2D::3020936491464382641::1729460731::1729483435::1::::<><>::
-_0001s_0008_20240905_161527_045.png::CompressedTexture2D::4335396655726947022::1729460736::1729483435::1::::<><>::
-_0001s_0009_20240905_161527_047.png::CompressedTexture2D::807321415601154595::1729460741::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/::1729483435
-_0000s_0000_20240905_161532_023.png::CompressedTexture2D::57114183933357869::1729460653::1729483435::1::::<><>::
-_0000s_0001_20240905_161532_027.png::CompressedTexture2D::8208474782109296385::1729460658::1729483435::1::::<><>::
-_0000s_0002_20240905_161532_031.png::CompressedTexture2D::323058550122107656::1729460663::1729483435::1::::<><>::
-_0000s_0003_20240905_161532_033.png::CompressedTexture2D::7264670971624521876::1729460668::1729483435::1::::<><>::
-_0000s_0004_20240905_161532_037.png::CompressedTexture2D::4183516897847690251::1729460672::1729483435::1::::<><>::
-_0000s_0005_20240905_161532_041.png::CompressedTexture2D::8502633452105417402::1729460677::1729483435::1::::<><>::
-_0000s_0006_20240905_161532_045.png::CompressedTexture2D::5799913409175534045::1729460681::1729483435::1::::<><>::
-_0000s_0007_20240905_161532_047.png::CompressedTexture2D::4938045750202729808::1729460686::1729483435::1::::<><>::
-_0000s_0008_20240905_161532_049.png::CompressedTexture2D::6449671226468401499::1729460690::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias parado/::1729483435
-_0000s_0000_20240905_161311_058.png::CompressedTexture2D::5779311099383375917::1728502206::1729483435::1::::<><>::
-_0000s_0001_20240905_161311_056.png::CompressedTexture2D::4652366294308325634::1728502208::1729483435::1::::<><>::
-_0000s_0002_20240905_161311_052.png::CompressedTexture2D::7812856023426229320::1728502210::1729483435::1::::<><>::
-_0000s_0003_20240905_161311_044.png::CompressedTexture2D::6553001033502582051::1728502211::1729483435::1::::<><>::
-_0000s_0004_20240905_161311_034.png::CompressedTexture2D::481299770131618138::1728502213::1729483435::1::::<><>::
-_0000s_0005_20240905_161311_030.png::CompressedTexture2D::8897123778691370200::1728502214::1729483435::1::::<><>::
-_0000s_0006_20240905_161311_026.png::CompressedTexture2D::7004975283046589212::1728502215::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias pulo/::1729483435
-_0000s_0000_20240905_161421_030.png::CompressedTexture2D::6402466219521076345::1729462609::1729483435::1::::<><>::
-_0000s_0001_20240905_161421_034.png::CompressedTexture2D::28022477553587277::1729462611::1729483435::1::::<><>::
-_0000s_0002_20240905_161421_038.png::CompressedTexture2D::4839238723842743526::1729462612::1729483435::1::::<><>::
-_0000s_0003_20240905_161421_042.png::CompressedTexture2D::1786661196751569836::1729462613::1729483435::1::::<><>::
-_0000s_0004_20240905_161421_046.png::CompressedTexture2D::8295595501201520959::1729462614::1729483435::1::::<><>::
-_0000s_0005_20240905_161421_050.png::CompressedTexture2D::5782555689911522451::1729462616::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/::1729483435
-_0000s_0000_20240905_161654_022.png::CompressedTexture2D::1710522554109725211::1729462981::1729483435::1::::<><>::
-_0000s_0001_20240905_161654_028.png::CompressedTexture2D::5527668599436594126::1729462983::1729483435::1::::<><>::
-_0000s_0002_20240905_161654_030.png::CompressedTexture2D::5169600874743436332::1729462985::1729483435::1::::<><>::
-_0000s_0003_20240905_161654_034.png::CompressedTexture2D::5965863451530850345::1729462986::1729483435::1::::<><>::
-_0000s_0004_20240905_161654_036.png::CompressedTexture2D::915998555733113127::1729462988::1729483435::1::::<><>::
-_0000s_0005_20240905_161654_040.png::CompressedTexture2D::1604687993018497140::1729462990::1729483435::1::::<><>::
-_0000s_0006_20240905_161654_044.png::CompressedTexture2D::5828088991392438179::1729462992::1729483435::1::::<><>::
-_0000s_0007_20240905_161654_046.png::CompressedTexture2D::9134299934249374595::1729462993::1729483435::1::::<><>::
-::res://Assests/Neemias Sprites Prontos/Neemias vitória/::1729483435
-1.png::CompressedTexture2D::27132843053691958::1729306544::1729483435::1::::<><>::
-2.png::CompressedTexture2D::703621428580562032::1729306542::1729483435::1::::<><>::
-3.png::CompressedTexture2D::863688394201689683::1729306540::1729483435::1::::<><>::
-4.png::CompressedTexture2D::6960851542826869244::1729306538::1729483435::1::::<><>::
-5.png::CompressedTexture2D::7835081780107366077::1729306536::1729483435::1::::<><>::
-6.png::CompressedTexture2D::1521427108541018065::1729306533::1729483435::1::::<><>::
-7.png::CompressedTexture2D::8889411493411275512::1729306531::1729483435::1::::<><>::
-8.png::CompressedTexture2D::6374861201601239308::1729306529::1729483435::1::::<><>::
-9.png::CompressedTexture2D::1428145633672372180::1729306526::1729483435::1::::<><>::
-10.png::CompressedTexture2D::2914157763205042833::1729306523::1729483435::1::::<><>::
-11.png::CompressedTexture2D::7937363091350592251::1729306521::1729483435::1::::<><>::
-12.png::CompressedTexture2D::3507654489302368126::1729306518::1729483435::1::::<><>::
-::res://Assests/Poeira/::1729702318
-_0000s_0001_Layer-29.png::CompressedTexture2D::157395591363792136::1729634826::1729650927::1::::<><>::
-_0000s_0002_Layer-27.png::CompressedTexture2D::338477294345864360::1729634829::1729650927::1::::<><>::
-_0000s_0003_Layer-25.png::CompressedTexture2D::4554479271574504036::1729634832::1729650927::1::::<><>::
-_0000s_0004_Layer-23.png::CompressedTexture2D::9129406819392884119::1729634834::1729650927::1::::<><>::
-_0000s_0005_Layer-21.png::CompressedTexture2D::4267980550832421196::1729634837::1729650927::1::::<><>::
-_0000s_0006_Layer-19.png::CompressedTexture2D::4648834977972254715::1729634840::1729650927::1::::<><>::
-_0000s_0007_Layer-17.png::CompressedTexture2D::6121105265273161630::1729634842::1729650927::1::::<><>::
-_0000s_0008_Layer-15.png::CompressedTexture2D::6196262163928945981::1729634845::1729650927::1::::<><>::
-_0000s_0009_Layer-13.png::CompressedTexture2D::8692791430610071467::1729634847::1729650927::1::::<><>::
-_0000s_0010_Layer-11.png::CompressedTexture2D::6599850998101868988::1729634850::1729650927::1::::<><>::
-_0000s_0011_Layer-9.png::CompressedTexture2D::8751316492568895613::1729634852::1729650927::1::::<><>::
-_0000s_0012_Layer-7.png::CompressedTexture2D::2063108637795530185::1729634854::1729650927::1::::<><>::
-_0000s_0013_Layer-5.png::CompressedTexture2D::346097000274974734::1729634857::1729650927::1::::<><>::
-_0000s_0014_Layer-3.png::CompressedTexture2D::6517428615136649058::1729634859::1729650927::1::::<><>::
-_0000s_0015_Layer-2.png::CompressedTexture2D::6644994763566155883::1729634861::1729650927::1::::<><>::
-1.png::CompressedTexture2D::3397017238418472997::1729702275::1729702318::1::::<><>::
-::res://audio/::1729602822
-btnMenuclick.wav::AudioStreamWAV::7353204518981333929::1729209218::1729602821::1::::<><>::
-menu main.wav::AudioStreamWAV::5877301095354131991::1728708083::1729602822::1::::<><>::
-MenuBtnSoundEffectwav.wav::AudioStreamWAV::2143321277823791337::1728700736::1729602821::1::::<><>::
-::res://Cenas/::1730053302
-main_menu.tscn::PackedScene::7553971546369173381::1730053302::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/menuvideo/menu main v3.ogv<>res://.godot/v_box_container.gd<>uid://bm57v7luifu4i::::res://Assests/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png<>res://.godot/button.gd<>uid://bqa6qf3mywvsx::::res://Assests/menu main/hover 1vs1.png<>uid://rvrdbs523s3x::::res://Assests/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://Assests/menu main/hover Chaveamento.png<>uid://caxd0w6bke5dv::::res://Assests/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://Assests/menu main/hover opções.png<>uid://cgibdukfg6s6n::::res://Assests/menu main/_0002s_0000s_0003_sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://b5a4qc5cq6mdk::::res://Assests/menu main/hover sair.png<>uid://t0bfd8edgial::::res://Assests/menu main/subMenu1v1/personagem.png<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://bexw55fgtu2wj::::res://Assests/menu main/subMenu1v1/personagemHover.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://c8edt864hgstm::::res://Assests/menu main/subMenu1v1/p1.png<>uid://crhxta14is3it::::res://Assests/menu main/subMenu1v1/VS.png<>uid://mw0h4dd841jn::::res://Assests/menu main/subMenu1v1/personagem2Hover.png<>uid://dkr0c7os2ki81::::res://Assests/menu main/subMenu1v1/p2.png<>uid://dm7q5sxcwioqh::::res://Assests/menu main/subMenu1v1/btnIniciar.png<>uid://d3g4g1s37w1el::::res://Assests/menu main/subMenu1v1/btnVoltar.png<>uid://dgewi5jlh3y7::::res://Assests/menu main/subMenu1v1/btnVoltarHover.png<>uid://b17d54hgcxd2b::::res://Assests/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://Assests/menu main/subMenuOpcoes/sliderGrab.png<>uid://6xellc821ygn::::res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png<>res://Cenas/menu_selecao_mapa.gd<>uid://bxy8fhudg4pjg::::res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://cdlfmhp6uvtpn::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png<>res://Cenas/texture_rect.gd<>uid://k7terqehqw3::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png<>uid://cudgep3jspc5x::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png<>uid://4epbitym2ywt::::res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png<>uid://dtcyscttamto::::res://Assests/menu main/MenuEscolhaMapa/mapaHover.png<>uid://d4cd4cqyqttdg::::res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png<>uid://chqyxwmrjoy28::::res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png<>uid://n6ra2tnkhtwy::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png<>uid://cmsodir305fih::::res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png
-mapaPreview.gd::GDScript::-1::1729953944::0::1::::<>Control<>::
-menu_selecao_mapa.gd::GDScript::-1::1729954219::0::1::::<>Control<>::
-particula.tscn::PackedScene::8755719069212901231::1730053302::0::1::::<><>::uid://c1w5dfn0bq0ih::::res://Assests/Poeira/_0000s_0015_Layer-2.png<>uid://cy4ddkh0uerr3::::res://Assests/Poeira/_0000s_0014_Layer-3.png<>uid://e6wfxc6bc1e5::::res://Assests/Poeira/_0000s_0013_Layer-5.png<>uid://4nndldr31y8x::::res://Assests/Poeira/_0000s_0012_Layer-7.png<>uid://dwxg50c0t3r1v::::res://Assests/Poeira/_0000s_0011_Layer-9.png<>uid://c1bat1oxg44mi::::res://Assests/Poeira/_0000s_0010_Layer-11.png<>uid://dv34aft2y8xix::::res://Assests/Poeira/_0000s_0009_Layer-13.png<>uid://cujrsdvr8uilx::::res://Assests/Poeira/_0000s_0008_Layer-15.png<>uid://cthdyec28beaw::::res://Assests/Poeira/_0000s_0007_Layer-17.png<>uid://b7h6vru4s5436::::res://Assests/Poeira/_0000s_0006_Layer-19.png<>uid://b12pasvjv5jpk::::res://Assests/Poeira/_0000s_0005_Layer-21.png<>uid://d3cl847evoj6v::::res://Assests/Poeira/_0000s_0004_Layer-23.png<>uid://b55huxcdvdwf1::::res://Assests/Poeira/_0000s_0003_Layer-25.png<>uid://e27w3magfm05::::res://Assests/Poeira/_0000s_0002_Layer-27.png<>uid://ciijuphiehi3::::res://Assests/Poeira/_0000s_0001_Layer-29.png<>uid://bonsm3ro6mlqj::::res://Assests/Poeira/1.png
-player.tscn::PackedScene::3519376603016033622::1730053302::0::1::::<><>::res://Scripts/player_1.gd<>uid://bpqqhalfqyafd::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png<>uid://dq64vuan350t1::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png<>uid://c51p20bsmgynd::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png<>uid://calvfust52scc::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png<>uid://ygdt11fuw4gp::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png<>uid://ce3k0x6jnxgho::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png<>uid://b6loebjjbs6ti::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png<>uid://dq5gcs5h8q5lo::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0003_5.png<>uid://dhjqw6b3yhm06::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png<>uid://cwnqw7ng2ctst::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png<>uid://dty5vcvf1kftj::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png<>uid://bk22uujqrel6g::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png<>uid://dqs1sojvx4401::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png<>uid://bdts30urgbjhj::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png<>uid://ya30f72xg0ab::::res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0000_7.png<>uid://chbqr6wt6ougs::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png<>uid://ci6v5kgadovh3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0002_9.png<>uid://bmy3gawueosn3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0001_10.png<>uid://cr75llsfp0s23::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0000_11.png<>uid://cy4gbn0dld1w4::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png<>uid://hx2syxuny46m::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png<>uid://blcotdbte6b5d::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png<>uid://dkbco23w5krbx::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png<>uid://bb3ltido73l78::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png<>uid://ccil2enkh6vtg::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png<>uid://c2fqwdbbxtgmh::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png<>uid://qd455g1remr3::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png<>uid://pxxtu6fq0w7t::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png<>uid://cfc5k26h51wsq::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0004_3.png<>uid://c817rp6g2ehkw::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0003_4.png<>uid://c130ydaanwpjj::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0002_5.png<>uid://cm1tbi2hlpuyl::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0001_6.png<>uid://cmgp684xp1ynu::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0000_7.png<>uid://dpextd03iie42::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0010_11.png<>uid://d06mln2f5rcjs::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0009_10.png<>uid://rrh76y74eon7::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0008_9.png<>uid://cmctuh3sj4tu6::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0007_8.png<>uid://b1uyvk6f67fpc::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0006_7.png<>uid://btvhihftey2in::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0005_6.png<>uid://gy2o1b8ymngy::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0004_5.png<>uid://b3ndmjuuwgfd3::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0003_4.png<>uid://hfgm7t4ovqe5::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0002_3.png<>uid://qnbxiiqj84cv::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png<>uid://dlwdx3mmufc82::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png<>uid://b1ayeypy31dle::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png<>uid://b71fa4xv3dvul::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png<>uid://c83q5p17urtbn::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png<>uid://bl0v8xphaut7::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png<>uid://rqbdvpci64cd::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png<>uid://cl1t713c4otje::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0002_3.png<>uid://b5vlscthj1ami::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0001_4.png<>uid://dbavrmwtgt217::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0000_5.png<>uid://bcvusksbdbm2g::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0008_1.png<>uid://bhp0yicc82dt1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0007_2.png<>uid://4xqviberyej8::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0006_3.png<>uid://bevenbrnm7ewv::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0005_4.png<>uid://cd2ocbq0fu5wu::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0004_5.png<>uid://s22h1nirpxl2::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0003_6.png<>uid://co1a2muopaa06::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0002_7.png<>uid://c8shhy2b1kr2k::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0001_8.png<>uid://j1dnjlwt58a1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0000_9.png<>uid://88qeckqwprhb::::res://Assests/Michel Sprites Pronto/Michel Andando/13.png<>uid://yr2h0u23yrl7::::res://Assests/Michel Sprites Pronto/Michel Andando/12.png<>uid://bymvcj3ql6048::::res://Assests/Michel Sprites Pronto/Michel Andando/11.png<>uid://djpbrcbvwfnyp::::res://Assests/Michel Sprites Pronto/Michel Andando/10.png<>uid://cc8x1sfy4h30f::::res://Assests/Michel Sprites Pronto/Michel Andando/9.png<>uid://lvpqx5rusglx::::res://Assests/Michel Sprites Pronto/Michel Andando/8.png<>uid://dfh72r47sryi0::::res://Assests/Michel Sprites Pronto/Michel Andando/7.png<>uid://b2l6nvqqm1yhq::::res://Assests/Michel Sprites Pronto/Michel Andando/6.png<>uid://cmndawuoafrvt::::res://Assests/Michel Sprites Pronto/Michel Andando/5.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://budc8rek5y1fv::::res://Assests/Michel Sprites Pronto/Michel Andando/4.png<>uid://bnjydsuayujng::::res://Assests/Michel Sprites Pronto/Michel Andando/3.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://c267c6dp4t2c8::::res://Assests/Michel Sprites Pronto/Michel Andando/1.png<>uid://bnl11xgdnewml::::res://Assests/Michel Sprites Pronto/Michel Andando/2.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png
-player_2.tscn::PackedScene::880172633076244536::1730053302::0::1::::<><>::res://Scripts/player_2.gd<>uid://bm80q03wldxbk::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png<>uid://cf3txtxcj2gmv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png<>uid://c6f7vfw4exywa::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png<>uid://cn5qgpdnlq2w::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png<>uid://b2dw31uhj1w3r::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png<>uid://dnydkktnkgqkx::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png<>uid://d3vsr0hscl3j::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png<>uid://duvx3033kunwv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png<>uid://b21557jbb3x7s::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png<>uid://bxp4rkhxnsl8x::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png<>uid://cp4dr432ie8jy::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0002_20240905_162028_039.png<>uid://haryvft1dnif::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0001_20240905_162028_041.png<>uid://colsn6kt8f52h::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png<>uid://8e3yuo8f23r1::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0000_20240905_162028_045.png<>uid://b7jv1745jkkhm::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png<>uid://djkuuknwljpxg::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png<>uid://c0mk7742ign6b::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png<>uid://g4e64by52k63::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png<>uid://dy03lgbfd72gq::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png<>uid://c62i6i56v20ya::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png<>uid://ntr5gjkgni0::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0001_20240905_161421_034.png<>uid://ca7fs4kj3y1gs::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0002_20240905_161421_038.png<>uid://0pqbwra2gaee::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0003_20240905_161421_042.png<>uid://dqgpimi8go1ol::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0004_20240905_161421_046.png<>uid://cond32tchmqhv::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0005_20240905_161421_050.png<>uid://ymub6m4o4lpj::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0000_20240905_161654_022.png<>uid://ck0v5ny3bybsw::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0001_20240905_161654_028.png<>uid://cfwgtohiywkxg::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0002_20240905_161654_030.png<>uid://cq855ty6sm4rt::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0003_20240905_161654_034.png<>uid://nbymk6eumacd::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0004_20240905_161654_036.png<>uid://w4k8hgbhlv61::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0005_20240905_161654_040.png<>uid://cpbf1k76apanr::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0006_20240905_161654_044.png<>uid://d3eyt5x0ithk2::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0007_20240905_161654_046.png<>uid://ch3ont7n3aker::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0000_Layer-2.png<>uid://t73g7bdxmbev::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0004_20240905_161523_032.png<>uid://cw2537r06cn61::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0005_20240905_161523_036.png<>uid://bu854alesr8lr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0006_20240905_161523_042.png<>uid://cmqptuteggp7d::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0000_20240905_161527_027.png<>uid://bta3a3005880w::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0001_20240905_161527_029.png<>uid://3441hcv4svcu::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0003_20240905_161527_033.png<>uid://c6pqxw7chxe3n::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0005_20240905_161527_039.png<>uid://bjbmnalxclaxl::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0007_20240905_161527_043.png<>uid://lrcp3om7p3fr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0009_20240905_161527_047.png<>uid://2wwrtwolo66::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0000_20240905_161532_023.png<>uid://do7im6y1nt6c0::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0001_20240905_161532_027.png<>uid://euqyys1b7dfc::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0002_20240905_161532_031.png<>uid://dbrccmmpls4s3::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0003_20240905_161532_033.png<>uid://b0ur6amye12xb::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0004_20240905_161532_037.png<>uid://dte0epdi8f4ve::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0005_20240905_161532_041.png<>uid://covryx2htq6ib::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0006_20240905_161532_045.png<>uid://ccma5lhcj587m::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0007_20240905_161532_047.png<>uid://cx5je4ci8ukln::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0008_20240905_161532_049.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://b2kcn4oy7soyx::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0000_20240905_161346_073.png<>uid://dcnsg72lo2vy6::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0001_20240905_161346_071.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://di0lstbb0l40j::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0002_20240905_161346_069.png<>uid://c0qsrtgqjdpeu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0003_20240905_161346_067.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://odsobpxu4f73::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0004_20240905_161346_065.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://dmjkwknyqwlqd::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0005_20240905_161346_063.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://dqpengdo4lbdg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0006_20240905_161346_061.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://cj05ruky8mkuu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0007_20240905_161346_059.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://2dt3saejp6tg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0008_20240905_161346_057.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://d13lk7ufufnrs::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0009_20240905_161346_055.png<>uid://csuuxpp6txhfr::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0010_20240905_161346_053.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png<>uid://skhcq31iouhk::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0011_20240905_161346_051.png<>uid://wmaamhm1d5mj::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0012_20240905_161346_047.png
-texture_rect.gd::GDScript::-1::1729982389::0::1::::<>TextureRect<>::
-::res://prefer/::1730053302
-camera_2d.gd::GDScript::-1::1729438926::0::1::::<>Camera2D<>::
-camera_2d_2.gd::GDScript::-1::1729391995::0::1::::<>Camera2D<>::
-hitbox.tscn::PackedScene::6649929041854336219::1729377650::0::1::::<><>::res://Scripts/hitbox.gd
-world.gd::GDScript::-1::1729399156::0::1::::<>Node2D<>::
-world.tscn::PackedScene::3564916529657022667::1730053302::0::1::::<><>::res://prefer/world.gd<>uid://cu4w02wlugy63::::res://Assests/MapaEstacionamento/_0005_chão.png<>res://prefer/camera_2d.gd<>uid://bqe2va7eeqr7s::::res://Cenas/player.tscn<>uid://msmkx04o1khs::::res://Cenas/player_2.tscn<>uid://pra1kn7a86jl::::res://Assests/MapaEstacionamento/_0004_cenario.png<>uid://dskf4ptooihtn::::res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png<>uid://bwn4f7nlitoc6::::res://Assests/MapaEstacionamento/_0002_carros-atrás.png<>uid://c5ddbmv36feig::::res://Assests/MapaEstacionamento/_0001_arvores.png<>uid://hqvgmeir6nqv::::res://Assests/MapaEstacionamento/_0000_carros-frente.png<>uid://bqwgr17t7eieq::::res://Assests/Fontes/RevMiniPixel.ttf<>uid://e8rf2fu6m40s::::res://Assests/hud/HUD.png<>res://Scripts/gerencia_hud.gd
-::res://Scripts/::1729721067
-gerencia_hud.gd::GDScript::-1::1729463211::0::1::::<>Control<>::
-Global.gd::GDScript::-1::1729463211::0::1::::<>Node<>::
-hitbox.gd::GDScript::-1::1729377650::0::1::::<>Area2D<>::
-player_1.gd::GDScript::-1::1729711914::0::1::::<>CharacterBody2D<>::
-player_2.gd::GDScript::-1::1729721067::0::1::::<>CharacterBody2D<>::
+<<<<<<< Updated upstream
+::res://::1730057742
+default_bus_layout.tres::AudioBusLayout::7673916110365846087::1730057529::0::1::::<><>::
+icon.svg::CompressedTexture2D::2478846410236958265::1729721108::1730057742::1::::<><>::
+mainMenuAudio.tscn::PackedScene::3465627478822212323::1729721108::0::1::::<><>::uid://cp0aj4wficg3x::::res://audio/menu main.wav
+::res://Assests/::1730059806
+::res://Assests/FachadaAccets/::1730059806
+_0000_chão.png::CompressedTexture2D::5078694482112511345::1730059806::1730059817::1::::<><>::
+_0001_arbustos.png::CompressedTexture2D::8087660460529663003::1730059806::1730059816::1::::<><>::
+_0002_estruturaEntrada.png::CompressedTexture2D::1094080667995993725::1730059806::1730059817::1::::<><>::
+_0003_arvores.png::CompressedTexture2D::2457014494875317471::1730059806::1730059816::1::::<><>::
+_0004_fundo.png::CompressedTexture2D::9196831588932993309::1730059806::1730059817::1::::<><>::
+::res://Assests/Fontes/::1730057734
+RevMiniPixel.ttf::FontFile::3555254568890963768::1729721108::1730057734::1::::<><>::
+::res://Assests/hud/::1730059806
+HUD.png::CompressedTexture2D::349922385087773416::1730057529::1730057749::1::::<><>::
+lifeDamage.png::CompressedTexture2D::2168472800753658624::1730057529::1730059816::1::::<><>::
+lifeEmpty.png::CompressedTexture2D::746504107585427249::1730057529::1730059816::1::::<><>::
+lifeFull.png::CompressedTexture2D::5065018781704272952::1730057529::1730057746::1::::<><>::
+main_menu.tscn::PackedScene::-1::1729721108::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/menuvideo/menu main v3.ogv<>res://.godot/v_box_container.gd<>uid://bm57v7luifu4i::::res://assetss/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://assetss/menu main/_0002s_0000s_0000_1-vs-1.png<>uid://bqa6qf3mywvsx::::res://assetss/menu main/hover 1vs1.png<>res://.godot/button.gd<>uid://caxd0w6bke5dv::::res://assetss/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://assetss/menu main/hover opções.png<>uid://rvrdbs523s3x::::res://assetss/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://assetss/menu main/hover Chaveamento.png<>uid://cgibdukfg6s6n::::res://assetss/menu main/_0002s_0000s_0003_sair.png<>uid://b5a4qc5cq6mdk::::res://assetss/menu main/hover sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://crhxta14is3it::::res://assetss/menu main/subMenu1v1/VS.png<>uid://dm7q5sxcwioqh::::res://assetss/menu main/subMenu1v1/btnIniciar.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://d3g4g1s37w1el::::res://assetss/menu main/subMenu1v1/btnVoltar.png<>uid://c8edt864hgstm::::res://assetss/menu main/subMenu1v1/p1.png<>uid://t0bfd8edgial::::res://assetss/menu main/subMenu1v1/personagem.png<>uid://dkr0c7os2ki81::::res://assetss/menu main/subMenu1v1/p2.png<>uid://bexw55fgtu2wj::::res://assetss/menu main/subMenu1v1/personagemHover.png<>uid://mw0h4dd841jn::::res://assetss/menu main/subMenu1v1/personagem2Hover.png<>uid://b17d54hgcxd2b::::res://assetss/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://assetss/menu main/subMenuOpcoes/sliderGrab.png<>uid://o60yxho17of0::::res://assetss/menu main/MenuEscolhaMapa/mapaEstacionamento.png<>uid://dgewi5jlh3y7::::res://assetss/menu main/subMenu1v1/btnVoltarHover.png<>uid://bxy8fhudg4pjg::::res://assetss/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://6xellc821ygn::::res://assetss/menu main/subMenuChaveamento/MenuModoChaveamento.png<>uid://chqyxwmrjoy28::::res://assetss/menu main/MenuEscolhaMapa/mapaRandomBtn.png
+::res://Assests/MapaEstacionamento/::1730057749
+_0000_carros-frente.png::CompressedTexture2D::525638357989562737::1729721108::1730057747::1::::<><>::
+_0001_arvores.png::CompressedTexture2D::6884884410596471422::1729721108::1730057747::1::::<><>::
+_0002_carros-atrás.png::CompressedTexture2D::3959183577633247955::1729721108::1730057747::1::::<><>::
+_0003_arvores-atras-comp.png::CompressedTexture2D::8443661204948222031::1729721108::1730057747::1::::<><>::
+_0004_cenario.png::CompressedTexture2D::1087974053802254849::1729721108::1730057749::1::::<><>::
+_0005_chão.png::CompressedTexture2D::6237867066345999978::1729721108::1730057747::1::::<><>::
+::res://Assests/menu main/::1730057748
+_0002s_0000s_0000_1-vs-1.png::CompressedTexture2D::2780723799238957644::1729721108::1730057748::1::::<><>::
+_0002s_0000s_0001_Chaveamento.png::CompressedTexture2D::1237599902670646119::1729721108::1730057745::1::::<><>::
+_0002s_0000s_0002_opções.png::CompressedTexture2D::4820550055017129619::1729721108::1730057745::1::::<><>::
+_0002s_0000s_0003_sair.png::CompressedTexture2D::5210556591772838251::1729721108::1730057745::1::::<><>::
+_0002s_0000_Agrupar-2.png::CompressedTexture2D::3292600284071485594::1729721108::1730057745::1::::<><>::
+hover 1vs1.png::CompressedTexture2D::3511353287829319039::1729721108::1730057745::1::::<><>::
+hover Chaveamento.png::CompressedTexture2D::5108000902194792220::1729721108::1730057745::1::::<><>::
+hover opções.png::CompressedTexture2D::4100127562864712675::1729721108::1730057745::1::::<><>::
+hover sair.png::CompressedTexture2D::4493875509831095768::1729721108::1730057745::1::::<><>::
+::res://Assests/menu main/MenuEscolhaMapa/::1730057748
+mapa1Btn.png::CompressedTexture2D::4052322141901119388::1729721108::1730057748::1::::<><>::
+mapa2Btn.png::CompressedTexture2D::2044646967850241079::1730057529::1730057748::1::::<><>::
+mapa4Btn.png::CompressedTexture2D::5653122133651373547::1730057529::1730057748::1::::<><>::
+mapa5Btn - Copia.png::CompressedTexture2D::5836974116298626242::1730057529::1730057748::1::::<><>::
+mapa5Btn.png::CompressedTexture2D::9199101341968074576::1730057529::1730057748::1::::<><>::
+mapaRandomBtn.png::CompressedTexture2D::5298692772839957303::1729721108::1730057748::1::::<><>::
+::res://Assests/menu main/MenuEscolhaMapa/Preview/::1730057748
+Preview_Estacionamento.png::CompressedTexture2D::5006441460357237855::1730057529::1730057748::1::::<><>::
+Preview_Fachada.png::CompressedTexture2D::22620888480999808::1730057529::1730057748::1::::<><>::
+Preview_FilaCaj.png::CompressedTexture2D::6183183650079589075::1730057529::1730057748::1::::<><>::
+Preview_RU.png::CompressedTexture2D::977484314633363464::1730057529::1730057748::1::::<><>::
+::res://Assests/menu main/menuvideo/::1730057529
+menu main v3.ogv::VideoStreamTheora::-1::1730057529::0::1::::<><>::
+::res://Assests/menu main/subMenu1v1/::1730057748
+btnIniciar.png::CompressedTexture2D::8068614289638420479::1729721108::1730057748::1::::<><>::
+btnVoltar.png::CompressedTexture2D::9138708841751658155::1729721108::1730057748::1::::<><>::
+btnVoltarHover.png::CompressedTexture2D::223235419830289864::1729721108::1730057748::1::::<><>::
+p1.png::CompressedTexture2D::7097548582006732890::1729721108::1730057748::1::::<><>::
+p2.png::CompressedTexture2D::7897768108914403164::1729721108::1730057748::1::::<><>::
+personagem2Hover.png::CompressedTexture2D::889214387615342527::1729721108::1730057748::1::::<><>::
+personagem.png::CompressedTexture2D::1385267327670992587::1729721108::1730057748::1::::<><>::
+personagemHover.png::CompressedTexture2D::2716047677969961905::1729721108::1730057748::1::::<><>::
+VS.png::CompressedTexture2D::5981932815922965699::1729721108::1730057748::1::::<><>::
+::res://Assests/menu main/subMenuChaveamento/::1730057749
+MenuModoChaveamento.png::CompressedTexture2D::2223597935209358809::1729721108::1730057749::1::::<><>::
+::res://Assests/menu main/subMenuOpcoes/::1730057748
+menuOpcoes.png::CompressedTexture2D::4277627965474280827::1729721108::1730057748::1::::<><>::
+sliderGrab.png::CompressedTexture2D::7721360842279616436::1729721108::1730057748::1::::<><>::
+::res://Assests/Michel Sprites Pronto/::1729721108
+::res://Assests/Michel Sprites Pronto/Michel Andando/::1730057746
+1.png::CompressedTexture2D::6733884004924597081::1729721108::1730057745::1::::<><>::
+2.png::CompressedTexture2D::3323210096195376459::1729721108::1730057745::1::::<><>::
+3.png::CompressedTexture2D::3318918592331429764::1729721108::1730057745::1::::<><>::
+4.png::CompressedTexture2D::3796571954471910535::1729721108::1730057745::1::::<><>::
+5.png::CompressedTexture2D::5642127739869771529::1729721108::1730057745::1::::<><>::
+6.png::CompressedTexture2D::4306134187762433390::1729721108::1730057745::1::::<><>::
+7.png::CompressedTexture2D::7526649012926806897::1729721108::1730057746::1::::<><>::
+8.png::CompressedTexture2D::816369795628616341::1729721108::1730057746::1::::<><>::
+9.png::CompressedTexture2D::4982787396295232399::1729721108::1730057746::1::::<><>::
+10.png::CompressedTexture2D::7822018493196901339::1729721108::1730057746::1::::<><>::
+11.png::CompressedTexture2D::4097004609198090887::1729721108::1730057746::1::::<><>::
+12.png::CompressedTexture2D::1721279873738801338::1729721108::1730057746::1::::<><>::
+13.png::CompressedTexture2D::2385335042250644363::1729721108::1730057746::1::::<><>::
+::res://Assests/Michel Sprites Pronto/michel chute/::1730057747
+_0000s_0000_1.png::CompressedTexture2D::7976980355688695277::1729721108::1730057746::1::::<><>::
+_0000s_0001_2.png::CompressedTexture2D::1149960632549435237::1729721108::1730057746::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::502031237155651662::1729721108::1730057746::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::4378749301410532262::1729721108::1730057746::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::472343856528828120::1729721108::1730057746::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::3763800327208642345::1729721108::1730057746::1::::<><>::
+_0000s_0006_7.png::CompressedTexture2D::4254113456253842404::1729721108::1730057746::1::::<><>::
+_0000s_0007_8.png::CompressedTexture2D::5620425997040372811::1729721108::1730057746::1::::<><>::
+_0000s_0008_9.png::CompressedTexture2D::1228788594811910274::1729721108::1730057747::1::::<><>::
+_0000s_0009_10.png::CompressedTexture2D::8978727824833326356::1729721108::1730057747::1::::<><>::
+_0000s_0010_11.png::CompressedTexture2D::8221782835057213189::1729721108::1730057747::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel comemoração/::1730057753
+_0000s_0000_10.png::CompressedTexture2D::7411550583080999469::1729721108::1730057752::1::::<><>::
+_0000s_0001_9.png::CompressedTexture2D::1354441946080419701::1729721108::1730057752::1::::<><>::
+_0000s_0002_8.png::CompressedTexture2D::8498373381678612550::1729721108::1730057752::1::::<><>::
+_0000s_0003_7.png::CompressedTexture2D::4496949868535144523::1729721108::1730057752::1::::<><>::
+_0000s_0004_6.png::CompressedTexture2D::7070428676148055316::1729721108::1730057752::1::::<><>::
+_0000s_0005_5.png::CompressedTexture2D::3068597573507146833::1729721108::1730057752::1::::<><>::
+_0000s_0006_4.png::CompressedTexture2D::3586025257604649808::1729721108::1730057752::1::::<><>::
+_0000s_0007_3.png::CompressedTexture2D::5023325344796954294::1729721108::1730057752::1::::<><>::
+_0000s_0008_2.png::CompressedTexture2D::3420120295415668068::1729721108::1730057752::1::::<><>::
+_0000s_0009_1.png::CompressedTexture2D::5854331153739087290::1729721108::1730057753::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel dano/::1730057754
+_0000s_0000_8.png::CompressedTexture2D::2637354644793779491::1729721108::1730057753::1::::<><>::
+_0000s_0001_7.png::CompressedTexture2D::3145723459235929408::1729721108::1730057753::1::::<><>::
+_0000s_0002_6.png::CompressedTexture2D::7670175746755451673::1729721108::1730057753::1::::<><>::
+_0000s_0003_5.png::CompressedTexture2D::8344583747581269228::1729721108::1730057753::1::::<><>::
+_0000s_0004_4.png::CompressedTexture2D::1697136000926449119::1729721108::1730057753::1::::<><>::
+_0000s_0005_3.png::CompressedTexture2D::4796834587676407462::1729721108::1730057753::1::::<><>::
+_0000s_0006_2.png::CompressedTexture2D::3473267372012491469::1729721108::1730057754::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel Defesa/::1730057754
+_0000s_0000_7.png::CompressedTexture2D::1686277281266109541::1729721108::1730057754::1::::<><>::
+_0000s_0001_6.png::CompressedTexture2D::1436383619954349329::1729721108::1730057754::1::::<><>::
+_0000s_0002_5.png::CompressedTexture2D::2135916243412614514::1729721108::1730057754::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::3448751342757038079::1729721108::1730057754::1::::<><>::
+_0000s_0004_3.png::CompressedTexture2D::9046204879074253796::1729721108::1730057754::1::::<><>::
+_0000s_0005_2.png::CompressedTexture2D::436795033878815825::1729721108::1730057754::1::::<><>::
+_0000s_0006_1.png::CompressedTexture2D::1172266816338331496::1729721108::1730057754::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel especial/::1730057754
+_0000s_0000_11.png::CompressedTexture2D::6033953556690170834::1729721108::1730057754::1::::<><>::
+_0000s_0001_10.png::CompressedTexture2D::3279942698908137166::1729721108::1730057754::1::::<><>::
+_0000s_0002_9.png::CompressedTexture2D::5399676992038468606::1729721108::1730057754::1::::<><>::
+_0000s_0003_8.png::CompressedTexture2D::5267231144101959918::1729721108::1730057753::1::::<><>::
+_0000s_0004_7.png::CompressedTexture2D::8321053885179309080::1729721108::1730057753::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::8544254295504264179::1729721108::1730057753::1::::<><>::
+_0000s_0006_5.png::CompressedTexture2D::6344845298714319619::1729721108::1730057753::1::::<><>::
+_0000s_0007_4.png::CompressedTexture2D::4585840239678701578::1729721108::1730057753::1::::<><>::
+_0000s_0008_3.png::CompressedTexture2D::5112052390180484988::1729721108::1730057753::1::::<><>::
+_0000s_0009_2.png::CompressedTexture2D::6933140784922352653::1729721108::1730057748::1::::<><>::
+_0000s_0010_1.png::CompressedTexture2D::8348078605222194132::1729721108::1730057749::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 1/::1730057750
+_0000s_0000_5.png::CompressedTexture2D::7147901659752872259::1729721108::1730057749::1::::<><>::
+_0000s_0001_4.png::CompressedTexture2D::3658652957616731895::1729721108::1730057749::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::4686442646378883775::1729721108::1730057749::1::::<><>::
+_0000s_0003_2.png::CompressedTexture2D::1794636541629813337::1729721108::1730057749::1::::<><>::
+_0000s_0004_1.png::CompressedTexture2D::4212796254145320790::1729721108::1730057750::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 2/::1730057750
+_0000s_0000_5.png::CompressedTexture2D::7230756975199783384::1729721108::1730057750::1::::<><>::
+_0000s_0001_4.png::CompressedTexture2D::4536138091609128608::1729721108::1730057750::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::5599804646269456514::1729721108::1730057750::1::::<><>::
+_0000s_0003_2.png::CompressedTexture2D::1226307586551220915::1729721108::1730057750::1::::<><>::
+_0000s_0004_1.png::CompressedTexture2D::94454194915820166::1729721108::1730057750::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 3/::1730057752
+_0000s_0000_9.png::CompressedTexture2D::685579271376095550::1729721108::1730057750::1::::<><>::
+_0000s_0001_8.png::CompressedTexture2D::7126670828871762740::1729721108::1730057750::1::::<><>::
+_0000s_0002_7.png::CompressedTexture2D::5809207878192073761::1729721108::1730057750::1::::<><>::
+_0000s_0003_6.png::CompressedTexture2D::1320790630282604469::1729721108::1730057750::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::5039999785530063112::1729721108::1730057752::1::::<><>::
+_0000s_0005_4.png::CompressedTexture2D::2710794153765300273::1729721108::1730057752::1::::<><>::
+_0000s_0006_3.png::CompressedTexture2D::2083966549339593459::1729721108::1730057751::1::::<><>::
+_0000s_0007_2.png::CompressedTexture2D::2910269462755548756::1729721108::1730057751::1::::<><>::
+_0000s_0008_1.png::CompressedTexture2D::2571397341039517988::1729721108::1730057751::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel idle/::1730057752
+_0000s_0000_9.png::CompressedTexture2D::1101744862437189715::1729721108::1730057752::1::::<><>::
+_0000s_0001_8.png::CompressedTexture2D::1131030584251613054::1729721108::1730057751::1::::<><>::
+_0000s_0002_7.png::CompressedTexture2D::6679272952925326623::1729721108::1730057751::1::::<><>::
+_0000s_0003_6.png::CompressedTexture2D::4930450410691418312::1729721108::1730057751::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::2515114346950618733::1729721108::1730057751::1::::<><>::
+_0000s_0005_4.png::CompressedTexture2D::7863362762738947949::1729721108::1730057751::1::::<><>::
+_0000s_0006_3.png::CompressedTexture2D::3163510847187194203::1729721108::1730057751::1::::<><>::
+_0000s_0007_2.png::CompressedTexture2D::540475393922547950::1729721108::1730057751::1::::<><>::
+_0000s_0008_1.png::CompressedTexture2D::6517607378892033497::1729721108::1730057751::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel pulo/::1730057751
+_0000s_0000_7.png::CompressedTexture2D::5628461651205490830::1729721108::1730057750::1::::<><>::
+_0000s_0001_6.png::CompressedTexture2D::5669937183534494163::1729721108::1730057750::1::::<><>::
+_0000s_0002_5.png::CompressedTexture2D::6657114820549902071::1729721108::1730057751::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::7144721167359783382::1729721108::1730057738::1::::<><>::
+_0000s_0004_3.png::CompressedTexture2D::5129755175185103260::1729721108::1730057738::1::::<><>::
+_0000s_0005_2.png::CompressedTexture2D::8897449694078674745::1729721108::1730057738::1::::<><>::
+_0000s_0006_1.png::CompressedTexture2D::83463917197364605::1729721108::1730057738::1::::<><>::
+::res://Assests/Michel Sprites Pronto/michel rochaEspecial/::1730057738
+_0000_1.png::CompressedTexture2D::6608668136520148538::1729721108::1730057738::1::::<><>::
+_0001_2.png::CompressedTexture2D::7896429249683461192::1729721108::1730057738::1::::<><>::
+_0002_3.png::CompressedTexture2D::6918521420832617883::1729721108::1730057738::1::::<><>::
+_0003_4.png::CompressedTexture2D::5438319073135957029::1729721108::1730057738::1::::<><>::
+_0004_5.png::CompressedTexture2D::3202908601378707765::1729721108::1730057738::1::::<><>::
+_0005_6.png::CompressedTexture2D::5017919380981675875::1729721108::1730057738::1::::<><>::
+_0006_7.png::CompressedTexture2D::365774670925037381::1729721108::1730057738::1::::<><>::
+_0007_8.png::CompressedTexture2D::4755570456125036283::1729721108::1730057738::1::::<><>::
+_0008_9.png::CompressedTexture2D::5046929214363890322::1729721108::1730057738::1::::<><>::
+_0009_10.png::CompressedTexture2D::6123001031324574188::1729721108::1730057738::1::::<><>::
+_0010_11.png::CompressedTexture2D::4213842031045606653::1729721108::1730057738::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/::1729721108
+::res://Assests/Neemias Sprites Prontos/Neemias andando/::1730057740
+_0000s_0000_20240905_161346_073.png::CompressedTexture2D::4302309434705223183::1729721108::1730057739::1::::<><>::
+_0000s_0001_20240905_161346_071.png::CompressedTexture2D::7327581992767879291::1729721108::1730057740::1::::<><>::
+_0000s_0002_20240905_161346_069.png::CompressedTexture2D::7773083274813543575::1729721108::1730057740::1::::<><>::
+_0000s_0003_20240905_161346_067.png::CompressedTexture2D::6561716774719756160::1729721108::1730057740::1::::<><>::
+_0000s_0004_20240905_161346_065.png::CompressedTexture2D::989954927947402168::1729721108::1730057740::1::::<><>::
+_0000s_0005_20240905_161346_063.png::CompressedTexture2D::8020754578344470463::1729721108::1730057740::1::::<><>::
+_0000s_0006_20240905_161346_061.png::CompressedTexture2D::8313515619340344856::1729721108::1730057740::1::::<><>::
+_0000s_0007_20240905_161346_059.png::CompressedTexture2D::5458003339309445332::1729721108::1730057740::1::::<><>::
+_0000s_0008_20240905_161346_057.png::CompressedTexture2D::1902496482195650960::1729721108::1730057739::1::::<><>::
+_0000s_0009_20240905_161346_055.png::CompressedTexture2D::9042662019538707856::1729721108::1730057739::1::::<><>::
+_0000s_0010_20240905_161346_053.png::CompressedTexture2D::6078784333524241631::1729721108::1730057739::1::::<><>::
+_0000s_0011_20240905_161346_051.png::CompressedTexture2D::1284472438383067000::1729721108::1730057739::1::::<><>::
+_0000s_0012_20240905_161346_047.png::CompressedTexture2D::1568927734759385233::1729721108::1730057739::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias dano/::1730057739
+_0000s_0000_20240905_162052_032.png::CompressedTexture2D::9057024536638638468::1729721108::1730057739::1::::<><>::
+_0000s_0001_20240905_162052_031.png::CompressedTexture2D::4435574924983320319::1729721108::1730057739::1::::<><>::
+_0000s_0002_20240905_162052_029.png::CompressedTexture2D::5217466196390183692::1729721108::1730057739::1::::<><>::
+_0000s_0003_20240905_162052_027.png::CompressedTexture2D::8989485868510311126::1729721108::1730057739::1::::<><>::
+_0000s_0004_20240905_162052_025.png::CompressedTexture2D::5588306355150047664::1729721108::1730057739::1::::<><>::
+_0000s_0005_20240905_162052_023.png::CompressedTexture2D::5534836109505133176::1729721108::1730057736::1::::<><>::
+_0000s_0006_20240905_162052_019.png::CompressedTexture2D::2092447422936576345::1729721108::1730057736::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias defesa/::1730057736
+_0000s_0000_1.png::CompressedTexture2D::9199500005528038249::1729721108::1730057736::1::::<><>::
+_0000s_0001_2.png::CompressedTexture2D::721069642272992299::1729721108::1730057736::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::2763354038721079175::1729721108::1730057736::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::1524525393430615048::1729721108::1730057735::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::1979046633529166611::1729721108::1730057735::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::6961191651780656318::1729721108::1730057735::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias especial/::1730057737
+_0000s_0000_20240905_162028_045.png::CompressedTexture2D::2326233359523895828::1729721108::1730057735::1::::<><>::
+_0000s_0001_20240905_162028_041.png::CompressedTexture2D::492398065009500193::1729721108::1730057735::1::::<><>::
+_0000s_0002_20240905_162028_039.png::CompressedTexture2D::5885755053968424654::1729721108::1730057735::1::::<><>::
+_0000s_0003_20240905_162028_037.png::CompressedTexture2D::4033521442075594021::1729721108::1730057735::1::::<><>::
+_0000s_0004_20240905_162028_035.png::CompressedTexture2D::4337070061824014718::1729721108::1730057735::1::::<><>::
+_0000s_0005_20240905_162028_031.png::CompressedTexture2D::8607838707362806261::1729721108::1730057735::1::::<><>::
+_0000s_0006_20240905_162028_029.png::CompressedTexture2D::269677241025411901::1729721108::1730057735::1::::<><>::
+_0000s_0007_20240905_162028_027.png::CompressedTexture2D::8121462648577571035::1729721108::1730057735::1::::<><>::
+_0000s_0008_20240905_162028_025.png::CompressedTexture2D::4289099768086669409::1729721108::1730057736::1::::<><>::
+_0000s_0009_20240905_162028_023.png::CompressedTexture2D::169065019030611636::1729721108::1730057736::1::::<><>::
+_0000s_0010_20240905_162028_019.png::CompressedTexture2D::6960998152302387556::1729721108::1730057736::1::::<><>::
+_0000s_0011_20240905_162028_017.png::CompressedTexture2D::5182783892390533933::1729721108::1730057736::1::::<><>::
+_0000s_0012_20240905_162028_015.png::CompressedTexture2D::3298359128107803024::1729721108::1730057737::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/::1730057737
+_0002s_0000_Layer-2.png::CompressedTexture2D::5322840151191080353::1729721108::1730057737::1::::<><>::
+_0002s_0001_20240905_161523_026.png::CompressedTexture2D::5688581091362910839::1729721108::1730057737::1::::<><>::
+_0002s_0002_20240905_161523_028.png::CompressedTexture2D::2339161024536074433::1729721108::1730057737::1::::<><>::
+_0002s_0003_20240905_161523_030.png::CompressedTexture2D::3242454814256111675::1729721108::1730057737::1::::<><>::
+_0002s_0004_20240905_161523_032.png::CompressedTexture2D::1401360590272942481::1729721108::1730057737::1::::<><>::
+_0002s_0005_20240905_161523_036.png::CompressedTexture2D::6374607346981145932::1729721108::1730057737::1::::<><>::
+_0002s_0006_20240905_161523_042.png::CompressedTexture2D::3860195337343308275::1729721108::1730057737::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/::1730057743
+_0001s_0000_20240905_161527_027.png::CompressedTexture2D::5649083300091537871::1729721108::1730057737::1::::<><>::
+_0001s_0001_20240905_161527_029.png::CompressedTexture2D::3721710299064403508::1729721108::1730057738::1::::<><>::
+_0001s_0002_20240905_161527_031.png::CompressedTexture2D::1563085652578097638::1729721108::1730057738::1::::<><>::
+_0001s_0003_20240905_161527_033.png::CompressedTexture2D::2026962171911084332::1729721108::1730057738::1::::<><>::
+_0001s_0004_20240905_161527_035.png::CompressedTexture2D::3046572595400654940::1729721108::1730057742::1::::<><>::
+_0001s_0005_20240905_161527_039.png::CompressedTexture2D::6980674936668757949::1729721108::1730057742::1::::<><>::
+_0001s_0006_20240905_161527_041.png::CompressedTexture2D::3210739701161070322::1729721108::1730057742::1::::<><>::
+_0001s_0007_20240905_161527_043.png::CompressedTexture2D::3020936491464382641::1729721108::1730057742::1::::<><>::
+_0001s_0008_20240905_161527_045.png::CompressedTexture2D::4335396655726947022::1729721108::1730057742::1::::<><>::
+_0001s_0009_20240905_161527_047.png::CompressedTexture2D::807321415601154595::1729721108::1730057743::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/::1730057743
+_0000s_0000_20240905_161532_023.png::CompressedTexture2D::57114183933357869::1729721108::1730057743::1::::<><>::
+_0000s_0001_20240905_161532_027.png::CompressedTexture2D::8208474782109296385::1729721108::1730057743::1::::<><>::
+_0000s_0002_20240905_161532_031.png::CompressedTexture2D::323058550122107656::1729721108::1730057743::1::::<><>::
+_0000s_0003_20240905_161532_033.png::CompressedTexture2D::7264670971624521876::1729721108::1730057743::1::::<><>::
+_0000s_0004_20240905_161532_037.png::CompressedTexture2D::4183516897847690251::1729721108::1730057743::1::::<><>::
+_0000s_0005_20240905_161532_041.png::CompressedTexture2D::8502633452105417402::1729721108::1730057743::1::::<><>::
+_0000s_0006_20240905_161532_045.png::CompressedTexture2D::5799913409175534045::1729721108::1730057743::1::::<><>::
+_0000s_0007_20240905_161532_047.png::CompressedTexture2D::4938045750202729808::1729721108::1730057743::1::::<><>::
+_0000s_0008_20240905_161532_049.png::CompressedTexture2D::6449671226468401499::1729721108::1730057743::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias parado/::1730057745
+_0000s_0000_20240905_161311_058.png::CompressedTexture2D::5779311099383375917::1729721108::1730057743::1::::<><>::
+_0000s_0001_20240905_161311_056.png::CompressedTexture2D::4652366294308325634::1729721108::1730057745::1::::<><>::
+_0000s_0002_20240905_161311_052.png::CompressedTexture2D::7812856023426229320::1729721108::1730057745::1::::<><>::
+_0000s_0003_20240905_161311_044.png::CompressedTexture2D::6553001033502582051::1729721108::1730057745::1::::<><>::
+_0000s_0004_20240905_161311_034.png::CompressedTexture2D::481299770131618138::1729721108::1730057745::1::::<><>::
+_0000s_0005_20240905_161311_030.png::CompressedTexture2D::8897123778691370200::1729721108::1730057744::1::::<><>::
+_0000s_0006_20240905_161311_026.png::CompressedTexture2D::7004975283046589212::1729721108::1730057745::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias pulo/::1730057745
+_0000s_0000_20240905_161421_030.png::CompressedTexture2D::6402466219521076345::1729721108::1730057745::1::::<><>::
+_0000s_0001_20240905_161421_034.png::CompressedTexture2D::28022477553587277::1729721108::1730057744::1::::<><>::
+_0000s_0002_20240905_161421_038.png::CompressedTexture2D::4839238723842743526::1729721108::1730057744::1::::<><>::
+_0000s_0003_20240905_161421_042.png::CompressedTexture2D::1786661196751569836::1729721108::1730057744::1::::<><>::
+_0000s_0004_20240905_161421_046.png::CompressedTexture2D::8295595501201520959::1729721108::1730057744::1::::<><>::
+_0000s_0005_20240905_161421_050.png::CompressedTexture2D::5782555689911522451::1729721108::1730057744::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/::1730057744
+_0000s_0000_20240905_161654_022.png::CompressedTexture2D::1710522554109725211::1729721108::1730057744::1::::<><>::
+_0000s_0001_20240905_161654_028.png::CompressedTexture2D::5527668599436594126::1729721108::1730057744::1::::<><>::
+_0000s_0002_20240905_161654_030.png::CompressedTexture2D::5169600874743436332::1729721108::1730057744::1::::<><>::
+_0000s_0003_20240905_161654_034.png::CompressedTexture2D::5965863451530850345::1729721108::1730057743::1::::<><>::
+_0000s_0004_20240905_161654_036.png::CompressedTexture2D::915998555733113127::1729721108::1730057743::1::::<><>::
+_0000s_0005_20240905_161654_040.png::CompressedTexture2D::1604687993018497140::1729721108::1730057740::1::::<><>::
+_0000s_0006_20240905_161654_044.png::CompressedTexture2D::5828088991392438179::1729721108::1730057740::1::::<><>::
+_0000s_0007_20240905_161654_046.png::CompressedTexture2D::9134299934249374595::1729721108::1730057740::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias vitória/::1730057741
+1.png::CompressedTexture2D::27132843053691958::1729721108::1730057741::1::::<><>::
+2.png::CompressedTexture2D::703621428580562032::1729721108::1730057741::1::::<><>::
+3.png::CompressedTexture2D::863688394201689683::1729721108::1730057741::1::::<><>::
+4.png::CompressedTexture2D::6960851542826869244::1729721108::1730057741::1::::<><>::
+5.png::CompressedTexture2D::7835081780107366077::1729721108::1730057741::1::::<><>::
+6.png::CompressedTexture2D::1521427108541018065::1729721108::1730057741::1::::<><>::
+7.png::CompressedTexture2D::8889411493411275512::1729721108::1730057741::1::::<><>::
+8.png::CompressedTexture2D::6374861201601239308::1729721108::1730057741::1::::<><>::
+9.png::CompressedTexture2D::1428145633672372180::1729721108::1730057741::1::::<><>::
+10.png::CompressedTexture2D::2914157763205042833::1729721108::1730057741::1::::<><>::
+11.png::CompressedTexture2D::7937363091350592251::1729721108::1730057741::1::::<><>::
+12.png::CompressedTexture2D::3507654489302368126::1729721108::1730057741::1::::<><>::
+::res://Assests/Poeira/::1730057742
+_0000s_0001_Layer-29.png::CompressedTexture2D::157395591363792136::1729721108::1730057741::1::::<><>::
+_0000s_0002_Layer-27.png::CompressedTexture2D::338477294345864360::1729721108::1730057741::1::::<><>::
+_0000s_0003_Layer-25.png::CompressedTexture2D::4554479271574504036::1729721108::1730057741::1::::<><>::
+_0000s_0004_Layer-23.png::CompressedTexture2D::9129406819392884119::1729721108::1730057741::1::::<><>::
+_0000s_0005_Layer-21.png::CompressedTexture2D::4267980550832421196::1729721108::1730057741::1::::<><>::
+_0000s_0006_Layer-19.png::CompressedTexture2D::4648834977972254715::1729721108::1730057742::1::::<><>::
+_0000s_0007_Layer-17.png::CompressedTexture2D::6121105265273161630::1729721108::1730057742::1::::<><>::
+_0000s_0008_Layer-15.png::CompressedTexture2D::6196262163928945981::1729721108::1730057742::1::::<><>::
+_0000s_0009_Layer-13.png::CompressedTexture2D::8692791430610071467::1729721108::1730057742::1::::<><>::
+_0000s_0010_Layer-11.png::CompressedTexture2D::6599850998101868988::1729721108::1730057742::1::::<><>::
+_0000s_0011_Layer-9.png::CompressedTexture2D::8751316492568895613::1729721108::1730057742::1::::<><>::
+_0000s_0012_Layer-7.png::CompressedTexture2D::2063108637795530185::1729721108::1730057742::1::::<><>::
+_0000s_0013_Layer-5.png::CompressedTexture2D::346097000274974734::1729721108::1730057742::1::::<><>::
+_0000s_0014_Layer-3.png::CompressedTexture2D::6517428615136649058::1729721108::1730057742::1::::<><>::
+_0000s_0015_Layer-2.png::CompressedTexture2D::6644994763566155883::1729721108::1730057742::1::::<><>::
+1.png::CompressedTexture2D::3397017238418472997::1729721108::1730057742::1::::<><>::
+::res://audio/::1730057755
+btnMenuclick.wav::AudioStreamWAV::7353204518981333929::1729721108::1730057754::1::::<><>::
+menu main.wav::AudioStreamWAV::5877301095354131991::1729721108::1730057755::1::::<><>::
+MenuBtnSoundEffectwav.wav::AudioStreamWAV::2143321277823791337::1729721108::1730057754::1::::<><>::
+::res://Cenas/::1730059760
+main_menu.tscn::PackedScene::7553971546369173381::1730059760::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/v_box_container.gd<>res://Assests/menu main/menuvideo/menu main v3.ogv<>uid://bm57v7luifu4i::::res://Assests/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png<>res://.godot/button.gd<>uid://bqa6qf3mywvsx::::res://Assests/menu main/hover 1vs1.png<>uid://rvrdbs523s3x::::res://Assests/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://Assests/menu main/hover Chaveamento.png<>uid://caxd0w6bke5dv::::res://Assests/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://Assests/menu main/hover opções.png<>uid://cgibdukfg6s6n::::res://Assests/menu main/_0002s_0000s_0003_sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://b5a4qc5cq6mdk::::res://Assests/menu main/hover sair.png<>uid://t0bfd8edgial::::res://Assests/menu main/subMenu1v1/personagem.png<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://bexw55fgtu2wj::::res://Assests/menu main/subMenu1v1/personagemHover.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://c8edt864hgstm::::res://Assests/menu main/subMenu1v1/p1.png<>uid://crhxta14is3it::::res://Assests/menu main/subMenu1v1/VS.png<>uid://mw0h4dd841jn::::res://Assests/menu main/subMenu1v1/personagem2Hover.png<>uid://dkr0c7os2ki81::::res://Assests/menu main/subMenu1v1/p2.png<>uid://dm7q5sxcwioqh::::res://Assests/menu main/subMenu1v1/btnIniciar.png<>uid://d3g4g1s37w1el::::res://Assests/menu main/subMenu1v1/btnVoltar.png<>uid://dgewi5jlh3y7::::res://Assests/menu main/subMenu1v1/btnVoltarHover.png<>uid://b17d54hgcxd2b::::res://Assests/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://Assests/menu main/subMenuOpcoes/sliderGrab.png<>uid://6xellc821ygn::::res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png<>res://Cenas/menu_selecao_mapa.gd<>uid://bxy8fhudg4pjg::::res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://cdlfmhp6uvtpn::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png<>res://Cenas/texture_rect.gd<>uid://k7terqehqw3::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png<>uid://cudgep3jspc5x::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png<>uid://4epbitym2ywt::::res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png<>uid://dtcyscttamto::::res://Assests/menu main/MenuEscolhaMapa/mapaHover.png<>uid://d4cd4cqyqttdg::::res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png<>uid://chqyxwmrjoy28::::res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png<>uid://n6ra2tnkhtwy::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png<>uid://cmsodir305fih::::res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png
+mapaPreview.gd::GDScript::-1::1730057529::0::1::::<>Control<>::
+menu_selecao_mapa.gd::GDScript::-1::1730057529::0::1::::<>Control<>::
+particula.tscn::PackedScene::8755719069212901231::1730059760::0::1::::<><>::uid://c1w5dfn0bq0ih::::res://Assests/Poeira/_0000s_0015_Layer-2.png<>uid://cy4ddkh0uerr3::::res://Assests/Poeira/_0000s_0014_Layer-3.png<>uid://e6wfxc6bc1e5::::res://Assests/Poeira/_0000s_0013_Layer-5.png<>uid://4nndldr31y8x::::res://Assests/Poeira/_0000s_0012_Layer-7.png<>uid://dwxg50c0t3r1v::::res://Assests/Poeira/_0000s_0011_Layer-9.png<>uid://c1bat1oxg44mi::::res://Assests/Poeira/_0000s_0010_Layer-11.png<>uid://dv34aft2y8xix::::res://Assests/Poeira/_0000s_0009_Layer-13.png<>uid://cujrsdvr8uilx::::res://Assests/Poeira/_0000s_0008_Layer-15.png<>uid://cthdyec28beaw::::res://Assests/Poeira/_0000s_0007_Layer-17.png<>uid://b7h6vru4s5436::::res://Assests/Poeira/_0000s_0006_Layer-19.png<>uid://b12pasvjv5jpk::::res://Assests/Poeira/_0000s_0005_Layer-21.png<>uid://d3cl847evoj6v::::res://Assests/Poeira/_0000s_0004_Layer-23.png<>uid://b55huxcdvdwf1::::res://Assests/Poeira/_0000s_0003_Layer-25.png<>uid://e27w3magfm05::::res://Assests/Poeira/_0000s_0002_Layer-27.png<>uid://ciijuphiehi3::::res://Assests/Poeira/_0000s_0001_Layer-29.png<>uid://bonsm3ro6mlqj::::res://Assests/Poeira/1.png
+player.tscn::PackedScene::3519376603016033622::1730059760::0::1::::<><>::res://Scripts/player_1.gd<>uid://bpqqhalfqyafd::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png<>uid://dq64vuan350t1::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png<>uid://c51p20bsmgynd::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png<>uid://calvfust52scc::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png<>uid://ygdt11fuw4gp::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png<>uid://ce3k0x6jnxgho::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png<>uid://b6loebjjbs6ti::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png<>uid://dq5gcs5h8q5lo::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0003_5.png<>uid://dhjqw6b3yhm06::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png<>uid://cwnqw7ng2ctst::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png<>uid://dty5vcvf1kftj::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png<>uid://bk22uujqrel6g::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png<>uid://dqs1sojvx4401::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png<>uid://bdts30urgbjhj::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png<>uid://ya30f72xg0ab::::res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0000_7.png<>uid://chbqr6wt6ougs::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png<>uid://ci6v5kgadovh3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0002_9.png<>uid://bmy3gawueosn3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0001_10.png<>uid://cr75llsfp0s23::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0000_11.png<>uid://cy4gbn0dld1w4::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png<>uid://hx2syxuny46m::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png<>uid://blcotdbte6b5d::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png<>uid://dkbco23w5krbx::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png<>uid://bb3ltido73l78::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png<>uid://ccil2enkh6vtg::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png<>uid://c2fqwdbbxtgmh::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png<>uid://qd455g1remr3::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png<>uid://pxxtu6fq0w7t::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png<>uid://cfc5k26h51wsq::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0004_3.png<>uid://c817rp6g2ehkw::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0003_4.png<>uid://c130ydaanwpjj::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0002_5.png<>uid://cm1tbi2hlpuyl::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0001_6.png<>uid://cmgp684xp1ynu::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0000_7.png<>uid://dpextd03iie42::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0010_11.png<>uid://d06mln2f5rcjs::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0009_10.png<>uid://rrh76y74eon7::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0008_9.png<>uid://cmctuh3sj4tu6::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0007_8.png<>uid://b1uyvk6f67fpc::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0006_7.png<>uid://btvhihftey2in::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0005_6.png<>uid://gy2o1b8ymngy::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0004_5.png<>uid://b3ndmjuuwgfd3::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0003_4.png<>uid://hfgm7t4ovqe5::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0002_3.png<>uid://qnbxiiqj84cv::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png<>uid://dlwdx3mmufc82::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png<>uid://b1ayeypy31dle::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png<>uid://b71fa4xv3dvul::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png<>uid://c83q5p17urtbn::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png<>uid://bl0v8xphaut7::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png<>uid://rqbdvpci64cd::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png<>uid://cl1t713c4otje::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0002_3.png<>uid://b5vlscthj1ami::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0001_4.png<>uid://dbavrmwtgt217::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0000_5.png<>uid://bcvusksbdbm2g::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0008_1.png<>uid://bhp0yicc82dt1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0007_2.png<>uid://4xqviberyej8::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0006_3.png<>uid://bevenbrnm7ewv::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0005_4.png<>uid://cd2ocbq0fu5wu::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0004_5.png<>uid://s22h1nirpxl2::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0003_6.png<>uid://co1a2muopaa06::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0002_7.png<>uid://c8shhy2b1kr2k::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0001_8.png<>uid://j1dnjlwt58a1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0000_9.png<>uid://88qeckqwprhb::::res://Assests/Michel Sprites Pronto/Michel Andando/13.png<>uid://yr2h0u23yrl7::::res://Assests/Michel Sprites Pronto/Michel Andando/12.png<>uid://bymvcj3ql6048::::res://Assests/Michel Sprites Pronto/Michel Andando/11.png<>uid://djpbrcbvwfnyp::::res://Assests/Michel Sprites Pronto/Michel Andando/10.png<>uid://cc8x1sfy4h30f::::res://Assests/Michel Sprites Pronto/Michel Andando/9.png<>uid://lvpqx5rusglx::::res://Assests/Michel Sprites Pronto/Michel Andando/8.png<>uid://dfh72r47sryi0::::res://Assests/Michel Sprites Pronto/Michel Andando/7.png<>uid://b2l6nvqqm1yhq::::res://Assests/Michel Sprites Pronto/Michel Andando/6.png<>uid://cmndawuoafrvt::::res://Assests/Michel Sprites Pronto/Michel Andando/5.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://budc8rek5y1fv::::res://Assests/Michel Sprites Pronto/Michel Andando/4.png<>uid://bnjydsuayujng::::res://Assests/Michel Sprites Pronto/Michel Andando/3.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://c267c6dp4t2c8::::res://Assests/Michel Sprites Pronto/Michel Andando/1.png<>uid://bnl11xgdnewml::::res://Assests/Michel Sprites Pronto/Michel Andando/2.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png
+player_2.tscn::PackedScene::880172633076244536::1730059760::0::1::::<><>::res://Scripts/player_2.gd<>uid://bm80q03wldxbk::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png<>uid://cf3txtxcj2gmv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png<>uid://c6f7vfw4exywa::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png<>uid://cn5qgpdnlq2w::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png<>uid://b2dw31uhj1w3r::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png<>uid://dnydkktnkgqkx::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png<>uid://d3vsr0hscl3j::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png<>uid://duvx3033kunwv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png<>uid://b21557jbb3x7s::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png<>uid://bxp4rkhxnsl8x::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png<>uid://cp4dr432ie8jy::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0002_20240905_162028_039.png<>uid://haryvft1dnif::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0001_20240905_162028_041.png<>uid://colsn6kt8f52h::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png<>uid://8e3yuo8f23r1::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0000_20240905_162028_045.png<>uid://b7jv1745jkkhm::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png<>uid://djkuuknwljpxg::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png<>uid://c0mk7742ign6b::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png<>uid://g4e64by52k63::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png<>uid://dy03lgbfd72gq::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png<>uid://c62i6i56v20ya::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png<>uid://ntr5gjkgni0::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0001_20240905_161421_034.png<>uid://ca7fs4kj3y1gs::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0002_20240905_161421_038.png<>uid://0pqbwra2gaee::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0003_20240905_161421_042.png<>uid://dqgpimi8go1ol::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0004_20240905_161421_046.png<>uid://cond32tchmqhv::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0005_20240905_161421_050.png<>uid://ymub6m4o4lpj::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0000_20240905_161654_022.png<>uid://ck0v5ny3bybsw::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0001_20240905_161654_028.png<>uid://cfwgtohiywkxg::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0002_20240905_161654_030.png<>uid://cq855ty6sm4rt::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0003_20240905_161654_034.png<>uid://nbymk6eumacd::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0004_20240905_161654_036.png<>uid://w4k8hgbhlv61::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0005_20240905_161654_040.png<>uid://cpbf1k76apanr::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0006_20240905_161654_044.png<>uid://d3eyt5x0ithk2::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0007_20240905_161654_046.png<>uid://ch3ont7n3aker::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0000_Layer-2.png<>uid://t73g7bdxmbev::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0004_20240905_161523_032.png<>uid://cw2537r06cn61::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0005_20240905_161523_036.png<>uid://bu854alesr8lr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0006_20240905_161523_042.png<>uid://cmqptuteggp7d::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0000_20240905_161527_027.png<>uid://bta3a3005880w::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0001_20240905_161527_029.png<>uid://3441hcv4svcu::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0003_20240905_161527_033.png<>uid://c6pqxw7chxe3n::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0005_20240905_161527_039.png<>uid://bjbmnalxclaxl::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0007_20240905_161527_043.png<>uid://lrcp3om7p3fr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0009_20240905_161527_047.png<>uid://2wwrtwolo66::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0000_20240905_161532_023.png<>uid://do7im6y1nt6c0::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0001_20240905_161532_027.png<>uid://euqyys1b7dfc::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0002_20240905_161532_031.png<>uid://dbrccmmpls4s3::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0003_20240905_161532_033.png<>uid://b0ur6amye12xb::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0004_20240905_161532_037.png<>uid://dte0epdi8f4ve::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0005_20240905_161532_041.png<>uid://covryx2htq6ib::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0006_20240905_161532_045.png<>uid://ccma5lhcj587m::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0007_20240905_161532_047.png<>uid://cx5je4ci8ukln::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0008_20240905_161532_049.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://b2kcn4oy7soyx::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0000_20240905_161346_073.png<>uid://dcnsg72lo2vy6::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0001_20240905_161346_071.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://di0lstbb0l40j::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0002_20240905_161346_069.png<>uid://c0qsrtgqjdpeu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0003_20240905_161346_067.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://odsobpxu4f73::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0004_20240905_161346_065.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://dmjkwknyqwlqd::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0005_20240905_161346_063.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://dqpengdo4lbdg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0006_20240905_161346_061.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://cj05ruky8mkuu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0007_20240905_161346_059.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://2dt3saejp6tg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0008_20240905_161346_057.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://d13lk7ufufnrs::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0009_20240905_161346_055.png<>uid://csuuxpp6txhfr::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0010_20240905_161346_053.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png<>uid://skhcq31iouhk::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0011_20240905_161346_051.png<>uid://wmaamhm1d5mj::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0012_20240905_161346_047.png
+texture_rect.gd::GDScript::-1::1730057529::0::1::::<>TextureRect<>::
+::res://prefer/::1730059806
+camera_2d.gd::GDScript::-1::1729721108::0::1::::<>Camera2D<>::
+camera_2d_2.gd::GDScript::-1::1729721108::0::1::::<>Camera2D<>::
+hitbox.tscn::PackedScene::6649929041854336219::1729721108::0::1::::<><>::res://Scripts/hitbox.gd
+frenteUFJ.tscn::PackedScene::8436712403994816127::1730059797::0::1::::<><>::res://prefer/camera_2d.gd<>uid://bqe2va7eeqr7s::::res://Cenas/player.tscn<>uid://msmkx04o1khs::::res://Cenas/player_2.tscn<>uid://d4baqck52ii3v::::res://Assests/FachadaAccets/_0004_fundo.png<>uid://bbagw1ido3t40::::res://Assests/FachadaAccets/_0003_arvores.png<>uid://pt8l4fpqa6gv::::res://Assests/FachadaAccets/_0002_estruturaEntrada.png<>uid://dnhyt6usv2x36::::res://Assests/FachadaAccets/_0001_arbustos.png<>uid://cemfmdwx0pjsb::::res://Assests/FachadaAccets/_0000_chão.png<>uid://e8rf2fu6m40s::::res://Assests/hud/HUD.png<>res://Scripts/gerencia_hud.gd<>uid://bqwgr17t7eieq::::res://Assests/Fontes/RevMiniPixel.ttf
+world.gd::GDScript::-1::1729721108::0::1::::<>Node2D<>::
+world.tscn::PackedScene::3564916529657022667::1730059760::0::1::::<><>::res://prefer/world.gd<>uid://cu4w02wlugy63::::res://Assests/MapaEstacionamento/_0005_chão.png<>res://prefer/camera_2d.gd<>uid://bqe2va7eeqr7s::::res://Cenas/player.tscn<>uid://msmkx04o1khs::::res://Cenas/player_2.tscn<>uid://pra1kn7a86jl::::res://Assests/MapaEstacionamento/_0004_cenario.png<>uid://dskf4ptooihtn::::res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png<>uid://bwn4f7nlitoc6::::res://Assests/MapaEstacionamento/_0002_carros-atrás.png<>uid://c5ddbmv36feig::::res://Assests/MapaEstacionamento/_0001_arvores.png<>uid://hqvgmeir6nqv::::res://Assests/MapaEstacionamento/_0000_carros-frente.png<>uid://bqwgr17t7eieq::::res://Assests/Fontes/RevMiniPixel.ttf<>uid://e8rf2fu6m40s::::res://Assests/hud/HUD.png<>res://Scripts/gerencia_hud.gd
+::res://Scripts/::1730059805
+Global.gd::GDScript::-1::1729721108::0::1::::<>Node<>::
+hitbox.gd::GDScript::-1::1729721108::0::1::::<>Area2D<>::
+player_1.gd::GDScript::-1::1729721108::0::1::::<>CharacterBody2D<>::
+player_2.gd::GDScript::-1::1729721108::0::1::::<>CharacterBody2D<>::
+::res://Scripts/HUD/::1730059805
+Tempo_hud.gd::GDScript::-1::1730059805::0::1::::<>Control<>::
+=======
+::res://::1730057690
+default_bus_layout.tres::AudioBusLayout::7673916110365846087::1730054114::0::1::::<><>::
+icon.svg::CompressedTexture2D::2478846410236958265::1730054114::1730054163::1::::<><>::
+mainMenuAudio.tscn::PackedScene::3465627478822212323::1730054114::0::1::::<><>::uid://cp0aj4wficg3x::::res://audio/menu main.wav
+::res://Assests/::1730055457
+::res://Assests/Fontes/::1730055428
+RevMiniPixel.ttf::FontFile::3555254568890963768::1730054113::1730054161::1::::<><>::
+::res://Assests/hud/::1730055457
+HUD.png::CompressedTexture2D::349922385087773416::1730054113::1730054165::1::::<><>::
+lifeDamage.png::CompressedTexture2D::5130591146741871449::1730055028::1730055457::1::::<><>::
+lifeEmpty.png::CompressedTexture2D::4199088808765968989::1730055028::1730055058::1::::<><>::
+lifeFull.png::CompressedTexture2D::5065018781704272952::1730054113::1730054164::1::::<><>::
+main_menu.tscn::PackedScene::-1::1730054113::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/menuvideo/menu main v3.ogv<>res://.godot/v_box_container.gd<>uid://bm57v7luifu4i::::res://assetss/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://assetss/menu main/_0002s_0000s_0000_1-vs-1.png<>uid://bqa6qf3mywvsx::::res://assetss/menu main/hover 1vs1.png<>res://.godot/button.gd<>uid://caxd0w6bke5dv::::res://assetss/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://assetss/menu main/hover opções.png<>uid://rvrdbs523s3x::::res://assetss/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://assetss/menu main/hover Chaveamento.png<>uid://cgibdukfg6s6n::::res://assetss/menu main/_0002s_0000s_0003_sair.png<>uid://b5a4qc5cq6mdk::::res://assetss/menu main/hover sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://crhxta14is3it::::res://assetss/menu main/subMenu1v1/VS.png<>uid://dm7q5sxcwioqh::::res://assetss/menu main/subMenu1v1/btnIniciar.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://d3g4g1s37w1el::::res://assetss/menu main/subMenu1v1/btnVoltar.png<>uid://c8edt864hgstm::::res://assetss/menu main/subMenu1v1/p1.png<>uid://t0bfd8edgial::::res://assetss/menu main/subMenu1v1/personagem.png<>uid://dkr0c7os2ki81::::res://assetss/menu main/subMenu1v1/p2.png<>uid://bexw55fgtu2wj::::res://assetss/menu main/subMenu1v1/personagemHover.png<>uid://mw0h4dd841jn::::res://assetss/menu main/subMenu1v1/personagem2Hover.png<>uid://b17d54hgcxd2b::::res://assetss/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://assetss/menu main/subMenuOpcoes/sliderGrab.png<>uid://o60yxho17of0::::res://assetss/menu main/MenuEscolhaMapa/mapaEstacionamento.png<>uid://dgewi5jlh3y7::::res://assetss/menu main/subMenu1v1/btnVoltarHover.png<>uid://bxy8fhudg4pjg::::res://assetss/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://6xellc821ygn::::res://assetss/menu main/subMenuChaveamento/MenuModoChaveamento.png<>uid://chqyxwmrjoy28::::res://assetss/menu main/MenuEscolhaMapa/mapaRandomBtn.png
+::res://Assests/MapaEstacionamento/::1730054165
+_0000_carros-frente.png::CompressedTexture2D::525638357989562737::1730054113::1730054165::1::::<><>::
+_0001_arvores.png::CompressedTexture2D::6884884410596471422::1730054113::1730054165::1::::<><>::
+_0002_carros-atrás.png::CompressedTexture2D::3959183577633247955::1730054113::1730054164::1::::<><>::
+_0003_arvores-atras-comp.png::CompressedTexture2D::8443661204948222031::1730054113::1730054165::1::::<><>::
+_0004_cenario.png::CompressedTexture2D::1087974053802254849::1730054113::1730054165::1::::<><>::
+_0005_chão.png::CompressedTexture2D::6237867066345999978::1730054113::1730054164::1::::<><>::
+::res://Assests/menu main/::1730054165
+_0002s_0000s_0000_1-vs-1.png::CompressedTexture2D::2780723799238957644::1730054113::1730054165::1::::<><>::
+_0002s_0000s_0001_Chaveamento.png::CompressedTexture2D::1237599902670646119::1730054113::1730054165::1::::<><>::
+_0002s_0000s_0002_opções.png::CompressedTexture2D::4820550055017129619::1730054113::1730054164::1::::<><>::
+_0002s_0000s_0003_sair.png::CompressedTexture2D::5210556591772838251::1730054113::1730054164::1::::<><>::
+_0002s_0000_Agrupar-2.png::CompressedTexture2D::3292600284071485594::1730054113::1730054164::1::::<><>::
+hover 1vs1.png::CompressedTexture2D::3511353287829319039::1730054113::1730054164::1::::<><>::
+hover Chaveamento.png::CompressedTexture2D::5108000902194792220::1730054113::1730054164::1::::<><>::
+hover opções.png::CompressedTexture2D::4100127562864712675::1730054113::1730054164::1::::<><>::
+hover sair.png::CompressedTexture2D::4493875509831095768::1730054113::1730054164::1::::<><>::
+::res://Assests/menu main/MenuEscolhaMapa/::1730054165
+mapa1Btn.png::CompressedTexture2D::4052322141901119388::1730054113::1730054165::1::::<><>::
+mapa2Btn.png::CompressedTexture2D::2044646967850241079::1730054113::1730054165::1::::<><>::
+mapa4Btn.png::CompressedTexture2D::5653122133651373547::1730054113::1730054165::1::::<><>::
+mapa5Btn - Copia.png::CompressedTexture2D::5836974116298626242::1730054113::1730054165::1::::<><>::
+mapa5Btn.png::CompressedTexture2D::9199101341968074576::1730054113::1730054165::1::::<><>::
+mapaRandomBtn.png::CompressedTexture2D::5298692772839957303::1730054113::1730054165::1::::<><>::
+::res://Assests/menu main/MenuEscolhaMapa/Preview/::1730054165
+Preview_Estacionamento.png::CompressedTexture2D::5006441460357237855::1730054113::1730054165::1::::<><>::
+Preview_Fachada.png::CompressedTexture2D::22620888480999808::1730054113::1730054165::1::::<><>::
+Preview_FilaCaj.png::CompressedTexture2D::6183183650079589075::1730054113::1730054165::1::::<><>::
+Preview_RU.png::CompressedTexture2D::977484314633363464::1730054113::1730054165::1::::<><>::
+::res://Assests/menu main/menuvideo/::1730054113
+menu main v3.ogv::VideoStreamTheora::-1::1730054114::0::1::::<><>::
+::res://Assests/menu main/subMenu1v1/::1730054165
+btnIniciar.png::CompressedTexture2D::8068614289638420479::1730054114::1730054165::1::::<><>::
+btnVoltar.png::CompressedTexture2D::9138708841751658155::1730054114::1730054165::1::::<><>::
+btnVoltarHover.png::CompressedTexture2D::223235419830289864::1730054114::1730054165::1::::<><>::
+p1.png::CompressedTexture2D::7097548582006732890::1730054114::1730054165::1::::<><>::
+p2.png::CompressedTexture2D::7897768108914403164::1730054114::1730054165::1::::<><>::
+personagem2Hover.png::CompressedTexture2D::889214387615342527::1730054114::1730054165::1::::<><>::
+personagem.png::CompressedTexture2D::1385267327670992587::1730054114::1730054165::1::::<><>::
+personagemHover.png::CompressedTexture2D::2716047677969961905::1730054114::1730054165::1::::<><>::
+VS.png::CompressedTexture2D::5981932815922965699::1730054114::1730054165::1::::<><>::
+::res://Assests/menu main/subMenuChaveamento/::1730054165
+MenuModoChaveamento.png::CompressedTexture2D::2223597935209358809::1730054114::1730054165::1::::<><>::
+::res://Assests/menu main/subMenuOpcoes/::1730054165
+menuOpcoes.png::CompressedTexture2D::4277627965474280827::1730054114::1730054165::1::::<><>::
+sliderGrab.png::CompressedTexture2D::7721360842279616436::1730054114::1730054165::1::::<><>::
+::res://Assests/Michel Sprites Pronto/::1730054113
+::res://Assests/Michel Sprites Pronto/Michel Andando/::1730054164
+1.png::CompressedTexture2D::6733884004924597081::1730054113::1730054164::1::::<><>::
+2.png::CompressedTexture2D::3323210096195376459::1730054113::1730054164::1::::<><>::
+3.png::CompressedTexture2D::3318918592331429764::1730054113::1730054164::1::::<><>::
+4.png::CompressedTexture2D::3796571954471910535::1730054113::1730054164::1::::<><>::
+5.png::CompressedTexture2D::5642127739869771529::1730054113::1730054164::1::::<><>::
+6.png::CompressedTexture2D::4306134187762433390::1730054113::1730054164::1::::<><>::
+7.png::CompressedTexture2D::7526649012926806897::1730054113::1730054164::1::::<><>::
+8.png::CompressedTexture2D::816369795628616341::1730054113::1730054164::1::::<><>::
+9.png::CompressedTexture2D::4982787396295232399::1730054113::1730054164::1::::<><>::
+10.png::CompressedTexture2D::7822018493196901339::1730054113::1730054164::1::::<><>::
+11.png::CompressedTexture2D::4097004609198090887::1730054113::1730054164::1::::<><>::
+12.png::CompressedTexture2D::1721279873738801338::1730054113::1730054164::1::::<><>::
+13.png::CompressedTexture2D::2385335042250644363::1730054113::1730054164::1::::<><>::
+::res://Assests/Michel Sprites Pronto/michel chute/::1730054164
+_0000s_0000_1.png::CompressedTexture2D::7976980355688695277::1730054113::1730054164::1::::<><>::
+_0000s_0001_2.png::CompressedTexture2D::1149960632549435237::1730054113::1730054164::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::502031237155651662::1730054113::1730054164::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::4378749301410532262::1730054113::1730054164::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::472343856528828120::1730054113::1730054164::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::3763800327208642345::1730054113::1730054164::1::::<><>::
+_0000s_0006_7.png::CompressedTexture2D::4254113456253842404::1730054113::1730054164::1::::<><>::
+_0000s_0007_8.png::CompressedTexture2D::5620425997040372811::1730054113::1730054164::1::::<><>::
+_0000s_0008_9.png::CompressedTexture2D::1228788594811910274::1730054113::1730054164::1::::<><>::
+_0000s_0009_10.png::CompressedTexture2D::8978727824833326356::1730054113::1730054164::1::::<><>::
+_0000s_0010_11.png::CompressedTexture2D::8221782835057213189::1730054113::1730054164::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel comemoração/::1730054166
+_0000s_0000_10.png::CompressedTexture2D::7411550583080999469::1730054113::1730054164::1::::<><>::
+_0000s_0001_9.png::CompressedTexture2D::1354441946080419701::1730054113::1730054166::1::::<><>::
+_0000s_0002_8.png::CompressedTexture2D::8498373381678612550::1730054113::1730054166::1::::<><>::
+_0000s_0003_7.png::CompressedTexture2D::4496949868535144523::1730054113::1730054166::1::::<><>::
+_0000s_0004_6.png::CompressedTexture2D::7070428676148055316::1730054113::1730054166::1::::<><>::
+_0000s_0005_5.png::CompressedTexture2D::3068597573507146833::1730054113::1730054166::1::::<><>::
+_0000s_0006_4.png::CompressedTexture2D::3586025257604649808::1730054113::1730054166::1::::<><>::
+_0000s_0007_3.png::CompressedTexture2D::5023325344796954294::1730054113::1730054166::1::::<><>::
+_0000s_0008_2.png::CompressedTexture2D::3420120295415668068::1730054113::1730054166::1::::<><>::
+_0000s_0009_1.png::CompressedTexture2D::5854331153739087290::1730054113::1730054166::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel dano/::1730054166
+_0000s_0000_8.png::CompressedTexture2D::2637354644793779491::1730054113::1730054166::1::::<><>::
+_0000s_0001_7.png::CompressedTexture2D::3145723459235929408::1730054113::1730054166::1::::<><>::
+_0000s_0002_6.png::CompressedTexture2D::7670175746755451673::1730054113::1730054166::1::::<><>::
+_0000s_0003_5.png::CompressedTexture2D::8344583747581269228::1730054113::1730054166::1::::<><>::
+_0000s_0004_4.png::CompressedTexture2D::1697136000926449119::1730054113::1730054166::1::::<><>::
+_0000s_0005_3.png::CompressedTexture2D::4796834587676407462::1730054113::1730054166::1::::<><>::
+_0000s_0006_2.png::CompressedTexture2D::3473267372012491469::1730054113::1730054166::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel Defesa/::1730054167
+_0000s_0000_7.png::CompressedTexture2D::1686277281266109541::1730054113::1730054167::1::::<><>::
+_0000s_0001_6.png::CompressedTexture2D::1436383619954349329::1730054113::1730054167::1::::<><>::
+_0000s_0002_5.png::CompressedTexture2D::2135916243412614514::1730054113::1730054167::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::3448751342757038079::1730054113::1730054167::1::::<><>::
+_0000s_0004_3.png::CompressedTexture2D::9046204879074253796::1730054113::1730054167::1::::<><>::
+_0000s_0005_2.png::CompressedTexture2D::436795033878815825::1730054113::1730054166::1::::<><>::
+_0000s_0006_1.png::CompressedTexture2D::1172266816338331496::1730054113::1730054167::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel especial/::1730054166
+_0000s_0000_11.png::CompressedTexture2D::6033953556690170834::1730054113::1730054166::1::::<><>::
+_0000s_0001_10.png::CompressedTexture2D::3279942698908137166::1730054113::1730054166::1::::<><>::
+_0000s_0002_9.png::CompressedTexture2D::5399676992038468606::1730054113::1730054166::1::::<><>::
+_0000s_0003_8.png::CompressedTexture2D::5267231144101959918::1730054113::1730054166::1::::<><>::
+_0000s_0004_7.png::CompressedTexture2D::8321053885179309080::1730054113::1730054166::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::8544254295504264179::1730054113::1730054166::1::::<><>::
+_0000s_0006_5.png::CompressedTexture2D::6344845298714319619::1730054113::1730054166::1::::<><>::
+_0000s_0007_4.png::CompressedTexture2D::4585840239678701578::1730054113::1730054166::1::::<><>::
+_0000s_0008_3.png::CompressedTexture2D::5112052390180484988::1730054113::1730054166::1::::<><>::
+_0000s_0009_2.png::CompressedTexture2D::6933140784922352653::1730054113::1730054166::1::::<><>::
+_0000s_0010_1.png::CompressedTexture2D::8348078605222194132::1730054113::1730054165::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 1/::1730054165
+_0000s_0000_5.png::CompressedTexture2D::7147901659752872259::1730054113::1730054165::1::::<><>::
+_0000s_0001_4.png::CompressedTexture2D::3658652957616731895::1730054113::1730054165::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::4686442646378883775::1730054113::1730054165::1::::<><>::
+_0000s_0003_2.png::CompressedTexture2D::1794636541629813337::1730054113::1730054165::1::::<><>::
+_0000s_0004_1.png::CompressedTexture2D::4212796254145320790::1730054113::1730054165::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 2/::1730054165
+_0000s_0000_5.png::CompressedTexture2D::7230756975199783384::1730054113::1730054165::1::::<><>::
+_0000s_0001_4.png::CompressedTexture2D::4536138091609128608::1730054113::1730054165::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::5599804646269456514::1730054113::1730054165::1::::<><>::
+_0000s_0003_2.png::CompressedTexture2D::1226307586551220915::1730054113::1730054165::1::::<><>::
+_0000s_0004_1.png::CompressedTexture2D::94454194915820166::1730054113::1730054165::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel golpe 3/::1730054165
+_0000s_0000_9.png::CompressedTexture2D::685579271376095550::1730054113::1730054165::1::::<><>::
+_0000s_0001_8.png::CompressedTexture2D::7126670828871762740::1730054113::1730054165::1::::<><>::
+_0000s_0002_7.png::CompressedTexture2D::5809207878192073761::1730054113::1730054165::1::::<><>::
+_0000s_0003_6.png::CompressedTexture2D::1320790630282604469::1730054113::1730054165::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::5039999785530063112::1730054113::1730054165::1::::<><>::
+_0000s_0005_4.png::CompressedTexture2D::2710794153765300273::1730054113::1730054165::1::::<><>::
+_0000s_0006_3.png::CompressedTexture2D::2083966549339593459::1730054113::1730054165::1::::<><>::
+_0000s_0007_2.png::CompressedTexture2D::2910269462755548756::1730054113::1730054165::1::::<><>::
+_0000s_0008_1.png::CompressedTexture2D::2571397341039517988::1730054113::1730054165::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel idle/::1730054166
+_0000s_0000_9.png::CompressedTexture2D::1101744862437189715::1730054113::1730054165::1::::<><>::
+_0000s_0001_8.png::CompressedTexture2D::1131030584251613054::1730054113::1730054166::1::::<><>::
+_0000s_0002_7.png::CompressedTexture2D::6679272952925326623::1730054113::1730054166::1::::<><>::
+_0000s_0003_6.png::CompressedTexture2D::4930450410691418312::1730054113::1730054166::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::2515114346950618733::1730054113::1730054166::1::::<><>::
+_0000s_0005_4.png::CompressedTexture2D::7863362762738947949::1730054113::1730054166::1::::<><>::
+_0000s_0006_3.png::CompressedTexture2D::3163510847187194203::1730054113::1730054166::1::::<><>::
+_0000s_0007_2.png::CompressedTexture2D::540475393922547950::1730054113::1730054166::1::::<><>::
+_0000s_0008_1.png::CompressedTexture2D::6517607378892033497::1730054113::1730054166::1::::<><>::
+::res://Assests/Michel Sprites Pronto/Michel pulo/::1730054166
+_0000s_0000_7.png::CompressedTexture2D::5628461651205490830::1730054113::1730054166::1::::<><>::
+_0000s_0001_6.png::CompressedTexture2D::5669937183534494163::1730054113::1730054166::1::::<><>::
+_0000s_0002_5.png::CompressedTexture2D::6657114820549902071::1730054113::1730054166::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::7144721167359783382::1730054113::1730054162::1::::<><>::
+_0000s_0004_3.png::CompressedTexture2D::5129755175185103260::1730054113::1730054161::1::::<><>::
+_0000s_0005_2.png::CompressedTexture2D::8897449694078674745::1730054113::1730054162::1::::<><>::
+_0000s_0006_1.png::CompressedTexture2D::83463917197364605::1730054113::1730054162::1::::<><>::
+::res://Assests/Michel Sprites Pronto/michel rochaEspecial/::1730054162
+_0000_1.png::CompressedTexture2D::6608668136520148538::1730054113::1730054161::1::::<><>::
+_0001_2.png::CompressedTexture2D::7896429249683461192::1730054113::1730054162::1::::<><>::
+_0002_3.png::CompressedTexture2D::6918521420832617883::1730054113::1730054162::1::::<><>::
+_0003_4.png::CompressedTexture2D::5438319073135957029::1730054113::1730054162::1::::<><>::
+_0004_5.png::CompressedTexture2D::3202908601378707765::1730054113::1730054162::1::::<><>::
+_0005_6.png::CompressedTexture2D::5017919380981675875::1730054113::1730054162::1::::<><>::
+_0006_7.png::CompressedTexture2D::365774670925037381::1730054113::1730054162::1::::<><>::
+_0007_8.png::CompressedTexture2D::4755570456125036283::1730054113::1730054162::1::::<><>::
+_0008_9.png::CompressedTexture2D::5046929214363890322::1730054113::1730054162::1::::<><>::
+_0009_10.png::CompressedTexture2D::6123001031324574188::1730054113::1730054162::1::::<><>::
+_0010_11.png::CompressedTexture2D::4213842031045606653::1730054113::1730054162::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/::1730054113
+::res://Assests/Neemias Sprites Prontos/Neemias andando/::1730054162
+_0000s_0000_20240905_161346_073.png::CompressedTexture2D::4302309434705223183::1730054113::1730054162::1::::<><>::
+_0000s_0001_20240905_161346_071.png::CompressedTexture2D::7327581992767879291::1730054113::1730054162::1::::<><>::
+_0000s_0002_20240905_161346_069.png::CompressedTexture2D::7773083274813543575::1730054113::1730054162::1::::<><>::
+_0000s_0003_20240905_161346_067.png::CompressedTexture2D::6561716774719756160::1730054113::1730054162::1::::<><>::
+_0000s_0004_20240905_161346_065.png::CompressedTexture2D::989954927947402168::1730054113::1730054162::1::::<><>::
+_0000s_0005_20240905_161346_063.png::CompressedTexture2D::8020754578344470463::1730054113::1730054162::1::::<><>::
+_0000s_0006_20240905_161346_061.png::CompressedTexture2D::8313515619340344856::1730054113::1730054162::1::::<><>::
+_0000s_0007_20240905_161346_059.png::CompressedTexture2D::5458003339309445332::1730054113::1730054162::1::::<><>::
+_0000s_0008_20240905_161346_057.png::CompressedTexture2D::1902496482195650960::1730054113::1730054162::1::::<><>::
+_0000s_0009_20240905_161346_055.png::CompressedTexture2D::9042662019538707856::1730054113::1730054162::1::::<><>::
+_0000s_0010_20240905_161346_053.png::CompressedTexture2D::6078784333524241631::1730054113::1730054162::1::::<><>::
+_0000s_0011_20240905_161346_051.png::CompressedTexture2D::1284472438383067000::1730054113::1730054162::1::::<><>::
+_0000s_0012_20240905_161346_047.png::CompressedTexture2D::1568927734759385233::1730054113::1730054162::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias dano/::1730054162
+_0000s_0000_20240905_162052_032.png::CompressedTexture2D::9057024536638638468::1730054113::1730054162::1::::<><>::
+_0000s_0001_20240905_162052_031.png::CompressedTexture2D::4435574924983320319::1730054113::1730054162::1::::<><>::
+_0000s_0002_20240905_162052_029.png::CompressedTexture2D::5217466196390183692::1730054113::1730054162::1::::<><>::
+_0000s_0003_20240905_162052_027.png::CompressedTexture2D::8989485868510311126::1730054113::1730054162::1::::<><>::
+_0000s_0004_20240905_162052_025.png::CompressedTexture2D::5588306355150047664::1730054113::1730054162::1::::<><>::
+_0000s_0005_20240905_162052_023.png::CompressedTexture2D::5534836109505133176::1730054113::1730054161::1::::<><>::
+_0000s_0006_20240905_162052_019.png::CompressedTexture2D::2092447422936576345::1730054113::1730054161::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias defesa/::1730054161
+_0000s_0000_1.png::CompressedTexture2D::9199500005528038249::1730054113::1730054161::1::::<><>::
+_0000s_0001_2.png::CompressedTexture2D::721069642272992299::1730054113::1730054161::1::::<><>::
+_0000s_0002_3.png::CompressedTexture2D::2763354038721079175::1730054113::1730054161::1::::<><>::
+_0000s_0003_4.png::CompressedTexture2D::1524525393430615048::1730054113::1730054161::1::::<><>::
+_0000s_0004_5.png::CompressedTexture2D::1979046633529166611::1730054113::1730054161::1::::<><>::
+_0000s_0005_6.png::CompressedTexture2D::6961191651780656318::1730054113::1730054161::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias especial/::1730054161
+_0000s_0000_20240905_162028_045.png::CompressedTexture2D::2326233359523895828::1730054113::1730054161::1::::<><>::
+_0000s_0001_20240905_162028_041.png::CompressedTexture2D::492398065009500193::1730054113::1730054161::1::::<><>::
+_0000s_0002_20240905_162028_039.png::CompressedTexture2D::5885755053968424654::1730054113::1730054161::1::::<><>::
+_0000s_0003_20240905_162028_037.png::CompressedTexture2D::4033521442075594021::1730054113::1730054161::1::::<><>::
+_0000s_0004_20240905_162028_035.png::CompressedTexture2D::4337070061824014718::1730054113::1730054161::1::::<><>::
+_0000s_0005_20240905_162028_031.png::CompressedTexture2D::8607838707362806261::1730054113::1730054161::1::::<><>::
+_0000s_0006_20240905_162028_029.png::CompressedTexture2D::269677241025411901::1730054113::1730054161::1::::<><>::
+_0000s_0007_20240905_162028_027.png::CompressedTexture2D::8121462648577571035::1730054113::1730054161::1::::<><>::
+_0000s_0008_20240905_162028_025.png::CompressedTexture2D::4289099768086669409::1730054113::1730054161::1::::<><>::
+_0000s_0009_20240905_162028_023.png::CompressedTexture2D::169065019030611636::1730054113::1730054161::1::::<><>::
+_0000s_0010_20240905_162028_019.png::CompressedTexture2D::6960998152302387556::1730054113::1730054161::1::::<><>::
+_0000s_0011_20240905_162028_017.png::CompressedTexture2D::5182783892390533933::1730054113::1730054161::1::::<><>::
+_0000s_0012_20240905_162028_015.png::CompressedTexture2D::3298359128107803024::1730054113::1730054161::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/::1730054161
+_0002s_0000_Layer-2.png::CompressedTexture2D::5322840151191080353::1730054113::1730054161::1::::<><>::
+_0002s_0001_20240905_161523_026.png::CompressedTexture2D::5688581091362910839::1730054113::1730054161::1::::<><>::
+_0002s_0002_20240905_161523_028.png::CompressedTexture2D::2339161024536074433::1730054113::1730054161::1::::<><>::
+_0002s_0003_20240905_161523_030.png::CompressedTexture2D::3242454814256111675::1730054113::1730054161::1::::<><>::
+_0002s_0004_20240905_161523_032.png::CompressedTexture2D::1401360590272942481::1730054113::1730054161::1::::<><>::
+_0002s_0005_20240905_161523_036.png::CompressedTexture2D::6374607346981145932::1730054113::1730054161::1::::<><>::
+_0002s_0006_20240905_161523_042.png::CompressedTexture2D::3860195337343308275::1730054113::1730054161::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/::1730054163
+_0001s_0000_20240905_161527_027.png::CompressedTexture2D::5649083300091537871::1730054113::1730054161::1::::<><>::
+_0001s_0001_20240905_161527_029.png::CompressedTexture2D::3721710299064403508::1730054113::1730054161::1::::<><>::
+_0001s_0002_20240905_161527_031.png::CompressedTexture2D::1563085652578097638::1730054113::1730054161::1::::<><>::
+_0001s_0003_20240905_161527_033.png::CompressedTexture2D::2026962171911084332::1730054113::1730054161::1::::<><>::
+_0001s_0004_20240905_161527_035.png::CompressedTexture2D::3046572595400654940::1730054113::1730054163::1::::<><>::
+_0001s_0005_20240905_161527_039.png::CompressedTexture2D::6980674936668757949::1730054113::1730054163::1::::<><>::
+_0001s_0006_20240905_161527_041.png::CompressedTexture2D::3210739701161070322::1730054113::1730054163::1::::<><>::
+_0001s_0007_20240905_161527_043.png::CompressedTexture2D::3020936491464382641::1730054113::1730054163::1::::<><>::
+_0001s_0008_20240905_161527_045.png::CompressedTexture2D::4335396655726947022::1730054113::1730054163::1::::<><>::
+_0001s_0009_20240905_161527_047.png::CompressedTexture2D::807321415601154595::1730054113::1730054163::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/::1730054163
+_0000s_0000_20240905_161532_023.png::CompressedTexture2D::57114183933357869::1730054113::1730054163::1::::<><>::
+_0000s_0001_20240905_161532_027.png::CompressedTexture2D::8208474782109296385::1730054113::1730054163::1::::<><>::
+_0000s_0002_20240905_161532_031.png::CompressedTexture2D::323058550122107656::1730054113::1730054163::1::::<><>::
+_0000s_0003_20240905_161532_033.png::CompressedTexture2D::7264670971624521876::1730054113::1730054163::1::::<><>::
+_0000s_0004_20240905_161532_037.png::CompressedTexture2D::4183516897847690251::1730054113::1730054163::1::::<><>::
+_0000s_0005_20240905_161532_041.png::CompressedTexture2D::8502633452105417402::1730054113::1730054163::1::::<><>::
+_0000s_0006_20240905_161532_045.png::CompressedTexture2D::5799913409175534045::1730054113::1730054163::1::::<><>::
+_0000s_0007_20240905_161532_047.png::CompressedTexture2D::4938045750202729808::1730054113::1730054163::1::::<><>::
+_0000s_0008_20240905_161532_049.png::CompressedTexture2D::6449671226468401499::1730054113::1730054163::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias parado/::1730054164
+_0000s_0000_20240905_161311_058.png::CompressedTexture2D::5779311099383375917::1730054113::1730054163::1::::<><>::
+_0000s_0001_20240905_161311_056.png::CompressedTexture2D::4652366294308325634::1730054113::1730054164::1::::<><>::
+_0000s_0002_20240905_161311_052.png::CompressedTexture2D::7812856023426229320::1730054113::1730054164::1::::<><>::
+_0000s_0003_20240905_161311_044.png::CompressedTexture2D::6553001033502582051::1730054113::1730054164::1::::<><>::
+_0000s_0004_20240905_161311_034.png::CompressedTexture2D::481299770131618138::1730054113::1730054164::1::::<><>::
+_0000s_0005_20240905_161311_030.png::CompressedTexture2D::8897123778691370200::1730054113::1730054164::1::::<><>::
+_0000s_0006_20240905_161311_026.png::CompressedTexture2D::7004975283046589212::1730054113::1730054164::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias pulo/::1730054164
+_0000s_0000_20240905_161421_030.png::CompressedTexture2D::6402466219521076345::1730054113::1730054164::1::::<><>::
+_0000s_0001_20240905_161421_034.png::CompressedTexture2D::28022477553587277::1730054113::1730054163::1::::<><>::
+_0000s_0002_20240905_161421_038.png::CompressedTexture2D::4839238723842743526::1730054113::1730054164::1::::<><>::
+_0000s_0003_20240905_161421_042.png::CompressedTexture2D::1786661196751569836::1730054113::1730054164::1::::<><>::
+_0000s_0004_20240905_161421_046.png::CompressedTexture2D::8295595501201520959::1730054113::1730054163::1::::<><>::
+_0000s_0005_20240905_161421_050.png::CompressedTexture2D::5782555689911522451::1730054113::1730054163::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/::1730054163
+_0000s_0000_20240905_161654_022.png::CompressedTexture2D::1710522554109725211::1730054113::1730054163::1::::<><>::
+_0000s_0001_20240905_161654_028.png::CompressedTexture2D::5527668599436594126::1730054113::1730054163::1::::<><>::
+_0000s_0002_20240905_161654_030.png::CompressedTexture2D::5169600874743436332::1730054113::1730054163::1::::<><>::
+_0000s_0003_20240905_161654_034.png::CompressedTexture2D::5965863451530850345::1730054113::1730054163::1::::<><>::
+_0000s_0004_20240905_161654_036.png::CompressedTexture2D::915998555733113127::1730054113::1730054163::1::::<><>::
+_0000s_0005_20240905_161654_040.png::CompressedTexture2D::1604687993018497140::1730054113::1730054162::1::::<><>::
+_0000s_0006_20240905_161654_044.png::CompressedTexture2D::5828088991392438179::1730054113::1730054162::1::::<><>::
+_0000s_0007_20240905_161654_046.png::CompressedTexture2D::9134299934249374595::1730054113::1730054162::1::::<><>::
+::res://Assests/Neemias Sprites Prontos/Neemias vitória/::1730054163
+1.png::CompressedTexture2D::27132843053691958::1730054113::1730054162::1::::<><>::
+2.png::CompressedTexture2D::703621428580562032::1730054113::1730054162::1::::<><>::
+3.png::CompressedTexture2D::863688394201689683::1730054113::1730054162::1::::<><>::
+4.png::CompressedTexture2D::6960851542826869244::1730054113::1730054162::1::::<><>::
+5.png::CompressedTexture2D::7835081780107366077::1730054113::1730054162::1::::<><>::
+6.png::CompressedTexture2D::1521427108541018065::1730054113::1730054163::1::::<><>::
+7.png::CompressedTexture2D::8889411493411275512::1730054113::1730054163::1::::<><>::
+8.png::CompressedTexture2D::6374861201601239308::1730054113::1730054163::1::::<><>::
+9.png::CompressedTexture2D::1428145633672372180::1730054113::1730054163::1::::<><>::
+10.png::CompressedTexture2D::2914157763205042833::1730054113::1730054163::1::::<><>::
+11.png::CompressedTexture2D::7937363091350592251::1730054113::1730054163::1::::<><>::
+12.png::CompressedTexture2D::3507654489302368126::1730054113::1730054163::1::::<><>::
+::res://Assests/Poeira/::1730054163
+_0000s_0001_Layer-29.png::CompressedTexture2D::157395591363792136::1730054113::1730054163::1::::<><>::
+_0000s_0002_Layer-27.png::CompressedTexture2D::338477294345864360::1730054113::1730054163::1::::<><>::
+_0000s_0003_Layer-25.png::CompressedTexture2D::4554479271574504036::1730054113::1730054163::1::::<><>::
+_0000s_0004_Layer-23.png::CompressedTexture2D::9129406819392884119::1730054113::1730054163::1::::<><>::
+_0000s_0005_Layer-21.png::CompressedTexture2D::4267980550832421196::1730054113::1730054163::1::::<><>::
+_0000s_0006_Layer-19.png::CompressedTexture2D::4648834977972254715::1730054113::1730054163::1::::<><>::
+_0000s_0007_Layer-17.png::CompressedTexture2D::6121105265273161630::1730054113::1730054163::1::::<><>::
+_0000s_0008_Layer-15.png::CompressedTexture2D::6196262163928945981::1730054113::1730054163::1::::<><>::
+_0000s_0009_Layer-13.png::CompressedTexture2D::8692791430610071467::1730054113::1730054163::1::::<><>::
+_0000s_0010_Layer-11.png::CompressedTexture2D::6599850998101868988::1730054113::1730054163::1::::<><>::
+_0000s_0011_Layer-9.png::CompressedTexture2D::8751316492568895613::1730054113::1730054163::1::::<><>::
+_0000s_0012_Layer-7.png::CompressedTexture2D::2063108637795530185::1730054113::1730054163::1::::<><>::
+_0000s_0013_Layer-5.png::CompressedTexture2D::346097000274974734::1730054113::1730054163::1::::<><>::
+_0000s_0014_Layer-3.png::CompressedTexture2D::6517428615136649058::1730054113::1730054163::1::::<><>::
+_0000s_0015_Layer-2.png::CompressedTexture2D::6644994763566155883::1730054113::1730054163::1::::<><>::
+1.png::CompressedTexture2D::3397017238418472997::1730054113::1730054163::1::::<><>::
+::res://audio/::1730054167
+btnMenuclick.wav::AudioStreamWAV::7353204518981333929::1730054114::1730054167::1::::<><>::
+menu main.wav::AudioStreamWAV::5877301095354131991::1730054114::1730054167::1::::<><>::
+MenuBtnSoundEffectwav.wav::AudioStreamWAV::2143321277823791337::1730054114::1730054167::1::::<><>::
+::res://Cenas/::1730057697
+main_menu.tscn::PackedScene::7553971546369173381::1730054174::0::1::::<><>::res://.godot/main_menu.gd<>res://.godot/v_box_container.gd<>res://Assests/menu main/menuvideo/menu main v3.ogv<>uid://bm57v7luifu4i::::res://Assests/menu main/_0002s_0000_Agrupar-2.png<>uid://bfvad5ul6xkme::::res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png<>res://.godot/button.gd<>uid://bqa6qf3mywvsx::::res://Assests/menu main/hover 1vs1.png<>uid://rvrdbs523s3x::::res://Assests/menu main/_0002s_0000s_0001_Chaveamento.png<>uid://ce1ma8a7j5moq::::res://Assests/menu main/hover Chaveamento.png<>uid://caxd0w6bke5dv::::res://Assests/menu main/_0002s_0000s_0002_opções.png<>uid://byoerchvpayqt::::res://Assests/menu main/hover opções.png<>uid://cgibdukfg6s6n::::res://Assests/menu main/_0002s_0000s_0003_sair.png<>uid://5signxbsqjrd::::res://audio/MenuBtnSoundEffectwav.wav<>uid://b5a4qc5cq6mdk::::res://Assests/menu main/hover sair.png<>uid://t0bfd8edgial::::res://Assests/menu main/subMenu1v1/personagem.png<>uid://cp0aj4wficg3x::::res://audio/menu main.wav<>uid://bexw55fgtu2wj::::res://Assests/menu main/subMenu1v1/personagemHover.png<>res://.godot/main_menu_audio.gd<>uid://dc07g67m4x62p::::res://audio/btnMenuclick.wav<>uid://c8edt864hgstm::::res://Assests/menu main/subMenu1v1/p1.png<>uid://crhxta14is3it::::res://Assests/menu main/subMenu1v1/VS.png<>uid://mw0h4dd841jn::::res://Assests/menu main/subMenu1v1/personagem2Hover.png<>uid://dkr0c7os2ki81::::res://Assests/menu main/subMenu1v1/p2.png<>uid://dm7q5sxcwioqh::::res://Assests/menu main/subMenu1v1/btnIniciar.png<>uid://d3g4g1s37w1el::::res://Assests/menu main/subMenu1v1/btnVoltar.png<>uid://dgewi5jlh3y7::::res://Assests/menu main/subMenu1v1/btnVoltarHover.png<>uid://b17d54hgcxd2b::::res://Assests/menu main/subMenuOpcoes/menuOpcoes.png<>uid://diajxj27uuw65::::res://Assests/menu main/subMenuOpcoes/sliderGrab.png<>uid://6xellc821ygn::::res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png<>res://Cenas/menu_selecao_mapa.gd<>uid://bxy8fhudg4pjg::::res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png<>uid://cdlfmhp6uvtpn::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png<>res://Cenas/texture_rect.gd<>uid://k7terqehqw3::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png<>uid://cudgep3jspc5x::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png<>uid://4epbitym2ywt::::res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png<>uid://dtcyscttamto::::res://Assests/menu main/MenuEscolhaMapa/mapaHover.png<>uid://d4cd4cqyqttdg::::res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png<>uid://chqyxwmrjoy28::::res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png<>uid://n6ra2tnkhtwy::::res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png<>uid://cmsodir305fih::::res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png
+mapaPreview.gd::GDScript::-1::1730054114::0::1::::<>Control<>::
+menu_selecao_mapa.gd::GDScript::-1::1730054114::0::1::::<>Control<>::
+particula.tscn::PackedScene::8755719069212901231::1730057697::0::1::::<><>::uid://c1w5dfn0bq0ih::::res://Assests/Poeira/_0000s_0015_Layer-2.png<>uid://cy4ddkh0uerr3::::res://Assests/Poeira/_0000s_0014_Layer-3.png<>uid://e6wfxc6bc1e5::::res://Assests/Poeira/_0000s_0013_Layer-5.png<>uid://4nndldr31y8x::::res://Assests/Poeira/_0000s_0012_Layer-7.png<>uid://dwxg50c0t3r1v::::res://Assests/Poeira/_0000s_0011_Layer-9.png<>uid://c1bat1oxg44mi::::res://Assests/Poeira/_0000s_0010_Layer-11.png<>uid://dv34aft2y8xix::::res://Assests/Poeira/_0000s_0009_Layer-13.png<>uid://cujrsdvr8uilx::::res://Assests/Poeira/_0000s_0008_Layer-15.png<>uid://cthdyec28beaw::::res://Assests/Poeira/_0000s_0007_Layer-17.png<>uid://b7h6vru4s5436::::res://Assests/Poeira/_0000s_0006_Layer-19.png<>uid://b12pasvjv5jpk::::res://Assests/Poeira/_0000s_0005_Layer-21.png<>uid://d3cl847evoj6v::::res://Assests/Poeira/_0000s_0004_Layer-23.png<>uid://b55huxcdvdwf1::::res://Assests/Poeira/_0000s_0003_Layer-25.png<>uid://e27w3magfm05::::res://Assests/Poeira/_0000s_0002_Layer-27.png<>uid://ciijuphiehi3::::res://Assests/Poeira/_0000s_0001_Layer-29.png<>uid://bonsm3ro6mlqj::::res://Assests/Poeira/1.png
+player.tscn::PackedScene::3519376603016033622::1730057696::0::1::::<><>::res://Scripts/player_1.gd<>uid://bpqqhalfqyafd::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png<>uid://dq64vuan350t1::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png<>uid://c51p20bsmgynd::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png<>uid://calvfust52scc::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png<>uid://ygdt11fuw4gp::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png<>uid://ce3k0x6jnxgho::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png<>uid://b6loebjjbs6ti::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png<>uid://dq5gcs5h8q5lo::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0003_5.png<>uid://dhjqw6b3yhm06::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png<>uid://cwnqw7ng2ctst::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png<>uid://dty5vcvf1kftj::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png<>uid://bk22uujqrel6g::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png<>uid://dqs1sojvx4401::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png<>uid://bdts30urgbjhj::::res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png<>uid://ya30f72xg0ab::::res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0000_7.png<>uid://chbqr6wt6ougs::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png<>uid://ci6v5kgadovh3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0002_9.png<>uid://bmy3gawueosn3::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0001_10.png<>uid://cr75llsfp0s23::::res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0000_11.png<>uid://cy4gbn0dld1w4::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png<>uid://hx2syxuny46m::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png<>uid://blcotdbte6b5d::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png<>uid://dkbco23w5krbx::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png<>uid://bb3ltido73l78::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png<>uid://ccil2enkh6vtg::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png<>uid://c2fqwdbbxtgmh::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png<>uid://qd455g1remr3::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png<>uid://pxxtu6fq0w7t::::res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png<>uid://cfc5k26h51wsq::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0004_3.png<>uid://c817rp6g2ehkw::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0003_4.png<>uid://c130ydaanwpjj::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0002_5.png<>uid://cm1tbi2hlpuyl::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0001_6.png<>uid://cmgp684xp1ynu::::res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0000_7.png<>uid://dpextd03iie42::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0010_11.png<>uid://d06mln2f5rcjs::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0009_10.png<>uid://rrh76y74eon7::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0008_9.png<>uid://cmctuh3sj4tu6::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0007_8.png<>uid://b1uyvk6f67fpc::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0006_7.png<>uid://btvhihftey2in::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0005_6.png<>uid://gy2o1b8ymngy::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0004_5.png<>uid://b3ndmjuuwgfd3::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0003_4.png<>uid://hfgm7t4ovqe5::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0002_3.png<>uid://qnbxiiqj84cv::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png<>uid://dlwdx3mmufc82::::res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png<>uid://b1ayeypy31dle::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png<>uid://b71fa4xv3dvul::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png<>uid://c83q5p17urtbn::::res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png<>uid://bl0v8xphaut7::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png<>uid://rqbdvpci64cd::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png<>uid://cl1t713c4otje::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0002_3.png<>uid://b5vlscthj1ami::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0001_4.png<>uid://dbavrmwtgt217::::res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0000_5.png<>uid://bcvusksbdbm2g::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0008_1.png<>uid://bhp0yicc82dt1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0007_2.png<>uid://4xqviberyej8::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0006_3.png<>uid://bevenbrnm7ewv::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0005_4.png<>uid://cd2ocbq0fu5wu::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0004_5.png<>uid://s22h1nirpxl2::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0003_6.png<>uid://co1a2muopaa06::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0002_7.png<>uid://c8shhy2b1kr2k::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0001_8.png<>uid://j1dnjlwt58a1::::res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0000_9.png<>uid://88qeckqwprhb::::res://Assests/Michel Sprites Pronto/Michel Andando/13.png<>uid://yr2h0u23yrl7::::res://Assests/Michel Sprites Pronto/Michel Andando/12.png<>uid://bymvcj3ql6048::::res://Assests/Michel Sprites Pronto/Michel Andando/11.png<>uid://djpbrcbvwfnyp::::res://Assests/Michel Sprites Pronto/Michel Andando/10.png<>uid://cc8x1sfy4h30f::::res://Assests/Michel Sprites Pronto/Michel Andando/9.png<>uid://lvpqx5rusglx::::res://Assests/Michel Sprites Pronto/Michel Andando/8.png<>uid://dfh72r47sryi0::::res://Assests/Michel Sprites Pronto/Michel Andando/7.png<>uid://b2l6nvqqm1yhq::::res://Assests/Michel Sprites Pronto/Michel Andando/6.png<>uid://cmndawuoafrvt::::res://Assests/Michel Sprites Pronto/Michel Andando/5.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://budc8rek5y1fv::::res://Assests/Michel Sprites Pronto/Michel Andando/4.png<>uid://bnjydsuayujng::::res://Assests/Michel Sprites Pronto/Michel Andando/3.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://c267c6dp4t2c8::::res://Assests/Michel Sprites Pronto/Michel Andando/1.png<>uid://bnl11xgdnewml::::res://Assests/Michel Sprites Pronto/Michel Andando/2.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png
+player_2.tscn::PackedScene::880172633076244536::1730057697::0::1::::<><>::res://Scripts/player_2.gd<>uid://bm80q03wldxbk::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png<>uid://cf3txtxcj2gmv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png<>uid://c6f7vfw4exywa::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png<>uid://cn5qgpdnlq2w::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png<>uid://b2dw31uhj1w3r::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png<>uid://dnydkktnkgqkx::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png<>uid://d3vsr0hscl3j::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png<>uid://duvx3033kunwv::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png<>uid://b21557jbb3x7s::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png<>uid://bxp4rkhxnsl8x::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png<>uid://cp4dr432ie8jy::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0002_20240905_162028_039.png<>uid://haryvft1dnif::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0001_20240905_162028_041.png<>uid://colsn6kt8f52h::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png<>uid://8e3yuo8f23r1::::res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0000_20240905_162028_045.png<>uid://b7jv1745jkkhm::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png<>uid://djkuuknwljpxg::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png<>uid://c0mk7742ign6b::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png<>uid://g4e64by52k63::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png<>uid://dy03lgbfd72gq::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png<>uid://c62i6i56v20ya::::res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png<>uid://ntr5gjkgni0::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0001_20240905_161421_034.png<>uid://ca7fs4kj3y1gs::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0002_20240905_161421_038.png<>uid://0pqbwra2gaee::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0003_20240905_161421_042.png<>uid://dqgpimi8go1ol::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0004_20240905_161421_046.png<>uid://cond32tchmqhv::::res://Assests/Neemias Sprites Prontos/Neemias pulo/_0000s_0005_20240905_161421_050.png<>uid://ymub6m4o4lpj::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0000_20240905_161654_022.png<>uid://ck0v5ny3bybsw::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0001_20240905_161654_028.png<>uid://cfwgtohiywkxg::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0002_20240905_161654_030.png<>uid://cq855ty6sm4rt::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0003_20240905_161654_034.png<>uid://nbymk6eumacd::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0004_20240905_161654_036.png<>uid://w4k8hgbhlv61::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0005_20240905_161654_040.png<>uid://cpbf1k76apanr::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0006_20240905_161654_044.png<>uid://d3eyt5x0ithk2::::res://Assests/Neemias Sprites Prontos/Neemias tapa(chute)/_0000s_0007_20240905_161654_046.png<>uid://ch3ont7n3aker::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0000_Layer-2.png<>uid://t73g7bdxmbev::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0004_20240905_161523_032.png<>uid://cw2537r06cn61::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0005_20240905_161523_036.png<>uid://bu854alesr8lr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 1/_0002s_0006_20240905_161523_042.png<>uid://cmqptuteggp7d::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0000_20240905_161527_027.png<>uid://bta3a3005880w::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0001_20240905_161527_029.png<>uid://3441hcv4svcu::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0003_20240905_161527_033.png<>uid://c6pqxw7chxe3n::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0005_20240905_161527_039.png<>uid://bjbmnalxclaxl::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0007_20240905_161527_043.png<>uid://lrcp3om7p3fr::::res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0009_20240905_161527_047.png<>uid://2wwrtwolo66::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0000_20240905_161532_023.png<>uid://do7im6y1nt6c0::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0001_20240905_161532_027.png<>uid://euqyys1b7dfc::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0002_20240905_161532_031.png<>uid://dbrccmmpls4s3::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0003_20240905_161532_033.png<>uid://b0ur6amye12xb::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0004_20240905_161532_037.png<>uid://dte0epdi8f4ve::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0005_20240905_161532_041.png<>uid://covryx2htq6ib::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0006_20240905_161532_045.png<>uid://ccma5lhcj587m::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0007_20240905_161532_047.png<>uid://cx5je4ci8ukln::::res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0008_20240905_161532_049.png<>uid://c1fj2fi6ps8kc::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0000_1.png<>uid://b2kcn4oy7soyx::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0000_20240905_161346_073.png<>uid://dcnsg72lo2vy6::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0001_20240905_161346_071.png<>uid://dkrdbhxjwiyv5::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0001_2.png<>uid://c5tnbi07nfwed::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0002_3.png<>uid://di0lstbb0l40j::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0002_20240905_161346_069.png<>uid://c0qsrtgqjdpeu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0003_20240905_161346_067.png<>uid://cjqmk5uk4oilp::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png<>uid://odsobpxu4f73::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0004_20240905_161346_065.png<>uid://blvro33urn2vh::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png<>uid://dmjkwknyqwlqd::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0005_20240905_161346_063.png<>uid://cdqyntllyw4ex::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png<>uid://dqpengdo4lbdg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0006_20240905_161346_061.png<>uid://fhgixh3ti8ar::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png<>uid://cj05ruky8mkuu::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0007_20240905_161346_059.png<>uid://b80vsyrmoy3i2::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png<>uid://cd51gl614oxhi::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png<>uid://2dt3saejp6tg::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0008_20240905_161346_057.png<>uid://ctia6x4hnk2yq::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png<>uid://d13lk7ufufnrs::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0009_20240905_161346_055.png<>uid://csuuxpp6txhfr::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0010_20240905_161346_053.png<>uid://b1bhmlfxfuup6::::res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png<>uid://skhcq31iouhk::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0011_20240905_161346_051.png<>uid://wmaamhm1d5mj::::res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0012_20240905_161346_047.png
+texture_rect.gd::GDScript::-1::1730054114::0::1::::<>TextureRect<>::
+::res://prefer/::1730058275
+camera_2d.gd::GDScript::-1::1730054114::0::1::::<>Camera2D<>::
+camera_2d_2.gd::GDScript::-1::1730054114::0::1::::<>Camera2D<>::
+hitbox.tscn::PackedScene::6649929041854336219::1730054114::0::1::::<><>::res://Scripts/hitbox.gd
+BarraVida.gd::GDScript::-1::1730058275::0::1::::<>Control<>::
+world.gd::GDScript::-1::1730054114::0::1::::<>Node2D<>::
+world.tscn::PackedScene::3564916529657022667::1730057696::0::1::::<><>::res://prefer/world.gd<>uid://cu4w02wlugy63::::res://Assests/MapaEstacionamento/_0005_chão.png<>res://prefer/camera_2d.gd<>uid://bqe2va7eeqr7s::::res://Cenas/player.tscn<>uid://msmkx04o1khs::::res://Cenas/player_2.tscn<>uid://pra1kn7a86jl::::res://Assests/MapaEstacionamento/_0004_cenario.png<>uid://dskf4ptooihtn::::res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png<>uid://bwn4f7nlitoc6::::res://Assests/MapaEstacionamento/_0002_carros-atrás.png<>uid://c5ddbmv36feig::::res://Assests/MapaEstacionamento/_0001_arvores.png<>uid://hqvgmeir6nqv::::res://Assests/MapaEstacionamento/_0000_carros-frente.png<>uid://bqwgr17t7eieq::::res://Assests/Fontes/RevMiniPixel.ttf<>uid://e8rf2fu6m40s::::res://Assests/hud/HUD.png<>res://Scripts/HUD/Tempo_hud.gd<>uid://b03cm5lrwvljx::::res://Assests/hud/lifeEmpty.png<>uid://cefseb6834lpg::::res://Assests/hud/lifeFull.png
+::res://Scripts/::1730057689
+Global.gd::GDScript::-1::1730054114::0::1::::<>Node<>::
+hitbox.gd::GDScript::-1::1730054114::0::1::::<>Area2D<>::
+player_1.gd::GDScript::-1::1730054114::0::1::::<>CharacterBody2D<>::
+player_2.gd::GDScript::-1::1730054114::0::1::::<>CharacterBody2D<>::
+::res://Scripts/HUD/::1730057689
+Tempo_hud.gd::GDScript::-1::1730057366::0::1::::<>Control<>::
+>>>>>>> Stashed changes

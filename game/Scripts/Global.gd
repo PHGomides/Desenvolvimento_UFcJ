@@ -1,7 +1,8 @@
 extends Node
 
-var vida_player1 := 200
-var vida_player2 := 200
+var max_vida = 100
+var vida_player1 := 100
+var vida_player2 := 100
 
 # Called when the node enters the  scene tree for the first time.
 func _ready() -> void:
