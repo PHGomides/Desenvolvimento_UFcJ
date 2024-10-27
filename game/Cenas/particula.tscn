@@ -1,0 +1,82 @@
+[gd_scene load_steps=18 format=3 uid="uid://dw0locnx2a76b"]
+
+[ext_resource type="Texture2D" uid="uid://c1w5dfn0bq0ih" path="res://Assests/Poeira/_0000s_0015_Layer-2.png" id="1_6ckg2"]
+[ext_resource type="Texture2D" uid="uid://cy4ddkh0uerr3" path="res://Assests/Poeira/_0000s_0014_Layer-3.png" id="2_3coyy"]
+[ext_resource type="Texture2D" uid="uid://e6wfxc6bc1e5" path="res://Assests/Poeira/_0000s_0013_Layer-5.png" id="3_cws50"]
+[ext_resource type="Texture2D" uid="uid://4nndldr31y8x" path="res://Assests/Poeira/_0000s_0012_Layer-7.png" id="4_k0uwk"]
+[ext_resource type="Texture2D" uid="uid://dwxg50c0t3r1v" path="res://Assests/Poeira/_0000s_0011_Layer-9.png" id="5_0cycr"]
+[ext_resource type="Texture2D" uid="uid://c1bat1oxg44mi" path="res://Assests/Poeira/_0000s_0010_Layer-11.png" id="6_3wyg4"]
+[ext_resource type="Texture2D" uid="uid://dv34aft2y8xix" path="res://Assests/Poeira/_0000s_0009_Layer-13.png" id="7_5c7ny"]
+[ext_resource type="Texture2D" uid="uid://cujrsdvr8uilx" path="res://Assests/Poeira/_0000s_0008_Layer-15.png" id="8_ohc1i"]
+[ext_resource type="Texture2D" uid="uid://cthdyec28beaw" path="res://Assests/Poeira/_0000s_0007_Layer-17.png" id="9_j332t"]
+[ext_resource type="Texture2D" uid="uid://b7h6vru4s5436" path="res://Assests/Poeira/_0000s_0006_Layer-19.png" id="10_jibvl"]
+[ext_resource type="Texture2D" uid="uid://b12pasvjv5jpk" path="res://Assests/Poeira/_0000s_0005_Layer-21.png" id="11_71vfv"]
+[ext_resource type="Texture2D" uid="uid://d3cl847evoj6v" path="res://Assests/Poeira/_0000s_0004_Layer-23.png" id="12_gc1mj"]
+[ext_resource type="Texture2D" uid="uid://b55huxcdvdwf1" path="res://Assests/Poeira/_0000s_0003_Layer-25.png" id="13_26k4a"]
+[ext_resource type="Texture2D" uid="uid://e27w3magfm05" path="res://Assests/Poeira/_0000s_0002_Layer-27.png" id="14_bldqs"]
+[ext_resource type="Texture2D" uid="uid://ciijuphiehi3" path="res://Assests/Poeira/_0000s_0001_Layer-29.png" id="15_77s4e"]
+[ext_resource type="Texture2D" uid="uid://bonsm3ro6mlqj" path="res://Assests/Poeira/1.png" id="16_3f2vm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dc4ef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6ckg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3coyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cws50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k0uwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0cycr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3wyg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5c7ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ohc1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j332t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jibvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_71vfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gc1mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_26k4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bldqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_77s4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3f2vm")
+}],
+"loop": false,
+"name": &"fumaca_pulo",
+"speed": 35.0
+}]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="fumaca_pulo" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -394.855)
+scale = Vector2(2.04, 2.04)
+sprite_frames = SubResource("SpriteFrames_dc4ef")
+animation = &"fumaca_pulo"
