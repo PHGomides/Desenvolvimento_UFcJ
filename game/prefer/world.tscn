@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=31 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="9_6viyd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
-[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="11_f64d2"]
+[ext_resource type="Script" path="res://Scripts/HUD/BarraVida.gd" id="12_k5l1p"]
+[ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_seokm"]
+[ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_4tl1g"]
+[ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_piww7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -221,7 +224,7 @@ offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("11_f64d2")
+script = ExtResource("12_k5l1p")
 
 [node name="clocktimer" type="Timer" parent="HUD/control"]
 autostart = true
@@ -249,6 +252,46 @@ theme_override_fonts/font = ExtResource("9_6viyd")
 theme_override_font_sizes/font_size = 55
 text = "60
 "
+
+[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = -561.685
+offset_top = 0.84
+offset_right = -34.685
+offset_bottom = 40.84
+value = 80.0
+texture_under = ExtResource("14_seokm")
+texture_progress = ExtResource("15_4tl1g")
+
+[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = -561.685
+offset_top = 0.84
+offset_right = -34.685
+offset_bottom = 40.84
+value = 75.0
+texture_progress = ExtResource("16_piww7")
+
+[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 595.0
+offset_bottom = 41.0
+value = 80.0
+fill_mode = 1
+texture_under = ExtResource("14_seokm")
+texture_progress = ExtResource("15_4tl1g")
+
+[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 595.0
+offset_bottom = 41.0
+value = 75.0
+fill_mode = 1
+texture_progress = ExtResource("16_piww7")
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)
