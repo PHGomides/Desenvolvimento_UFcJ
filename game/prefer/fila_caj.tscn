@@ -1,0 +1,217 @@
+[gd_scene load_steps=19 format=3 uid="uid://c6wuxgpmx08bo"]
+
+[ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
+[ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_oon58"]
+[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_n6my3"]
+[ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_qkrwl"]
+[ext_resource type="Texture2D" uid="uid://bpl8ly13or4jm" path="res://Assests/MAPAFILACAJ/_0000_chão.png" id="5_623ks"]
+[ext_resource type="Texture2D" uid="uid://pra1kn7a86jl" path="res://Assests/MapaEstacionamento/_0004_cenario.png" id="5_pw8l6"]
+[ext_resource type="Texture2D" uid="uid://bbrbm61oepm32" path="res://Assests/MAPAFILACAJ/_0004_fundo.png" id="6_22den"]
+[ext_resource type="Texture2D" uid="uid://yxu8bcsvn3dm" path="res://Assests/MAPAFILACAJ/_0003_pessoas2.png" id="8_p5kbu"]
+[ext_resource type="Texture2D" uid="uid://cl37xx7tgjfbc" path="res://Assests/MAPAFILACAJ/_0002_pessoas.png" id="9_i0lld"]
+[ext_resource type="Texture2D" uid="uid://cd2fgw4xqq5ho" path="res://Assests/MAPAFILACAJ/_0001_ponto-de-onibus.png" id="10_31ajt"]
+[ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_2v652"]
+[ext_resource type="Script" path="res://Scripts/HUD/BarraVida.gd" id="12_d85v6"]
+[ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="13_1hfbo"]
+[ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_ekxsb"]
+[ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_x2gly"]
+[ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_iugsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geqs2"]
+size = Vector2(247, 992)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aipy4"]
+size = Vector2(1727, 128)
+
+[node name="fila_caj" type="Node2D"]
+script = ExtResource("1_nhtel")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -91.89)
+zoom = Vector2(0.955, 0.955)
+limit_left = -630
+limit_right = 1765
+limit_bottom = 1200
+script = ExtResource("1_oon58")
+margin = Vector2(0, 0)
+
+[node name="player" parent="." groups=["players"] instance=ExtResource("2_n6my3")]
+modulate = Color(0.9, 1, 1, 1)
+z_index = 1
+position = Vector2(609, 767)
+scale = Vector2(1.38, 1.38)
+
+[node name="player2" parent="." groups=["players"] instance=ExtResource("3_qkrwl")]
+z_index = 1
+position = Vector2(887.605, 771)
+scale = Vector2(1.26, 1.26)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-222, 11)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-234, -77)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(2135, 469)
+shape = SubResource("RectangleShape2D_geqs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-541, 427)
+shape = SubResource("RectangleShape2D_geqs2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(115, 77)
+
+[node name="Chão" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(807, 487)
+scale = Vector2(4.6, 2.91313)
+texture = ExtResource("5_623ks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(801.27, 1002.14)
+scale = Vector2(-1.87, -1.87)
+shape = SubResource("RectangleShape2D_aipy4")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.3, 1)
+
+[node name="Fundo05" type="Sprite2D" parent="Background/05"]
+position = Vector2(1243, 427)
+scale = Vector2(1.66194, 1.66194)
+texture = ExtResource("5_pw8l6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/05"]
+position = Vector2(1244, 428.5)
+scale = Vector2(3.56, 3.5695)
+texture = ExtResource("6_22den")
+
+[node name="04" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.4, 1)
+
+[node name="Fundo04" type="Sprite2D" parent="Background/04"]
+position = Vector2(1464, 513)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("8_p5kbu")
+
+[node name="03" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-237, 101)
+motion_scale = Vector2(0.5, 1)
+
+[node name="Fundo03" type="Sprite2D" parent="Background/03"]
+position = Vector2(1568, 507)
+scale = Vector2(1.86719, 1.86719)
+texture = ExtResource("9_i0lld")
+
+[node name="02" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(277, 771)
+motion_scale = Vector2(0.6, 1)
+
+[node name="Fundo02" type="Sprite2D" parent="Background/02"]
+position = Vector2(953.5, -220.5)
+scale = Vector2(3.53, 2.70077)
+texture = ExtResource("10_31ajt")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_right = 510.0
+offset_bottom = 122.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_2v652")
+
+[node name="control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.315
+offset_top = 46.16
+offset_right = 29.685
+offset_bottom = 65.16
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("12_d85v6")
+
+[node name="clocktimer" type="Timer" parent="HUD/control"]
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 8
+
+[node name="Tempo_container" type="HBoxContainer" parent="HUD/control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_1hfbo")
+theme_override_font_sizes/font_size = 55
+text = "60
+"
+
+[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = -561.685
+offset_top = 0.84
+offset_right = -34.685
+offset_bottom = 40.84
+value = 80.0
+texture_under = ExtResource("14_ekxsb")
+texture_progress = ExtResource("15_x2gly")
+
+[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = -561.685
+offset_top = 0.84
+offset_right = -34.685
+offset_bottom = 40.84
+value = 75.0
+texture_progress = ExtResource("16_iugsl")
+
+[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 595.0
+offset_bottom = 41.0
+value = 80.0
+fill_mode = 1
+texture_under = ExtResource("14_ekxsb")
+texture_progress = ExtResource("15_x2gly")
+
+[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 595.0
+offset_bottom = 41.0
+value = 75.0
+fill_mode = 1
+texture_progress = ExtResource("16_iugsl")
+
+[connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]
