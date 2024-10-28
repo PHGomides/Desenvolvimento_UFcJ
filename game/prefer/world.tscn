@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=28 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -82,6 +82,18 @@ scale_max = 4.0
 alpha_curve = SubResource("CurveTexture_6fev4")
 turbulence_noise_strength = 20.0
 
+[sub_resource type="Environment" id="Environment_xcucr"]
+background_mode = 3
+background_energy_multiplier = 2.8
+ambient_light_energy = 0.0
+glow_enabled = true
+glow_intensity = 0.68
+glow_strength = 0.95
+glow_blend_mode = 1
+glow_hdr_threshold = 0.4
+glow_hdr_scale = 1.27
+glow_hdr_luminance_cap = 114.2
+
 [node name="world" type="Node2D"]
 position = Vector2(20, 123)
 script = ExtResource("1_kywhc")
@@ -96,6 +108,7 @@ script = ExtResource("2_1ilr7")
 margin = Vector2(0, 0)
 
 [node name="player" parent="." groups=["players"] instance=ExtResource("2_if2qb")]
+modulate = Color(0.9, 1, 1, 1)
 z_index = 1
 position = Vector2(628, 535)
 scale = Vector2(1.38, 1.38)
@@ -257,5 +270,8 @@ process_material = SubResource("ParticleProcessMaterial_tfgtc")
 lifetime = 0.5
 speed_scale = 3.56
 visibility_rect = Rect2(-100, -133.255, 200, 574.265)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xcucr")
 
 [connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://0iejer5b2ak5"]
+[gd_scene load_steps=15 format=3 uid="uid://0iejer5b2ak5"]
 
 [ext_resource type="Script" path="res://prefer/frente_ufj.gd" id="1_h0k4u"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_nqpsh"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://0n8aab242ud6" path="res://Assests/FachadaAccets/_0002_estruturaEntrada.png" id="7_x3ptv"]
 [ext_resource type="Texture2D" uid="uid://b7swi5iuevqdd" path="res://Assests/FachadaAccets/_0001_arbustos.png" id="8_cyaxd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="9_0r3qa"]
-[ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="10_ojggp"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="11_mwjv4"]
 
 [sub_resource type="Environment" id="Environment_sc6fg"]
@@ -21,9 +20,9 @@ glow_enabled = true
 glow_intensity = 2.17
 glow_strength = 1.09
 glow_blend_mode = 1
-glow_hdr_threshold = 0.6
-glow_hdr_scale = 1.45
-glow_hdr_luminance_cap = 95.1
+glow_hdr_threshold = 0.5
+glow_hdr_scale = 1.27
+glow_hdr_luminance_cap = 114.2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsd3s"]
 size = Vector2(247, 992)
@@ -47,11 +46,13 @@ script = ExtResource("1_nqpsh")
 margin = Vector2(0, 0)
 
 [node name="player" parent="." groups=["players"] instance=ExtResource("2_u8ob4")]
+modulate = Color(0.9, 0.9, 0.9, 1)
 z_index = 1
 position = Vector2(628, 535)
 scale = Vector2(1.38, 1.38)
 
 [node name="player2" parent="." groups=["players"] instance=ExtResource("3_ooq7k")]
+modulate = Color(0.9, 0.9, 0.9, 1)
 z_index = 1
 position = Vector2(906.605, 539)
 scale = Vector2(1.26, 1.26)
@@ -170,7 +171,6 @@ offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("10_ojggp")
 
 [node name="clocktimer" type="Timer" parent="HUD/control"]
 autostart = true
