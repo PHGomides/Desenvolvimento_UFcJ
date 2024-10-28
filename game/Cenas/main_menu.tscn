@@ -1,11 +1,9 @@
-[gd_scene load_steps=46 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=42 format=3 uid="uid://dfvg2pyu3s1nt"]
 
-[ext_resource type="Script" path="res://.godot/main_menu.gd" id="1_hk2d7"]
-[ext_resource type="Script" path="res://.godot/v_box_container.gd" id="2_jonta"]
+[ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
 [ext_resource type="Texture2D" uid="uid://bm57v7luifu4i" path="res://Assests/menu main/_0002s_0000_Agrupar-2.png" id="4_d2f3c"]
 [ext_resource type="Texture2D" uid="uid://bfvad5ul6xkme" path="res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png" id="5_ch8as"]
-[ext_resource type="Script" path="res://.godot/button.gd" id="5_n4u8h"]
 [ext_resource type="Texture2D" uid="uid://bqa6qf3mywvsx" path="res://Assests/menu main/hover 1vs1.png" id="6_s5ieo"]
 [ext_resource type="Texture2D" uid="uid://rvrdbs523s3x" path="res://Assests/menu main/_0002s_0000s_0001_Chaveamento.png" id="8_d01nw"]
 [ext_resource type="Texture2D" uid="uid://ce1ma8a7j5moq" path="res://Assests/menu main/hover Chaveamento.png" id="9_55qhi"]
@@ -17,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://t0bfd8edgial" path="res://Assests/menu main/subMenu1v1/personagem.png" id="14_fidrd"]
 [ext_resource type="AudioStream" uid="uid://cp0aj4wficg3x" path="res://audio/menu main.wav" id="14_o3hul"]
 [ext_resource type="Texture2D" uid="uid://bexw55fgtu2wj" path="res://Assests/menu main/subMenu1v1/personagemHover.png" id="15_kgxfw"]
-[ext_resource type="Script" path="res://.godot/main_menu_audio.gd" id="15_ncae1"]
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="15_wmb0y"]
 [ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenu1v1/p1.png" id="16_dve1p"]
 [ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenu1v1/VS.png" id="17_56fj5"]
@@ -29,14 +26,13 @@
 [ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
 [ext_resource type="Texture2D" uid="uid://diajxj27uuw65" path="res://Assests/menu main/subMenuOpcoes/sliderGrab.png" id="24_s3mw3"]
 [ext_resource type="Texture2D" uid="uid://6xellc821ygn" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png" id="25_pg731"]
-[ext_resource type="Script" path="res://Cenas/menu_selecao_mapa.gd" id="26_f2vi0"]
+[ext_resource type="Script" path="res://Scripts/menuScripts/menu_selecao_mapa.gd" id="26_f2vi0"]
 [ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
 [ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
 [ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
-[ext_resource type="Texture2D" uid="uid://dtcyscttamto" path="res://Assests/menu main/MenuEscolhaMapa/mapaHover.png" id="30_pjh03"]
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
 [ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
 [ext_resource type="Texture2D" uid="uid://n6ra2tnkhtwy" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png" id="31_d4520"]
@@ -72,7 +68,7 @@ offset_right = 13.0
 offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hk2d7")
+script = ExtResource("1_r5t8c")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -97,7 +93,6 @@ offset_left = -412.0
 offset_right = 412.0
 offset_bottom = 601.0
 grow_horizontal = 2
-script = ExtResource("2_jonta")
 
 [node name="TextureRect" type="TextureRect" parent="MenuMain"]
 custom_minimum_size = Vector2(0, 550)
@@ -116,7 +111,6 @@ focus_neighbor_bottom = NodePath("../btnChaveamento")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_ch8as")
 texture_hover = ExtResource("6_s5ieo")
-script = ExtResource("5_n4u8h")
 
 [node name="btnChaveamento" type="TextureButton" parent="MenuMain"]
 layout_mode = 2
@@ -159,7 +153,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = -112
 alignment = 2
-script = ExtResource("2_jonta")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
 layout_mode = 2
@@ -741,7 +734,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_e4bqd")
-texture_focused = ExtResource("30_pjh03")
 script = SubResource("GDScript_gdy4j")
 
 [node name="mapa2" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
@@ -750,7 +742,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_ax1sj")
-texture_focused = ExtResource("30_pjh03")
 
 [node name="mapa3" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -758,7 +749,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_urfyc")
-texture_focused = ExtResource("30_pjh03")
 
 [node name="mapa4" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -766,7 +756,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("32_iq5tj")
-texture_focused = ExtResource("30_pjh03")
 
 [node name="mapa5" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -774,7 +763,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_qvnfu")
-texture_focused = ExtResource("30_pjh03")
 
 [node name="buttons" type="VBoxContainer" parent="MenuSelecaoMapa"]
 layout_mode = 1
@@ -815,7 +803,6 @@ stream = ExtResource("14_o3hul")
 volume_db = -9.254
 autoplay = true
 bus = &"Musica"
-script = ExtResource("15_ncae1")
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_tjowc")

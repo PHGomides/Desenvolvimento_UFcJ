@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://c6wuxgpmx08bo"]
+[gd_scene load_steps=18 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_oon58"]
 [ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_n6my3"]
 [ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_qkrwl"]
 [ext_resource type="Texture2D" uid="uid://bpl8ly13or4jm" path="res://Assests/MAPAFILACAJ/_0000_chão.png" id="5_623ks"]
-[ext_resource type="Texture2D" uid="uid://pra1kn7a86jl" path="res://Assests/MapaEstacionamento/_0004_cenario.png" id="5_pw8l6"]
 [ext_resource type="Texture2D" uid="uid://bbrbm61oepm32" path="res://Assests/MAPAFILACAJ/_0004_fundo.png" id="6_22den"]
 [ext_resource type="Texture2D" uid="uid://yxu8bcsvn3dm" path="res://Assests/MAPAFILACAJ/_0003_pessoas2.png" id="8_p5kbu"]
 [ext_resource type="Texture2D" uid="uid://cl37xx7tgjfbc" path="res://Assests/MAPAFILACAJ/_0002_pessoas.png" id="9_i0lld"]
@@ -80,14 +79,9 @@ texture_repeat = 2
 position = Vector2(-237, 101)
 motion_scale = Vector2(0.3, 1)
 
-[node name="Fundo05" type="Sprite2D" parent="Background/05"]
-position = Vector2(1243, 427)
-scale = Vector2(1.66194, 1.66194)
-texture = ExtResource("5_pw8l6")
-
 [node name="Sprite2D" type="Sprite2D" parent="Background/05"]
-position = Vector2(1244, 428.5)
-scale = Vector2(3.56, 3.5695)
+position = Vector2(907.621, 319.75)
+scale = Vector2(3.45892, 3.46815)
 texture = ExtResource("6_22den")
 
 [node name="04" type="ParallaxLayer" parent="Background"]
@@ -116,8 +110,8 @@ position = Vector2(277, 771)
 motion_scale = Vector2(0.6, 1)
 
 [node name="Fundo02" type="Sprite2D" parent="Background/02"]
-position = Vector2(953.5, -220.5)
-scale = Vector2(3.53, 2.70077)
+position = Vector2(501.5, -402)
+scale = Vector2(2.23857, 2.16216)
 texture = ExtResource("10_31ajt")
 
 [node name="HUD" type="CanvasLayer" parent="."]

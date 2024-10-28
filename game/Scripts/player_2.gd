@@ -112,10 +112,10 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("3 foi pressionado")
 		if current_direction == 1:
-			animationEspecial.position.x = 408
+			animationEspecial.position.x = 630
 			animationEspecial.flip_h = false
 		else:
-			animationEspecial.position.x = -350.45
+			animationEspecial.position.x = -599.175
 			animationEspecial.flip_h = true
 			
 		animation.play("especial")

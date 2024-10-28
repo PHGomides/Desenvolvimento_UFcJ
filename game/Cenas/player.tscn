@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=91 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_4h448"]
@@ -80,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://bnl11xgdnewml" path="res://Assests/Michel Sprites Pronto/Michel Andando/2.png" id="75_lkybm"]
 [ext_resource type="Texture2D" uid="uid://cjqmk5uk4oilp" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png" id="75_mxj1h"]
 [ext_resource type="Texture2D" uid="uid://blvro33urn2vh" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png" id="76_8daug"]
+[ext_resource type="Texture2D" uid="uid://coe1rk6yw342" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/Empty.png" id="76_gjtjj"]
 [ext_resource type="Texture2D" uid="uid://cdqyntllyw4ex" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png" id="77_oy8xl"]
 [ext_resource type="Texture2D" uid="uid://fhgixh3ti8ar" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png" id="78_x2s11"]
 [ext_resource type="Texture2D" uid="uid://b80vsyrmoy3i2" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png" id="79_py8qw"]
@@ -417,6 +418,33 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
+}, {
+"duration": 1.0,
 "texture": ExtResource("72_2e24i")
 }, {
 "duration": 1.0,
@@ -448,10 +476,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("82_bqy6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_gjtjj")
 }],
 "loop": false,
 "name": &"especialMichel",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [node name="player" type="CharacterBody2D"]
@@ -478,7 +509,7 @@ position = Vector2(691.109, -406.827)
 scale = Vector2(2.212, 2.212)
 sprite_frames = SubResource("SpriteFrames_aku3l")
 animation = &"especialMichel"
-frame = 10
+frame = 20
 frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]

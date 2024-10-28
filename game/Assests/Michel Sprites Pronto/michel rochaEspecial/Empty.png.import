@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ifhnamjb6mn"
-path="res://.godot/imported/_0000s_0015_Layer-4-copy-13.png-c4462959b6345a2db8d99391e89757a6.ctex"
+uid="uid://coe1rk6yw342"
+path="res://.godot/imported/Empty.png-a8500e2c6996bd2b5715213f2c47f54a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/Neemias Sprites Prontos/especial NeemiasChinela/_0000s_0015_Layer-4-copy-13.png"
-dest_files=["res://.godot/imported/_0000s_0015_Layer-4-copy-13.png-c4462959b6345a2db8d99391e89757a6.ctex"]
+source_file="res://Assests/Michel Sprites Pronto/michel rochaEspecial/Empty.png"
+dest_files=["res://.godot/imported/Empty.png-a8500e2c6996bd2b5715213f2c47f54a.ctex"]
 
 [params]
 
