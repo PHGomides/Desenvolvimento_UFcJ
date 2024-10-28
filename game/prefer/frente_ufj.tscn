@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvqf4yial6rki"]
+[gd_scene load_steps=16 format=3 uid="uid://0iejer5b2ak5"]
 
+[ext_resource type="Script" path="res://prefer/frente_ufj.gd" id="1_h0k4u"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_nqpsh"]
 [ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_u8ob4"]
 [ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_ooq7k"]
@@ -12,6 +13,18 @@
 [ext_resource type="Script" path="res://Scripts/gerencia_hud.gd" id="10_ojggp"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="11_mwjv4"]
 
+[sub_resource type="Environment" id="Environment_sc6fg"]
+background_mode = 3
+background_energy_multiplier = 2.8
+ambient_light_energy = 0.0
+glow_enabled = true
+glow_intensity = 2.17
+glow_strength = 1.09
+glow_blend_mode = 1
+glow_hdr_threshold = 0.6
+glow_hdr_scale = 1.45
+glow_hdr_luminance_cap = 95.1
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsd3s"]
 size = Vector2(247, 992)
 
@@ -19,13 +32,17 @@ size = Vector2(247, 992)
 size = Vector2(1727, 128)
 
 [node name="FrenteUFJ" type="Node2D"]
+script = ExtResource("1_h0k4u")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sc6fg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
-limit_right = 1765
-limit_bottom = 1200
+limit_right = 2130
+limit_bottom = 1100
 script = ExtResource("1_nqpsh")
 margin = Vector2(0, 0)
 
@@ -46,7 +63,7 @@ position = Vector2(-222, 11)
 position = Vector2(-234, -77)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(1997.25, 466)
+position = Vector2(2391.45, 466)
 shape = SubResource("RectangleShape2D_nsd3s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -56,31 +73,36 @@ shape = SubResource("RectangleShape2D_nsd3s")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Chão" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(827, 695)
-scale = Vector2(2.45762, 1.38965)
+z_index = 4
+position = Vector2(769, 616)
+scale = Vector2(2.19421, 1.24071)
 texture = ExtResource("4_6dlh3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(801.27, 1002.14)
+position = Vector2(801.27, 961.55)
 scale = Vector2(-1.87, -1.87)
 shape = SubResource("RectangleShape2D_g42vu")
 
 [node name="Background" type="ParallaxBackground" parent="."]
+offset = Vector2(126.41, 0)
+transform = Transform2D(1, 0, 0, 1, 126.41, 0)
 
 [node name="05" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2
-position = Vector2(-237, 101)
-motion_scale = Vector2(0.3, 1)
+position = Vector2(-386.38, 57.75)
+motion_scale = Vector2(0.36, 1.198)
 
 [node name="Fundo05" type="Sprite2D" parent="Background/05"]
-position = Vector2(1243, 427)
-scale = Vector2(1.66194, 1.66194)
+modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(1243, 318.4)
+scale = Vector2(2.102, 2.102)
 texture = ExtResource("5_6arkf")
 
 [node name="04" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2
-position = Vector2(-237, 101)
-motion_scale = Vector2(0.4, 1)
+position = Vector2(-374.445, -54.545)
+scale = Vector2(1.195, 1.195)
+motion_scale = Vector2(0.37, 1.198)
 
 [node name="Fundo04" type="Sprite2D" parent="Background/04"]
 position = Vector2(986, 396)
@@ -89,28 +111,34 @@ texture = ExtResource("6_vl2hk")
 
 [node name="03" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2
-position = Vector2(-237, 101)
-motion_scale = Vector2(0.5, 1)
+position = Vector2(-189.63, -230.01)
+scale = Vector2(1.07, 1.07)
+motion_scale = Vector2(0.4, 1.198)
 
 [node name="Fundo03" type="Sprite2D" parent="Background/03"]
+self_modulate = Color(1.1, 1.1, 1.1, 1)
 position = Vector2(987.457, 570.031)
 scale = Vector2(1.86719, 1.86719)
 texture = ExtResource("7_x3ptv")
 
 [node name="02" type="ParallaxLayer" parent="Background"]
+z_index = 4
 texture_repeat = 2
-position = Vector2(277, 771)
-motion_scale = Vector2(0.6, 1)
+position = Vector2(397.01, 756.385)
+scale = Vector2(1.09, 1.09)
+motion_scale = Vector2(0.42, 1.198)
 
 [node name="Fundo02" type="Sprite2D" parent="Background/02"]
+z_index = 4
 position = Vector2(467.2, -281.413)
 scale = Vector2(1.41122, 1.41122)
 texture = ExtResource("8_cyaxd")
 
 [node name="09" type="ParallaxLayer" parent="Background"]
+z_index = 10
 texture_repeat = 2
-position = Vector2(-237, 101)
-motion_scale = Vector2(0.7, 1)
+position = Vector2(-237, 40.09)
+motion_scale = Vector2(0.9, 1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/09"]
 position = Vector2(911, 410)
