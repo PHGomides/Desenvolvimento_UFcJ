@@ -235,7 +235,7 @@ offset_left = -561.685
 offset_top = 0.84
 offset_right = -34.685
 offset_bottom = 40.84
-value = 80.0
+value = 100.0
 texture_under = ExtResource("14_seokm")
 texture_progress = ExtResource("15_4tl1g")
 
@@ -245,7 +245,7 @@ offset_left = -561.685
 offset_top = 0.84
 offset_right = -34.685
 offset_bottom = 40.84
-value = 75.0
+value = 100.0
 texture_progress = ExtResource("16_piww7")
 
 [node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
@@ -254,7 +254,7 @@ offset_left = 68.0
 offset_top = 1.0
 offset_right = 595.0
 offset_bottom = 41.0
-value = 80.0
+value = 100.0
 fill_mode = 1
 texture_under = ExtResource("14_seokm")
 texture_progress = ExtResource("15_4tl1g")
@@ -265,7 +265,7 @@ offset_left = 68.0
 offset_top = 1.0
 offset_right = 595.0
 offset_bottom = 41.0
-value = 75.0
+value = 100.0
 fill_mode = 1
 texture_progress = ExtResource("16_piww7")
 

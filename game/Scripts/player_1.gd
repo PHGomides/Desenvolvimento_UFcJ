@@ -5,6 +5,9 @@ const SPEED = 700.0
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player = 2
 
+@onready var control: Control = $"../HUD/control"
+
+
 var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
@@ -67,6 +70,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Lógica para o pulo com w
 		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
+			control.vida_player1 -= 10
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine
