@@ -61,7 +61,7 @@ func voltarSelecaoMapa() -> void:
 	Menu1v1.visible = true
 	MenuSelecaoMapa.visible = false
 
-func _on_btn_iniciar_pressed() -> void:
+func _on_btn_SelecionarMapa() -> void:
 	Menu1v1.visible = false
 	MenuSelecaoMapa.visible = true
 	pass # Replace with function body.

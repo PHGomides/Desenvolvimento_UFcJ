@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 700.0
 @export var JUMP_VELOCITY=-2000
+@export var typePlayer = 1
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 
 

@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 
 #apertando botão pra seleção de mapa
 func _on_mapaBtn_pressed(mapa_id: int) -> void:
-	print("Mapa " + str(mapa_id) + " selecionado")
 	mapa_atual = mapa_id
 	pass # Replace with function body.
 
@@ -29,3 +28,4 @@ func IniciarMapa() -> void:
 	else:
 		print("aleatorio")
 	pass # Replace with function body.
+	
