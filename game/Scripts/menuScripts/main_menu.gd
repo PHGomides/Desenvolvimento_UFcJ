@@ -57,6 +57,9 @@ func _on_btn_voltar_pressed() -> void:
 	MenuSelecaoMapa.visible = false
 	pass # Replace with function body.
 
+func voltarSelecaoMapa() -> void:
+	Menu1v1.visible = true
+	MenuSelecaoMapa.visible = false
 
 func _on_btn_iniciar_pressed() -> void:
 	Menu1v1.visible = false
@@ -100,10 +103,6 @@ func _on_slider_music_value_changed(value: float) -> void:
 		AudioServer.set_bus_mute(musica,false)
 	pass # Replace with function body.
 
-
-func IniciarMapa() -> void:
-	get_tree().change_scene_to_file("res://prefer/world.tscn")
-	pass # Replace with function body.
 
 
 func _on_mapaBtn_pressed(extra_arg_0: int) -> void:

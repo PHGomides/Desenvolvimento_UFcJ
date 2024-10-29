@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="10_i8o0t"]
 [ext_resource type="Texture2D" uid="uid://s4i015lcxgs4" path="res://Assests/mapa_RU_Accets/mapa-ru_0002_Cadeiras-tras.png" id="10_n6xjh"]
 [ext_resource type="Texture2D" uid="uid://csvi57huyhf3j" path="res://Assests/mapa_RU_Accets/mapa-ru_0001_cadeiras-Frente.png" id="11_gd43u"]
-[ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="12_kyqeo"]
 [ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="13_7sosk"]
 [ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="13_otjxj"]
+[ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="14_0hccy"]
 [ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="14_2tidg"]
 [ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="15_vlids"]
 
@@ -57,11 +57,13 @@ modulate = Color(0.9, 1, 1, 1)
 z_index = 1
 position = Vector2(1032, 559)
 scale = Vector2(1.825, 1.825)
+JUMP_VELOCITY = -2400
 
 [node name="player2" parent="." groups=["players"] instance=ExtResource("3_w5f33")]
 z_index = 1
 position = Vector2(675, 563)
 scale = Vector2(1.68, 1.68)
+JUMP_VELOCITY = -2400.0
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
@@ -192,9 +194,9 @@ layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -10.315
+offset_left = -26.345
 offset_top = 46.16
-offset_right = 29.685
+offset_right = 13.655
 offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
@@ -206,9 +208,15 @@ autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.785
+offset_top = -35.545
+offset_right = 31.345
+offset_bottom = 33.455
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
@@ -221,11 +229,12 @@ size_flags_horizontal = 4
 [node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(100, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("12_kyqeo")
+theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 55
-text = "60
+text = "90
 "
 
 [node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]

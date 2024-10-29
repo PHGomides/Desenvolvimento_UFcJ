@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=44 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://6xellc821ygn" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png" id="25_pg731"]
 [ext_resource type="Script" path="res://Scripts/menuScripts/menu_selecao_mapa.gd" id="26_f2vi0"]
 [ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
+[ext_resource type="Texture2D" uid="uid://daomouonbo1pg" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Aleatorio.png" id="28_535xv"]
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
@@ -36,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
 [ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
 [ext_resource type="Texture2D" uid="uid://n6ra2tnkhtwy" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png" id="31_d4520"]
+[ext_resource type="Texture2D" uid="uid://cpfqd1g6p5hv3" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn - Copia.png" id="32_baqie"]
 [ext_resource type="Texture2D" uid="uid://cmsodir305fih" path="res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png" id="32_iq5tj"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
@@ -708,9 +710,10 @@ grow_horizontal = 2
 texture = ExtResource("28_cwpyb")
 script = ExtResource("28_wglia")
 imagem1 = ExtResource("28_cwpyb")
-imagem2 = ExtResource("29_keom8")
-imagem3 = ExtResource("30_2i3ja")
-imagem4 = ExtResource("31_d4520")
+imagem2 = ExtResource("30_2i3ja")
+imagem3 = ExtResource("28_535xv")
+imagem4 = ExtResource("29_keom8")
+imagem5 = ExtResource("31_d4520")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoMapa"]
 layout_mode = 1
@@ -734,6 +737,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_e4bqd")
+texture_focused = ExtResource("32_baqie")
 script = SubResource("GDScript_gdy4j")
 
 [node name="mapa2" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
@@ -742,6 +746,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_ax1sj")
+texture_focused = ExtResource("32_baqie")
 
 [node name="mapa3" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -749,6 +754,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_urfyc")
+texture_focused = ExtResource("32_baqie")
 
 [node name="mapa4" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -756,6 +762,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("32_iq5tj")
+texture_focused = ExtResource("32_baqie")
 
 [node name="mapa5" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
@@ -763,6 +770,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_qvnfu")
+texture_focused = ExtResource("32_baqie")
 
 [node name="buttons" type="VBoxContainer" parent="MenuSelecaoMapa"]
 layout_mode = 1
@@ -882,7 +890,7 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="IniciarMapa"]
+[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoMapa" method="IniciarMapa"]
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="voltarSelecaoMapa"]
