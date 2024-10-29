@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cl37xx7tgjfbc" path="res://Assests/MAPAFILACAJ/_0002_pessoas.png" id="9_i0lld"]
 [ext_resource type="Texture2D" uid="uid://cd2fgw4xqq5ho" path="res://Assests/MAPAFILACAJ/_0001_ponto-de-onibus.png" id="10_31ajt"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_2v652"]
-[ext_resource type="Script" path="res://Scripts/HUD/BarraVida.gd" id="12_d85v6"]
+[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="11_edgwl"]
 [ext_resource type="FontFile" uid="uid://bqwgr17t7eieq" path="res://Assests/Fontes/RevMiniPixel.ttf" id="13_1hfbo"]
 [ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_ekxsb"]
 [ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_x2gly"]
@@ -153,7 +153,7 @@ offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("12_d85v6")
+script = ExtResource("11_edgwl")
 
 [node name="clocktimer" type="Timer" parent="HUD/control"]
 autostart = true
