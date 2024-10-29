@@ -5,6 +5,8 @@ const SPEED = 700.0
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player = 1
 
+@onready var barras: Control = $"../HUD/Barras"
+
 var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
@@ -54,6 +56,9 @@ func _physics_process(delta: float) -> void:
 	if type_player == 1:
 		# Lógica para o pulo setas
 		if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking and can_jump:
+			barras.vida_player2 -= 5
+			barras.power_player2 += 5 #TEMPORARIO ATE A COLISÃO FICAR PRONTO
+			
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY 
 			can_jump = false  # Impede pulos até que o cooldown termine
@@ -159,34 +164,38 @@ func _physics_process(delta: float) -> void:
 		# Lógica para o ataque especial com teclado numerico
 		if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
 			print("3 foi pressionado")
-			if current_direction == 1:
-				animationEspecial.position.x = 630
-				animationEspecial.flip_h = false
-			else:
-				animationEspecial.position.x = -599.175
-				animationEspecial.flip_h = true
+			if(barras.power_player2 >= barras.powerMAX): #Verificar se a barra de power ta cheia
+				if current_direction == 1:
+					animationEspecial.position.x = 630
+					animationEspecial.flip_h = false
+				else:
+					animationEspecial.position.x = -599.175
+					animationEspecial.flip_h = true
 				
-			animation.play("especial")
-			animationEspecial.play("especialNeemias")
-			is_attacking = true
-			using_special = true  # Marca o especial como usado
-			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
+				barras.power_player2 = 0
+				animation.play("especial")
+				animationEspecial.play("especialNeemias")
+				is_attacking = true
+				using_special = true  # Marca o especial como usado
+				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 	else:
 		# Lógica para o ataque especial com L
 		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
 			print("3 foi pressionado")
-			if current_direction == 1:
-				animationEspecial.position.x = 630
-				animationEspecial.flip_h = false
-			else:
-				animationEspecial.position.x = -599.175
-				animationEspecial.flip_h = true
+			if(barras.power_player2 >= barras.powerMAX): #Verificar se a barra de power ta cheia
+				if current_direction == 1:
+					animationEspecial.position.x = 630
+					animationEspecial.flip_h = false
+				else:
+					animationEspecial.position.x = -599.175
+					animationEspecial.flip_h = true
 				
-			animation.play("especial")
-			animationEspecial.play("especialNeemias")
-			is_attacking = true
-			using_special = true  # Marca o especial como usado
-			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
+				barras.power_player2 = 0
+				animation.play("especial")
+				animationEspecial.play("especialNeemias")
+				is_attacking = true
+				using_special = true  # Marca o especial como usado
+				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 			
 	if type_player == 1:
 		# Movimento só é permitido se não estiver atacando

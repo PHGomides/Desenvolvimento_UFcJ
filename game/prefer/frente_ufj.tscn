@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://0n8aab242ud6" path="res://Assests/FachadaAccets/_0002_estruturaEntrada.png" id="7_x3ptv"]
 [ext_resource type="Texture2D" uid="uid://b7swi5iuevqdd" path="res://Assests/FachadaAccets/_0001_arbustos.png" id="8_cyaxd"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="9_0r3qa"]
-[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="11_8pfj4"]
+[ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_8pfj4"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="12_oq0dl"]
 
 [sub_resource type="Environment" id="Environment_sc6fg"]

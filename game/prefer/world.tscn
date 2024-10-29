@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=34 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -11,11 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="7_vdybe"]
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
-[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="12_sra55"]
+[ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="12_sra55"]
+[ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="14_ajm26"]
 [ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_seokm"]
 [ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_4tl1g"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="16_ng82x"]
 [ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_piww7"]
+[ext_resource type="Texture2D" uid="uid://bcsffff26arca" path="res://Assests/hud/poderVazio.png" id="18_jgk0f"]
+[ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="19_gpx18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -212,7 +215,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 texture = ExtResource("11_f6dt1")
 
-[node name="control" type="Control" parent="HUD"]
+[node name="Tempo" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -226,50 +229,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("12_sra55")
 
-[node name="clocktimer" type="Timer" parent="HUD/control"]
+[node name="clocktimer" type="Timer" parent="HUD/Tempo"]
 autostart = true
 
-[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 0
-offset_left = -561.685
-offset_top = 0.84
-offset_right = -34.685
-offset_bottom = 40.84
-value = 100.0
-texture_under = ExtResource("14_seokm")
-texture_progress = ExtResource("15_4tl1g")
-
-[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 0
-offset_left = -561.685
-offset_top = 0.84
-offset_right = -34.685
-offset_bottom = 40.84
-value = 100.0
-texture_progress = ExtResource("16_piww7")
-
-[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 0
-offset_left = 68.0
-offset_top = 1.0
-offset_right = 595.0
-offset_bottom = 41.0
-value = 100.0
-fill_mode = 1
-texture_under = ExtResource("14_seokm")
-texture_progress = ExtResource("15_4tl1g")
-
-[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/control"]
-layout_mode = 0
-offset_left = 68.0
-offset_top = 1.0
-offset_right = 595.0
-offset_bottom = 41.0
-value = 100.0
-fill_mode = 1
-texture_progress = ExtResource("16_piww7")
-
-[node name="MarginContainer" type="MarginContainer" parent="HUD/control"]
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -285,11 +248,11 @@ grow_vertical = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 8
 
-[node name="Tempo_container" type="HBoxContainer" parent="HUD/control/MarginContainer"]
+[node name="Tempo_container" type="HBoxContainer" parent="HUD/Tempo/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Tempo_label" type="Label" parent="HUD/control/MarginContainer/Tempo_container"]
+[node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(100, 0, 0, 1)
@@ -299,6 +262,76 @@ theme_override_fonts/font = ExtResource("16_ng82x")
 theme_override_font_sizes/font_size = 55
 text = "90
 "
+
+[node name="Barras" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("14_ajm26")
+
+[node name="timerbarra" type="Timer" parent="HUD/Barras"]
+
+[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 374.915
+offset_top = 47.0
+offset_right = 901.915
+offset_bottom = 87.0
+value = 100.0
+texture_under = ExtResource("14_seokm")
+texture_progress = ExtResource("15_4tl1g")
+
+[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 374.915
+offset_top = 47.0
+offset_right = 901.915
+offset_bottom = 87.0
+value = 100.0
+texture_progress = ExtResource("16_piww7")
+
+[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1004.6
+offset_top = 47.16
+offset_right = 1531.6
+offset_bottom = 87.16
+value = 100.0
+fill_mode = 1
+texture_under = ExtResource("14_seokm")
+texture_progress = ExtResource("15_4tl1g")
+
+[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1004.6
+offset_top = 47.16
+offset_right = 1531.6
+offset_bottom = 87.16
+value = 100.0
+fill_mode = 1
+texture_progress = ExtResource("16_piww7")
+
+[node name="Power_Player1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 91.0
+offset_right = 766.0
+offset_bottom = 131.0
+max_value = 60.0
+texture_under = ExtResource("18_jgk0f")
+texture_progress = ExtResource("19_gpx18")
+
+[node name="Power_Player2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 91.0
+offset_right = 1534.0
+offset_bottom = 131.0
+max_value = 60.0
+fill_mode = 1
+texture_under = ExtResource("18_jgk0f")
+texture_progress = ExtResource("19_gpx18")
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)
@@ -324,4 +357,4 @@ visibility_rect = Rect2(-100, -133.255, 200, 574.265)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xcucr")
 
-[connection signal="timeout" from="HUD/control/clocktimer" to="HUD/control" method="_on_clocktimer_timeout"]
+[connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

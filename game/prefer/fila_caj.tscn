@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cl37xx7tgjfbc" path="res://Assests/MAPAFILACAJ/_0002_pessoas.png" id="9_i0lld"]
 [ext_resource type="Texture2D" uid="uid://cd2fgw4xqq5ho" path="res://Assests/MAPAFILACAJ/_0001_ponto-de-onibus.png" id="10_31ajt"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_2v652"]
-[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="11_edgwl"]
+[ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_edgwl"]
 [ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_ekxsb"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="15_hvm2u"]
 [ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_x2gly"]
