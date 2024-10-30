@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="10_i8o0t"]
 [ext_resource type="Texture2D" uid="uid://s4i015lcxgs4" path="res://Assests/mapa_RU_Accets/mapa-ru_0002_Cadeiras-tras.png" id="10_n6xjh"]
 [ext_resource type="Texture2D" uid="uid://csvi57huyhf3j" path="res://Assests/mapa_RU_Accets/mapa-ru_0001_cadeiras-Frente.png" id="11_gd43u"]
-[ext_resource type="Script" path="res://Scripts/HUD/gerencia_hud.gd" id="13_7sosk"]
+[ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="13_7sosk"]
 [ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="13_otjxj"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="14_0hccy"]
 [ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="14_2tidg"]
