@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="19_gpx18"]
 [ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="20_5j2kd"]
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="21_bt6mq"]
-[ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
+[ext_resource type="PackedScene" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)

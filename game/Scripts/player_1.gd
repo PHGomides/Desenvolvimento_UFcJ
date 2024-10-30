@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Lógica para o pulo com w
 		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
-a			barras.vida_player1 -= 5
+			barras.vida_player1 -= 5
 			barras.power_player1 += 5 #TEMPORARIO ATE A COLISÃO FICAR PRONTO
 			
 			is_jumping = true
