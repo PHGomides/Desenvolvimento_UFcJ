@@ -227,10 +227,10 @@ script = ExtResource("13_gjx0e")
 
 [node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 381.915
-offset_top = 47.0
-offset_right = 908.915
-offset_bottom = 87.0
+offset_left = 380.915
+offset_top = 48.0
+offset_right = 907.915
+offset_bottom = 88.0
 value = 100.0
 texture_under = ExtResource("12_wn8np")
 texture_progress = ExtResource("13_yfbw3")
@@ -238,18 +238,18 @@ texture_progress = ExtResource("13_yfbw3")
 [node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
 offset_left = 380.915
-offset_top = 47.0
+offset_top = 48.0
 offset_right = 907.915
-offset_bottom = 87.0
+offset_bottom = 88.0
 value = 100.0
 texture_progress = ExtResource("14_spqke")
 
 [node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
 offset_left = 1011.6
-offset_top = 47.16
+offset_top = 48.16
 offset_right = 1538.6
-offset_bottom = 87.16
+offset_bottom = 88.16
 value = 100.0
 fill_mode = 1
 texture_under = ExtResource("12_wn8np")
@@ -258,9 +258,9 @@ texture_progress = ExtResource("13_yfbw3")
 [node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
 offset_left = 1011.6
-offset_top = 47.16
+offset_top = 48.16
 offset_right = 1538.6
-offset_bottom = 87.16
+offset_bottom = 88.16
 value = 100.0
 fill_mode = 1
 texture_progress = ExtResource("14_spqke")
