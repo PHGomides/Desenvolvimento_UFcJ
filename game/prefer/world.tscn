@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=36 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_piww7"]
 [ext_resource type="Texture2D" uid="uid://bcsffff26arca" path="res://Assests/hud/poderVazio.png" id="18_jgk0f"]
 [ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="19_gpx18"]
+[ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="20_5j2kd"]
+[ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="21_bt6mq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -116,12 +118,12 @@ margin = Vector2(0, 0)
 [node name="player" parent="." groups=["players"] instance=ExtResource("2_if2qb")]
 modulate = Color(0.9, 1, 1, 1)
 z_index = 1
-position = Vector2(628, 535)
+position = Vector2(319, 540)
 scale = Vector2(1.38, 1.38)
 
 [node name="player2" parent="." groups=["players"] instance=ExtResource("3_6vtsv")]
 z_index = 1
-position = Vector2(906.605, 539)
+position = Vector2(1295, 540)
 scale = Vector2(1.26, 1.26)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -239,10 +241,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.785
-offset_top = -35.545
-offset_right = 25.215
-offset_bottom = 33.455
+offset_left = -27.6
+offset_top = -33.66
+offset_right = 32.4
+offset_bottom = 35.34
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
@@ -255,8 +257,8 @@ size_flags_horizontal = 4
 [node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(100, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.682517, 0.112595, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("16_ng82x")
 theme_override_font_sizes/font_size = 55
@@ -274,9 +276,9 @@ script = ExtResource("14_ajm26")
 
 [node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 374.915
+offset_left = 381.915
 offset_top = 47.0
-offset_right = 901.915
+offset_right = 908.915
 offset_bottom = 87.0
 value = 100.0
 texture_under = ExtResource("14_seokm")
@@ -284,18 +286,18 @@ texture_progress = ExtResource("15_4tl1g")
 
 [node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 374.915
+offset_left = 380.915
 offset_top = 47.0
-offset_right = 901.915
+offset_right = 907.915
 offset_bottom = 87.0
 value = 100.0
 texture_progress = ExtResource("16_piww7")
 
 [node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1004.6
+offset_left = 1011.6
 offset_top = 47.16
-offset_right = 1531.6
+offset_right = 1538.6
 offset_bottom = 87.16
 value = 100.0
 fill_mode = 1
@@ -304,9 +306,9 @@ texture_progress = ExtResource("15_4tl1g")
 
 [node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1004.6
+offset_left = 1011.6
 offset_top = 47.16
-offset_right = 1531.6
+offset_right = 1538.6
 offset_bottom = 87.16
 value = 100.0
 fill_mode = 1
@@ -314,24 +316,75 @@ texture_progress = ExtResource("16_piww7")
 
 [node name="Power_Player1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 91.0
-offset_right = 766.0
-offset_bottom = 131.0
+offset_left = 369.0
+offset_top = 92.0
+offset_right = 768.0
+offset_bottom = 132.0
 max_value = 60.0
 texture_under = ExtResource("18_jgk0f")
 texture_progress = ExtResource("19_gpx18")
 
 [node name="Power_Player2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1135.0
-offset_top = 91.0
-offset_right = 1534.0
-offset_bottom = 131.0
+offset_left = 1153.0
+offset_top = 92.0
+offset_right = 1552.0
+offset_bottom = 132.0
 max_value = 60.0
 fill_mode = 1
 texture_under = ExtResource("18_jgk0f")
 texture_progress = ExtResource("19_gpx18")
+
+[node name="InfosPlayer" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 1333.0
+offset_top = -1.0
+offset_right = 1392.0
+offset_bottom = 38.0
+scale = Vector2(2.43823, 1.89691)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_ng82x")
+text = "Neemias
+
+"
+
+[node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 446.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 38.0
+scale = Vector2(2.43823, 1.89691)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_ng82x")
+text = "Michel
+"
+
+[node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 6.0
+offset_right = 363.0
+offset_bottom = 80.0
+texture = ExtResource("20_5j2kd")
+flip_h = true
+
+[node name="FotoPlayer2" type="TextureRect" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 1557.0
+offset_top = 6.0
+offset_right = 1631.0
+offset_bottom = 84.0
+texture = ExtResource("21_bt6mq")
+flip_h = true
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)
