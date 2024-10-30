@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @export var cenaCarregada = ""  # Caminho do mapa a ser carregado
 var scene_load_status = 0
