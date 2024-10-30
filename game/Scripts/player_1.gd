@@ -7,8 +7,9 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 
 @onready var barras: Control = $"../HUD/Barras"
 
+signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
-var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var COMBO_WINDOW_DURATION = 0.5  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
@@ -109,13 +110,16 @@ func _physics_process(delta: float) -> void:
 			if attack_state == 0:
 				animation.play("punch1")
 				attack_state = 1 
+				emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
 			elif attack_state == 1:
 				COMBO_WINDOW_DURATION=0.3
 				animation.play("punch2")
 				attack_state = 2
+				emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2
 			else:
 				animation.play("punch3")
 				attack_state = 0
+				emit_signal("punch_activated", "state3")  # Emite sinal para ativar colisões de punch3
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -130,13 +134,16 @@ func _physics_process(delta: float) -> void:
 			if attack_state == 0:
 				animation.play("punch1")
 				attack_state = 1 
+				emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
 			elif attack_state == 1:
 				COMBO_WINDOW_DURATION=0.3
 				animation.play("punch2")
 				attack_state = 2
+				emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2
 			else:
 				animation.play("punch3")
 				attack_state = 0
+				emit_signal("punch_activated", "state3")  # Emite sinal para ativar colisões de punch3
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -174,7 +181,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		#Logica para ataque especial com L
 		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
-			print("3 foi pressionado")
+			print("L foi pressionado")
 			if(barras.power_player1 >= barras.powerMAX): #Verificar se a barra de power ta cheia
 				if current_direction == 1:
 					animationEspecial.position.x = 691.109

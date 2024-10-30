@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=98 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_o6lrx"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_4h448"]
@@ -79,17 +79,21 @@
 [ext_resource type="Texture2D" uid="uid://c267c6dp4t2c8" path="res://Assests/Michel Sprites Pronto/Michel Andando/1.png" id="74_y5mvq"]
 [ext_resource type="Texture2D" uid="uid://bnl11xgdnewml" path="res://Assests/Michel Sprites Pronto/Michel Andando/2.png" id="75_lkybm"]
 [ext_resource type="Texture2D" uid="uid://cjqmk5uk4oilp" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0003_4.png" id="75_mxj1h"]
+[ext_resource type="Texture2D" uid="uid://bu7rbhfs63o8s" path="res://Assests/Neemias Sprites Prontos/especial NeemiasChinela/Empty.png" id="76_0nx2e"]
 [ext_resource type="Texture2D" uid="uid://blvro33urn2vh" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0004_5.png" id="76_8daug"]
-[ext_resource type="Texture2D" uid="uid://coe1rk6yw342" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/Empty.png" id="76_gjtjj"]
 [ext_resource type="Texture2D" uid="uid://cdqyntllyw4ex" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0005_6.png" id="77_oy8xl"]
 [ext_resource type="Texture2D" uid="uid://fhgixh3ti8ar" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0006_7.png" id="78_x2s11"]
 [ext_resource type="Texture2D" uid="uid://b80vsyrmoy3i2" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0007_8.png" id="79_py8qw"]
 [ext_resource type="Texture2D" uid="uid://cd51gl614oxhi" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0008_9.png" id="80_pbe7v"]
 [ext_resource type="Texture2D" uid="uid://ctia6x4hnk2yq" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png" id="81_7itis"]
 [ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="82_bqy6j"]
+[ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="87_j0asu"]
+[ext_resource type="Script" path="res://Scripts/hitbox_michel.gd" id="88_pha0c"]
+[ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="88_u2erx"]
+[ext_resource type="Script" path="res://Scripts/hurtbox_michel.gd" id="89_ogaw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
-size = Vector2(168, 288)
+size = Vector2(89, 288)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_16flq"]
 animations = [{
@@ -418,31 +422,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
+"texture": ExtResource("76_0nx2e")
 }, {
 "duration": 1.0,
 "texture": ExtResource("72_2e24i")
@@ -476,29 +456,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("82_bqy6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_gjtjj")
 }],
 "loop": false,
 "name": &"especialMichel",
-"speed": 12.0
+"speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn6g"]
+size = Vector2(145.555, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ly7"]
+size = Vector2(113, 195.087)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asr8p"]
+size = Vector2(171, 301)
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_o6lrx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.10913, -7.82672)
+position = Vector2(6.60913, -7.82672)
 shape = SubResource("RectangleShape2D_m024i")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"defesa"
-frame_progress = 0.711832
+animation = &"punch3"
+frame = 8
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
@@ -509,9 +495,30 @@ position = Vector2(691.109, -406.827)
 scale = Vector2(2.212, 2.212)
 sprite_frames = SubResource("SpriteFrames_aku3l")
 animation = &"especialMichel"
-frame = 20
-frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
+
+[node name="hitbox_michel" parent="." instance=ExtResource("87_j0asu")]
+collision_layer = 64
+collision_mask = 128
+script = ExtResource("88_pha0c")
+
+[node name="punch1e2" type="CollisionShape2D" parent="hitbox_michel"]
+position = Vector2(112.109, -86.327)
+shape = SubResource("RectangleShape2D_ewn6g")
+debug_color = Color(0.998937, 0, 0.128371, 0.42)
+
+[node name="punch3eopcional" type="CollisionShape2D" parent="hitbox_michel"]
+position = Vector2(105.609, 9.283)
+shape = SubResource("RectangleShape2D_w0ly7")
+debug_color = Color(1, 0, 0.129412, 0.419608)
+
+[node name="hurtbox_michel" parent="." instance=ExtResource("88_u2erx")]
+script = ExtResource("89_ogaw7")
+
+[node name="areadano" type="CollisionShape2D" parent="hurtbox_michel"]
+position = Vector2(1.60913, -5.32672)
+shape = SubResource("RectangleShape2D_asr8p")
+debug_color = Color(8.18223e-07, 0.650299, 0.107491, 0.42)
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
