@@ -3,15 +3,11 @@
 [ext_resource type="Script" path="res://Cenas/carregamento.gd" id="1_758cw"]
 [ext_resource type="VideoStream" path="res://Assests/Loader/loader.ogv" id="1_q5otx"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_758cw")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_q5otx")

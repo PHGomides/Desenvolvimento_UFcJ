@@ -86,7 +86,6 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -689,6 +688,7 @@ clear_button_enabled = true
 caret_blink_interval = 0.1
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
