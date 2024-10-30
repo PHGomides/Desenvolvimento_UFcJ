@@ -1,0 +1,896 @@
+[gd_scene load_steps=44 format=3 uid="uid://dfvg2pyu3s1nt"]
+
+[ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
+[ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
+[ext_resource type="Texture2D" uid="uid://bm57v7luifu4i" path="res://Assests/menu main/_0002s_0000_Agrupar-2.png" id="4_d2f3c"]
+[ext_resource type="Texture2D" uid="uid://bfvad5ul6xkme" path="res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png" id="5_ch8as"]
+[ext_resource type="Texture2D" uid="uid://bqa6qf3mywvsx" path="res://Assests/menu main/hover 1vs1.png" id="6_s5ieo"]
+[ext_resource type="Texture2D" uid="uid://rvrdbs523s3x" path="res://Assests/menu main/_0002s_0000s_0001_Chaveamento.png" id="8_d01nw"]
+[ext_resource type="Texture2D" uid="uid://ce1ma8a7j5moq" path="res://Assests/menu main/hover Chaveamento.png" id="9_55qhi"]
+[ext_resource type="Texture2D" uid="uid://caxd0w6bke5dv" path="res://Assests/menu main/_0002s_0000s_0002_opções.png" id="10_i4iwc"]
+[ext_resource type="Texture2D" uid="uid://byoerchvpayqt" path="res://Assests/menu main/hover opções.png" id="11_ek7e4"]
+[ext_resource type="Texture2D" uid="uid://cgibdukfg6s6n" path="res://Assests/menu main/_0002s_0000s_0003_sair.png" id="12_rjdkj"]
+[ext_resource type="AudioStream" uid="uid://5signxbsqjrd" path="res://audio/MenuBtnSoundEffectwav.wav" id="12_tjowc"]
+[ext_resource type="Texture2D" uid="uid://b5a4qc5cq6mdk" path="res://Assests/menu main/hover sair.png" id="13_6fd72"]
+[ext_resource type="Texture2D" uid="uid://t0bfd8edgial" path="res://Assests/menu main/subMenu1v1/personagem.png" id="14_fidrd"]
+[ext_resource type="AudioStream" uid="uid://cp0aj4wficg3x" path="res://audio/menu main.wav" id="14_o3hul"]
+[ext_resource type="Texture2D" uid="uid://bexw55fgtu2wj" path="res://Assests/menu main/subMenu1v1/personagemHover.png" id="15_kgxfw"]
+[ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="15_wmb0y"]
+[ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenu1v1/p1.png" id="16_dve1p"]
+[ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenu1v1/VS.png" id="17_56fj5"]
+[ext_resource type="Texture2D" uid="uid://mw0h4dd841jn" path="res://Assests/menu main/subMenu1v1/personagem2Hover.png" id="18_rp268"]
+[ext_resource type="Texture2D" uid="uid://dkr0c7os2ki81" path="res://Assests/menu main/subMenu1v1/p2.png" id="19_bj234"]
+[ext_resource type="Texture2D" uid="uid://dm7q5sxcwioqh" path="res://Assests/menu main/subMenu1v1/btnIniciar.png" id="20_bn7yk"]
+[ext_resource type="Texture2D" uid="uid://d3g4g1s37w1el" path="res://Assests/menu main/subMenu1v1/btnVoltar.png" id="21_6jpfk"]
+[ext_resource type="Texture2D" uid="uid://dgewi5jlh3y7" path="res://Assests/menu main/subMenu1v1/btnVoltarHover.png" id="22_qmwjn"]
+[ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
+[ext_resource type="Texture2D" uid="uid://diajxj27uuw65" path="res://Assests/menu main/subMenuOpcoes/sliderGrab.png" id="24_s3mw3"]
+[ext_resource type="Texture2D" uid="uid://6xellc821ygn" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png" id="25_pg731"]
+[ext_resource type="Script" path="res://Scripts/menuScripts/menu_selecao_mapa.gd" id="26_f2vi0"]
+[ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
+[ext_resource type="Texture2D" uid="uid://daomouonbo1pg" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Aleatorio.png" id="28_535xv"]
+[ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
+[ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
+[ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
+[ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
+[ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
+[ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
+[ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
+[ext_resource type="Texture2D" uid="uid://n6ra2tnkhtwy" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png" id="31_d4520"]
+[ext_resource type="Texture2D" uid="uid://cpfqd1g6p5hv3" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn - Copia.png" id="32_baqie"]
+[ext_resource type="Texture2D" uid="uid://cmsodir305fih" path="res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png" id="32_iq5tj"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
+color = Color(0, 0, 0, 0.21)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ikngp"]
+color = Color(1, 1, 1, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_21j1v"]
+color = Color(1, 1, 1, 1)
+thickness = 10
+
+[sub_resource type="GDScript" id="GDScript_gdy4j"]
+script/source = "extends TextureButton
+
+func _ready():
+	self.grab_focus()
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r5t8c")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_so7t5")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
+[node name="MenuMain" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -412.0
+offset_right = 412.0
+offset_bottom = 601.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuMain"]
+custom_minimum_size = Vector2(0, 550)
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 14.55
+texture = ExtResource("4_d2f3c")
+stretch_mode = 5
+
+[node name="btn1vs1" type="TextureButton" parent="MenuMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnSair")
+focus_neighbor_bottom = NodePath("../btnChaveamento")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_ch8as")
+texture_hover = ExtResource("6_s5ieo")
+
+[node name="btnChaveamento" type="TextureButton" parent="MenuMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../btn1vs1")
+focus_neighbor_bottom = NodePath("../btnOpcoes")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_d01nw")
+texture_hover = ExtResource("9_55qhi")
+
+[node name="btnOpcoes" type="TextureButton" parent="MenuMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_i4iwc")
+texture_hover = ExtResource("11_ek7e4")
+
+[node name="btnSair" type="TextureButton" parent="MenuMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../btnOpcoes")
+focus_neighbor_bottom = NodePath("../btn1vs1")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_rjdkj")
+texture_hover = ExtResource("13_6fd72")
+
+[node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -112
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 116
+alignment = 1
+
+[node name="PersonagensP1" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureButton7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("16_dve1p")
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_56fj5")
+
+[node name="PersonagensP2" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("19_bj234")
+
+[node name="buttons" type="VBoxContainer" parent="MenuSelecaoPersonagens"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
+
+[node name="MenuOpcoes" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuOpcoes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -304.5
+offset_right = 304.5
+offset_bottom = 304.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_f2fev")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuOpcoes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.23
+offset_top = -73.66
+offset_right = 138.23
+offset_bottom = 270.15
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 70
+
+[node name="sliderMaster" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_icons/grabber = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
+theme_override_icons/tick = ExtResource("24_s3mw3")
+theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ikngp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_21j1v")
+min_value = -30.0
+max_value = 0.0
+value = -30.0
+
+[node name="sliderSFX" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
+theme_override_icons/tick = ExtResource("24_s3mw3")
+theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ikngp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_21j1v")
+min_value = -30.0
+max_value = 0.0
+
+[node name="sliderMusic" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
+theme_override_icons/tick = ExtResource("24_s3mw3")
+theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ikngp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_21j1v")
+min_value = -30.0
+max_value = 0.0
+
+[node name="buttons" type="VBoxContainer" parent="MenuOpcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnVoltar" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
+
+[node name="MenuChaveamento" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.5
+offset_top = -435.09
+offset_right = 516.5
+offset_bottom = 345.91
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_pg731")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = 241.125
+offset_right = 213.0
+offset_bottom = 440.125
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 70
+
+[node name="buttons" type="VBoxContainer" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuChaveamento/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuChaveamento/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
+
+[node name="Inputs" type="Control" parent="MenuChaveamento"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 316.0
+offset_right = 606.0
+offset_bottom = 347.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 4"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 251.0
+offset_right = 606.0
+offset_bottom = 282.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 3"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = -99.0
+offset_right = 605.0
+offset_bottom = -68.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 1"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = -35.0
+offset_right = 605.0
+offset_bottom = -4.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 2"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -594.0
+offset_top = 314.0
+offset_right = -394.0
+offset_bottom = 345.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 4"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -594.0
+offset_top = 251.0
+offset_right = -394.0
+offset_bottom = 282.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 3"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -593.0
+offset_top = -98.0
+offset_right = -393.0
+offset_bottom = -67.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 1"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -593.0
+offset_top = -35.0
+offset_right = -393.0
+offset_bottom = -4.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 2"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit11" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -409.0
+offset_top = 81.0
+offset_right = -209.0
+offset_bottom = 112.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 1"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit12" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -409.0
+offset_top = 126.0
+offset_right = -209.0
+offset_bottom = 157.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 2"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit9" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 80.0
+offset_right = 421.0
+offset_bottom = 111.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 1"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit10" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 130.0
+offset_right = 422.0
+offset_bottom = 161.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 2"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="Final1" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -121.0
+offset_top = 30.0
+offset_right = 129.0
+offset_bottom = 80.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+placeholder_text = "Final Player 1"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="Final2" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 152.0
+offset_right = 130.0
+offset_bottom = 202.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Final Player 2"
+alignment = 1
+editable = false
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="MenuSelecaoMapa" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("26_f2vi0")
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoMapa"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -243.5
+offset_top = 135.875
+offset_right = 243.5
+offset_bottom = 549.875
+grow_horizontal = 2
+texture = ExtResource("28_cwpyb")
+script = ExtResource("28_wglia")
+imagem1 = ExtResource("28_cwpyb")
+imagem2 = ExtResource("30_2i3ja")
+imagem3 = ExtResource("28_535xv")
+imagem4 = ExtResource("29_keom8")
+imagem5 = ExtResource("31_d4520")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoMapa"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.5
+offset_top = 84.455
+offset_right = 267.5
+offset_bottom = 179.455
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="mapa1" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("27_e4bqd")
+texture_focused = ExtResource("32_baqie")
+script = SubResource("GDScript_gdy4j")
+
+[node name="mapa2" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_ax1sj")
+texture_focused = ExtResource("32_baqie")
+
+[node name="mapa3" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_urfyc")
+texture_focused = ExtResource("32_baqie")
+
+[node name="mapa4" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("32_iq5tj")
+texture_focused = ExtResource("32_baqie")
+
+[node name="mapa5" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_qvnfu")
+texture_focused = ExtResource("32_baqie")
+
+[node name="buttons" type="VBoxContainer" parent="MenuSelecaoMapa"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -315.165
+offset_right = 213.0
+offset_bottom = -116.165
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuSelecaoMapa/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuSelecaoMapa/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
+
+[node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_o3hul")
+volume_db = -9.254
+autoplay = true
+bus = &"Musica"
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_tjowc")
+bus = &"SFX"
+
+[node name="clickmenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_wmb0y")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="MenuMain" to="MenuMain/btn1vs1" method="_on_v_box_container_mouse_entered"]
+[connection signal="button_down" from="MenuMain/btn1vs1" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuMain/btn1vs1" to="MenuMain" method="_on_btn_1_vs_1_focus_entered"]
+[connection signal="mouse_entered" from="MenuMain/btn1vs1" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuMain/btn1vs1" to="." method="_on_btn_1_vs_1_pressed"]
+[connection signal="button_down" from="MenuMain/btnChaveamento" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuMain/btnChaveamento" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuMain/btnChaveamento" to="." method="_on_btn_chaveamento_pressed"]
+[connection signal="button_down" from="MenuMain/btnOpcoes" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuMain/btnOpcoes" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuMain/btnOpcoes" to="." method="_on_btn_opcoes_pressed"]
+[connection signal="button_down" from="MenuMain/btnSair" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuMain/btnSair" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuMain/btnSair" to="." method="_on_btn_sair_pressed"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton2" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton3" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton4" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton5" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton6" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton7" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton2" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton3" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton4" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton5" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton6" to="." method="sound_entered_btn"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton7" to="." method="sound_entered_btn"]
+[connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]
+[connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
+[connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
+[connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [2]]
+[connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [3]]
+[connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [4]]
+[connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [5]]
+[connection signal="button_down" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoMapa" method="IniciarMapa"]
+[connection signal="button_down" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="voltarSelecaoMapa"]
