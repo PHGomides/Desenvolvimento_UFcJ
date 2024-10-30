@@ -6,19 +6,6 @@ extends Control
 @onready var MenuChaveamento = $MenuChaveamento
 @onready var MenuSelecaoMapa = $MenuSelecaoMapa
 
-# Array com os caminhos dos mapas
-var mapas = [
-	"res://prefer/world.tscn",
-	"res://prefer/frente_ufj.tscn",
-	"res://prefer/fila_caj.tscn",
-	"res://prefer/restaurante.tscn"
-]
-
-# Referência à variável de seleção de mapas
-var mapa_selecionado = 0  # Valor inicial (pode ser alterado)
-
-
-
 # Called when the node enters the scene tree for the first time.
 
 #sons de botões:
@@ -74,13 +61,9 @@ func voltarSelecaoMapa() -> void:
 	Menu1v1.visible = true
 	MenuSelecaoMapa.visible = false
 
-func _on_btn_SelecionarMapa() -> void:
+func _on_btnEscolherMapa() -> void:
 	Menu1v1.visible = false
 	MenuSelecaoMapa.visible = true
-	if mapa_selecionado < mapas.size():
-		get_tree().change_scene_to_file(mapas[mapa_selecionado])
-	else:
-		print("Mapa inválido!")  # Caso algo esteja fora do esperado
 	pass # Replace with function body.
 
 
@@ -119,9 +102,3 @@ func _on_slider_music_value_changed(value: float) -> void:
 	else:
 		AudioServer.set_bus_mute(musica,false)
 	pass # Replace with function body.
-
-
-
-func _on_mapaBtn_pressed(mapa_id: int) -> void:
-	mapa_selecionado = mapa_id
-	print("Mapa " + str(mapa_id) + " selecionado")  # Para depuração

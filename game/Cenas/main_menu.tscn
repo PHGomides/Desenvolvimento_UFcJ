@@ -145,6 +145,7 @@ texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
 
 [node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
@@ -688,7 +689,6 @@ clear_button_enabled = true
 caret_blink_interval = 0.1
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -851,8 +851,7 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btn_iniciar_pressed"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btn_SelecionarMapa"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
