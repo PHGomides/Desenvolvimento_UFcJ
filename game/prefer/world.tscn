@@ -1,10 +1,8 @@
-[gd_scene load_steps=37 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=36 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="2_1ilr7"]
-[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_if2qb"]
-[ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_6vtsv"]
 [ext_resource type="Texture2D" uid="uid://pra1kn7a86jl" path="res://Assests/MapaEstacionamento/_0004_cenario.png" id="4_hx6wh"]
 [ext_resource type="Texture2D" uid="uid://dskf4ptooihtn" path="res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png" id="5_0467r"]
 [ext_resource type="Texture2D" uid="uid://bwn4f7nlitoc6" path="res://Assests/MapaEstacionamento/_0002_carros-atrás.png" id="6_7vs72"]
@@ -22,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="20_5j2kd"]
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="21_bt6mq"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
+[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="23_af463"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -115,17 +114,6 @@ limit_right = 1765
 limit_bottom = 1200
 script = ExtResource("2_1ilr7")
 margin = Vector2(0, 0)
-
-[node name="player" parent="." groups=["players"] instance=ExtResource("2_if2qb")]
-modulate = Color(0.9, 1, 1, 1)
-z_index = 1
-position = Vector2(319, 540)
-scale = Vector2(1.38, 1.38)
-
-[node name="player2" parent="." groups=["players"] instance=ExtResource("3_6vtsv")]
-z_index = 1
-position = Vector2(1295, 540)
-scale = Vector2(1.26, 1.26)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
@@ -412,5 +400,14 @@ visibility_rect = Rect2(-100, -133.255, 200, 574.265)
 environment = SubResource("Environment_xcucr")
 
 [node name="Control" parent="." instance=ExtResource("22_vlji3")]
+
+[node name="Players" type="Node2D" parent="."]
+script = ExtResource("23_af463")
+
+[node name="MarkPlayer2" type="Marker2D" parent="Players" groups=["players"]]
+position = Vector2(1649, 998)
+
+[node name="MarkPlayer1" type="Marker2D" parent="Players" groups=["players"]]
+position = Vector2(317, 506)
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

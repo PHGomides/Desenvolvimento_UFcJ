@@ -13,6 +13,7 @@
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 3
+visible = false
 script = ExtResource("1_a7ykj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
