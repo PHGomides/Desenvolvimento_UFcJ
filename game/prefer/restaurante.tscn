@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=27 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restauranteScripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_rpvgp"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="20_vu2kn"]
 [ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="21_ddmxy"]
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="22_21a2l"]
+[ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="23_se4nb"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
 background_mode = 3
@@ -362,5 +363,7 @@ offset_right = 1631.0
 offset_bottom = 84.0
 texture = ExtResource("22_21a2l")
 flip_h = true
+
+[node name="Control" parent="." instance=ExtResource("23_se4nb")]
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]
