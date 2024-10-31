@@ -10,7 +10,7 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
-var COMBO_WINDOW_DURATION = 0.5  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
@@ -155,6 +155,7 @@ func _physics_process(delta: float) -> void:
 		# Lógica para o ataque opcional com teclado numerico
 		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
 			animation.play("opcional")
+			emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_2
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
@@ -162,6 +163,7 @@ func _physics_process(delta: float) -> void:
 		# Lógica para o ataque opcional com k
 		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack:
 			animation.play("opcional")
+			emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_K
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional

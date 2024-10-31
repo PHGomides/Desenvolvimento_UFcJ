@@ -47,9 +47,6 @@ func _ready():
 		print("Erro: O nó pai não possui o sinal 'punch_activated'.")
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_opcional"):
-		activate_hitbox("punch3eopcional")
-	
 	if attack_active:
 		attack_timer += delta
 		if attack_timer >= attack_time:
@@ -59,6 +56,8 @@ func _on_punch_activated(state: String) -> void:
 	if state == "state1" or state == "state2":
 		activate_hitbox("punch1e2")
 	elif state == "state3":
+		activate_hitbox("punch3eopcional")
+	elif state == "opcional":
 		activate_hitbox("punch3eopcional")
 
 func activate_hitbox(punch_name: String) -> void:

@@ -473,8 +473,8 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"idle"
-frame = 6
+animation = &"opcional"
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
