@@ -13,7 +13,6 @@ var COMBO_WINDOW_DURATION = 0.5  # Tempo para apertar o botão para continuar o 
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
-
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 # Variável para pulo
 var is_jumping = false
@@ -40,6 +39,7 @@ var current_direction = 1 #direção do personagem olhando pra direita
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
+
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
@@ -71,9 +71,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Lógica para o pulo com w
 		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
-			barras.vida_player1 -= 5
-			barras.power_player1 += 5 #TEMPORARIO ATE A COLISÃO FICAR PRONTO
-			
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine

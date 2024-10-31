@@ -40,7 +40,6 @@ func _set_vida_player1(nova_vida):
 
 	
 func _set_vida_player2(nova_vida):
-	
 	nova_vida = clamp(nova_vida, 0, vidaMAX)  # Restringe o valor entre 0 e vidaMAX
 	vida_player2 = nova_vida
 	move_tween(bv_player_2, vida_player2, 0.1)
@@ -63,9 +62,11 @@ func _ready() -> void:
 	barrasvida = [ef_bv_player_1, ef_bv_player_2, bv_player_1, bv_player_2]
 	_init_vida()
 
+
 func _process(delta: float) -> void:
 	pass
-  
+
+
 func _init_vida():
 	vida_player1 = vidaMAX
 	vida_player2 = vidaMAX
