@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=45 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ce1ma8a7j5moq" path="res://Assests/menu main/hover Chaveamento.png" id="9_55qhi"]
 [ext_resource type="Texture2D" uid="uid://caxd0w6bke5dv" path="res://Assests/menu main/_0002s_0000s_0002_opções.png" id="10_i4iwc"]
 [ext_resource type="Texture2D" uid="uid://byoerchvpayqt" path="res://Assests/menu main/hover opções.png" id="11_ek7e4"]
+[ext_resource type="Script" path="res://Cenas/menu_selecao_personagens.gd" id="12_n4jld"]
 [ext_resource type="Texture2D" uid="uid://cgibdukfg6s6n" path="res://Assests/menu main/_0002s_0000s_0003_sair.png" id="12_rjdkj"]
 [ext_resource type="AudioStream" uid="uid://5signxbsqjrd" path="res://audio/MenuBtnSoundEffectwav.wav" id="12_tjowc"]
 [ext_resource type="Texture2D" uid="uid://b5a4qc5cq6mdk" path="res://Assests/menu main/hover sair.png" id="13_6fd72"]
@@ -82,6 +83,7 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -140,7 +142,6 @@ texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
 
 [node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
@@ -150,6 +151,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = -112
 alignment = 2
+script = ExtResource("12_n4jld")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
 layout_mode = 2
@@ -170,6 +172,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -179,6 +182,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -188,6 +192,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -197,6 +202,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -206,6 +212,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -215,6 +222,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
 [node name="TextureButton7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -224,9 +232,20 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+[node name="TextureButton8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -249,6 +268,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -257,6 +277,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -265,6 +286,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -273,6 +295,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -281,6 +304,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -289,6 +313,7 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureButton7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -297,6 +322,16 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_fidrd")
 texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
 stretch_mode = 5
 
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
@@ -831,19 +866,37 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="MenuMain/btnSair" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuMain/btnSair" to="." method="_on_btn_sair_pressed"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton2" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton2" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [2]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton3" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton3" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton4" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton4" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [4]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton5" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton5" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [5]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton6" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton6" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton7" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton7" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [7]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton8" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/TextureButton8" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [8]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton2" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton2" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [2]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton3" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton3" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton4" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton4" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [4]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton5" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton5" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [5]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton6" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton6" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton7" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton7" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton8" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/TextureButton8" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [8]]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
