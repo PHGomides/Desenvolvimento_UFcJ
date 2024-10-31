@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var hurtbox_area = self
 @onready var player_2: CharacterBody2D = $".."
+@onready var anim: AnimatedSprite2D = $"../anim"
 
 
 func _ready():
@@ -21,9 +22,9 @@ func _on_area_entered(area: Area2D) -> void:
 			print("Player 1 acertou o Player 2 com um soco!")
 			player_2.barras.vida_player2 -= 3
 			player_2.barras.power_player2 += 3
-			# Coloque a lógica de dano para o golpe punch1 aqui
+			player_2._damage()
 		elif golpe_tipo == "punch3":
 			print("Player 1 acertou o Player 2 com um soco de cima pra baixo!")
 			player_2.barras.vida_player2 -= 5
 			player_2.barras.power_player2 += 5
-			# Coloque a lógica de dano para o golpe punch3 aqui
+			player_2._damage()

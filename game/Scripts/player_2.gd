@@ -246,11 +246,17 @@ func _physics_process(delta: float) -> void:
 			animation.play("jump")
 		move_and_slide()
 
+func _damage() -> void:
+	is_attacking = true
+	animation.play("damage")
+
+
+
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
 	
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage"]:
 		if animation.animation == "especial":
 			print("special");
 			using_special = false  # Permite o uso do especial novamente
@@ -276,4 +282,6 @@ func _on_anim_animation_finished() -> void:
 		if child is AnimatedSprite2D and child.animation == "fumaca_pulo":  # Verifica se é a animação de fumaça
 			child.queue_free()  # Remove a animação do mundo		
 			
+			
+
 			

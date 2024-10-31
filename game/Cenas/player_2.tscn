@@ -1,13 +1,20 @@
-[gd_scene load_steps=96 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=103 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ujqhl"]
 [ext_resource type="Texture2D" uid="uid://bm80q03wldxbk" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png" id="2_4b023"]
+[ext_resource type="Texture2D" uid="uid://42ukkwxlsvg0" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0006_20240905_162052_019.png" id="2_jsnid"]
+[ext_resource type="Texture2D" uid="uid://clvaubehivdxo" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0004_20240905_162052_025.png" id="3_dsyuk"]
 [ext_resource type="Texture2D" uid="uid://cf3txtxcj2gmv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png" id="3_yba10"]
+[ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_cnlud"]
 [ext_resource type="Texture2D" uid="uid://c6f7vfw4exywa" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png" id="4_nkkpe"]
 [ext_resource type="Texture2D" uid="uid://cn5qgpdnlq2w" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png" id="5_g43r8"]
+[ext_resource type="Texture2D" uid="uid://d2bj4uyxywasq" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0000_20240905_162052_032.png" id="5_tak8n"]
 [ext_resource type="Texture2D" uid="uid://b2dw31uhj1w3r" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png" id="6_kkavk"]
+[ext_resource type="Texture2D" uid="uid://b4gvjhifpot24" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0001_20240905_162052_031.png" id="6_pkob6"]
+[ext_resource type="Texture2D" uid="uid://d1ctrv23cefra" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0003_20240905_162052_027.png" id="7_3c5pj"]
 [ext_resource type="Texture2D" uid="uid://dnydkktnkgqkx" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png" id="7_cchs5"]
 [ext_resource type="Texture2D" uid="uid://d3vsr0hscl3j" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png" id="8_6ed0y"]
+[ext_resource type="Texture2D" uid="uid://ck4d7bbjh5jl5" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0005_20240905_162052_023.png" id="8_h455i"]
 [ext_resource type="Texture2D" uid="uid://duvx3033kunwv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png" id="9_6l0vb"]
 [ext_resource type="Texture2D" uid="uid://b21557jbb3x7s" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png" id="10_smxyi"]
 [ext_resource type="Texture2D" uid="uid://bxp4rkhxnsl8x" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png" id="11_njheo"]
@@ -94,6 +101,32 @@ size = Vector2(91.0638, 283.404)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jsnid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dsyuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cnlud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tak8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pkob6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3c5pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h455i")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_4b023")
@@ -473,8 +506,7 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"opcional"
-frame = 4
+animation = &"damage"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
