@@ -14,6 +14,7 @@ var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
+var is_round = false
 
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 # Variável para pulo
@@ -214,42 +215,48 @@ func _physics_process(delta: float) -> void:
 				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 			
 	if type_player == 1:
-		# Movimento só é permitido se não estiver atacando
-		if not is_attacking:
-			var direction := Input.get_axis("ui_left", "ui_right")
-			
-			if direction != 0:
-				current_direction = direction
-				velocity.x = direction * SPEED
-				# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
-				animation.scale.x = abs(animation.scale.x) * direction
-				if not is_jumping:
-					animation.play("walk")
-			elif is_jumping:
-				animation.play("jump")
-			else:
-				animation.play("idle")
-				velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+		if not is_round: # para funçao round
+			if not is_attacking:
+				var direction := Input.get_axis("ui_left", "ui_right")
+				if direction != 0:
+					current_direction = direction
+					velocity.x = direction * SPEED
+					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
+					animation.scale.x = abs(animation.scale.x) * direction
+					if not is_jumping:
+						animation.play("walk")
+				elif is_jumping:
+					animation.play("jump")
+				else:
+					animation.play("idle")
+					velocity.x = move_toward(velocity.x, 0, SPEED)
+		else:
+			animation.play("idle")			
+					
 		if not is_on_floor() and not is_attacking:
 			animation.play("jump")
 		move_and_slide()
 	else:
 		# Movimento só é permitido se não estiver atacando
-		if not is_attacking:
-			var direction := Input.get_axis("ui_A", "ui_D")
-			
-			if direction != 0:
-				current_direction = direction
-				velocity.x = direction * SPEED
-				# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
-				animation.scale.x = abs(animation.scale.x) * direction
-				if not is_jumping:
-					animation.play("walk")
-			elif is_jumping:
-				animation.play("jump")
-			else:
-				animation.play("idle")
-				velocity.x = move_toward(velocity.x, 0, SPEED)
+		if not is_round:
+			if not is_attacking:
+				var direction := Input.get_axis("ui_A", "ui_D")
+				if direction != 0:
+					current_direction = direction
+					velocity.x = direction * SPEED
+					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
+					animation.scale.x = abs(animation.scale.x) * direction
+					if not is_jumping:
+						animation.play("walk")
+				elif is_jumping:
+					animation.play("jump")
+				else:
+					animation.play("idle")
+					velocity.x = move_toward(velocity.x, 0, SPEED)	
+		else:
+			animation.play("idle")	
+					
 		if not is_on_floor() and not is_attacking:
 			animation.play("jump")
 		move_and_slide()

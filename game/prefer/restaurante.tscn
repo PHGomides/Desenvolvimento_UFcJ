@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=32 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restauranteScripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_rpvgp"]
@@ -24,6 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="22_21a2l"]
 [ext_resource type="Script" path="res://Scripts/HUD/Round.gd" id="23_aht74"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="23_se4nb"]
+[ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="24_2bo1l"]
+[ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_dgdn2"]
+[ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_5s52m"]
+[ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="27_yb0rb"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
 background_mode = 3
@@ -62,13 +66,13 @@ margin = Vector2(0, 0)
 [node name="player" parent="." groups=["players"] instance=ExtResource("2_7yrne")]
 modulate = Color(0.9, 1, 1, 1)
 z_index = 1
-position = Vector2(1032, 559)
+position = Vector2(1503, 743)
 scale = Vector2(1.825, 1.825)
 JUMP_VELOCITY = -2400
 
 [node name="player2" parent="." groups=["players"] instance=ExtResource("3_w5f33")]
 z_index = 1
-position = Vector2(675, 563)
+position = Vector2(169, 785)
 scale = Vector2(1.68, 1.68)
 JUMP_VELOCITY = -2400.0
 
@@ -117,7 +121,7 @@ position = Vector2(-237, 101)
 motion_scale = Vector2(0.4, 1)
 
 [node name="Fundo04" type="Sprite2D" parent="Background/04 galpão"]
-position = Vector2(1284, 322.47)
+position = Vector2(1284, 322)
 scale = Vector2(2.18069, 1.96861)
 texture = ExtResource("7_urmir")
 
@@ -371,6 +375,54 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("23_aht74")
+
+[node name="round_player1_1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="round_player1_2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="round_player2_1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="round_player2_2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="TextureRect" parent="HUD/Round"]
+offset_left = 713.0
+offset_top = 219.0
+offset_right = 1213.0
+offset_bottom = 719.0
+texture = ExtResource("24_2bo1l")
+
+[node name="2" type="TextureRect" parent="HUD/Round"]
+offset_left = 713.0
+offset_top = 219.0
+offset_right = 1213.0
+offset_bottom = 719.0
+texture = ExtResource("25_dgdn2")
+
+[node name="3" type="TextureRect" parent="HUD/Round"]
+offset_left = 713.0
+offset_top = 214.0
+offset_right = 1213.0
+offset_bottom = 714.0
+texture = ExtResource("26_5s52m")
+
+[node name="Fight" type="TextureRect" parent="HUD/Round"]
+offset_left = 716.0
+offset_top = 229.0
+offset_right = 1216.0
+offset_bottom = 729.0
+texture = ExtResource("27_yb0rb")
 
 [node name="Control" parent="." instance=ExtResource("23_se4nb")]
 
