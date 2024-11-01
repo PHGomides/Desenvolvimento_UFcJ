@@ -1,9 +1,10 @@
 extends CharacterBody2D
-
+#michel
 const SPEED = 700.0
 @export var JUMP_VELOCITY=-2000
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
-@export var type_player = 2
+@export var type_player: int = 0
+
 
 @onready var barras: Control = $"../HUD/Barras"
 
@@ -30,7 +31,7 @@ var special_could = true
 
 # Variável para controlar o ataque opcional
 var opcional_attack = false
-var current_direction = 1 #direção do personagem olhando pra direita
+var current_direction #direção do personagem olhando pra direita
 
 # Janela de combo (tempo permitido para encadear ataques)
 
@@ -40,10 +41,21 @@ var current_direction = 1 #direção do personagem olhando pra direita
 @onready var animationEspecial := $especial as AnimatedSprite2D
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
 
-
+func _ready() -> void:
+# Garante que o personagem esteja virado para a direita
+	if(type_player == 1):
+		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
+		current_direction = 1  # Define a direção atual para a direita
+	else:
+		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
+		current_direction = -1  # Define a direção atual para a direita
+	
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 		# Atualiza o temporizador de cooldown do pulo
+	scale.x = 1.3
+	scale.y = 1.3
+	
 	if not can_jump:
 		jump_timer -= delta
 		if jump_timer <= 0:
