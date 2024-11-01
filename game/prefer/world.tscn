@@ -404,10 +404,10 @@ environment = SubResource("Environment_xcucr")
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("23_af463")
 
-[node name="MarkPlayer2" type="Marker2D" parent="Players" groups=["players"]]
-position = Vector2(1649, 998)
+[node name="MarkPlayer1" type="Marker2D" parent="Players"]
+position = Vector2(-132, 475)
 
-[node name="MarkPlayer1" type="Marker2D" parent="Players" groups=["players"]]
-position = Vector2(317, 506)
+[node name="MarkPlayer2" type="Marker2D" parent="Players"]
+position = Vector2(1375, 480)
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

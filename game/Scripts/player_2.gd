@@ -43,18 +43,26 @@ var current_direction = -1 #direção do personagem olhando pra esquerda
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
 
 
-func _ready() -> void:#direçao inicial
-	# Ajusta a escala para que o personagem inicie virado para a esquerda
-	animation.scale.x = abs(animation.scale.x) * current_direction
+func _ready() -> void:
+# Garante que o personagem esteja virado para a direita
+	if(type_player == 1):
+		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
+		current_direction = 1  # Define a direção atual para a direita
+	else:
+		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
+		current_direction = -1  # Define a direção atual para a direita
+	
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
+	scale.x = 1.2
+	scale.y = 1.2
 	if not can_jump:
 		jump_timer -= delta
 		if jump_timer <= 0:
 			can_jump = true  # Permite pular novamente após o cooldown
 	if not is_on_floor():
-		
+	
 		velocity.y += GRAVITY * delta
 	if type_player == 1:
 		# Lógica para o pulo setas
