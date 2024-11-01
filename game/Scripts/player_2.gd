@@ -1,9 +1,9 @@
 extends CharacterBody2D
-
+#Neemias
 const SPEED = 700.0
 @export var JUMP_VELOCITY = -2000.0
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
-@export var type_player = 1
+@export var type_player: int = 0
 
 @onready var barras: Control = $"../HUD/Barras"
 

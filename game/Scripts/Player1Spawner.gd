@@ -7,9 +7,12 @@ var Player2: CharacterBody2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Player1 = load(Global.player1Diretorio).instantiate()
+	Player1.type_player = 2
 	Player1.global_position = Player1Position.global_position
+	
 	add_child(Player1)
 	
 	Player2 = load(Global.player2Diretorio).instantiate()
+	Player2.type_player = 1
 	Player2.global_position = Player2Position.global_position
 	add_child(Player2)
