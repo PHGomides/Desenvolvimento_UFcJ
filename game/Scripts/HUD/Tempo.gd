@@ -20,7 +20,13 @@ func _process(delta: float) -> void:
 func _on_clocktimer_timeout() -> void:
 	seconds -= 1
 	tempo_label.text = str("%02d" % seconds)
+	if seconds == 0:
+		clocktimer.stop()  # Para o timer quando o tempo termina
+		emit_signal("time_is_up")  # Emite o sinal de tempo esgotado
 	
 func reset_clock_timer():
 	seconds = default_seconds
+	
+func recomeco():
+	clocktimer.start()  # Reinicia o timer
 	
