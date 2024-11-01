@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8edt864hgstm"
-path="res://.godot/imported/p1.png-8536391b94b080506dae834bfe14e86e.ctex"
+uid="uid://cmup1w1rgkbsm"
+path="res://.godot/imported/pedrBtnH.png-4d6f0812d4f147565c0252a7bcdd1266.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/menu main/subMenu1v1/p1.png"
-dest_files=["res://.godot/imported/p1.png-8536391b94b080506dae834bfe14e86e.ctex"]
+source_file="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtnH.png"
+dest_files=["res://.godot/imported/pedrBtnH.png-4d6f0812d4f147565c0252a7bcdd1266.ctex"]
 
 [params]
 

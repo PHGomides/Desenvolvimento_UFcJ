@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgewi5jlh3y7"
-path="res://.godot/imported/btnVoltarHover.png-4e18235bb1ac9ffb62282d8e1b52a6c9.ctex"
+uid="uid://t0bfd8edgial"
+path="res://.godot/imported/personagem.png-dc516c593c167e56fb58ef492d52773d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/menu main/subMenu1v1/btnVoltarHover.png"
-dest_files=["res://.godot/imported/btnVoltarHover.png-4e18235bb1ac9ffb62282d8e1b52a6c9.ctex"]
+source_file="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem.png"
+dest_files=["res://.godot/imported/personagem.png-dc516c593c167e56fb58ef492d52773d.ctex"]
 
 [params]
 

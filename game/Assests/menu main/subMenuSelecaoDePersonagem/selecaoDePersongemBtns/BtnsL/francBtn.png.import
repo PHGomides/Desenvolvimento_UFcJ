@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crhxta14is3it"
-path="res://.godot/imported/VS.png-c4ff2020018a92945adea058be67e85b.ctex"
+uid="uid://cqqqcot1e8r8w"
+path="res://.godot/imported/francBtn.png-d16d9801ea9e48ce4b19614fc115b86e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/menu main/subMenu1v1/VS.png"
-dest_files=["res://.godot/imported/VS.png-c4ff2020018a92945adea058be67e85b.ctex"]
+source_file="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png"
+dest_files=["res://.godot/imported/francBtn.png-d16d9801ea9e48ce4b19614fc115b86e.ctex"]
 
 [params]
 

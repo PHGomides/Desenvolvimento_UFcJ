@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkr0c7os2ki81"
-path="res://.godot/imported/p2.png-1081aa11bac912c4f1c3961de2005fa4.ctex"
+uid="uid://mw0h4dd841jn"
+path="res://.godot/imported/personagem2Hover.png-c8b773fed0357d993994374807f19817.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/menu main/subMenu1v1/p2.png"
-dest_files=["res://.godot/imported/p2.png-1081aa11bac912c4f1c3961de2005fa4.ctex"]
+source_file="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem2Hover.png"
+dest_files=["res://.godot/imported/personagem2Hover.png-c8b773fed0357d993994374807f19817.ctex"]
 
 [params]
 

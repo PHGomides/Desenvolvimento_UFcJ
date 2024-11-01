@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=67 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
@@ -13,33 +13,55 @@
 [ext_resource type="Texture2D" uid="uid://cgibdukfg6s6n" path="res://Assests/menu main/_0002s_0000s_0003_sair.png" id="12_rjdkj"]
 [ext_resource type="AudioStream" uid="uid://5signxbsqjrd" path="res://audio/MenuBtnSoundEffectwav.wav" id="12_tjowc"]
 [ext_resource type="Texture2D" uid="uid://b5a4qc5cq6mdk" path="res://Assests/menu main/hover sair.png" id="13_6fd72"]
-[ext_resource type="Texture2D" uid="uid://t0bfd8edgial" path="res://Assests/menu main/subMenu1v1/personagem.png" id="14_fidrd"]
+[ext_resource type="Texture2D" uid="uid://t0bfd8edgial" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem.png" id="14_fidrd"]
 [ext_resource type="AudioStream" uid="uid://cp0aj4wficg3x" path="res://audio/menu main.wav" id="14_o3hul"]
-[ext_resource type="Texture2D" uid="uid://bexw55fgtu2wj" path="res://Assests/menu main/subMenu1v1/personagemHover.png" id="15_kgxfw"]
+[ext_resource type="Texture2D" uid="uid://bexw55fgtu2wj" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagemHover.png" id="15_kgxfw"]
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="15_wmb0y"]
-[ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenu1v1/p1.png" id="16_dve1p"]
-[ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenu1v1/VS.png" id="17_56fj5"]
-[ext_resource type="Texture2D" uid="uid://mw0h4dd841jn" path="res://Assests/menu main/subMenu1v1/personagem2Hover.png" id="18_rp268"]
-[ext_resource type="Texture2D" uid="uid://dkr0c7os2ki81" path="res://Assests/menu main/subMenu1v1/p2.png" id="19_bj234"]
-[ext_resource type="Texture2D" uid="uid://dm7q5sxcwioqh" path="res://Assests/menu main/subMenu1v1/btnIniciar.png" id="20_bn7yk"]
-[ext_resource type="Texture2D" uid="uid://d3g4g1s37w1el" path="res://Assests/menu main/subMenu1v1/btnVoltar.png" id="21_6jpfk"]
-[ext_resource type="Texture2D" uid="uid://dgewi5jlh3y7" path="res://Assests/menu main/subMenu1v1/btnVoltarHover.png" id="22_qmwjn"]
+[ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/p1.png" id="16_dve1p"]
+[ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenuSelecaoDePersonagem/VS.png" id="17_56fj5"]
+[ext_resource type="Texture2D" uid="uid://mw0h4dd841jn" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem2Hover.png" id="18_rp268"]
+[ext_resource type="Texture2D" uid="uid://dkr0c7os2ki81" path="res://Assests/menu main/subMenuSelecaoDePersonagem/p2.png" id="19_bj234"]
+[ext_resource type="ButtonGroup" uid="uid://bkt8mowuc0by1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnGrupLeft.tres" id="19_fh0ld"]
+[ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="20_5id1b"]
+[ext_resource type="Texture2D" uid="uid://dm7q5sxcwioqh" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnIniciar.png" id="20_bn7yk"]
+[ext_resource type="Texture2D" uid="uid://d3g4g1s37w1el" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnVoltar.png" id="21_6jpfk"]
+[ext_resource type="Texture2D" uid="uid://cex78jqwrcrn1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michBtnF.png" id="22_4jfx2"]
+[ext_resource type="Texture2D" uid="uid://dgewi5jlh3y7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnVoltarHover.png" id="22_qmwjn"]
+[ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="22_tgq14"]
 [ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
+[ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="23_r21ep"]
+[ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="24_g4m7p"]
+[ext_resource type="Texture2D" uid="uid://bo1bcwadrspm4" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemBtnF.png" id="24_goy5u"]
 [ext_resource type="Texture2D" uid="uid://diajxj27uuw65" path="res://Assests/menu main/subMenuOpcoes/sliderGrab.png" id="24_s3mw3"]
 [ext_resource type="Texture2D" uid="uid://6xellc821ygn" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png" id="25_pg731"]
+[ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="25_rfm48"]
 [ext_resource type="Script" path="res://Scripts/menuScripts/menu_selecao_mapa.gd" id="26_f2vi0"]
+[ext_resource type="Texture2D" uid="uid://bjujio6jc6r7b" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtnF.png" id="26_ft5tc"]
 [ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
 [ext_resource type="Texture2D" uid="uid://daomouonbo1pg" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Aleatorio.png" id="28_535xv"]
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
+[ext_resource type="Texture2D" uid="uid://2mbba26wydu2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtnF.png" id="28_ei1r6"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
+[ext_resource type="ButtonGroup" uid="uid://xj672sn0ymaw" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnGrupRight.tres" id="29_jn2e5"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
+[ext_resource type="Texture2D" uid="uid://e8ntb7u0v0tm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/michBtn.png" id="29_xd7ua"]
 [ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
+[ext_resource type="Texture2D" uid="uid://dfnatagmv64da" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/pedrBtnF.png" id="30_6w850"]
 [ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
 [ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
 [ext_resource type="Texture2D" uid="uid://n6ra2tnkhtwy" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png" id="31_d4520"]
+[ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="31_pj44o"]
+[ext_resource type="Texture2D" uid="uid://cyutbmme3kpcy" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/okaBtn.png" id="32_18xtj"]
 [ext_resource type="Texture2D" uid="uid://cpfqd1g6p5hv3" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn - Copia.png" id="32_baqie"]
 [ext_resource type="Texture2D" uid="uid://cmsodir305fih" path="res://Assests/menu main/MenuEscolhaMapa/mapa4Btn.png" id="32_iq5tj"]
+[ext_resource type="Texture2D" uid="uid://cgvvw8ednxe31" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/michBtnH.png" id="32_irdys"]
+[ext_resource type="Texture2D" uid="uid://dl87nu23tdmoc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/francBtn.png" id="33_mh0us"]
+[ext_resource type="Texture2D" uid="uid://dngiyy4yabnnk" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtn.png" id="34_pab37"]
+[ext_resource type="Texture2D" uid="uid://c17jasxax5ek1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtnH.png" id="34_rmu8n"]
+[ext_resource type="Texture2D" uid="uid://cg3e2fpmropbi" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/okaBtnH.png" id="36_4jyqn"]
+[ext_resource type="Texture2D" uid="uid://bs4wab12dfchb" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/francBtnH.png" id="38_7k1bu"]
+[ext_resource type="Texture2D" uid="uid://cmup1w1rgkbsm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtnH.png" id="40_1ekn0"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -140,229 +162,6 @@ focus_neighbor_bottom = NodePath("../btn1vs1")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
-
-[node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = -112
-alignment = 2
-script = ExtResource("12_n4jld")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 116
-alignment = 1
-
-[node name="PersonagensP1" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
-
-[node name="Player1Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Michel8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("16_dve1p")
-
-[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("17_56fj5")
-
-[node name="PersonagensP2" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Player2Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="Player2Michel8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("19_bj234")
-
-[node name="buttons" type="VBoxContainer" parent="MenuSelecaoPersonagens"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="btnIniciar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("20_bn7yk")
-
-[node name="btnVoltar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("21_6jpfk")
-texture_hover = ExtResource("22_qmwjn")
-stretch_mode = 5
 
 [node name="MenuOpcoes" type="Control" parent="."]
 visible = false
@@ -718,6 +517,263 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
+[node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -464.0
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -112
+alignment = 2
+script = ExtResource("12_n4jld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 116
+alignment = 1
+
+[node name="PersonagensP1" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Player1Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("20_5id1b")
+texture_hover = ExtResource("22_4jfx2")
+texture_focused = ExtResource("22_4jfx2")
+stretch_mode = 3
+
+[node name="Player1Michel2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("22_tgq14")
+texture_hover = ExtResource("24_goy5u")
+texture_focused = ExtResource("24_goy5u")
+stretch_mode = 3
+
+[node name="Player1Michel3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("23_r21ep")
+texture_hover = ExtResource("26_ft5tc")
+texture_focused = ExtResource("26_ft5tc")
+stretch_mode = 3
+
+[node name="Player1Michel4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("24_g4m7p")
+texture_hover = ExtResource("28_ei1r6")
+texture_focused = ExtResource("28_ei1r6")
+stretch_mode = 3
+
+[node name="Player1Michel5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("25_rfm48")
+texture_hover = ExtResource("30_6w850")
+texture_focused = ExtResource("30_6w850")
+stretch_mode = 3
+
+[node name="Player1Michel6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="Player1Michel7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="Player1Michel8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("19_fh0ld")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("15_kgxfw")
+texture_focused = ExtResource("15_kgxfw")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("16_dve1p")
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_56fj5")
+
+[node name="PersonagensP2" type="VBoxContainer" parent="MenuSelecaoPersonagens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Player2Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("29_xd7ua")
+texture_hover = ExtResource("32_irdys")
+texture_focused = ExtResource("32_irdys")
+stretch_mode = 5
+
+[node name="Player2Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("31_pj44o")
+texture_hover = ExtResource("34_rmu8n")
+texture_focused = ExtResource("34_rmu8n")
+stretch_mode = 5
+
+[node name="Player2Oka" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("32_18xtj")
+texture_hover = ExtResource("36_4jyqn")
+texture_focused = ExtResource("36_4jyqn")
+stretch_mode = 5
+
+[node name="Player2Frances" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("33_mh0us")
+texture_hover = ExtResource("38_7k1bu")
+texture_focused = ExtResource("38_7k1bu")
+stretch_mode = 5
+
+[node name="Player2Pedro" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("34_pab37")
+texture_hover = ExtResource("40_1ekn0")
+texture_focused = ExtResource("40_1ekn0")
+stretch_mode = 5
+
+[node name="Player2Alisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="Player2Walisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="Player2Thiago" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = ExtResource("29_jn2e5")
+texture_normal = ExtResource("14_fidrd")
+texture_hover = ExtResource("18_rp268")
+texture_focused = ExtResource("18_rp268")
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("19_bj234")
+
+[node name="buttons" type="VBoxContainer" parent="MenuSelecaoPersonagens"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
+
 [node name="MenuSelecaoMapa" type="Control" parent="."]
 visible = false
 layout_mode = 1
@@ -811,9 +867,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -213.0
-offset_top = -315.165
+offset_top = -275.0
 offset_right = 213.0
-offset_bottom = -116.165
+offset_bottom = -76.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 0
@@ -865,6 +921,18 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuMain/btnSair" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuMain/btnSair" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuMain/btnSair" to="." method="_on_btn_sair_pressed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
+[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
+[connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="focus_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
+[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel2" to="." method="sound_entered_btn"]
@@ -883,20 +951,20 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel8" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [8]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel2" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel2" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [2]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel3" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel3" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel4" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel4" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [4]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel5" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel5" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [5]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel6" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel6" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel7" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel7" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel8" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel8" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [8]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [2]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [4]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [5]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [8]]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
@@ -904,18 +972,6 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
-[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
-[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
-[connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
-[connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
-[connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
-[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
-[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_entered_btn"]
-[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
-[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_button_down"]
 [connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_entered_btn"]
