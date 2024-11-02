@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=95 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
@@ -45,11 +45,13 @@
 [ext_resource type="ButtonGroup" uid="uid://xj672sn0ymaw" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnGrupRight.tres" id="29_jn2e5"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
 [ext_resource type="Texture2D" uid="uid://e8ntb7u0v0tm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/michBtn.png" id="29_xd7ua"]
+[ext_resource type="Texture2D" uid="uid://txko7ukvfgy7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/AlissonBtn.png" id="30_1mfh3"]
 [ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
 [ext_resource type="Texture2D" uid="uid://dfnatagmv64da" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/pedrBtnF.png" id="30_6w850"]
 [ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
 [ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
+[ext_resource type="Texture2D" uid="uid://cqv2jexbxntlo" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/AlissonBtnH.png" id="31_8tx4n"]
 [ext_resource type="Texture2D" uid="uid://n6ra2tnkhtwy" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_RU.png" id="31_d4520"]
 [ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="31_pj44o"]
 [ext_resource type="Texture2D" uid="uid://cyutbmme3kpcy" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/okaBtn.png" id="32_18xtj"]
@@ -62,6 +64,31 @@
 [ext_resource type="Texture2D" uid="uid://cg3e2fpmropbi" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/okaBtnH.png" id="36_4jyqn"]
 [ext_resource type="Texture2D" uid="uid://bs4wab12dfchb" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/francBtnH.png" id="38_7k1bu"]
 [ext_resource type="Texture2D" uid="uid://cmup1w1rgkbsm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtnH.png" id="40_1ekn0"]
+[ext_resource type="Texture2D" uid="uid://d337887r483vj" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtn.png" id="47_80f7l"]
+[ext_resource type="Texture2D" uid="uid://22bsb0beqfy2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtnH.png" id="48_y6dna"]
+[ext_resource type="Texture2D" uid="uid://q6jfubtgrtb7" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0000_Layer-7.png" id="51_nbvc6"]
+[ext_resource type="Texture2D" uid="uid://sv4nmvmoy7os" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
+[ext_resource type="Texture2D" uid="uid://1173bhga5u8o" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
+[ext_resource type="Texture2D" uid="uid://k54ypoa7jkou" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0003_20240916_161841_007.png" id="54_mjh0t"]
+[ext_resource type="Texture2D" uid="uid://da3ojfaw4mdir" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0004_20240916_161841_011.png" id="55_sni0m"]
+[ext_resource type="Texture2D" uid="uid://864818f6h7g2" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0005_20240916_161841_013.png" id="56_s1hmo"]
+[ext_resource type="Texture2D" uid="uid://dnd5mk07l53yn" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0006_20240916_161841_017.png" id="57_wv1t7"]
+[ext_resource type="Texture2D" uid="uid://pxxtu6fq0w7t" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png" id="58_eo6hh"]
+[ext_resource type="Texture2D" uid="uid://qd455g1remr3" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png" id="59_gyoxc"]
+[ext_resource type="Texture2D" uid="uid://c2fqwdbbxtgmh" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png" id="60_o1n1v"]
+[ext_resource type="Texture2D" uid="uid://ccil2enkh6vtg" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png" id="61_0k7mt"]
+[ext_resource type="Texture2D" uid="uid://bb3ltido73l78" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png" id="62_voqgb"]
+[ext_resource type="Texture2D" uid="uid://dkbco23w5krbx" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png" id="63_v68ew"]
+[ext_resource type="Texture2D" uid="uid://blcotdbte6b5d" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png" id="64_bl46r"]
+[ext_resource type="Texture2D" uid="uid://hx2syxuny46m" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png" id="65_6r3qd"]
+[ext_resource type="Texture2D" uid="uid://cy4gbn0dld1w4" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png" id="66_778qi"]
+[ext_resource type="Texture2D" uid="uid://colsn6kt8f52h" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png" id="67_sueid"]
+[ext_resource type="Texture2D" uid="uid://b7jv1745jkkhm" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png" id="68_cm6nd"]
+[ext_resource type="Texture2D" uid="uid://djkuuknwljpxg" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png" id="69_72jtn"]
+[ext_resource type="Texture2D" uid="uid://c0mk7742ign6b" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png" id="70_61ihb"]
+[ext_resource type="Texture2D" uid="uid://g4e64by52k63" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png" id="71_kblb0"]
+[ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
+[ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -74,6 +101,98 @@ thickness = 10
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_21j1v"]
 color = Color(1, 1, 1, 1)
 thickness = 10
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htphl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_nbvc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ct74j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ha4yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_mjh0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_sni0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_s1hmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wv1t7")
+}],
+"loop": true,
+"name": &"Alisson",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_eo6hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_gyoxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o1n1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_0k7mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_voqgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_v68ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_bl46r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_6r3qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_778qi")
+}],
+"loop": true,
+"name": &"Michel",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_sueid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_cm6nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_72jtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_61ihb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_kblb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_31080")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_4f2kh")
+}],
+"loop": true,
+"name": &"Neemias",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Pedro",
+"speed": 5.0
+}]
 
 [sub_resource type="GDScript" id="GDScript_gdy4j"]
 script/source = "extends TextureButton
@@ -610,9 +729,9 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
+texture_normal = ExtResource("30_1mfh3")
+texture_hover = ExtResource("31_8tx4n")
+texture_focused = ExtResource("31_8tx4n")
 stretch_mode = 3
 
 [node name="Player1Michel7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
@@ -717,9 +836,9 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("29_jn2e5")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
+texture_normal = ExtResource("47_80f7l")
+texture_hover = ExtResource("48_y6dna")
+texture_focused = ExtResource("48_y6dna")
 stretch_mode = 5
 
 [node name="Player2Walisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
@@ -773,6 +892,21 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
 stretch_mode = 5
+
+[node name="AnimacaoP1Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
+position = Vector2(676, 419)
+scale = Vector2(1.305, 1.305)
+sprite_frames = SubResource("SpriteFrames_htphl")
+animation = &"Michel"
+frame_progress = 0.618922
+
+[node name="AnimacaoP2Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
+position = Vector2(1256.09, 419)
+scale = Vector2(1.305, 1.305)
+sprite_frames = SubResource("SpriteFrames_htphl")
+animation = &"Michel"
+frame_progress = 0.949779
+flip_h = true
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
 visible = false

@@ -5,8 +5,13 @@ const SPEED = 700.0
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player: int = 2
 
+#VIDA
+var max_health: int = 100  # Saúde máxima
+var current_health: int = max_health  # Saúde atual
 
-@onready var barras: Control = $"../HUD/Barras"
+#PODER
+var MaxPower: int = 100
+var current_power: int = 0
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
@@ -51,6 +56,12 @@ func _ready() -> void:
 		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = -1  # Define a direção atual para a direita
 	
+	
+func get_current_power() -> int:
+	return current_power
+	
+func get_current_health() -> int:
+	return current_health
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 		# Atualiza o temporizador de cooldown do pulo
@@ -68,11 +79,12 @@ func _physics_process(delta: float) -> void:
 	if type_player == 1 :
 		# Lógica para o pulo com setas
 		if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking and can_jump:
+			_damage()
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine
 			jump_timer = jump_cooldown_time  # Reseta o temporizador para o cooldown
-
+				
 			#adicionando animação de fumaça quando pular
 			var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
 			get_parent().add_child(particulaPulo)
@@ -84,6 +96,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Lógica para o pulo com w
 		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
+			_damage()
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine
@@ -179,32 +192,40 @@ func _physics_process(delta: float) -> void:
 		# Lógica para o ataque especial com teclado numerico
 		if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
 			print("3 foi pressionado")
-			if(barras.power_player1 >= barras.powerMAX): #Verificar se a barra de power ta cheia
+			if(current_power >= MaxPower): #Verificar se a barra de power ta cheia
 				if current_direction == 1:
-					animationEspecial.position.x = 691.109
+					animationEspecial.position.x = 630
+					animationEspecial.flip_h = false
 				else:
-					animationEspecial.position.x = -691.109
-				barras.power_player1 = 0
-				animation.play("especial")
-				animationEspecial.play("especialMichel")
-				is_attacking = true
-				using_special = true  # Marca o especial como usado
-				velocity.x = 0  # Para o movimento horizontal durante o ataque especialaa
-	else:
-		#Logica para ataque especial com L
-		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
-			print("L foi pressionado")
-			if(barras.power_player1 >= barras.powerMAX): #Verificar se a barra de power ta cheia
-				if current_direction == 1:
-					animationEspecial.position.x = 691.109
-				else:
-					animationEspecial.position.x = -691.109
-				barras.power_player1 = 0
+					animationEspecial.position.x = -599.175
+					animationEspecial.flip_h = true
+				
+				current_power = 0
 				animation.play("especial")
 				animationEspecial.play("especialMichel")
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
 				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
+		
+	else:
+		#Logica para ataque especial com L
+		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
+			print("L foi pressionado")
+			if(current_power >= MaxPower): #Verificar se a barra de power ta cheia
+				if current_direction == 1:
+					animationEspecial.position.x = 630
+					animationEspecial.flip_h = false
+				else:
+					animationEspecial.position.x = -599.175
+					animationEspecial.flip_h = true
+				
+				current_power = 0
+				animation.play("especial")
+				animationEspecial.play("especialMichel")
+				is_attacking = true
+				using_special = true  # Marca o especial como usado
+				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
+			
 	if type_player == 1:
 		# Movimento só é permitido se não estiver atacando
 		if not is_round:
@@ -255,8 +276,10 @@ func _physics_process(delta: float) -> void:
 
 func _damage() -> void:
 	is_attacking = true
+	current_health-=50
+	current_power +=100
 	animation.play("damage")
-
+	
 
 
 # Função que é chamada automaticamente quando a animação termina

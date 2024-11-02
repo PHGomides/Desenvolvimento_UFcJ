@@ -2,9 +2,7 @@ extends Control
 
 @onready var timer_barra: Timer = $timerbarra
 
-var seconds = 0
-
-@export_range(0,90) var default_seconds := 90
+@export_range(0, 90) var default_seconds := 90
 
 @onready var ef_bv_player_1: TextureProgressBar = $EF_BarraVidaPlayer1
 @onready var bv_player_1: TextureProgressBar = $BarraVidaPlayer1
@@ -15,65 +13,42 @@ var seconds = 0
 @onready var bp_power_player_1: TextureProgressBar = $Power_Player1
 @onready var bp_power_player_2: TextureProgressBar = $Power_Player2
 
-
-var barrasvida = []
 @export var vidaMAX: int = 100
-@export var vida_player1 = 0 : set = _set_vida_player1
-@export var vida_player2 = 0 : set = _set_vida_player2
-
-@export var powerMAX: int = 60
-@export var power_player1 = 0 : set = _set_power_player1
-@export var power_player2 = 0 : set = _set_power_player2
-
-
+@export var powerMAX: int = 100
 
 signal time_is_up()
 
-func _set_vida_player1(nova_vida):
-	nova_vida = clamp(nova_vida, 0, vidaMAX)  # Restringe o valor entre 0 e vidaMAX
-	vida_player1 = nova_vida
-	move_tween(bv_player_1, vida_player1, 0.1)
-	timer_barra.start(1.0)
-	await timer_barra.timeout
-	move_tween(ef_bv_player_1, vida_player1, 0.2)
-	
-
-	
-func _set_vida_player2(nova_vida):
-	nova_vida = clamp(nova_vida, 0, vidaMAX)  # Restringe o valor entre 0 e vidaMAX
-	vida_player2 = nova_vida
-	move_tween(bv_player_2, vida_player2, 0.1)
-	timer_barra.start(1.0)
-	await timer_barra.timeout
-	move_tween(ef_bv_player_2, vida_player2, 0.2)
-	
-
-func _set_power_player1(novo_power):
-	novo_power = clamp(novo_power , 0, powerMAX)  # Restringe o valor entre 0 e powerMAX
-	power_player1 = novo_power 
-	move_tween(bp_power_player_1, power_player1, 0.5)
-	
-func _set_power_player2(novo_power):
-	novo_power = clamp(novo_power , 0, powerMAX)  # Restringe o valor entre 0 e powerMAX
-	power_player2 = novo_power 
-	move_tween(bp_power_player_2, power_player2, 0.5)
-
 func _ready() -> void:
-	barrasvida = [ef_bv_player_1, ef_bv_player_2, bv_player_1, bv_player_2]
+	# Inicializa as barras de vida
 	_init_vida()
 
-
 func _process(delta: float) -> void:
-	pass
-
+	# Atualiza as barras de vida com a vida atual dos jogadores
+	if Global.player1 and Global.player2:
+		_update_health_bars()
+		_update_power_bars()
 
 func _init_vida():
-	vida_player1 = vidaMAX
-	vida_player2 = vidaMAX
-	for bar in barrasvida:
+	# Definir as barras de vida máximas
+	for bar in [bv_player_1, bv_player_2, ef_bv_player_1, ef_bv_player_2]:
 		bar.max_value = vidaMAX
 		bar.value = vidaMAX
 
+func _update_health_bars():
+	# Acessa as vidas dos jogadores diretamente
+	var vida_player1 = Global.player1.get_current_health()  # Método para obter a vida atual do jogador 1
+	var vida_player2 = Global.player2.get_current_health()  # Método para obter a vida atual do jogador 2
+	
+	move_tween(bv_player_1, vida_player1, 0.1)
+	move_tween(bv_player_2, vida_player2, 0.1)
+
+func _update_power_bars():
+# Acessa o poder dos jogadores diretamente
+	var power_player1 = Global.player1.get_current_power()  # Método para obter o poder atual do jogador 1
+	var power_player2 = Global.player2.get_current_power()  # Método para obter o poder atual do jogador 2
+	move_tween(bp_power_player_1, power_player1, 0.1)
+	move_tween(bp_power_player_2, power_player2, 0.1)
+	
 func move_tween(node, nova_vida, speed):
 	var tween = node.create_tween()
 	tween.set_parallel(true)
