@@ -6,12 +6,14 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 @export var type_player: int = 2
 
 #VIDA
-var max_health: int = 100  # Saúde máxima
-var current_health: int = max_health  # Saúde atual
+var vida_maxima: int = 100  # Saúde máxima
+var vida: int = 100  # Saúde máxima
+
 
 #PODER
 var MaxPower: int = 100
-var current_power: int = 0
+var power: int = 0
+
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
@@ -56,12 +58,7 @@ func _ready() -> void:
 		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = -1  # Define a direção atual para a direita
 	
-	
-func get_current_power() -> int:
-	return current_power
-	
-func get_current_health() -> int:
-	return current_health
+
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 		# Atualiza o temporizador de cooldown do pulo
@@ -192,7 +189,7 @@ func _physics_process(delta: float) -> void:
 		# Lógica para o ataque especial com teclado numerico
 		if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
 			print("3 foi pressionado")
-			if(current_power >= MaxPower): #Verificar se a barra de power ta cheia
+			if(power >= MaxPower): #Verificar se a barra de power ta cheia
 				if current_direction == 1:
 					animationEspecial.position.x = 630
 					animationEspecial.flip_h = false
@@ -200,7 +197,7 @@ func _physics_process(delta: float) -> void:
 					animationEspecial.position.x = -599.175
 					animationEspecial.flip_h = true
 				
-				current_power = 0
+				power = 0
 				animation.play("especial")
 				animationEspecial.play("especialMichel")
 				is_attacking = true
@@ -211,7 +208,7 @@ func _physics_process(delta: float) -> void:
 		#Logica para ataque especial com L
 		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
 			print("L foi pressionado")
-			if(current_power >= MaxPower): #Verificar se a barra de power ta cheia
+			if(power >= MaxPower): #Verificar se a barra de power ta cheia
 				if current_direction == 1:
 					animationEspecial.position.x = 630
 					animationEspecial.flip_h = false
@@ -219,7 +216,7 @@ func _physics_process(delta: float) -> void:
 					animationEspecial.position.x = -599.175
 					animationEspecial.flip_h = true
 				
-				current_power = 0
+				power = 0
 				animation.play("especial")
 				animationEspecial.play("especialMichel")
 				is_attacking = true
@@ -276,8 +273,8 @@ func _physics_process(delta: float) -> void:
 
 func _damage() -> void:
 	is_attacking = true
-	current_health-=50
-	current_power +=100
+	vida-=50
+	power +=50
 	animation.play("damage")
 	
 

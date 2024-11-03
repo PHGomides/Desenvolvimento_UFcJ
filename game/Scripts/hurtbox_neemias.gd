@@ -20,11 +20,7 @@ func _on_area_entered(area: Area2D) -> void:
 		# Ações baseadas no tipo do golpe
 		if golpe_tipo == "punch1":
 			print("Player 1 acertou o Player 2 com um soco!")
-			player_2.barras.vida_player2 -= 3
-			player_2.barras.power_player2 += 3
-			player_2._damage()
+			
 		elif golpe_tipo == "punch3":
 			print("Player 1 acertou o Player 2 com um soco de cima pra baixo!")
-			player_2.barras.vida_player2 -= 5
-			player_2.barras.power_player2 += 5
-			player_2._damage()
+			
