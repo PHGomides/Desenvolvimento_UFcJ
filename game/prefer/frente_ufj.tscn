@@ -48,6 +48,7 @@ script = ExtResource("1_h0k4u")
 environment = SubResource("Environment_sc6fg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1511, 459)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
@@ -108,6 +109,17 @@ motion_scale = Vector2(0.37, 1.198)
 position = Vector2(986, 396)
 scale = Vector2(1.565, 1.565)
 texture = ExtResource("6_vl2hk")
+
+[node name="07" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-792.29, -54.545)
+scale = Vector2(1.195, 1.195)
+motion_scale = Vector2(0.37, 1.198)
+
+[node name="Fundo04" type="Sprite2D" parent="Background/07"]
+position = Vector2(1307.14, 401.293)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("8_o04ym")
 
 [node name="06" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2

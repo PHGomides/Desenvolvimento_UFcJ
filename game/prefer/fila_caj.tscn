@@ -46,6 +46,7 @@ glow_map_strength = 0.71
 script = ExtResource("1_nhtel")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1602, 440)
 offset = Vector2(0, -91.89)
 zoom = Vector2(1.085, 1.085)
 limit_left = -630

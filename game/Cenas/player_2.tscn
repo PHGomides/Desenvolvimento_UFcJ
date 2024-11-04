@@ -166,6 +166,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_idu6j")
 }],
 "loop": false,
 "name": &"especial",
@@ -506,7 +524,9 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"damage"
+animation = &"especial"
+frame = 15
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

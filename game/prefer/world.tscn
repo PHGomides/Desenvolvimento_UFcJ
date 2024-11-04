@@ -107,6 +107,7 @@ position = Vector2(20, 123)
 script = ExtResource("1_kywhc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1699, 529)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
@@ -149,8 +150,8 @@ position = Vector2(-237, 101)
 motion_scale = Vector2(0.3, 1)
 
 [node name="Fundo05" type="Sprite2D" parent="Background/05"]
-position = Vector2(1243, 427)
-scale = Vector2(1.66194, 1.66194)
+position = Vector2(1296.77, 412.329)
+scale = Vector2(1.73364, 1.73364)
 texture = ExtResource("4_hx6wh")
 
 [node name="04" type="ParallaxLayer" parent="Background"]
