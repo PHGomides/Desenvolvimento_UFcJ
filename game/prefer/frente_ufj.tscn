@@ -1,9 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://0iejer5b2ak5"]
+[gd_scene load_steps=26 format=3 uid="uid://0iejer5b2ak5"]
 
 [ext_resource type="Script" path="res://prefer/frente_ufj.gd" id="1_h0k4u"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_nqpsh"]
-[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_u8ob4"]
-[ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_ooq7k"]
 [ext_resource type="Texture2D" uid="uid://5uv2rwbpwa" path="res://Assests/FachadaAccets/_0000_chão.png" id="4_6dlh3"]
 [ext_resource type="Texture2D" uid="uid://blylhnp76wny0" path="res://Assests/FachadaAccets/_0004_fundo.png" id="5_6arkf"]
 [ext_resource type="Texture2D" uid="uid://cah0thyddqr83" path="res://Assests/FachadaAccets/_0003_arvores.png" id="6_vl2hk"]
@@ -22,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="19_iqh4h"]
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="20_sje8o"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="21_j7f5e"]
+[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="22_chvk4"]
 [ext_resource type="Texture2D" uid="uid://djrcj7teqjiom" path="res://Assests/FachadaAccets/fumaça.png" id="23_ogu0r"]
 
 [sub_resource type="Environment" id="Environment_sc6fg"]
@@ -56,18 +55,6 @@ limit_right = 2130
 limit_bottom = 1100
 script = ExtResource("1_nqpsh")
 margin = Vector2(0, 0)
-
-[node name="player" parent="." groups=["players"] instance=ExtResource("2_u8ob4")]
-modulate = Color(0.9, 0.9, 0.9, 1)
-z_index = 1
-position = Vector2(628, 535)
-scale = Vector2(1.38, 1.38)
-
-[node name="player2" parent="." groups=["players"] instance=ExtResource("3_ooq7k")]
-modulate = Color(0.9, 0.9, 0.9, 1)
-z_index = 1
-position = Vector2(906.605, 539)
-scale = Vector2(1.26, 1.26)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
@@ -373,5 +360,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 texture = ExtResource("23_ogu0r")
+
+[node name="Players" type="Node2D" parent="."]
+script = ExtResource("22_chvk4")
+
+[node name="MarkPlayer1" type="Marker2D" parent="Players"]
+position = Vector2(-132, 475)
+
+[node name="MarkPlayer2" type="Marker2D" parent="Players"]
+position = Vector2(1375, 480)
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

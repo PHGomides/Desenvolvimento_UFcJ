@@ -1,9 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=31 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restauranteScripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_rpvgp"]
-[ext_resource type="PackedScene" uid="uid://bqe2va7eeqr7s" path="res://Cenas/player.tscn" id="2_7yrne"]
-[ext_resource type="PackedScene" uid="uid://msmkx04o1khs" path="res://Cenas/player_2.tscn" id="3_w5f33"]
 [ext_resource type="Texture2D" uid="uid://cdg5630onoly7" path="res://Assests/mapa_RU_Accets/mapa-ru_0000_chão.png" id="5_lqom8"]
 [ext_resource type="Texture2D" uid="uid://dnuhm56mhuqyw" path="res://Assests/mapa_RU_Accets/mapa-ru_0006_fundo-Lado-de-fora.png" id="6_ruc5r"]
 [ext_resource type="Texture2D" uid="uid://dtk8tagpbfy8c" path="res://Assests/mapa_RU_Accets/mapa-ru_0005_fundo.png" id="7_urmir"]
@@ -27,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="24_2bo1l"]
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_dgdn2"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_5s52m"]
+[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="27_qdop1"]
 [ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="27_yb0rb"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
@@ -62,19 +61,6 @@ limit_right = 1945
 limit_bottom = 1200
 script = ExtResource("1_rpvgp")
 margin = Vector2(0, 0)
-
-[node name="player" parent="." groups=["players"] instance=ExtResource("2_7yrne")]
-modulate = Color(0.9, 1, 1, 1)
-z_index = 1
-position = Vector2(1503, 743)
-scale = Vector2(1.825, 1.825)
-JUMP_VELOCITY = -2400
-
-[node name="player2" parent="." groups=["players"] instance=ExtResource("3_w5f33")]
-z_index = 1
-position = Vector2(169, 785)
-scale = Vector2(1.68, 1.68)
-JUMP_VELOCITY = -2400.0
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-222, 11)
@@ -429,5 +415,14 @@ offset_bottom = 729.0
 texture = ExtResource("27_yb0rb")
 
 [node name="Control" parent="." instance=ExtResource("23_se4nb")]
+
+[node name="Players" type="Node2D" parent="."]
+script = ExtResource("27_qdop1")
+
+[node name="MarkPlayer1" type="Marker2D" parent="Players"]
+position = Vector2(-132, 475)
+
+[node name="MarkPlayer2" type="Marker2D" parent="Players"]
+position = Vector2(1375, 480)
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]
