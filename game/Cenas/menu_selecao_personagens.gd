@@ -1,4 +1,5 @@
-extends VBoxContainer
+extends Control
+
 var Personagem1 = 0
 var Personagem2 = 0
 
@@ -8,6 +9,7 @@ var Player2 = "res://Cenas/player_2.tscn"
 @onready var AnimacaoP2Menu = $AnimacaoP2Menu
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	pass # Replace with function body.
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=96 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
@@ -89,6 +89,7 @@
 [ext_resource type="Texture2D" uid="uid://g4e64by52k63" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png" id="71_kblb0"]
 [ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
 [ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
+[ext_resource type="Texture2D" uid="uid://svkvfret00yc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/AddPersonIcon.png" id="74_thep2"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -191,6 +192,14 @@ animations = [{
 "frames": [],
 "loop": true,
 "name": &"Pedro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_thep2")
+}],
+"loop": true,
+"name": &"addPerson",
 "speed": 5.0
 }]
 
@@ -382,13 +391,45 @@ stretch_mode = 5
 [node name="MenuChaveamento" type="Control" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="buttons" type="VBoxContainer" parent="MenuChaveamento"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -275.0
+offset_right = 213.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuChaveamento/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuChaveamento/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
 
 [node name="TextureRect" type="TextureRect" parent="MenuChaveamento"]
 layout_mode = 1
@@ -405,49 +446,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("25_pg731")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuChaveamento"]
+[node name="Inputs" type="Control" parent="MenuChaveamento"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -213.0
-offset_top = 241.125
-offset_right = 213.0
-offset_bottom = 440.125
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 70
-
-[node name="buttons" type="VBoxContainer" parent="MenuChaveamento/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="btnIniciar" type="TextureButton" parent="MenuChaveamento/VBoxContainer/buttons"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("20_bn7yk")
-
-[node name="btnVoltar" type="TextureButton" parent="MenuChaveamento/VBoxContainer/buttons"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("21_6jpfk")
-texture_hover = ExtResource("22_qmwjn")
-stretch_mode = 5
-
-[node name="Inputs" type="Control" parent="MenuChaveamento"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
@@ -636,22 +643,22 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="MenuSelecaoPersonagens" type="VBoxContainer" parent="."]
+[node name="MenuSelecaoPersonagens" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -464.0
-offset_bottom = 464.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = -112
-alignment = 2
 script = ExtResource("12_n4jld")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuSelecaoPersonagens"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 116
 alignment = 1
@@ -674,7 +681,7 @@ texture_hover = ExtResource("22_4jfx2")
 texture_focused = ExtResource("22_4jfx2")
 stretch_mode = 3
 
-[node name="Player1Michel2" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -686,7 +693,7 @@ texture_hover = ExtResource("24_goy5u")
 texture_focused = ExtResource("24_goy5u")
 stretch_mode = 3
 
-[node name="Player1Michel3" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Oka" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -698,7 +705,7 @@ texture_hover = ExtResource("26_ft5tc")
 texture_focused = ExtResource("26_ft5tc")
 stretch_mode = 3
 
-[node name="Player1Michel4" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Frances" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -710,7 +717,7 @@ texture_hover = ExtResource("28_ei1r6")
 texture_focused = ExtResource("28_ei1r6")
 stretch_mode = 3
 
-[node name="Player1Michel5" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Pedro" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -722,7 +729,7 @@ texture_hover = ExtResource("30_6w850")
 texture_focused = ExtResource("30_6w850")
 stretch_mode = 3
 
-[node name="Player1Michel6" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Alisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -734,7 +741,7 @@ texture_hover = ExtResource("31_8tx4n")
 texture_focused = ExtResource("31_8tx4n")
 stretch_mode = 3
 
-[node name="Player1Michel7" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Walisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -746,7 +753,7 @@ texture_hover = ExtResource("15_kgxfw")
 texture_focused = ExtResource("15_kgxfw")
 stretch_mode = 3
 
-[node name="Player1Michel8" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Thiago" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -870,7 +877,18 @@ size_flags_vertical = 4
 texture = ExtResource("19_bj234")
 
 [node name="buttons" type="VBoxContainer" parent="MenuSelecaoPersonagens"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -275.0
+offset_right = 213.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 theme_override_constants/separation = 0
 alignment = 1
@@ -894,18 +912,15 @@ texture_hover = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="AnimacaoP1Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
-position = Vector2(676, 419)
-scale = Vector2(1.305, 1.305)
+position = Vector2(676, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
-animation = &"Michel"
-frame_progress = 0.618922
+animation = &"addPerson"
+frame_progress = 0.403356
 
 [node name="AnimacaoP2Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
-position = Vector2(1256.09, 419)
-scale = Vector2(1.305, 1.305)
+position = Vector2(1256.09, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
-animation = &"Michel"
-frame_progress = 0.949779
+animation = &"addPerson"
 flip_h = true
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
@@ -1061,73 +1076,65 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
-[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
-[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnIniciar" to="." method="sound_entered_btn"]
-[connection signal="button_down" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
-[connection signal="mouse_entered" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuChaveamento/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="button_down" from="MenuChaveamento/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamento/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="button_down" from="MenuChaveamento/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamento/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamento/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [1]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel2" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel2" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [2]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel3" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel3" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [3]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel4" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel4" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [4]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel5" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel5" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [5]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel6" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel6" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel7" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel7" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [7]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel8" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel8" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [8]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Neemias" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Neemias" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [2]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Pedro" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Thiago" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [2]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [4]]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [5]]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [8]]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa2" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [2]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa3" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [3]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa4" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [4]]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa5" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [5]]
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_button_down"]
-[connection signal="focus_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoPersonagens" method="_on_btn_opcoes_focus_entered"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnIniciar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoMapa" method="IniciarMapa"]
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_button_down"]

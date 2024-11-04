@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://0iejer5b2ak5"]
+[gd_scene load_steps=27 format=3 uid="uid://0iejer5b2ak5"]
 
 [ext_resource type="Script" path="res://prefer/frente_ufj.gd" id="1_h0k4u"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_nqpsh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cah0thyddqr83" path="res://Assests/FachadaAccets/_0003_arvores.png" id="6_vl2hk"]
 [ext_resource type="Texture2D" uid="uid://0n8aab242ud6" path="res://Assests/FachadaAccets/_0002_estruturaEntrada.png" id="7_x3ptv"]
 [ext_resource type="Texture2D" uid="uid://b7swi5iuevqdd" path="res://Assests/FachadaAccets/_0001_arbustos.png" id="8_cyaxd"]
+[ext_resource type="Texture2D" uid="uid://b4ebwytx7q875" path="res://Assests/FachadaAccets/arvores2.png" id="8_o04ym"]
 [ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="9_0r3qa"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_8pfj4"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="12_oq0dl"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="19_iqh4h"]
 [ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="20_sje8o"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="21_j7f5e"]
+[ext_resource type="Texture2D" uid="uid://djrcj7teqjiom" path="res://Assests/FachadaAccets/fumaça.png" id="23_ogu0r"]
 
 [sub_resource type="Environment" id="Environment_sc6fg"]
 background_mode = 3
@@ -85,7 +87,7 @@ shape = SubResource("RectangleShape2D_nsd3s")
 
 [node name="Chão" type="Sprite2D" parent="StaticBody2D"]
 z_index = 4
-position = Vector2(769, 616)
+position = Vector2(769, 674.14)
 scale = Vector2(2.19421, 1.24071)
 texture = ExtResource("4_6dlh3")
 
@@ -100,12 +102,12 @@ transform = Transform2D(1, 0, 0, 1, 126.41, 0)
 
 [node name="05" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2
-position = Vector2(-386.38, 57.75)
+position = Vector2(-386.38, -193.12)
 motion_scale = Vector2(0.36, 1.198)
 
 [node name="Fundo05" type="Sprite2D" parent="Background/05"]
 modulate = Color(1.2, 1.2, 1.2, 1)
-position = Vector2(1243, 318.4)
+position = Vector2(1261, 318.4)
 scale = Vector2(2.102, 2.102)
 texture = ExtResource("5_6arkf")
 
@@ -120,6 +122,17 @@ position = Vector2(986, 396)
 scale = Vector2(1.565, 1.565)
 texture = ExtResource("6_vl2hk")
 
+[node name="06" type="ParallaxLayer" parent="Background"]
+texture_repeat = 2
+position = Vector2(-374.445, -54.545)
+scale = Vector2(1.195, 1.195)
+motion_scale = Vector2(0.37, 1.198)
+
+[node name="Fundo04" type="Sprite2D" parent="Background/06"]
+position = Vector2(1307.14, 401.293)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("8_o04ym")
+
 [node name="03" type="ParallaxLayer" parent="Background"]
 texture_repeat = 2
 position = Vector2(-189.63, -230.01)
@@ -128,8 +141,8 @@ motion_scale = Vector2(0.4, 1.198)
 
 [node name="Fundo03" type="Sprite2D" parent="Background/03"]
 self_modulate = Color(1.1, 1.1, 1.1, 1)
-position = Vector2(987.457, 570.031)
-scale = Vector2(1.86719, 1.86719)
+position = Vector2(1017.47, 578.505)
+scale = Vector2(1.9072, 1.9072)
 texture = ExtResource("7_x3ptv")
 
 [node name="02" type="ParallaxLayer" parent="Background"]
@@ -137,7 +150,7 @@ z_index = 4
 texture_repeat = 2
 position = Vector2(397.01, 756.385)
 scale = Vector2(1.09, 1.09)
-motion_scale = Vector2(0.42, 1.198)
+motion_scale = Vector2(0.36, 1.198)
 
 [node name="Fundo02" type="Sprite2D" parent="Background/02"]
 z_index = 4
@@ -148,7 +161,7 @@ texture = ExtResource("8_cyaxd")
 [node name="09" type="ParallaxLayer" parent="Background"]
 z_index = 10
 texture_repeat = 2
-position = Vector2(-237, 40.09)
+position = Vector2(-237, 115.44)
 motion_scale = Vector2(0.9, 1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/09"]
@@ -339,5 +352,26 @@ texture = ExtResource("20_sje8o")
 flip_h = true
 
 [node name="Control" parent="." instance=ExtResource("21_j7f5e")]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(5983.65, 0)
+autoscroll = Vector2(300, 0)
+ignore_camera_scroll = true
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D"]
+z_index = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2548.0
+offset_top = -102.0
+offset_right = 4231.0
+offset_bottom = 1819.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("23_ogu0r")
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

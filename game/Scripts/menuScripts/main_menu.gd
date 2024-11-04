@@ -62,9 +62,10 @@ func voltarSelecaoMapa() -> void:
 	MenuSelecaoMapa.visible = false
 
 func _on_btnEscolherMapa() -> void:
-	Menu1v1.visible = false
-	MenuSelecaoMapa.visible = true
-	pass # Replace with function body.
+	if(Global.player1Diretorio != null && Global.player2Diretorio != null):
+		Menu1v1.visible = false
+		MenuSelecaoMapa.visible = true
+	
 
 
 

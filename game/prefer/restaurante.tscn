@@ -397,6 +397,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
 offset_left = 713.0
 offset_top = 219.0
 offset_right = 1213.0
@@ -404,6 +405,7 @@ offset_bottom = 719.0
 texture = ExtResource("24_2bo1l")
 
 [node name="2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
 offset_left = 713.0
 offset_top = 219.0
 offset_right = 1213.0
@@ -411,6 +413,7 @@ offset_bottom = 719.0
 texture = ExtResource("25_dgdn2")
 
 [node name="3" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
 offset_left = 713.0
 offset_top = 214.0
 offset_right = 1213.0
@@ -418,6 +421,7 @@ offset_bottom = 714.0
 texture = ExtResource("26_5s52m")
 
 [node name="Fight" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
 offset_left = 716.0
 offset_top = 229.0
 offset_right = 1216.0
