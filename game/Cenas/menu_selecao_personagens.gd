@@ -3,8 +3,8 @@ extends Control
 var Personagem1 = 0
 var Personagem2 = 0
 
-var Player1 = "res://Cenas/player.tscn"
-var Player2 = "res://Cenas/player_2.tscn"
+var Player1 = "res://Cenas/michel.tscn"
+var Player2 = "res://Cenas/neemias.tscn"
 @onready var AnimacaoP1Menu = $AnimacaoP1Menu
 @onready var AnimacaoP2Menu = $AnimacaoP2Menu
 # Called when the node enters the scene tree for the first time.
