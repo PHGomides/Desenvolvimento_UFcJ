@@ -21,6 +21,7 @@ extends Control
 @export var power_2: int = 0
 @export var powerMAX: int = 60
 
+
 signal time_is_up()
 
 func _ready() -> void:
@@ -45,13 +46,14 @@ func _init_vida():
 	for bar in [bv_player_1, bv_player_2, ef_bv_player_1, ef_bv_player_2]:
 		bar.max_value = vidaMAX
 		bar.value = vidaMAX
+		
+	bp_power_player_1.max_value = powerMAX
+	bp_power_player_2.max_value = powerMAX
 	
 	
 
 func _set_vida1(nova_vida1 : int):
-	nova_vida1 = clamp(nova_vida1, 0, vidaMAX)  # Restringe o valor entre 0 e vidaMAX
 	vida_1 = nova_vida1
-	
 	move_tween(bv_player_1, vida_1, 0.1)
 	timer_barra.start(1.0)
 	await timer_barra.timeout
@@ -59,25 +61,19 @@ func _set_vida1(nova_vida1 : int):
 	
 	
 func _set_vida2(nova_vida2 : int):
-	nova_vida2 = clamp(nova_vida2, 0, vidaMAX)  # Restringe o valor entre 0 e vidaMAX
 	vida_2 = nova_vida2
-	
 	move_tween(bv_player_2, vida_2, 0.1)
 	timer_barra.start(1.0)
 	await timer_barra.timeout
 	move_tween(ef_bv_player_2, vida_2, 0.1)
 
 func _set_power1(novo_power1 : int):
-	novo_power1 = clamp(novo_power1, 0, powerMAX)  # Restringe o valor entre 0 e vidaMAX
 	power_1 = novo_power1
-	
 	move_tween(bp_power_player_1, power_1, 0.2)
 
 
 func _set_power2(novo_power2 : int):
-	novo_power2 = clamp(novo_power2, 0, powerMAX)  # Restringe o valor entre 0 e vidaMAX
 	power_2 = novo_power2
-	
 	move_tween(bp_power_player_2, power_2, 0.2)
 	
 func move_tween(node, nova_vida, speed):

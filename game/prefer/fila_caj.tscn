@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://di4riu174okwk"]
+[gd_scene load_steps=29 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
 [ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_oon58"]
@@ -8,20 +8,23 @@
 [ext_resource type="Texture2D" uid="uid://yxu8bcsvn3dm" path="res://Assests/MAPAFILACAJ/_0003_pessoas2.png" id="8_p5kbu"]
 [ext_resource type="Texture2D" uid="uid://cl37xx7tgjfbc" path="res://Assests/MAPAFILACAJ/_0002_pessoas.png" id="9_i0lld"]
 [ext_resource type="Texture2D" uid="uid://cd2fgw4xqq5ho" path="res://Assests/MAPAFILACAJ/_0001_ponto-de-onibus.png" id="10_31ajt"]
-[ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_2v652"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_edgwl"]
+[ext_resource type="Texture2D" uid="uid://dkooywpymfl4q" path="res://Assests/hud/novahuf/HUDPreta.png" id="12_me6oa"]
 [ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="13_e555b"]
-[ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_ekxsb"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="15_hvm2u"]
-[ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_x2gly"]
-[ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_iugsl"]
-[ext_resource type="Texture2D" uid="uid://bcsffff26arca" path="res://Assests/hud/poderVazio.png" id="17_8ri1f"]
-[ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="18_gnyt2"]
-[ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="19_d0yqy"]
-[ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="20_t1b80"]
+[ext_resource type="Texture2D" uid="uid://by0g820gl2qjr" path="res://Assests/hud/novahuf/vida vazia left.png" id="16_cryll"]
+[ext_resource type="Texture2D" uid="uid://d4d1umvv60cht" path="res://Assests/hud/novahuf/efeito dano left.png" id="17_wk5v7"]
+[ext_resource type="Texture2D" uid="uid://c5i1uypbpyobf" path="res://Assests/hud/novahuf/vida cheia left.png" id="18_33tok"]
+[ext_resource type="Texture2D" uid="uid://b1pwpka8tut2y" path="res://Assests/hud/novahuf/vida vazia.png" id="19_hvawh"]
+[ext_resource type="Texture2D" uid="uid://v16dl5gchjvm" path="res://Assests/hud/novahuf/efeito dano right.png" id="20_giwt0"]
+[ext_resource type="Texture2D" uid="uid://duf5co7h33yux" path="res://Assests/hud/novahuf/vida Cheia.png" id="21_2ilo3"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="21_bakc5"]
 [ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="22_lid6l"]
+[ext_resource type="Texture2D" uid="uid://dsit3lip5ylig" path="res://Assests/hud/novahuf/poder vazio.png" id="22_uve6e"]
 [ext_resource type="Texture2D" uid="uid://djrcj7teqjiom" path="res://Assests/FachadaAccets/fumaça.png" id="22_x8vqu"]
+[ext_resource type="Texture2D" uid="uid://dplhss7bi5pqf" path="res://Assests/hud/novahuf/poder cheio.png" id="23_24h8a"]
+[ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="24_k6clw"]
+[ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="25_2kehu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_geqs2"]
 size = Vector2(247, 992)
@@ -138,188 +141,6 @@ texture = ExtResource("10_31ajt")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3tbu2")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="HUD"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -510.0
-offset_right = 510.0
-offset_bottom = 122.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-texture = ExtResource("11_2v652")
-
-[node name="Tempo" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -23.4
-offset_top = 46.16
-offset_right = 16.6
-offset_bottom = 65.16
-grow_horizontal = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-script = ExtResource("11_edgwl")
-
-[node name="clocktimer" type="Timer" parent="HUD/Tempo"]
-autostart = true
-
-[node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.6
-offset_top = -33.66
-offset_right = 32.4
-offset_bottom = 35.34
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 8
-
-[node name="Tempo_container" type="HBoxContainer" parent="HUD/Tempo/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.682517, 0.112595, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("15_hvm2u")
-theme_override_font_sizes/font_size = 55
-text = "90
-"
-
-[node name="Barras" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("13_e555b")
-
-[node name="timerbarra" type="Timer" parent="HUD/Barras"]
-
-[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 380.915
-offset_top = 48.0
-offset_right = 907.915
-offset_bottom = 88.0
-value = 100.0
-texture_under = ExtResource("14_ekxsb")
-texture_progress = ExtResource("15_x2gly")
-
-[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 380.915
-offset_top = 48.0
-offset_right = 907.915
-offset_bottom = 88.0
-value = 100.0
-texture_progress = ExtResource("16_iugsl")
-
-[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 1011.6
-offset_top = 48.16
-offset_right = 1538.6
-offset_bottom = 88.16
-value = 100.0
-fill_mode = 1
-texture_under = ExtResource("14_ekxsb")
-texture_progress = ExtResource("15_x2gly")
-
-[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 1011.6
-offset_top = 48.16
-offset_right = 1538.6
-offset_bottom = 88.16
-value = 100.0
-fill_mode = 1
-texture_progress = ExtResource("16_iugsl")
-
-[node name="Power_Player1" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 369.0
-offset_top = 92.0
-offset_right = 768.0
-offset_bottom = 132.0
-max_value = 60.0
-texture_under = ExtResource("17_8ri1f")
-texture_progress = ExtResource("18_gnyt2")
-
-[node name="Power_Player2" type="TextureProgressBar" parent="HUD/Barras"]
-layout_mode = 0
-offset_left = 1153.0
-offset_top = 92.0
-offset_right = 1552.0
-offset_bottom = 132.0
-max_value = 60.0
-fill_mode = 1
-texture_under = ExtResource("17_8ri1f")
-texture_progress = ExtResource("18_gnyt2")
-
-[node name="InfosPlayer" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 1333.0
-offset_top = -1.0
-offset_right = 1392.0
-offset_bottom = 38.0
-scale = Vector2(2.43823, 1.89691)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_hvm2u")
-text = "Neemias
-
-"
-
-[node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 446.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 38.0
-scale = Vector2(2.43823, 1.89691)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_hvm2u")
-text = "Michel
-"
-
-[node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 289.0
-offset_top = 6.0
-offset_right = 363.0
-offset_bottom = 80.0
-texture = ExtResource("19_d0yqy")
-flip_h = true
-
-[node name="FotoPlayer2" type="TextureRect" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 1557.0
-offset_top = 6.0
-offset_right = 1631.0
-offset_bottom = 84.0
-texture = ExtResource("20_t1b80")
-flip_h = true
-
 [node name="Control" parent="." instance=ExtResource("21_bakc5")]
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
@@ -351,5 +172,195 @@ position = Vector2(-132, 475)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
 position = Vector2(1375, 480)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -680.0
+offset_top = 29.0
+offset_right = 660.0
+offset_bottom = 100.0
+grow_horizontal = 2
+scale = Vector2(1.02, 1.02)
+size_flags_horizontal = 4
+texture = ExtResource("12_me6oa")
+
+[node name="Tempo" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.0
+offset_top = 46.16
+offset_right = 23.0
+offset_bottom = 65.16
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("11_edgwl")
+
+[node name="clocktimer" type="Timer" parent="HUD/Tempo"]
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.56
+anchor_bottom = 1.0
+offset_left = -27.6
+offset_top = -33.66
+offset_right = 30.0
+offset_bottom = 25.84
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 8
+
+[node name="Tempo_container" type="HBoxContainer" parent="HUD/Tempo/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 70
+text = "90
+"
+
+[node name="Barras" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_e555b")
+
+[node name="timerbarra" type="Timer" parent="HUD/Barras"]
+
+[node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 66.0
+offset_right = 890.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
+value = 100.0
+texture_under = ExtResource("16_cryll")
+texture_progress = ExtResource("17_wk5v7")
+
+[node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 66.0
+offset_right = 891.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
+value = 100.0
+texture_progress = ExtResource("18_33tok")
+
+[node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1012.0
+offset_top = 66.0
+offset_right = 1548.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
+value = 100.0
+fill_mode = 1
+texture_under = ExtResource("19_hvawh")
+texture_progress = ExtResource("20_giwt0")
+
+[node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 66.0
+offset_right = 1547.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
+value = 100.0
+fill_mode = 1
+texture_progress = ExtResource("21_2ilo3")
+
+[node name="Power_Player1" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 109.0
+offset_right = 861.0
+offset_bottom = 119.0
+scale = Vector2(1.05, 1.05)
+max_value = 60.0
+texture_under = ExtResource("22_uve6e")
+texture_progress = ExtResource("23_24h8a")
+
+[node name="Power_Player2" type="TextureProgressBar" parent="HUD/Barras"]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 109.0
+offset_right = 1620.0
+offset_bottom = 119.0
+scale = Vector2(1.045, 1.045)
+max_value = 60.0
+fill_mode = 1
+texture_under = ExtResource("22_uve6e")
+texture_progress = ExtResource("23_24h8a")
+
+[node name="InfosPlayer" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 1476.0
+offset_top = 40.0
+offset_right = 1535.0
+offset_bottom = 79.0
+scale = Vector2(2.43823, 1.89691)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 10
+text = "Neemias
+
+"
+
+[node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 40.0
+offset_right = 427.0
+offset_bottom = 79.0
+scale = Vector2(2.43823, 1.89691)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 10
+text = "Michel
+"
+
+[node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 26.0
+offset_right = 374.0
+offset_bottom = 121.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_k6clw")
+
+[node name="FotoPlayer2" type="TextureRect" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 1571.0
+offset_top = 26.0
+offset_right = 1666.0
+offset_bottom = 121.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("25_2kehu")
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

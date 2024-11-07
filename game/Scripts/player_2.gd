@@ -11,7 +11,7 @@ var vida: int = 100  # Saúde máxima
 
 
 #PODER
-var MaxPower: int = 100
+var MaxPower: int = 60
 var power: int = 0
 
 
@@ -283,7 +283,8 @@ func _physics_process(delta: float) -> void:
 func _damage() -> void:
 	is_attacking = true
 	vida-=50
-	power +=100
+	power += 60
+	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
 
 
