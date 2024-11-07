@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=39 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -8,17 +8,20 @@
 [ext_resource type="Texture2D" uid="uid://bwn4f7nlitoc6" path="res://Assests/MapaEstacionamento/_0002_carros-atrás.png" id="6_7vs72"]
 [ext_resource type="Texture2D" uid="uid://c5ddbmv36feig" path="res://Assests/MapaEstacionamento/_0001_arvores.png" id="7_vdybe"]
 [ext_resource type="Texture2D" uid="uid://hqvgmeir6nqv" path="res://Assests/MapaEstacionamento/_0000_carros-frente.png" id="8_2vacx"]
-[ext_resource type="Texture2D" uid="uid://e8rf2fu6m40s" path="res://Assests/hud/HUD.png" id="11_f6dt1"]
+[ext_resource type="Texture2D" uid="uid://dkooywpymfl4q" path="res://Assests/hud/novahuf/HUDPreta.png" id="9_efll0"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="12_sra55"]
+[ext_resource type="Texture2D" uid="uid://by0g820gl2qjr" path="res://Assests/hud/novahuf/vida vazia left.png" id="13_5maln"]
+[ext_resource type="Texture2D" uid="uid://d4d1umvv60cht" path="res://Assests/hud/novahuf/efeito dano left.png" id="14_11ouk"]
 [ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="14_ajm26"]
-[ext_resource type="Texture2D" uid="uid://c74q77dqdo1ww" path="res://Assests/hud/lifeEmpty.png" id="14_seokm"]
-[ext_resource type="Texture2D" uid="uid://dojg2ddtxld41" path="res://Assests/hud/lifeDamage.png" id="15_4tl1g"]
+[ext_resource type="Texture2D" uid="uid://c5i1uypbpyobf" path="res://Assests/hud/novahuf/vida cheia left.png" id="15_1mgd1"]
+[ext_resource type="Texture2D" uid="uid://b1pwpka8tut2y" path="res://Assests/hud/novahuf/vida vazia.png" id="16_0408g"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="16_ng82x"]
-[ext_resource type="Texture2D" uid="uid://cefseb6834lpg" path="res://Assests/hud/lifeFull.png" id="16_piww7"]
-[ext_resource type="Texture2D" uid="uid://bcsffff26arca" path="res://Assests/hud/poderVazio.png" id="18_jgk0f"]
-[ext_resource type="Texture2D" uid="uid://ds8glugnr3t0m" path="res://Assests/hud/poderCheio.png" id="19_gpx18"]
-[ext_resource type="Texture2D" uid="uid://hpyrpfvpsdfb" path="res://Assests/hud/ImgMichelHud.png" id="20_5j2kd"]
-[ext_resource type="Texture2D" uid="uid://dfmv5ho46r4y2" path="res://Assests/hud/ImgNeemiasHud.png" id="21_bt6mq"]
+[ext_resource type="Texture2D" uid="uid://v16dl5gchjvm" path="res://Assests/hud/novahuf/efeito dano right.png" id="17_n3x70"]
+[ext_resource type="Texture2D" uid="uid://duf5co7h33yux" path="res://Assests/hud/novahuf/vida Cheia.png" id="18_6ce5w"]
+[ext_resource type="Texture2D" uid="uid://dsit3lip5ylig" path="res://Assests/hud/novahuf/poder vazio.png" id="19_boj3j"]
+[ext_resource type="Texture2D" uid="uid://dplhss7bi5pqf" path="res://Assests/hud/novahuf/poder cheio.png" id="20_8008n"]
+[ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="21_pcmvb"]
+[ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="22_aadej"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
 [ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="23_af463"]
 
@@ -200,21 +203,23 @@ texture = ExtResource("8_2vacx")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -510.0
-offset_right = 510.0
-offset_bottom = 122.0
+offset_left = -680.0
+offset_top = 29.0
+offset_right = 660.0
+offset_bottom = 100.0
 grow_horizontal = 2
+scale = Vector2(1.02, 1.02)
 size_flags_horizontal = 4
-texture = ExtResource("11_f6dt1")
+texture = ExtResource("9_efll0")
 
 [node name="Tempo" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -23.4
+offset_left = -17.0
 offset_top = 46.16
-offset_right = 16.6
+offset_right = 23.0
 offset_bottom = 65.16
 grow_horizontal = 2
 size_flags_horizontal = 4
@@ -226,15 +231,15 @@ autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_right = 0.56
+anchor_bottom = 1.0
 offset_left = -27.6
 offset_top = -33.66
-offset_right = 32.4
-offset_bottom = 35.34
+offset_right = 30.0
+offset_bottom = 25.84
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
@@ -248,10 +253,11 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.682517, 0.112595, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.994108, 0.994108, 0.994108, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("16_ng82x")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 70
 text = "90
 "
 
@@ -266,64 +272,70 @@ script = ExtResource("14_ajm26")
 
 [node name="EF_BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 380.915
-offset_top = 48.0
-offset_right = 907.915
-offset_bottom = 88.0
+offset_left = 355.0
+offset_top = 66.0
+offset_right = 890.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
 value = 100.0
-texture_under = ExtResource("14_seokm")
-texture_progress = ExtResource("15_4tl1g")
+texture_under = ExtResource("13_5maln")
+texture_progress = ExtResource("14_11ouk")
 
 [node name="BarraVidaPlayer1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 380.915
-offset_top = 48.0
-offset_right = 907.915
-offset_bottom = 88.0
+offset_left = 355.0
+offset_top = 66.0
+offset_right = 891.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
 value = 100.0
-texture_progress = ExtResource("16_piww7")
+texture_progress = ExtResource("15_1mgd1")
 
 [node name="EF_BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1011.6
-offset_top = 48.16
-offset_right = 1538.6
-offset_bottom = 88.16
+offset_left = 1012.0
+offset_top = 66.0
+offset_right = 1548.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
 value = 100.0
 fill_mode = 1
-texture_under = ExtResource("14_seokm")
-texture_progress = ExtResource("15_4tl1g")
+texture_under = ExtResource("16_0408g")
+texture_progress = ExtResource("17_n3x70")
 
 [node name="BarraVidaPlayer2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1011.6
-offset_top = 48.16
-offset_right = 1538.6
-offset_bottom = 88.16
+offset_left = 1011.0
+offset_top = 66.0
+offset_right = 1547.0
+offset_bottom = 91.0
+scale = Vector2(1.045, 1.045)
 value = 100.0
 fill_mode = 1
-texture_progress = ExtResource("16_piww7")
+texture_progress = ExtResource("18_6ce5w")
 
 [node name="Power_Player1" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 369.0
-offset_top = 92.0
-offset_right = 768.0
-offset_bottom = 132.0
+offset_left = 280.0
+offset_top = 109.0
+offset_right = 861.0
+offset_bottom = 119.0
+scale = Vector2(1.05, 1.05)
 max_value = 60.0
-texture_under = ExtResource("18_jgk0f")
-texture_progress = ExtResource("19_gpx18")
+texture_under = ExtResource("19_boj3j")
+texture_progress = ExtResource("20_8008n")
 
 [node name="Power_Player2" type="TextureProgressBar" parent="HUD/Barras"]
 layout_mode = 0
-offset_left = 1153.0
-offset_top = 92.0
-offset_right = 1552.0
-offset_bottom = 132.0
+offset_left = 1039.0
+offset_top = 109.0
+offset_right = 1620.0
+offset_bottom = 119.0
+scale = Vector2(1.045, 1.045)
 max_value = 60.0
 fill_mode = 1
-texture_under = ExtResource("18_jgk0f")
-texture_progress = ExtResource("19_gpx18")
+texture_under = ExtResource("19_boj3j")
+texture_progress = ExtResource("20_8008n")
 
 [node name="InfosPlayer" type="Control" parent="HUD"]
 layout_mode = 3
@@ -333,48 +345,50 @@ offset_bottom = 40.0
 
 [node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
 layout_mode = 0
-offset_left = 1333.0
-offset_top = -1.0
-offset_right = 1392.0
-offset_bottom = 38.0
+offset_left = 1476.0
+offset_top = 40.0
+offset_right = 1535.0
+offset_bottom = 79.0
 scale = Vector2(2.43823, 1.89691)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("16_ng82x")
+theme_override_font_sizes/font_size = 10
 text = "Neemias
 
 "
 
 [node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
 layout_mode = 0
-offset_left = 446.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 38.0
+offset_left = 368.0
+offset_top = 40.0
+offset_right = 427.0
+offset_bottom = 79.0
 scale = Vector2(2.43823, 1.89691)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("16_ng82x")
+theme_override_font_sizes/font_size = 10
 text = "Michel
 "
 
 [node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
 layout_mode = 0
-offset_left = 289.0
-offset_top = 6.0
-offset_right = 363.0
-offset_bottom = 80.0
-texture = ExtResource("20_5j2kd")
-flip_h = true
+offset_left = 279.0
+offset_top = 26.0
+offset_right = 374.0
+offset_bottom = 121.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("21_pcmvb")
 
 [node name="FotoPlayer2" type="TextureRect" parent="HUD/InfosPlayer"]
 layout_mode = 0
-offset_left = 1557.0
-offset_top = 6.0
-offset_right = 1631.0
-offset_bottom = 84.0
-texture = ExtResource("21_bt6mq")
-flip_h = true
+offset_left = 1571.0
+offset_top = 26.0
+offset_right = 1666.0
+offset_bottom = 121.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("22_aadej")
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=96 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
-[ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/menu main v3.ogv" id="2_so7t5"]
+[ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
 [ext_resource type="Texture2D" uid="uid://bm57v7luifu4i" path="res://Assests/menu main/_0002s_0000_Agrupar-2.png" id="4_d2f3c"]
 [ext_resource type="Texture2D" uid="uid://bfvad5ul6xkme" path="res://Assests/menu main/_0002s_0000s_0000_1-vs-1.png" id="5_ch8as"]
 [ext_resource type="Texture2D" uid="uid://bqa6qf3mywvsx" path="res://Assests/menu main/hover 1vs1.png" id="6_s5ieo"]
@@ -226,7 +226,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_so7t5")
+stream = ExtResource("2_f7gkh")
 volume_db = -80.0
 autoplay = true
 expand = true
