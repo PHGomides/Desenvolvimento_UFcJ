@@ -52,6 +52,7 @@ var current_direction = -1 #direção do personagem olhando pra esquerda
 
 	
 func _ready() -> void:
+
 # Garante que o personagem esteja virado para a direita
 	if(type_player == 1):
 		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
@@ -269,6 +270,15 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor() and not is_attacking:
 			animation.play("jump")
 		move_and_slide()
+		
+	if current_direction == 1: 
+		$hitbox_neemias/opcionalePunch1.position.x = 115
+		$hitbox_neemias/punch2.position.x = 167.75
+		$hitbox_neemias/punch3.position.x = 120
+	elif current_direction == -1:
+		$hitbox_neemias/opcionalePunch1.position.x = -53
+		$hitbox_neemias/punch2.position.x = -111
+		$hitbox_neemias/punch3.position.x = -58
 
 func _damage() -> void:
 	is_attacking = true

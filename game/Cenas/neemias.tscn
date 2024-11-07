@@ -524,9 +524,8 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"especial"
-frame = 15
-frame_progress = 1.0
+animation = &"punch3"
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
@@ -536,7 +535,6 @@ position = Vector2(-599.175, -258)
 scale = Vector2(3.22344, 3.22344)
 sprite_frames = SubResource("SpriteFrames_o5v8y")
 animation = &"especialNeemias"
-flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 

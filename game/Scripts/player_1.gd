@@ -270,6 +270,15 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor() and not is_attacking:
 			animation.play("jump")
 		move_and_slide()
+		
+	if current_direction == 1: 
+		$hitbox_michel/punch1e2.position.x = 112
+		$hitbox_michel/punch3eopcional.position.x = 105
+	elif current_direction == -1:
+		$hitbox_michel/punch1e2.position.x = -78
+		$hitbox_michel/punch3eopcional.position.x = -75
+		
+		
 
 func _damage() -> void:
 	is_attacking = true
