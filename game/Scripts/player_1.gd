@@ -93,7 +93,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Lógica para o pulo com w
 		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
-			_damage()
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine
@@ -282,8 +281,8 @@ func _physics_process(delta: float) -> void:
 
 func _damage() -> void:
 	is_attacking = true
-	vida-=10
-	power +=50
+	vida-=5
+	power +=5
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
 	
