@@ -271,11 +271,11 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		
 	if current_direction == 1: 
-		$hitbox_michel/punch1e2.position.x = 112
-		$hitbox_michel/punch3eopcional.position.x = 105
+		$hitbox_michel/punch1e2.position.x = 161.109
+		$hitbox_michel/punch3eopcional.position.x = 145.109
 	elif current_direction == -1:
-		$hitbox_michel/punch1e2.position.x = -78
-		$hitbox_michel/punch3eopcional.position.x = -75
+		$hitbox_michel/punch1e2.position.x = -157
+		$hitbox_michel/punch3eopcional.position.x = -143
 		
 		
 

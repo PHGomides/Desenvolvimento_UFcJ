@@ -10,8 +10,11 @@ func _ready():
 	hurtbox_area.connect("area_entered", Callable(self, "_on_area_entered"))
 	hurtbox_area.monitoring = true  # Ativa a detecção de colisões
 	print("hurtbox_michel.gd inicializado e monitoring ativado")
+	
 
+	
 func _on_area_entered(area: Area2D) -> void:
+	print(area)
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()
@@ -20,12 +23,13 @@ func _on_area_entered(area: Area2D) -> void:
 		# Ações baseadas no tipo do golpe
 		if golpe_tipo == "punch1":
 			print("Player 2 acertou o Player 1 com um soco!")
-			Global.player1._damage()
+			
+			get_parent()._damage()
 			
 		elif golpe_tipo == "punch2":
 			print("Player 2 acertou o Player 1 com um soco girando!")
-			Global.player1._damage()
+			get_parent()._damage()
 			#
 		elif golpe_tipo == "punch3":
 			print("Player 2 acertou o Player 1 com um gancho!")
-			Global.player1._damage()
+			get_parent()._damage()

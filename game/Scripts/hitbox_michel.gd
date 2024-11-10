@@ -9,7 +9,7 @@ var attack_timer: float = 0.0
 var attack_active: bool = false
 
 # Propriedade personalizada para o tipo de golpe
-var hitbox_type: String
+var hitbox_type: String = "punch1"
 
 # Método para retornar o tipo de golpe
 func get_hitbox_type() -> String:

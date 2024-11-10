@@ -17,7 +17,7 @@ var power: int = 0
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
-var COMBO_WINDOW_DURATION = 0.15  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var COMBO_WINDOW_DURATION = 0.4  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
@@ -64,6 +64,8 @@ func _ready() -> void:
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
+	
+	
 	scale.x = 1.2
 	scale.y = 1.2
 	if not can_jump:
@@ -115,7 +117,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		combo_ready = false  # Reseta a habilidade de encadear combos
 		if is_attacking and attack_state > 0:
-			COMBO_WINDOW_DURATION = 0.15#resetando a janela de combo
+			COMBO_WINDOW_DURATION = 0.4#resetando a janela de combo
 			is_attacking = false  # Se o combo não for finalizado, retorna ao estado idle
 			attack_state = 0  # Reseta o estado de ataque
 			animation.play("idle")  # Volta à animação idle
@@ -133,7 +135,6 @@ func _physics_process(delta: float) -> void:
 				attack_state = 1 
 				emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
 			elif attack_state == 1:
-				COMBO_WINDOW_DURATION=0.3
 				animation.play("punch2")
 				attack_state = 2
 				emit_signal("punch_activated_p2", "state2_p2")  # Emite sinal para ativar colisões de punch2
@@ -157,7 +158,7 @@ func _physics_process(delta: float) -> void:
 				attack_state = 1 
 				emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
 			elif attack_state == 1:
-				COMBO_WINDOW_DURATION=0.3
+				
 				animation.play("punch2")
 				attack_state = 2
 				emit_signal("punch_activated_p2", "state2_p2")  # Emite sinal para ativar colisões de punch2
@@ -271,13 +272,25 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		
 	if current_direction == 1: 
-		$hitbox_neemias/opcionalePunch1.position.x = 115
-		$hitbox_neemias/punch2.position.x = 167.75
-		$hitbox_neemias/punch3.position.x = 120
+		$hitbox_neemias/opcionalePunch1.position.x = 169
+		$hitbox_neemias/punch2.position.x = 191
+		$hitbox_neemias/punch3.position.x = 173
 	elif current_direction == -1:
-		$hitbox_neemias/opcionalePunch1.position.x = -53
-		$hitbox_neemias/punch2.position.x = -111
-		$hitbox_neemias/punch3.position.x = -58
+		$hitbox_neemias/opcionalePunch1.position.x = -125
+		$hitbox_neemias/punch2.position.x = -150
+		$hitbox_neemias/punch3.position.x = -130
+
+
+func VirarDeLado() -> void:
+	current_direction = current_direction*-1
+	animation.scale.x = abs(animation.scale.x) * current_direction
+
+func KnockBack() -> void:
+	if(current_direction==-1):
+		velocity.x = move_toward(velocity.x, 0, 100)	
+		
+	else:
+		velocity.x = move_toward(velocity.x, 0, 200)	
 
 func _damage() -> void:
 	is_attacking = true
@@ -285,6 +298,7 @@ func _damage() -> void:
 	power += 5
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
+	
 
 
 
@@ -307,7 +321,7 @@ func _on_anim_animation_finished() -> void:
 		else:
 			is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 			animation.play("idle")
-			COMBO_WINDOW_DURATION = 0.15
+			COMBO_WINDOW_DURATION = 0.4
 			
 			#retirando as animações de particulas do personagem
 	for child in get_parent().get_children():

@@ -121,7 +121,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"damage",
-"speed": 20.0
+"speed": 35.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -516,7 +516,9 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"especial"
+animation = &"damage"
+frame = 6
+frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
@@ -533,17 +535,15 @@ frame_progress = 1.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 
 [node name="hitbox_michel" parent="." instance=ExtResource("88_gxqdq")]
-collision_layer = 64
-collision_mask = 128
 script = ExtResource("89_4n31i")
 
 [node name="punch1e2" type="CollisionShape2D" parent="hitbox_michel"]
-position = Vector2(112.109, -86.327)
+position = Vector2(161.109, -85.8267)
 shape = SubResource("RectangleShape2D_ewn6g")
 debug_color = Color(0.998937, 0, 0.128371, 0.42)
 
 [node name="punch3eopcional" type="CollisionShape2D" parent="hitbox_michel"]
-position = Vector2(105.609, 9.283)
+position = Vector2(145.109, 14.1733)
 shape = SubResource("RectangleShape2D_w0ly7")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 

@@ -125,7 +125,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"damage",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -303,7 +303,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 40.0
+"speed": 17.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -326,7 +326,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch2",
-"speed": 25.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -525,7 +525,6 @@ position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
 animation = &"punch3"
-frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
@@ -542,23 +541,21 @@ animation = &"especialNeemias"
 script = ExtResource("93_vko2y")
 
 [node name="opcionalePunch1" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(115, -127)
+position = Vector2(169, -129)
 shape = SubResource("RectangleShape2D_bdl7y")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="punch2" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(167.75, -128)
+position = Vector2(191, -128)
 shape = SubResource("RectangleShape2D_hfw2y")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="punch3" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(120, 11.5)
+position = Vector2(173, 12)
 shape = SubResource("RectangleShape2D_aa854")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="hurtbox_neemias" parent="." instance=ExtResource("94_ypvfx")]
-collision_layer = 128
-collision_mask = 64
 script = ExtResource("95_wtsar")
 
 [node name="areadano" type="CollisionShape2D" parent="hurtbox_neemias"]
