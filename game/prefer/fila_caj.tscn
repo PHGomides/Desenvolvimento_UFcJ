@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
-[ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_oon58"]
+[ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_oon58"]
 [ext_resource type="Texture2D" uid="uid://bpl8ly13or4jm" path="res://Assests/MAPAFILACAJ/_0000_chão.png" id="5_623ks"]
 [ext_resource type="Texture2D" uid="uid://ba2hw7au3xg4b" path="res://Assests/MAPAFILACAJ/FundoAtras.png" id="6_mtn5d"]
 [ext_resource type="Texture2D" uid="uid://b18ptaxj21182" path="res://Assests/MAPAFILACAJ/FundoFrente.png" id="7_yd0hu"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://v16dl5gchjvm" path="res://Assests/hud/novahuf/efeito dano right.png" id="20_giwt0"]
 [ext_resource type="Texture2D" uid="uid://duf5co7h33yux" path="res://Assests/hud/novahuf/vida Cheia.png" id="21_2ilo3"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="21_bakc5"]
-[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="22_lid6l"]
+[ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="22_lid6l"]
 [ext_resource type="Texture2D" uid="uid://dsit3lip5ylig" path="res://Assests/hud/novahuf/poder vazio.png" id="22_uve6e"]
 [ext_resource type="Texture2D" uid="uid://djrcj7teqjiom" path="res://Assests/FachadaAccets/fumaça.png" id="22_x8vqu"]
 [ext_resource type="Texture2D" uid="uid://dplhss7bi5pqf" path="res://Assests/hud/novahuf/poder cheio.png" id="23_24h8a"]

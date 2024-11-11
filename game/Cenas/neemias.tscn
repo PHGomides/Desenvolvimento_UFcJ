@@ -1,6 +1,6 @@
 [gd_scene load_steps=103 format=3 uid="uid://msmkx04o1khs"]
 
-[ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_ytebf"]
+[ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://42ukkwxlsvg0" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0006_20240905_162052_019.png" id="2_l8b6e"]
 [ext_resource type="Texture2D" uid="uid://clvaubehivdxo" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0004_20240905_162052_025.png" id="3_hc6r8"]
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
@@ -92,9 +92,9 @@
 [ext_resource type="Texture2D" uid="uid://ccp31oack18o6" path="res://Assests/Neemias Sprites Prontos/especial NeemiasChinela/_0000s_0015_Layer-4-copy-14.png" id="90_1enih"]
 [ext_resource type="Texture2D" uid="uid://bvug2l7qge2g4" path="res://Assests/Neemias Sprites Prontos/especial NeemiasChinela/_0000s_0017_Layer-4-copy-15.png" id="91_5cd2a"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="92_47yxg"]
-[ext_resource type="Script" path="res://Scripts/hitbox_neemias.gd" id="93_vko2y"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_neemias.gd" id="93_vko2y"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="94_ypvfx"]
-[ext_resource type="Script" path="res://Scripts/hurtbox_neemias.gd" id="95_wtsar"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_neemias.gd" id="95_wtsar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)

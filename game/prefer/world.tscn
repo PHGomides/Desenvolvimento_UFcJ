@@ -1,8 +1,8 @@
 [gd_scene load_steps=39 format=3 uid="uid://bq14wiqv14l8v"]
 
-[ext_resource type="Script" path="res://prefer/world.gd" id="1_kywhc"]
+[ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
-[ext_resource type="Script" path="res://prefer/camera_2d.gd" id="2_1ilr7"]
+[ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="2_1ilr7"]
 [ext_resource type="Texture2D" uid="uid://pra1kn7a86jl" path="res://Assests/MapaEstacionamento/_0004_cenario.png" id="4_hx6wh"]
 [ext_resource type="Texture2D" uid="uid://dskf4ptooihtn" path="res://Assests/MapaEstacionamento/_0003_arvores-atras-comp.png" id="5_0467r"]
 [ext_resource type="Texture2D" uid="uid://bwn4f7nlitoc6" path="res://Assests/MapaEstacionamento/_0002_carros-atrás.png" id="6_7vs72"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="21_pcmvb"]
 [ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="22_aadej"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
-[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="23_af463"]
+[ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="23_af463"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)

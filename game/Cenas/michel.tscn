@@ -1,6 +1,6 @@
-[gd_scene load_steps=98 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=104 format=3 uid="uid://bqe2va7eeqr7s"]
 
-[ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_61h00"]
+[ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_npba2"]
 [ext_resource type="Texture2D" uid="uid://calvfust52scc" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png" id="3_lxstc"]
 [ext_resource type="Texture2D" uid="uid://ygdt11fuw4gp" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png" id="4_rqxy4"]
@@ -8,12 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://dhjqw6b3yhm06" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png" id="6_wqky6"]
 [ext_resource type="Texture2D" uid="uid://bk22uujqrel6g" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png" id="7_1tjbb"]
 [ext_resource type="Texture2D" uid="uid://bdts30urgbjhj" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png" id="8_pewi2"]
+[ext_resource type="Texture2D" uid="uid://qx4cfb2pbeuy" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0006_1.png" id="9_mjsnc"]
 [ext_resource type="Texture2D" uid="uid://ya30f72xg0ab" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0000_7.png" id="9_na1um"]
+[ext_resource type="Texture2D" uid="uid://ght7kwgjvrl6" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0005_2.png" id="10_si20s"]
 [ext_resource type="Texture2D" uid="uid://dq64vuan350t1" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png" id="10_yulpp"]
+[ext_resource type="Texture2D" uid="uid://d15bw4vptrd1m" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0004_3.png" id="11_bq2x2"]
 [ext_resource type="Texture2D" uid="uid://c51p20bsmgynd" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png" id="11_icyyv"]
+[ext_resource type="Texture2D" uid="uid://bpeuov7b3g2d4" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0003_4.png" id="12_2x33r"]
 [ext_resource type="Texture2D" uid="uid://ce3k0x6jnxgho" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png" id="12_dk75m"]
 [ext_resource type="Texture2D" uid="uid://b6loebjjbs6ti" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png" id="13_l02p1"]
+[ext_resource type="Texture2D" uid="uid://5owh1dxwri7k" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0002_5.png" id="13_odwtm"]
 [ext_resource type="Texture2D" uid="uid://cwnqw7ng2ctst" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png" id="14_gkj2m"]
+[ext_resource type="Texture2D" uid="uid://up2a710wr71v" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0001_6.png" id="14_lvmpy"]
 [ext_resource type="Texture2D" uid="uid://dty5vcvf1kftj" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0005_6.png" id="15_1nep1"]
 [ext_resource type="Texture2D" uid="uid://dqs1sojvx4401" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0004_7.png" id="16_vijb1"]
 [ext_resource type="Texture2D" uid="uid://chbqr6wt6ougs" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0003_8.png" id="17_a80ye"]
@@ -88,9 +94,9 @@
 [ext_resource type="Texture2D" uid="uid://ctia6x4hnk2yq" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0009_10.png" id="86_03i8h"]
 [ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="87_5hf55"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="88_gxqdq"]
-[ext_resource type="Script" path="res://Scripts/hitbox_michel.gd" id="89_4n31i"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="89_4n31i"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
-[ext_resource type="Script" path="res://Scripts/hurtbox_michel.gd" id="91_vude1"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -125,9 +131,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_mjsnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_si20s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bq2x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2x33r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_odwtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lvmpy")
+}, {
+"duration": 1.0,
 "texture": ExtResource("9_na1um")
 }],
-"loop": true,
+"loop": false,
 "name": &"defesa",
 "speed": 20.0
 }, {
@@ -328,7 +352,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 30.0
+"speed": 17.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -348,7 +372,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch2",
-"speed": 25.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -516,9 +540,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"damage"
-frame = 6
-frame_progress = 1.0
+animation = &"defesa"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

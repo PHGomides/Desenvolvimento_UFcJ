@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://b5rud87wpls6h"]
 
-[ext_resource type="Script" path="res://Scripts/restauranteScripts/restaurante.gd" id="1_ebi03"]
-[ext_resource type="Script" path="res://prefer/camera_2d.gd" id="1_rpvgp"]
+[ext_resource type="Script" path="res://Scripts/restaurante.gd" id="1_ebi03"]
+[ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_rpvgp"]
 [ext_resource type="Texture2D" uid="uid://cdg5630onoly7" path="res://Assests/mapa_RU_Accets/mapa-ru_0000_chão.png" id="5_lqom8"]
 [ext_resource type="Texture2D" uid="uid://dnuhm56mhuqyw" path="res://Assests/mapa_RU_Accets/mapa-ru_0006_fundo-Lado-de-fora.png" id="6_ruc5r"]
 [ext_resource type="Texture2D" uid="uid://dtk8tagpbfy8c" path="res://Assests/mapa_RU_Accets/mapa-ru_0005_fundo.png" id="7_urmir"]
@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="23_se4nb"]
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="24_c2v8x"]
 [ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="25_x3ugo"]
-[ext_resource type="Script" path="res://Scripts/Player1Spawner.gd" id="27_qdop1"]
+[ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="27_qdop1"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
 background_mode = 3
