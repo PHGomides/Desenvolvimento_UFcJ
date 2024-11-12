@@ -285,6 +285,23 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/opcionalePunch1.position.x = -125
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
+	# Lógica para animação de defesa
+	if type_player != 1:
+		# Defesa com a tecla "U" para o player com type_player != 1
+		if Input.is_action_pressed("ui_U"):
+			is_defending = true
+			velocity.x = 0  # Impede movimento enquanto defende
+			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
+		else:
+			is_defending = false  # Para a defesa quando a tecla for solta
+	else:
+		# Defesa com a tecla "4" para o player com type_player == 1
+		if Input.is_action_pressed("ui_defesa"):
+			is_defending = true
+			velocity.x = 0  # Impede movimento enquanto defende
+			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
+		else:
+			is_defending = false  # Para a defesa quando a tecla for solta
 
 func SoltarEspecial()-> void:
 	emit_signal("punch_activated_p2", "state4_p2")  # Emite sinal para ativar colisões de punch3

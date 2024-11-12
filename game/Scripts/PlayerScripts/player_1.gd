@@ -186,6 +186,7 @@ func _physics_process(delta: float) -> void:
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
+			
 	if type_player == 1:
 		# Lógica para o ataque especial com teclado numerico
 		if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
@@ -223,11 +224,28 @@ func _physics_process(delta: float) -> void:
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
 				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
-			
+
+	# Lógica para animação de defesa
+	if type_player != 1:
+		# Defesa com a tecla "U" para o player com type_player != 1
+		if Input.is_action_pressed("ui_U") and is_on_floor():
+			is_defending = true
+			velocity.x = 0  # Impede movimento enquanto defende
+			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
+		else:
+			is_defending = false  # Para a defesa quando a tecla for solta
+	else:
+		# Defesa com a tecla "4" para o player com type_player == 1
+		if Input.is_action_pressed("ui_defesa")and is_on_floor():
+			is_defending = true
+			velocity.x = 0  # Impede movimento enquanto defende
+			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
+		else:
+			is_defending = false  # Para a defesa quando a tecla for solta
 	if type_player == 1:
 		# Movimento só é permitido se não estiver atacando
 		if not is_round:
-			if not is_attacking:
+			if not is_attacking and is_defending == false:
 				var direction := Input.get_axis("ui_left", "ui_right")
 				if direction != 0:
 					current_direction = direction
@@ -251,7 +269,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Movimento só é permitido se não estiver atacando
 		if not is_round:
-			if not is_attacking:
+			if not is_attacking and is_defending == false:
 				var direction := Input.get_axis("ui_A", "ui_D")
 				if direction != 0:
 					current_direction = direction
@@ -279,23 +297,7 @@ func _physics_process(delta: float) -> void:
 		$hitbox_michel/punch1e2.position.x = -157
 		$hitbox_michel/punch3eopcional.position.x = -143
 		
-	# Lógica para animação de defesa
-	if type_player != 1:
-		# Defesa com a tecla "U" para o player com type_player != 1
-		if Input.is_action_pressed("ui_U"):
-			is_defending = true
-			velocity.x = 0  # Impede movimento enquanto defende
-			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
-		else:
-			is_defending = false  # Para a defesa quando a tecla for solta
-	else:
-		# Defesa com a tecla "4" para o player com type_player == 1
-		if Input.is_action_pressed("ui_defesa"):
-			is_defending = true
-			velocity.x = 0  # Impede movimento enquanto defende
-			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
-		else:
-			is_defending = false  # Para a defesa quando a tecla for solta
+	
 
 	
 
@@ -311,11 +313,12 @@ func KnockBack() -> void:
 		velocity.x = move_toward(velocity.x, 0, 200)	
 		
 func _damage(damegeValue: int) -> void:
-	is_attacking = true
-	vida-= damegeValue
-	power += 5
-	power = clamp(power, 0, MaxPower)
-	animation.play("damage")
+	if(is_defending == false):
+		is_attacking = true
+		vida-= damegeValue
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")
 	
 func _start_round() -> void: is_round = true
 
