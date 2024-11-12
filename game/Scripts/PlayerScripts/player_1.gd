@@ -232,6 +232,7 @@ func _physics_process(delta: float) -> void:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
+		
 		else:
 			is_defending = false  # Para a defesa quando a tecla for solta
 	else:
