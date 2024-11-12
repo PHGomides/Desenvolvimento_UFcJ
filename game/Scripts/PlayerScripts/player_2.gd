@@ -12,7 +12,7 @@ var vida: int = 100  # Saúde máxima
 
 #PODER
 var MaxPower: int = 60
-var power: int = 0
+var power: int = 60
 
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo
@@ -44,6 +44,7 @@ var current_direction = -1 #direção do personagem olhando pra esquerda
 # Definição da variável para indicar se o jogador está defendendo
 var is_defending = false
 
+@onready var especialHitbox = $hitbox_neemias/especialShape
 
 
 
@@ -81,7 +82,6 @@ func _physics_process(delta: float) -> void:
 	if type_player == 1:
 		# Lógica para o pulo setas
 		if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking and can_jump:
-			_damage()
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY 
 			can_jump = false  # Impede pulos até que o cooldown termine
@@ -204,6 +204,7 @@ func _physics_process(delta: float) -> void:
 				
 				power = 0
 				animation.play("especial")
+				SoltarEspecial()
 				animationEspecial.play("especialNeemias")
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
@@ -222,6 +223,8 @@ func _physics_process(delta: float) -> void:
 				
 				power = 0
 				animation.play("especial")
+				
+				SoltarEspecial()
 				animationEspecial.play("especialNeemias")
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
@@ -283,6 +286,9 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
 
+func SoltarEspecial()-> void:
+	emit_signal("punch_activated_p2", "state4_p2")  # Emite sinal para ativar colisões de punch3
+
 
 func VirarDeLado() -> void:
 	current_direction = current_direction*-1
@@ -295,9 +301,9 @@ func KnockBack() -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, 200)	
 
-func _damage() -> void:
+func _damage(damegeValue: int) -> void:
 	is_attacking = true
-	vida-= 5
+	vida-= damegeValue
 	power += 5
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")

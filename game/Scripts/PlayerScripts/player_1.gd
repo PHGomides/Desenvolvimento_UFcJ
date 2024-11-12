@@ -81,7 +81,6 @@ func _physics_process(delta: float) -> void:
 	if type_player == 1 :
 		# Lógica para o pulo com setas
 		if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking and can_jump:
-			_damage()
 			is_jumping = true
 			velocity.y = JUMP_VELOCITY
 			can_jump = false  # Impede pulos até que o cooldown termine
@@ -310,13 +309,15 @@ func KnockBack() -> void:
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, 200)	
-func _damage() -> void:
+		
+func _damage(damegeValue: int) -> void:
 	is_attacking = true
-	vida-=5
-	power +=5
+	vida-= damegeValue
+	power += 5
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
 	
+
 
 
 # Função que é chamada automaticamente quando a animação termina
