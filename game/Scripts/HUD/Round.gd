@@ -69,10 +69,10 @@ func _on_time_is_up():
 		_init_round()
 	 
 func desativar_controle_jogadores():
-	player.is_round = true
-	player_2.is_round = true
+	Global.player1._start_round()
+	Global.player2._start_round()
 
 func ativar_controle_jogadores():
-	player.is_round = false
-	player_2.is_round = false
+	Global.player1._desativar_start_round()
+	Global.player2._desativar_start_round()
 	

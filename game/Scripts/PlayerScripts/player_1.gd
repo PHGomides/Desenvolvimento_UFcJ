@@ -317,6 +317,10 @@ func _damage(damegeValue: int) -> void:
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
 	
+func _start_round() -> void: is_round = true
+
+func _desativar_start_round() -> void: is_round = false
+	
 
 
 

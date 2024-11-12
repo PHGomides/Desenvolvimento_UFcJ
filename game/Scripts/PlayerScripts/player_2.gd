@@ -308,8 +308,10 @@ func _damage(damegeValue: int) -> void:
 	power = clamp(power, 0, MaxPower)
 	animation.play("damage")
 	
+	
+func _start_round() -> void: is_round = true
 
-
+func _desativar_start_round() -> void: is_round = false
 
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
