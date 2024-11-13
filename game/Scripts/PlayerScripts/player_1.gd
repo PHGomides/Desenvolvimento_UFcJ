@@ -201,6 +201,7 @@ func _physics_process(delta: float) -> void:
 				
 				power = 0
 				animation.play("especial")
+				SoltarEspecial()
 				animationEspecial.play("especialMichel")
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
@@ -220,6 +221,8 @@ func _physics_process(delta: float) -> void:
 				
 				power = 0
 				animation.play("especial")
+				SoltarEspecial()
+
 				animationEspecial.play("especialMichel")
 				is_attacking = true
 				using_special = true  # Marca o especial como usado
@@ -294,10 +297,12 @@ func _physics_process(delta: float) -> void:
 	if current_direction == 1: 
 		$hitbox_michel/punch1e2.position.x = 161.109
 		$hitbox_michel/punch3eopcional.position.x = 145.109
+		$hitbox_michel/especialShape.position.x = 1023.109
 	elif current_direction == -1:
 		$hitbox_michel/punch1e2.position.x = -157
 		$hitbox_michel/punch3eopcional.position.x = -143
-		
+		$hitbox_michel/especialShape.position.x = -1023.109
+
 	
 
 	
@@ -306,13 +311,47 @@ func VirarDeLado() -> void:
 	current_direction = current_direction*-1
 	animation.scale.x = abs(animation.scale.x) * current_direction
 
-func KnockBack() -> void:
-	if(current_direction==-1):
-		velocity.x = move_toward(velocity.x, 0, 100)	
-		
-	else:
-		velocity.x = move_toward(velocity.x, 0, 200)	
-		
+func KnockBack(force: float = 500.0) -> void:
+	# Define a direção contrária ao dano para aplicar o knockback
+	var knockback_direction = -current_direction
+	velocity.x = knockback_direction * force  # Aplica a força de knockback inicial
+
+	# Cria um Timer para reduzir gradualmente a velocidade
+	var knockback_timer = Timer.new()
+	knockback_timer.wait_time = 0.1
+	knockback_timer.one_shot = false  # Timer contínuo para reduzir o knockback aos poucos
+	add_child(knockback_timer)
+
+	knockback_timer.connect("timeout", Callable(self, "_reduce_knockback"))
+	knockback_timer.start()
+
+func _reduce_knockback(timer: Timer) -> void:
+	# Diminui gradativamente a velocidade até que seja nula
+	velocity.x = lerp(velocity.x, 0, 0.2)  # Suaviza a velocidade horizontal
+
+	# Para o knockback quando a velocidade é quase zero
+	if abs(velocity.x) < 10:
+		velocity.x = 0
+		timer.stop()  # Para o Timer quando o knockback é reduzido totalmente
+		timer.queue_free()  # Remove o Timer
+
+func SoltarEspecial() -> void:
+	# Cria um timer temporário e adiciona ao personagem
+	var timer = Timer.new()
+	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
+	timer.one_shot = true  # O timer deve disparar apenas uma vez
+	add_child(timer)
+	
+	# Conecta o sinal timeout do timer à função que emitirá o sinal
+	timer.connect("timeout", Callable(self, "_emit_special_signal"))
+	
+	# Inicia o timer
+	timer.start()
+
+# Função auxiliar para emitir o sinal após o timer terminar
+func _emit_special_signal() -> void:
+	emit_signal("punch_activated", "state4")
+
 func _damage(damegeValue: int) -> void:
 	if(is_defending == false):
 		is_attacking = true
@@ -320,6 +359,9 @@ func _damage(damegeValue: int) -> void:
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
+
+		
+		
 	
 func _start_round() -> void: is_round = true
 

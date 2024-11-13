@@ -3,6 +3,7 @@ extends Area2D
 @onready var hitbox_area: Area2D = $"."
 var punch1e2: CollisionShape2D
 var punch3eopcional: CollisionShape2D
+var especialShape: CollisionShape2D
 
 var attack_time: float = 0.3
 var attack_timer: float = 0.0
@@ -29,7 +30,9 @@ func _ready():
 			elif punch3eopcional == null:
 				punch3eopcional = child
 				hitbox_type = "punch3"  # Defina o tipo de golpe aqui
-
+			elif especialShape == null:
+				especialShape = child
+				hitbox_type = "especialShape"
 	if punch1e2 == null or punch3eopcional == null:
 		print("Erro: 'punch1e2' ou 'punch3eopcional' não encontrados dentro de hitbox.")
 		return
@@ -38,7 +41,10 @@ func _ready():
 
 	punch1e2.disabled = true
 	punch3eopcional.disabled = true
+	especialShape.disabled = true
 	hitbox_area.monitoring = false
+	
+
 
 	var player = get_parent()
 	if player.has_signal("punch_activated"):
@@ -59,6 +65,8 @@ func _on_punch_activated(state: String) -> void:
 		activate_hitbox("punch3eopcional")
 	elif state == "opcional":
 		activate_hitbox("punch3eopcional")
+	elif state == "state4":
+		activate_hitbox("especialShape")
 
 func activate_hitbox(punch_name: String) -> void:
 	print("Ativando hitbox:", punch_name)
@@ -73,7 +81,9 @@ func activate_hitbox(punch_name: String) -> void:
 	elif punch_name == "punch3eopcional":
 		punch3eopcional.disabled = false
 		hitbox_type = "punch3"  # Atualiza o tipo de golpe ativo
-
+	elif punch_name == "especialShape":
+		especialShape.disabled = false
+		hitbox_type = "especialShape"
 	attack_active = true
 	attack_timer = 0.0
 
@@ -81,5 +91,6 @@ func deactivate_hitbox() -> void:
 	print("Desativando hitboxes")
 	punch1e2.disabled = true
 	punch3eopcional.disabled = true
+	especialShape.disabled = true
 	hitbox_area.monitoring = false
 	attack_active = false

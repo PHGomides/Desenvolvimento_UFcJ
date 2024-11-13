@@ -72,7 +72,7 @@ func _on_punch_activated_p2(state: String) -> void:
 		activate_hitbox("punch3")
 	elif state == "opcional_p2":
 		activate_hitbox("opcionalePunch1")
-	elif state == "state4_p2":
+	elif state == "state4":
 		activate_hitbox("especialShape")
 
 func activate_hitbox(punch_name: String) -> void:

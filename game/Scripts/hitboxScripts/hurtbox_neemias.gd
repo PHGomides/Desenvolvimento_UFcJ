@@ -35,4 +35,10 @@ func _on_area_entered(area: Area2D) -> void:
 		elif golpe_tipo == "punch3":
 			print("Player 1 acertou o Player 2 com um soco de cima pra baixo!")
 			get_parent()._damage(10)
+			get_parent().KnockBack()
+		elif golpe_tipo == "especialShape":
+			
+			print("Player 2 acertou o Player 1 com o especial!")
+			get_parent()._damage(50)
+			get_parent().KnockBack(1200)
 			
