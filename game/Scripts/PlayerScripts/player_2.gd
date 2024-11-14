@@ -43,6 +43,7 @@ var current_direction = -1 #direção do personagem olhando pra esquerda
 
 # Definição da variável para indicar se o jogador está defendendo
 var is_defending = false
+var break_defense = false
 
 @onready var especialHitbox = $hitbox_neemias/especialShape
 
@@ -144,6 +145,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("punch3")
 				attack_state = 0
+				
 				emit_signal("punch_activated_p2", "state3_p2")  # Emite sinal para ativar colisões de punch3
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
@@ -232,7 +234,7 @@ func _physics_process(delta: float) -> void:
 	# Lógica para animação de defesa
 	if type_player != 1:
 		# Defesa com a tecla "U" para o player com type_player != 1
-		if Input.is_action_pressed("ui_U") and is_on_floor():
+		if Input.is_action_pressed("ui_U") and is_on_floor() and break_defense == false:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -240,13 +242,12 @@ func _physics_process(delta: float) -> void:
 			is_defending = false  # Para a defesa quando a tecla for solta
 	else:
 		# Defesa com a tecla "4" para o player com type_player == 1
-		if Input.is_action_pressed("ui_defesa")and is_on_floor():
+		if Input.is_action_pressed("ui_defesa")and is_on_floor() and break_defense == false:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
-			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
+			animation.play("defesa")  # Reproduz a animação de defesa sem looping
 		else:
 			is_defending = false  # Para a defesa quando a tecla for solta
-			
 	if type_player == 1:
 		
 		if not is_round: # para funçao round
@@ -305,7 +306,6 @@ func _physics_process(delta: float) -> void:
 	
 
 
-
 func VirarDeLado() -> void:
 	current_direction = current_direction*-1
 	animation.scale.x = abs(animation.scale.x) * current_direction
@@ -349,14 +349,23 @@ func _reduce_knockback(timer: Timer) -> void:
 func _emit_special_signal() -> void:
 	emit_signal("punch_activated_p2", "state4")
 
-func _damage(damegeValue: int) -> void:
+func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		animation.play("damage")	
+	elif(tipoGolpe == "punch3"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue
+		power += 5
+		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
-	
+		
 	
 func _start_round() -> void: is_round = true
 
@@ -373,7 +382,8 @@ func _on_anim_animation_finished() -> void:
 			
 		elif animation.animation == "opcional":
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
-		
+		elif animation.animation == "damage":
+			break_defense = false
 		if combo_window > 0:
 			combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
 			
@@ -382,7 +392,6 @@ func _on_anim_animation_finished() -> void:
 			is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 			animation.play("idle")
 			COMBO_WINDOW_DURATION = 0.4
-			
 			#retirando as animações de particulas do personagem
 	for child in get_parent().get_children():
 		if child is Sprite2D:

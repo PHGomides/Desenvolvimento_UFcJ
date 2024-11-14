@@ -30,15 +30,15 @@ func _on_area_entered(area: Area2D) -> void:
 		# Ações baseadas no tipo do golpe
 		if golpe_tipo == "punch1" || golpe_tipo == "punch2" :
 			print("Player 1 acertou o Player 2 com um soco!")
-			get_parent()._damage(10)
+			get_parent()._damage(10,golpe_tipo)
 			
 		elif golpe_tipo == "punch3":
 			print("Player 1 acertou o Player 2 com um soco de cima pra baixo!")
-			get_parent()._damage(10)
+			get_parent()._damage(10,"punch3")
 			get_parent().KnockBack()
 		elif golpe_tipo == "especialShape":
 			
 			print("Player 2 acertou o Player 1 com o especial!")
-			get_parent()._damage(50)
+			get_parent()._damage(50, golpe_tipo)
 			get_parent().KnockBack(1200)
 			

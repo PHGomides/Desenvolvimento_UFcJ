@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=106 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://42ukkwxlsvg0" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0006_20240905_162052_019.png" id="2_l8b6e"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://c6f7vfw4exywa" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png" id="11_c5s53"]
 [ext_resource type="Texture2D" uid="uid://cn5qgpdnlq2w" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png" id="12_866cl"]
 [ext_resource type="Texture2D" uid="uid://b2dw31uhj1w3r" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png" id="13_dfldh"]
+[ext_resource type="Texture2D" uid="uid://3gwux5w5cgj0" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0004_5.png" id="13_sho6n"]
 [ext_resource type="Texture2D" uid="uid://dnydkktnkgqkx" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png" id="14_2v7xr"]
+[ext_resource type="Texture2D" uid="uid://c6gb2r0dhekv3" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0005_6.png" id="14_entv3"]
 [ext_resource type="Texture2D" uid="uid://d3vsr0hscl3j" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png" id="15_0uohf"]
 [ext_resource type="Texture2D" uid="uid://duvx3033kunwv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png" id="16_laoff"]
 [ext_resource type="Texture2D" uid="uid://b21557jbb3x7s" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png" id="17_j16d0"]
@@ -126,6 +128,17 @@ animations = [{
 "loop": false,
 "name": &"damage",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sho6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_entv3")
+}],
+"loop": false,
+"name": &"defesa",
+"speed": 120.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -527,7 +540,7 @@ shape = SubResource("RectangleShape2D_17xdv")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"punch3"
+animation = &"defesa"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
