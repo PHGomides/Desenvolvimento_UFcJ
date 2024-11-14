@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=106 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -91,6 +91,9 @@
 [ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="87_5hf55"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="88_gxqdq"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="89_4n31i"]
+[ext_resource type="Texture2D" uid="uid://omncl7r6msun" path="res://Assests/poderes/4ca092beb9b20f34fdd3f22e6686462f.png" id="90_1ub8p"]
+[ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="90_4kq8a"]
+[ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="90_ocib6"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
 
@@ -500,6 +503,19 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3dqd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1eke4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("90_1ub8p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn6g"]
 size = Vector2(145.555, 31)
 
@@ -540,6 +556,27 @@ frame = 19
 frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
+
+[node name="Poder" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-140.11, 0)
+rotation = 1.5708
+scale = Vector2(0.24, 0.24)
+script = ExtResource("90_4kq8a")
+
+[node name="powerOpitional" type="Area2D" parent="Poder"]
+script = ExtResource("90_ocib6")
+
+[node name="power" type="CollisionShape2D" parent="Poder/powerOpitional"]
+scale = Vector2(20.635, 20.635)
+shape = SubResource("CircleShape2D_j3dqd")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Poder"]
+sprite_frames = SubResource("SpriteFrames_1eke4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Poder/AnimatedSprite2D"]
+root_node = NodePath("../..")
 
 [node name="hitbox_michel" parent="." instance=ExtResource("88_gxqdq")]
 script = ExtResource("89_4n31i")

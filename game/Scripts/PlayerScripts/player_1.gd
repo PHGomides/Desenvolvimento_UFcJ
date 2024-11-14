@@ -6,7 +6,10 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 @export var type_player: int = 2
 var name_player = "Michel"
 @export var ImageHud: Texture
-
+@onready var powerOptional = $Poder
+var can_launch_Opitional_Power = true
+var powerOpitional_cooldown_time = 3.0
+var poweropitional_timer = 0.0
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
@@ -37,9 +40,11 @@ var can_jump = true      # Indica se o jogador pode pular
 var jump_cooldown_time = 1.0  # Tempo de cooldown para pular
 var jump_timer = 0.0    # Temporizador para controlar o cooldown
 
+
+
 # Definição da variável para indicar se o jogador está defendendo
 var is_defending = false
-
+var break_defense = false
 # Variável para decidir se o especial pode ser usado
 var using_special = false
 var special_could = true
@@ -49,6 +54,8 @@ var opcional_attack = false
 var current_direction #direção do personagem olhando pra direita
 
 # Janela de combo (tempo permitido para encadear ataques)
+
+
 
 
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
@@ -71,7 +78,11 @@ func _physics_process(delta: float) -> void:
 		# Atualiza o temporizador de cooldown do pulo
 	scale.x = 1.3
 	scale.y = 1.3
-	
+	if not can_launch_Opitional_Power:
+		poweropitional_timer -= delta
+		if poweropitional_timer <= 0:
+			can_launch_Opitional_Power = true  # Permite pular novamente após o cooldown
+			
 	if not can_jump:
 		jump_timer -= delta
 		if jump_timer <= 0:
@@ -172,19 +183,25 @@ func _physics_process(delta: float) -> void:
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 	if type_player == 1:
 		# Lógica para o ataque opcional com teclado numerico
-		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
+		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
 			print("2 foi pressionado")
 			emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
 			animation.play("opcional")
+			SoltarPoder()
+			poweropitional_timer = powerOpitional_cooldown_time
+			can_launch_Opitional_Power = false
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 	else:
 		#logica para atque opcional com K
-		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack:
+		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
 			print("k foi pressionado")
 			emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
 			animation.play("opcional")
+			SoltarPoder()
+			poweropitional_timer = powerOpitional_cooldown_time
+			can_launch_Opitional_Power = false
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
@@ -233,7 +250,7 @@ func _physics_process(delta: float) -> void:
 	# Lógica para animação de defesa
 	if type_player != 1:
 		# Defesa com a tecla "U" para o player com type_player != 1
-		if Input.is_action_pressed("ui_U") and is_on_floor():
+		if Input.is_action_pressed("ui_U") and is_on_floor() and break_defense ==false:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -242,7 +259,8 @@ func _physics_process(delta: float) -> void:
 			is_defending = false  # Para a defesa quando a tecla for solta
 	else:
 		# Defesa com a tecla "4" para o player com type_player == 1
-		if Input.is_action_pressed("ui_defesa")and is_on_floor():
+		if Input.is_action_pressed("ui_defesa")and is_on_floor() and break_defense ==false:
+
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
@@ -306,7 +324,25 @@ func _physics_process(delta: float) -> void:
 		$hitbox_michel/especialShape.position.x = -1023.109
 
 	
-
+func SoltarPoder():
+	powerOptional.visible = true
+	powerOptional.powerOpitionalArea.powerColision.disabled = false
+	var start_position = powerOptional.position
+	var end_position
+	if(current_direction == 1):
+		end_position = start_position + Vector2(2000, 0)  # Ajuste a distância conforme necessário
+	else:
+		end_position = start_position + Vector2(-2000, 0)  # Ajuste a distância conforme necessário
+	# Cria o Tween para movimentação suave
+	var tween = create_tween()
+	# Move para a posição final
+	tween.tween_property(powerOptional, "position", end_position,1.0)  # Vai para a posição final
+	tween.finished.connect(func(): reset_power(start_position))
+	
+func reset_power(start_position: Vector2):
+	powerOptional.position = start_position
+	powerOptional.visible = false
+	powerOptional.powerOpitionalArea.powerColision.disabled = true
 	
 
 func VirarDeLado() -> void:
@@ -354,10 +390,28 @@ func SoltarEspecial() -> void:
 func _emit_special_signal() -> void:
 	emit_signal("punch_activated", "state4")
 
-func _damage(damegeValue: int) -> void:
-	if(is_defending == false):
+func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")	
+	elif(tipoGolpe == "punch3"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")	
+	elif(tipoGolpe == "especialShape"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue/2
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
@@ -381,7 +435,8 @@ func _on_anim_animation_finished() -> void:
 			using_special = false  # Permite o uso do especial novamente
 		elif animation.animation == "opcional":
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
-		
+		elif animation.animation == "damage":
+			break_defense = false
 		if combo_window > 0:
 			combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
 			

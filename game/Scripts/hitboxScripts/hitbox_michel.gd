@@ -8,7 +8,6 @@ var especialShape: CollisionShape2D
 var attack_time: float = 0.3
 var attack_timer: float = 0.0
 var attack_active: bool = false
-
 # Propriedade personalizada para o tipo de golpe
 var hitbox_type: String = "punch1"
 

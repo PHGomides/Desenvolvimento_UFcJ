@@ -576,7 +576,7 @@ shape = SubResource("RectangleShape2D_aa854")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="especialShape" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(-985, -438)
+position = Vector2(-988.66, -438)
 shape = SubResource("RectangleShape2D_cd8t8")
 disabled = true
 one_way_collision_margin = 0.0

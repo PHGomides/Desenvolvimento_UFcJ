@@ -300,11 +300,12 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/opcionalePunch1.position.x = 169
 		$hitbox_neemias/punch2.position.x = 191
 		$hitbox_neemias/punch3.position.x = 173
+		$hitbox_neemias/especialShape.position.x = 1030.109
 	elif current_direction == -1:
 		$hitbox_neemias/opcionalePunch1.position.x = -125
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
-	
+		$hitbox_neemias/especialShape.position.x = -988.66
 
 
 func VirarDeLado() -> void:
@@ -366,7 +367,15 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
-		
+	elif(tipoGolpe == "especialShape"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue/2
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")
 	
 func _start_round() -> void: is_round = true
 
