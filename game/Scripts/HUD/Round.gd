@@ -9,14 +9,15 @@ var player1_round = 0
 
 @onready var player: CharacterBody2D = $"../../player"
 @onready var player_2: CharacterBody2D = $"../../player2"
-
 @onready var tempo: Control = $"../Tempo"
 @onready var barras: Control = $"../Barras"
 
 
 func _ready() -> void:
-	tempo.connect("time_is_up", Callable(self, "_on_time_is_up"))
+	tempo.connect("time_is_up", Callable(self, "_on_time_is_up"))	
+	barras.connect("vida_zero", Callable(self, "_on_time_is_up"))
 	_init_round()
+	
 
 
 func _process(delta: float) -> void:
@@ -28,6 +29,7 @@ func _init_round():
 	_2.visible = false
 	_3.visible = false
 	fight.visible = false
+	await get_tree().create_timer(0.5).timeout
 	desativar_controle_jogadores()
 	
 	_3.visible = true
@@ -45,14 +47,13 @@ func _init_round():
 	fight.visible = true
 	await get_tree().create_timer(1).timeout
 	fight.visible = false
-	
 	ativar_controle_jogadores()
 
 func _on_time_is_up():
-	if barras.vida_player1 > barras.vida_player2:
+	if Global.player1.vida > Global.player2.vida:
 		player1_round += 1
 		Global.round +=1
-	elif barras.vida_player2 > barras.vida_player1:
+	elif Global.player2.vida > Global.player1.vida:
 		player2_round += 1
 		Global.round += 1
 	else:
@@ -69,12 +70,10 @@ func _on_time_is_up():
 		_init_round()
 	 
 func desativar_controle_jogadores():
-	pass
-	#Global.player1._start_round()
-	#Global.player2._start_round()
+		Global.player1._start_round()
+		Global.player2._start_round()
 
 func ativar_controle_jogadores():
-	pass
-	#Global.player1._desativar_start_round()
-	#Global.player2._desativar_start_round()
+		Global.player1._desativar_start_round()
+		Global.player2._desativar_start_round()
 	

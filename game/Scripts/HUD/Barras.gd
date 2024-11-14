@@ -22,7 +22,7 @@ extends Control
 @export var powerMAX: int = 60
 
 
-signal time_is_up()
+signal vida_zero()
 
 func _ready() -> void:
 	# Inicializa as barras de vida
