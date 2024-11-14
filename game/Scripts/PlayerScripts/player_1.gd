@@ -6,7 +6,7 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 @export var type_player: int = 2
 var name_player = "Michel"
 @export var ImageHud: Texture
-@onready var powerOptional = $Poder
+@onready var powerOptional = $PoderOpicional
 var can_launch_Opitional_Power = true
 var powerOpitional_cooldown_time = 3.0
 var poweropitional_timer = 0.0
@@ -327,20 +327,22 @@ func _physics_process(delta: float) -> void:
 func SoltarPoder():
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
-	var start_position = powerOptional.position
+	var start_position = powerOptional.global_position
 	var end_position
-	if(current_direction == 1):
+
+	if current_direction == 1:
 		end_position = start_position + Vector2(2000, 0)  # Ajuste a distância conforme necessário
 	else:
 		end_position = start_position + Vector2(-2000, 0)  # Ajuste a distância conforme necessário
+
 	# Cria o Tween para movimentação suave
 	var tween = create_tween()
-	# Move para a posição final
-	tween.tween_property(powerOptional, "position", end_position,1.0)  # Vai para a posição final
+	# Move para a posição final usando `global_position`
+	tween.tween_property(powerOptional, "global_position", end_position, 1.0)
 	tween.finished.connect(func(): reset_power(start_position))
-	
+
 func reset_power(start_position: Vector2):
-	powerOptional.position = start_position
+	powerOptional.global_position = position
 	powerOptional.visible = false
 	powerOptional.powerOpitionalArea.powerColision.disabled = true
 	

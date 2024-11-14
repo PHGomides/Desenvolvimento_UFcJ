@@ -24,7 +24,7 @@ func _on_area_entered(area: Area2D) -> void:
 		print("esquerda")
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
 	
-	if area.has_method("poderNome"):
+	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
 		get_parent()._damage(10,"poderOpicional")
 		get_parent().KnockBack()
 	

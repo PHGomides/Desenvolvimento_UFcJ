@@ -10,6 +10,10 @@ var name_player = "Neemias"
 var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
 
+@onready var powerOptional = $PoderOpicional
+var can_launch_Opitional_Power = true
+var powerOpitional_cooldown_time = 3.0
+var poweropitional_timer = 0.0
 
 #PODER
 var MaxPower: int = 60
@@ -74,6 +78,11 @@ func _physics_process(delta: float) -> void:
 	
 	scale.x = 1.2
 	scale.y = 1.2
+	if not can_launch_Opitional_Power:
+		poweropitional_timer -= delta
+		if poweropitional_timer <= 0:
+			can_launch_Opitional_Power = true  # Permite pular novamente após o cooldown
+
 	if not can_jump:
 		jump_timer -= delta
 		if jump_timer <= 0:
@@ -178,17 +187,25 @@ func _physics_process(delta: float) -> void:
 	
 	if type_player == 1:
 		# Lógica para o ataque opcional com teclado numerico
-		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack:
+		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
 			animation.play("opcional")
 			emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_2
+			is_attacking = true
+			SoltarPoder()
+			poweropitional_timer = powerOpitional_cooldown_time
+			can_launch_Opitional_Power = false
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 	else:
 		# Lógica para o ataque opcional com k
-		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack:
+		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
 			animation.play("opcional")
 			emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_K
+			is_attacking = true
+			SoltarPoder()
+			poweropitional_timer = powerOpitional_cooldown_time
+			can_launch_Opitional_Power = false
 			is_attacking = true
 			opcional_attack = true  # Marca que o ataque opcional está em execução
 			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
@@ -306,7 +323,28 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
 		$hitbox_neemias/especialShape.position.x = -988.66
+func SoltarPoder():
+	powerOptional.visible = true
+	powerOptional.powerOpitionalArea.powerColision.disabled = false
+	var start_position = powerOptional.global_position
+	var end_position
 
+	if current_direction == 1:
+		end_position = start_position + Vector2(2000, 0)  # Ajuste a distância conforme necessário
+	else:
+		end_position = start_position + Vector2(-2000, 0)  # Ajuste a distância conforme necessário
+
+	# Cria o Tween para movimentação suave
+	var tween = create_tween()
+	# Move para a posição final usando `global_position`
+	tween.tween_property(powerOptional, "global_position", end_position, 1.0)
+	tween.finished.connect(func(): reset_power(start_position))
+
+func reset_power(start_position: Vector2):
+	powerOptional.global_position = position
+	powerOptional.visible = false
+	powerOptional.powerOpitionalArea.powerColision.disabled = true
+	
 
 func VirarDeLado() -> void:
 	current_direction = current_direction*-1

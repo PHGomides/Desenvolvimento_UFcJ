@@ -14,7 +14,7 @@ func _ready():
 
 	
 func _on_area_entered(area: Area2D) -> void:
-
+	
 	#verificaçao que altera a direçao do personagem quando ele apanha de costas
 	if(area.global_position.x-global_position.x)>0:
 		if(get_parent().current_direction == -1):
@@ -27,7 +27,9 @@ func _on_area_entered(area: Area2D) -> void:
 		print("esquerda")
 		
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
-	
+	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
+		get_parent()._damage(10,"poderOpicional")
+		get_parent().KnockBack()
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()
 		print("Colisão detectada com:", golpe_tipo)

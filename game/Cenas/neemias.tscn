@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=112 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clvaubehivdxo" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0004_20240905_162052_025.png" id="3_hc6r8"]
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
 [ext_resource type="Texture2D" uid="uid://d2bj4uyxywasq" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0000_20240905_162052_032.png" id="5_7fgp8"]
+[ext_resource type="Texture2D" uid="uid://6wjw55824y1n" path="res://Assests/poderes/poder7.png" id="5_n1j5s"]
 [ext_resource type="Texture2D" uid="uid://b4gvjhifpot24" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0001_20240905_162052_031.png" id="6_vxtlm"]
 [ext_resource type="Texture2D" uid="uid://d1ctrv23cefra" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0003_20240905_162052_027.png" id="7_5vfhg"]
 [ext_resource type="Texture2D" uid="uid://ck4d7bbjh5jl5" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0005_20240905_162052_023.png" id="8_d84mu"]
@@ -98,9 +99,24 @@
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_neemias.gd" id="93_vko2y"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="94_ypvfx"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_neemias.gd" id="95_wtsar"]
+[ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="99_q8oon"]
+[ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="100_tjfaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ojiv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdbsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n1j5s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
 animations = [{
@@ -300,7 +316,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"opcional",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -538,11 +554,32 @@ position = Vector2(26.5, -19.5)
 scale = Vector2(1.175, 1.175)
 shape = SubResource("RectangleShape2D_17xdv")
 
+[node name="PoderOpicional" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-140.11, -85.79)
+scale = Vector2(0.24, 0.24)
+script = ExtResource("99_q8oon")
+
+[node name="powerOpitionalArea" type="Area2D" parent="PoderOpicional"]
+script = ExtResource("100_tjfaj")
+
+[node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
+scale = Vector2(20.635, 20.635)
+shape = SubResource("CircleShape2D_6ojiv")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PoderOpicional"]
+scale = Vector2(1.63, 1.63)
+sprite_frames = SubResource("SpriteFrames_jdbsb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PoderOpicional/AnimatedSprite2D"]
+root_node = NodePath("../..")
+
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"defesa"
+animation = &"opcional"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

@@ -91,11 +91,11 @@
 [ext_resource type="Texture2D" uid="uid://b1bhmlfxfuup6" path="res://Assests/Michel Sprites Pronto/michel rochaEspecial/_0010_11.png" id="87_5hf55"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="88_gxqdq"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="89_4n31i"]
-[ext_resource type="Texture2D" uid="uid://omncl7r6msun" path="res://Assests/poderes/4ca092beb9b20f34fdd3f22e6686462f.png" id="90_1ub8p"]
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="90_4kq8a"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="90_ocib6"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
+[ext_resource type="Texture2D" uid="uid://o5w36fymfkcl" path="res://Assests/poderes/poder5.png" id="92_k443k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -509,7 +509,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("90_1ub8p")
+"texture": ExtResource("92_k443k")
 }],
 "loop": true,
 "name": &"default",
@@ -557,25 +557,26 @@ frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 
-[node name="Poder" type="Sprite2D" parent="."]
+[node name="PoderOpicional" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-140.11, 0)
-rotation = 1.5708
+position = Vector2(-140.11, -85.79)
+rotation = -6.28319
 scale = Vector2(0.24, 0.24)
 script = ExtResource("90_4kq8a")
 
-[node name="powerOpitional" type="Area2D" parent="Poder"]
+[node name="powerOpitionalArea" type="Area2D" parent="PoderOpicional"]
 script = ExtResource("90_ocib6")
 
-[node name="power" type="CollisionShape2D" parent="Poder/powerOpitional"]
+[node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
 scale = Vector2(20.635, 20.635)
 shape = SubResource("CircleShape2D_j3dqd")
 disabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Poder"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PoderOpicional"]
+scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_1eke4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Poder/AnimatedSprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PoderOpicional/AnimatedSprite2D"]
 root_node = NodePath("../..")
 
 [node name="hitbox_michel" parent="." instance=ExtResource("88_gxqdq")]
