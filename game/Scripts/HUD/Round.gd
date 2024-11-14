@@ -30,6 +30,8 @@ func _init_round():
 	_3.visible = false
 	fight.visible = false
 	await get_tree().create_timer(0.5).timeout
+	Global.player1.vida = 100
+	Global.player2.vida = 100
 	desativar_controle_jogadores()
 	
 	_3.visible = true
@@ -65,7 +67,6 @@ func _on_time_is_up():
 	elif player2_round >= 3:
 		print("Player 2 Wins!")
 	else:
-		# Caso ninguém tenha vencido, inicia o próximo round
 		Global.round += 1
 		_init_round()
 	 
