@@ -39,6 +39,7 @@ var jump_timer = 0.0    # Temporizador para controlar o cooldown
 
 # Definição da variável para indicar se o jogador está defendendo
 var is_defending = false
+var break_defense = false
 
 # Variável para decidir se o especial pode ser usado
 var using_special = false
@@ -233,7 +234,7 @@ func _physics_process(delta: float) -> void:
 	# Lógica para animação de defesa
 	if type_player != 1:
 		# Defesa com a tecla "U" para o player com type_player != 1
-		if Input.is_action_pressed("ui_U") and is_on_floor():
+		if Input.is_action_pressed("ui_U") and is_on_floor() and break_defense ==false:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -242,7 +243,7 @@ func _physics_process(delta: float) -> void:
 			is_defending = false  # Para a defesa quando a tecla for solta
 	else:
 		# Defesa com a tecla "4" para o player com type_player == 1
-		if Input.is_action_pressed("ui_defesa")and is_on_floor():
+		if Input.is_action_pressed("ui_defesa")and is_on_floor() and break_defense ==false:
 			is_defending = true
 			velocity.x = 0  # Impede movimento enquanto defende
 			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
@@ -354,17 +355,31 @@ func SoltarEspecial() -> void:
 func _emit_special_signal() -> void:
 	emit_signal("punch_activated", "state4")
 
-func _damage(damegeValue: int) -> void:
-	if(is_defending == false):
+func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		animation.play("damage")	
+	elif(tipoGolpe == "punch3"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")	
+	elif(tipoGolpe == "especialShape"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue/2
+		power += 5
+		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
-
-		
-		
-	
 func _start_round() -> void: is_round = true
 
 func _desativar_start_round() -> void: is_round = false
@@ -381,7 +396,8 @@ func _on_anim_animation_finished() -> void:
 			using_special = false  # Permite o uso do especial novamente
 		elif animation.animation == "opcional":
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
-		
+		elif animation.animation == "damage":
+			break_defense = false
 		if combo_window > 0:
 			combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
 			

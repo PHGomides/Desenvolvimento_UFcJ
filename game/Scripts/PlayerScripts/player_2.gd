@@ -366,6 +366,15 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
+	elif(tipoGolpe == "especialShape"):
+		break_defense = true
+		is_defending = false
+		print("sofri dano defendeeeeendo")
+		is_attacking = true
+		vida-= damegeValue/2
+		power += 5
+		power = clamp(power, 0, MaxPower)
+		animation.play("damage")
 		
 	
 func _start_round() -> void: is_round = true

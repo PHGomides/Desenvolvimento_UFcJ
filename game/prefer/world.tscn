@@ -366,6 +366,7 @@ text = "Michel
 script = ExtResource("22_t6qkj")
 
 [node name="round" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
 offset_left = 887.0
 offset_top = 105.0
 offset_right = 1106.0
