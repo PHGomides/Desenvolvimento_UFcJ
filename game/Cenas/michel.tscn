@@ -1,6 +1,7 @@
-[gd_scene load_steps=100 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=101 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
+[ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_npba2"]
 [ext_resource type="Texture2D" uid="uid://calvfust52scc" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png" id="3_lxstc"]
 [ext_resource type="Texture2D" uid="uid://ygdt11fuw4gp" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png" id="4_rqxy4"]
@@ -514,6 +515,7 @@ size = Vector2(171, 301)
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_61h00")
+ImageHud = ExtResource("2_8cp4u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.60913, -7.82672)

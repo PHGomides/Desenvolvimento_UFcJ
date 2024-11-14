@@ -1,6 +1,7 @@
-[gd_scene load_steps=106 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=107 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
+[ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
 [ext_resource type="Texture2D" uid="uid://42ukkwxlsvg0" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0006_20240905_162052_019.png" id="2_l8b6e"]
 [ext_resource type="Texture2D" uid="uid://clvaubehivdxo" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0004_20240905_162052_025.png" id="3_hc6r8"]
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
@@ -530,6 +531,7 @@ size = Vector2(143, 338)
 
 [node name="player2" type="CharacterBody2D"]
 script = ExtResource("1_ytebf")
+ImageHud = ExtResource("2_ajicn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(26.5, -19.5)

@@ -4,6 +4,8 @@ const SPEED = 700.0
 @export var JUMP_VELOCITY=-2000
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player: int = 2
+var name_player = "Michel"
+@export var ImageHud: Texture
 
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
