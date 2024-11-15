@@ -11,7 +11,8 @@ var seconds = 0
 signal time_is_up()
 
 func _ready() -> void:
-	round.connect("reset_time", Callable(self, "inciartimer"))	
+	round.connect("reset_time", Callable(self, "recomeco"))
+	round.connect("iniciar_time", Callable(self, "iniciartimer"))
 	tempo_label.text = str("%02d" % default_seconds)
 	seconds = default_seconds
 
@@ -30,5 +31,4 @@ func recomeco():
 	clocktimer.stop()
 	seconds = default_seconds
 	tempo_label.text = str("%02d" % seconds)
-	clocktimer.start()  # Reinicia o timer
 	

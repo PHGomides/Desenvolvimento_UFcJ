@@ -246,7 +246,6 @@ size_flags_vertical = 4
 script = ExtResource("12_sra55")
 
 [node name="clocktimer" type="Timer" parent="HUD/Tempo"]
-autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
 layout_mode = 1

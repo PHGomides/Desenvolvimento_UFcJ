@@ -20,7 +20,7 @@ extends Control
 @onready var barras: Control = $"../Barras"
 @onready var round: Label = $round
 
-signal inicar_time()
+signal iniciar_time()
 signal reset_time()
 
 func _ready() -> void:
@@ -62,6 +62,7 @@ func _init_round():
 	fight.visible = true
 	await get_tree().create_timer(1).timeout
 	fight.visible = false
+	emit_signal("iniciar_time")
 	ativar_controle_jogadores()
 
 func _on_time_is_up():
