@@ -74,10 +74,10 @@ func _on_time_is_up():
 		Global.player1_round += 1
 		if Global.player1_round == 1: round_player_1_1.visible = true
 		if Global.player1_round == 2: round_player_1_2.visible = true
-		elif Global.player2.vida > Global.player1.vida:
-			Global.player2_round += 1
-			if Global.player2_round == 1: round_player_2_1.visible = true
-			if Global.player2_round == 2: round_player_2_2.visible = true
+	elif Global.player2.vida > Global.player1.vida:
+		Global.player2_round += 1
+		if Global.player2_round == 1: round_player_2_1.visible = true
+		if Global.player2_round == 2: round_player_2_2.visible = true
 	else:
 		print("Empate") 
 		Global.round -= 1	
