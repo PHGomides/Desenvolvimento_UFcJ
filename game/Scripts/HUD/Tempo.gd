@@ -2,6 +2,7 @@ extends Control
 
 @onready var tempo_label = $MarginContainer/Tempo_container/Tempo_label as Label
 @onready var clocktimer = $clocktimer as Timer
+@onready var round: Control = $"../Round"
 
 var seconds = 0
 
@@ -10,12 +11,10 @@ var seconds = 0
 signal time_is_up()
 
 func _ready() -> void:
+	round.connect("reset_time", Callable(self, "inciartimer"))	
 	tempo_label.text = str("%02d" % default_seconds)
-	reset_clock_timer()
+	seconds = default_seconds
 
-func _process(delta: float) -> void:
-	pass
-  
 
 func _on_clocktimer_timeout() -> void:
 	seconds -= 1
@@ -24,9 +23,12 @@ func _on_clocktimer_timeout() -> void:
 		clocktimer.stop()  # Para o timer quando o tempo termina
 		emit_signal("time_is_up")  # Emite o sinal de tempo esgotado
 	
-func reset_clock_timer():
-	seconds = default_seconds
+func iniciartimer():
+	clocktimer.start()
 	
 func recomeco():
+	clocktimer.stop()
+	seconds = default_seconds
+	tempo_label.text = str("%02d" % seconds)
 	clocktimer.start()  # Reinicia o timer
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=47 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -20,18 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://duf5co7h33yux" path="res://Assests/hud/novahuf/vida Cheia.png" id="18_6ce5w"]
 [ext_resource type="Texture2D" uid="uid://dsit3lip5ylig" path="res://Assests/hud/novahuf/poder vazio.png" id="19_boj3j"]
 [ext_resource type="Texture2D" uid="uid://dplhss7bi5pqf" path="res://Assests/hud/novahuf/poder cheio.png" id="20_8008n"]
+[ext_resource type="Script" path="res://Scripts/HUD/Infosplayers.gd" id="21_8vmag"]
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="21_pcmvb"]
-[ext_resource type="Script" path="res://Scripts/HUD/Hud_Name_Player2.gd" id="21_y0h0y"]
 [ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="22_aadej"]
-[ext_resource type="Script" path="res://prefer/round_hud.gd" id="22_nsgkf"]
-[ext_resource type="Script" path="res://Scripts/HUD/Hud_Name_Player1.gd" id="22_t6qkj"]
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="23_af463"]
 [ext_resource type="Script" path="res://Scripts/HUD/Round.gd" id="23_kt74s"]
 [ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="24_1k0r8"]
-[ext_resource type="Script" path="res://prefer/foto_hud_player_1.gd" id="24_w6agc"]
+[ext_resource type="Texture2D" uid="uid://dmcm5vdkghup1" path="res://Assests/hud/bolinha hud.png" id="25_taysr"]
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_vht3l"]
-[ext_resource type="Script" path="res://prefer/foto_hud_player_2.gd" id="26_7634w"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_ndkkw"]
 [ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="27_aymks"]
 
@@ -40,6 +37,18 @@ size = Vector2(247, 992)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof4l"]
 size = Vector2(1727, 128)
+
+[sub_resource type="GDScript" id="GDScript_0f02l"]
+script/source = "extends Label
+
+var already_added = false #verifica se o nome do player já foi inserido
+# Called when the node enters the scene tree for the first time.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = \"ROUND \" + str(Global.round)
+"
 
 [sub_resource type="Gradient" id="Gradient_s6q3d"]
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.588235)
@@ -349,6 +358,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("21_8vmag")
 
 [node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
 layout_mode = 0
@@ -363,23 +373,6 @@ theme_override_fonts/font = ExtResource("16_ng82x")
 theme_override_font_sizes/font_size = 35
 text = "Michel
 "
-script = ExtResource("22_t6qkj")
-
-[node name="round" type="Label" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 887.0
-offset_top = 105.0
-offset_right = 1106.0
-offset_bottom = 186.0
-scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
-theme_override_fonts/font = ExtResource("16_ng82x")
-theme_override_font_sizes/font_size = 35
-text = "ROUND 
-"
-horizontal_alignment = 1
-script = ExtResource("22_nsgkf")
 
 [node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
 layout_mode = 0
@@ -395,7 +388,6 @@ theme_override_font_sizes/font_size = 35
 text = "Neemias
 "
 horizontal_alignment = 2
-script = ExtResource("21_y0h0y")
 
 [node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
 layout_mode = 0
@@ -405,7 +397,6 @@ offset_right = 374.0
 offset_bottom = 121.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("21_pcmvb")
-script = ExtResource("24_w6agc")
 
 [node name="FotoPlayer2" type="TextureRect" parent="HUD/InfosPlayer"]
 layout_mode = 0
@@ -416,7 +407,6 @@ offset_bottom = 121.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("22_aadej")
 flip_h = true
-script = ExtResource("26_7634w")
 
 [node name="Round" type="Control" parent="HUD"]
 layout_mode = 3
@@ -427,23 +417,35 @@ script = ExtResource("23_kt74s")
 
 [node name="Round_player1_1" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 859.0
+offset_top = 17.0
+offset_right = 899.0
+offset_bottom = 57.0
+texture = ExtResource("25_taysr")
 
 [node name="Round_player1_2" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 813.0
+offset_top = 17.0
+offset_right = 853.0
+offset_bottom = 57.0
+texture = ExtResource("25_taysr")
 
 [node name="Round_player2_1" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1023.0
+offset_top = 17.0
+offset_right = 1063.0
+offset_bottom = 57.0
+texture = ExtResource("25_taysr")
 
 [node name="Round_player2_2" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1070.0
+offset_top = 17.0
+offset_right = 1110.0
+offset_bottom = 57.0
+texture = ExtResource("25_taysr")
 
 [node name="1" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
@@ -480,6 +482,22 @@ offset_right = 1281.0
 offset_bottom = 714.0
 scale = Vector2(0.732345, 0.732345)
 texture = ExtResource("27_aymks")
+
+[node name="round" type="Label" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 105.0
+offset_right = 1106.0
+offset_bottom = 186.0
+scale = Vector2(0.709, 0.552)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_ng82x")
+theme_override_font_sizes/font_size = 35
+text = "ROUND 
+"
+horizontal_alignment = 1
+script = SubResource("GDScript_0f02l")
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)
