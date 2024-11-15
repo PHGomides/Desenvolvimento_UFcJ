@@ -20,6 +20,10 @@ extends Control
 @onready var barras: Control = $"../Barras"
 @onready var round: Label = $round
 
+@onready var control: CanvasLayer = $"../../Control"
+
+
+
 signal iniciar_time()
 signal reset_time()
 
@@ -70,19 +74,22 @@ func _on_time_is_up():
 		Global.player1_round += 1
 		if Global.player1_round == 1: round_player_1_1.visible = true
 		if Global.player1_round == 2: round_player_1_2.visible = true
-	elif Global.player2.vida > Global.player1.vida:
-		Global.player2_round += 1
-		if Global.player2_round == 1: round_player_2_1.visible = true
-		if Global.player2_round == 2: round_player_2_2.visible = true
+		elif Global.player2.vida > Global.player1.vida:
+			Global.player2_round += 1
+			if Global.player2_round == 1: round_player_2_1.visible = true
+			if Global.player2_round == 2: round_player_2_2.visible = true
 	else:
 		print("Empate") 
-		Global.round -= 1
-		
-	
-	if Global.player1_round >= 3:
+		Global.round -= 1	
+
+	if Global.player1_round == 2:
 		print("Player 1 Wins!")
-	elif Global.player2_round >= 3:
+		control.voltarMenuPrincipal()
+		
+	elif Global.player2_round == 2:
 		print("Player 2 Wins!")
+		control.voltarMenuPrincipal()
+		
 	else:
 		Global.round += 1
 		_init_round()
