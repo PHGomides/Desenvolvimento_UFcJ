@@ -4,6 +4,7 @@ extends Node2D
 @onready var camera = $Camera2D
 
 func _ready() -> void:
+	$MusicaMapa1.play()
 	for p in get_tree().get_nodes_in_group("players"):
 		camera.add_target(p)
 

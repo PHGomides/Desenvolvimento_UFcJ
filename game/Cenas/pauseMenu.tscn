@@ -211,4 +211,6 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN" to="." method="voltarMenuPrincipal"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
+[connection signal="value_changed" from="opcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
+[connection signal="value_changed" from="opcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
 [connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="voltarPauseMenuMain"]

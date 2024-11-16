@@ -8,10 +8,15 @@ func sound_entered_btn() -> void:
 	$HitSound.play()
 	pass
 	
+var master = AudioServer.get_bus_index("Master")
+var sfx = AudioServer.get_bus_index("SFX")
+var musica = AudioServer.get_bus_index("Musica")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
-	pass # Replace with function body.
+	$opcoes/VBoxContainer/sliderMaster.value = AudioServer.get_bus_volume_db(master)
+	$opcoes/VBoxContainer/sliderSFX.value = AudioServer.get_bus_volume_db(sfx)
+	$opcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,9 +58,7 @@ func voltarPauseMenuMain() -> void:
 	$opcoes.visible = false
 	pass # Replace with function body.
 
-var master = AudioServer.get_bus_index("Master")
-var sfx = AudioServer.get_bus_index("SFX")
-var musica = AudioServer.get_bus_index("Musica")
+
 
 
 func _on_slider_master_value_changed(value: float) -> void:

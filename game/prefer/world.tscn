@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=48 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_vht3l"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_ndkkw"]
 [ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="27_aymks"]
+[ext_resource type="AudioStream" uid="uid://b4w13ggmiaxht" path="res://audio/Musica Mapa 1.wav" id="32_l5p4x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -533,5 +534,10 @@ position = Vector2(200, 513)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
 position = Vector2(1157, 512)
+
+[node name="MusicaMapa1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_l5p4x")
+volume_db = -20.613
+bus = &"Musica"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

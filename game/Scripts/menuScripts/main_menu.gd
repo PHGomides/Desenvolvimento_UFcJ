@@ -20,6 +20,9 @@ func sound_button_down() -> void:
 
 
 func _ready() -> void:
+	$MenuOpcoes/VBoxContainer/sliderMaster.value = AudioServer.get_bus_volume_db(master)
+	$MenuOpcoes/VBoxContainer/sliderSFX.value = AudioServer.get_bus_volume_db(sfx)
+	$MenuOpcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
 	pass # Replace with function body.
 
 

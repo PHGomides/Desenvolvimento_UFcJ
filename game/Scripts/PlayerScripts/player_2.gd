@@ -145,6 +145,7 @@ func _physics_process(delta: float) -> void:
 		if attack_state == 0:
 			animation.play("punch1")
 			attack_state = 1 
+			
 			emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
 		elif attack_state == 1:
 			animation.play("punch2")
@@ -161,7 +162,6 @@ func _physics_process(delta: float) -> void:
 			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
-			
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
@@ -310,6 +310,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		
 		animation.play("damage")	
 	elif(tipoGolpe == "punch3"):
 		break_defense = true
@@ -329,6 +330,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
+	else:
+		$DefesaSfx.play()
+		
 	
 func _start_round() -> void: is_round = true
 

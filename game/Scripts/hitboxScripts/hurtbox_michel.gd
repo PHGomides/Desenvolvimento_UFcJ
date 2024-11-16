@@ -29,6 +29,7 @@ func _on_area_entered(area: Area2D) -> void:
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
 	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
 		get_parent()._damage(10,"poderOpicional")
+		$"../Dano2sfx".play()
 		get_parent().KnockBack()
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()
@@ -37,21 +38,25 @@ func _on_area_entered(area: Area2D) -> void:
 		# Ações baseadas no tipo do golpe
 		if golpe_tipo == "punch1":
 			print("Player 2 acertou o Player 1 com um soco!")
+			$"../Dano1sfx".play()
 			
 			get_parent()._damage(10,golpe_tipo)
 			
 		elif golpe_tipo == "punch2":
+			$"../Dano1sfx".play()
 			print("Player 2 acertou o Player 1 com um soco girando!")
 			get_parent()._damage(10,golpe_tipo)
 			#
 		elif golpe_tipo == "punch3":
 			print("Player 2 acertou o Player 1 com um gancho!")
+			$"../Dano2sfx".play()
 			get_parent()._damage(10,golpe_tipo)
 			get_parent().KnockBack(800)
 
 		elif golpe_tipo == "especialShape":
 			print("Player 2 acertou o Player 1 com o especial!")
 			get_parent()._damage(50,golpe_tipo)
+			$"../Dano2sfx".play()
 			get_parent().KnockBack(1200)
 
 			

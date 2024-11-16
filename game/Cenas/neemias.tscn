@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=116 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -102,6 +102,9 @@
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="99_q8oon"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="100_tjfaj"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="102_u5p3s"]
+[ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="103_2r16o"]
+[ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="103_mhko3"]
+[ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="104_kqm50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)
@@ -629,6 +632,18 @@ debug_color = Color(0, 0.65098, 0.105882, 0.419608)
 
 [node name="PoderOpicionalAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("102_u5p3s")
+bus = &"SFX"
+
+[node name="DefesaSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("104_kqm50")
+bus = &"SFX"
+
+[node name="Dano1sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("103_2r16o")
+bus = &"SFX"
+
+[node name="Dano2sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("103_mhko3")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
