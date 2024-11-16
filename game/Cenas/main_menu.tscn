@@ -292,7 +292,6 @@ texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
 
 [node name="MenuOpcoes" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -346,7 +345,6 @@ theme_override_styles/grabber_area = SubResource("StyleBoxLine_ikngp")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_21j1v")
 min_value = -30.0
 max_value = 0.0
-value = -30.0
 
 [node name="sliderSFX" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
 layout_mode = 2
@@ -644,6 +642,7 @@ clear_button_enabled = true
 caret_blink_interval = 0.1
 
 [node name="MenuSelecaoPersonagens" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1045,7 +1044,6 @@ stretch_mode = 5
 [node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_o3hul")
 volume_db = -23.308
-pitch_scale = 1.54
 autoplay = true
 bus = &"Musica"
 

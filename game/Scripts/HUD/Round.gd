@@ -39,6 +39,7 @@ func _ready() -> void:
 
 	
 func _init_round():
+	
 	print("Round ", Global.round)
 	round.text = "ROUND " + str(Global.round)
 	emit_signal("reset_time")

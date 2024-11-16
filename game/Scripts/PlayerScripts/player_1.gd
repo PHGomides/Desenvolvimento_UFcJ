@@ -29,7 +29,7 @@ var combo_window = 0.0 #tempo atual da janela de combo
 # Variável booleana que indica se o personagem está atacando
 var is_attacking = false
 
-var is_round = false
+var is_round = true
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 
 # Variável para pulo
@@ -55,8 +55,7 @@ var current_direction #direção do personagem olhando pra direita
 
 # Janela de combo (tempo permitido para encadear ataques)
 
-
-
+var controles
 
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
@@ -64,6 +63,23 @@ var current_direction #direção do personagem olhando pra direita
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
 
 func _ready() -> void:
+	controles = {
+		"jump": "ui_cimaseta",
+		"move_left": "ui_left",
+		"move_right": "ui_right",
+		"punch": "ui_punch",
+		"special": "ui_especial",
+		"optional": "ui_opcional",
+		"defense": "ui_defesa"
+	}if type_player == 1 else {
+		"jump": "ui_w",
+		"move_left": "ui_A",
+		"move_right": "ui_D",
+		"punch": "ui_J",
+		"special": "ui_L",
+		"optional": "ui_K",
+		"defense": "ui_U"
+	}
 # Garante que o personagem esteja virado para a direita
 	if(type_player == 1):
 		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
@@ -71,6 +87,7 @@ func _ready() -> void:
 	else:
 		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = -1  # Define a direção atual para a direita
+	
 	
 
 # Função que processa a física do personagem a cada frame
@@ -91,38 +108,22 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		
 		velocity.y += GRAVITY * delta
-	if type_player == 1 :
-		# Lógica para o pulo com setas
-		if Input.is_action_just_pressed("ui_cimaseta") and is_on_floor() and not is_attacking and can_jump:
-			is_jumping = true
-			velocity.y = JUMP_VELOCITY
-			can_jump = false  # Impede pulos até que o cooldown termine
-			jump_timer = jump_cooldown_time  # Reseta o temporizador para o cooldown
+		# Lógica para o pulo 
+	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump:
+		is_jumping = true
+		velocity.y = JUMP_VELOCITY
+		can_jump = false  # Impede pulos até que o cooldown termine
+		jump_timer = jump_cooldown_time  # Reseta o temporizador para o cooldown
 				
 			#adicionando animação de fumaça quando pular
-			var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
-			get_parent().add_child(particulaPulo)
-			particulaPulo.global_position = self.global_position  # Define a posição no local do jogador
-			var fumaca_pulo = particulaPulo.get_node("fumaca_pulo")
-			fumaca_pulo.play("fumaca_pulo")  # Substitua pelo nome da animação correta
-		elif is_on_floor():
-			is_jumping = false
-	else:
-		# Lógica para o pulo com w
-		if Input.is_action_just_pressed("ui_w") and is_on_floor() and not is_attacking and can_jump:
-			is_jumping = true
-			velocity.y = JUMP_VELOCITY
-			can_jump = false  # Impede pulos até que o cooldown termine
-			jump_timer = jump_cooldown_time  # Reseta o temporizador para o cooldown
+		var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
+		get_parent().add_child(particulaPulo)
+		particulaPulo.global_position = self.global_position  # Define a posição no local do jogador
+		var fumaca_pulo = particulaPulo.get_node("fumaca_pulo")
+		fumaca_pulo.play("fumaca_pulo")  # Substitua pelo nome da animação correta
+	elif is_on_floor():
+		is_jumping = false
 
-			#adicionando animação de fumaça quando pular
-			var particulaPulo = particula.instantiate()  # Instancia a cena de fumaça
-			get_parent().add_child(particulaPulo)
-			particulaPulo.global_position = self.global_position  # Define a posição no local do jogador
-			var fumaca_pulo = particulaPulo.get_node("fumaca_pulo")
-			fumaca_pulo.play("fumaca_pulo")  # Substitua pelo nome da animação correta
-		elif is_on_floor():
-			is_jumping = false
 
 	# Atualiza a janela de combo, se aplicável
 	if combo_window > 0:
@@ -135,194 +136,99 @@ func _physics_process(delta: float) -> void:
 			attack_state = 0  # Reseta o estado de ataque
 			animation.play("idle")  # Volta à animação idle
 
-	if type_player == 1:
-		# Lógica para ataque com teclado numerico
-		if Input.is_action_just_pressed("ui_punch") and (not is_attacking or combo_ready):
-			print("1 foi pressionado")
-			is_attacking = true  # Marca que o personagem está atacando
-			velocity.x = 0  # Para o movimento horizontal durante o ataque
+	
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready): # Lógica para ataque
+		print("j foi pressionado")
+		is_attacking = true  # Marca que o personagem está atacando
+		velocity.x = 0  # Para o movimento horizontal durante o ataque
 			
 			# Alterna entre as animações de punch
-			if attack_state == 0:
-				animation.play("punch1")
-				attack_state = 1 
-				emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
-			elif attack_state == 1:
-				animation.play("punch2")
-				attack_state = 2
-				emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2
-			else:
-				animation.play("punch3")
-				attack_state = 0
-				var attack_timer = Timer.new()
-				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
-				attack_timer.wait_time = 0.3  # Define o tempo de espera
-				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
-				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
-				attack_timer.start()  # Inicia o Timer
+		if attack_state == 0:
+			animation.play("punch1")
+			attack_state = 1 
+			emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
+		elif attack_state == 1:
+			animation.play("punch2")
+			attack_state = 2
+			await get_tree().create_timer(0.1).timeout
+			emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2 
+		else:
+			animation.play("punch3")
+			attack_state = 0
+			#criando um Timer dinamicamente para o atack3 , esse foi o unico timer que funcionou
+			var attack_timer = Timer.new()
+			add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
+			attack_timer.wait_time = 0.3  # Define o tempo de espera
+			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
+			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
+			attack_timer.start()  # Inicia o Timer
 			
-			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
-			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
-	else:
-			# Lógica para ataque com J
-		if Input.is_action_just_pressed("ui_J") and (not is_attacking or combo_ready):
-			print("j foi pressionado")
-			is_attacking = true  # Marca que o personagem está atacando
-			velocity.x = 0  # Para o movimento horizontal durante o ataque
-			
-			# Alterna entre as animações de punch
-			if attack_state == 0:
-				animation.play("punch1")
-				attack_state = 1 
-				emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
-			elif attack_state == 1:
-				animation.play("punch2")
-				attack_state = 2
-				emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2
-			else:
-				animation.play("punch3")
-				attack_state = 0
-				var attack_timer = Timer.new()
-				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
-				attack_timer.wait_time = 0.3  # Define o tempo de espera
-				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
-				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
-				attack_timer.start()  # Inicia o Timer
-			
-			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
-			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
-	if type_player == 1:
+		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
+		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
+
+		
 		# Lógica para o ataque opcional com teclado numerico
-		if Input.is_action_just_pressed("ui_opcional") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
-			print("2 foi pressionado")
-			emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
-			animation.play("opcional")
-			SoltarPoder()
-			poweropitional_timer = powerOpitional_cooldown_time
-			can_launch_Opitional_Power = false
-			is_attacking = true
-			opcional_attack = true  # Marca que o ataque opcional está em execução
-			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
-	else:
-		#logica para atque opcional com K
-		if Input.is_action_just_pressed("ui_K") and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
-			print("k foi pressionado")
-			emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
-			animation.play("opcional")
-			SoltarPoder()
-			poweropitional_timer = powerOpitional_cooldown_time
-			can_launch_Opitional_Power = false
-			is_attacking = true
-			opcional_attack = true  # Marca que o ataque opcional está em execução
-			velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
+		print("2 foi pressionado")
+		emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
+		animation.play("opcional")
+		SoltarPoder()
+		poweropitional_timer = powerOpitional_cooldown_time
+		can_launch_Opitional_Power = false
+		is_attacking = true
+		opcional_attack = true  # Marca que o ataque opcional está em execução
+		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 			
-	if type_player == 1:
-		# Lógica para o ataque especial com teclado numerico
-		if Input.is_action_just_pressed("ui_especial") and is_on_floor() and not using_special and not is_attacking and special_could:
-			print("3 foi pressionado")
-			if(power >= MaxPower): #Verificar se a barra de power ta cheia
-				if current_direction == 1:
-					animationEspecial.position.x = 630
-					animationEspecial.flip_h = false
-				else:
-					animationEspecial.position.x = -599.175
-					animationEspecial.flip_h = true
-				
-				power = 0
-				animation.play("especial")
-				SoltarEspecial()
-				animationEspecial.play("especialMichel")
-				is_attacking = true
-				using_special = true  # Marca o especial como usado
-				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
-		
-	else:
+
 		#Logica para ataque especial com L
-		if Input.is_action_just_pressed("ui_L") and is_on_floor() and not using_special and not is_attacking and special_could:
-			print("L foi pressionado")
-			if(power >= MaxPower): #Verificar se a barra de power ta cheia
-				if current_direction == 1:
-					animationEspecial.position.x = 630
-					animationEspecial.flip_h = false
-				else:
-					animationEspecial.position.x = -599.175
-					animationEspecial.flip_h = true
+	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could:
+		print("L foi pressionado")
+		if(power >= MaxPower): #Verificar se a barra de power ta cheia
+			if current_direction == 1:
+				animationEspecial.position.x = 630
+				animationEspecial.flip_h = false
+			else:
+				animationEspecial.position.x = -599.175
+				animationEspecial.flip_h = true
 				
-				power = 0
-				animation.play("especial")
-				SoltarEspecial()
+			power = 0
+			animation.play("especial")
+			SoltarEspecial()
 
-				animationEspecial.play("especialMichel")
-				is_attacking = true
-				using_special = true  # Marca o especial como usado
-				velocity.x = 0  # Para o movimento horizontal durante o ataque especial
-
+			animationEspecial.play("especialMichel")
+			is_attacking = true
+			using_special = true  # Marca o especial como usado
+			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 	# Lógica para animação de defesa
-	if type_player != 1:
-		# Defesa com a tecla "U" para o player com type_player != 1
-		if Input.is_action_pressed("ui_U") and is_on_floor() and break_defense ==false:
-			is_defending = true
-			velocity.x = 0  # Impede movimento enquanto defende
-			animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
-		
-		else:
-			is_defending = false  # Para a defesa quando a tecla for solta
-	else:
-		# Defesa com a tecla "4" para o player com type_player == 1
-		if Input.is_action_pressed("ui_defesa")and is_on_floor() and break_defense ==false:
+	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false:
 
-			is_defending = true
-			velocity.x = 0  # Impede movimento enquanto defende
-			animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
-		else:
-			is_defending = false  # Para a defesa quando a tecla for solta
-	if type_player == 1:
-		# Movimento só é permitido se não estiver atacando
-		if not is_round:
-			if not is_attacking and is_defending == false:
-				var direction := Input.get_axis("ui_left", "ui_right")
-				if direction != 0:
-					current_direction = direction
-					velocity.x = direction * SPEED
-					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
-					animation.scale.x = abs(animation.scale.x) * direction
-					if not is_jumping:
-						animation.play("walk")
-				elif is_jumping:
-					animation.play("jump")
-				else:
-					animation.play("idle")
-					velocity.x = move_toward(velocity.x, 0, SPEED)
-		else:
-			animation.play("idle")
-			
-			
-		if not is_on_floor() and not is_attacking:
-			animation.play("jump")
-		move_and_slide()
+		is_defending = true
+		velocity.x = 0  # Impede movimento enquanto defende
+		animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
 	else:
-		# Movimento só é permitido se não estiver atacando
-		if not is_round:
-			if not is_attacking and is_defending == false:
-				var direction := Input.get_axis("ui_A", "ui_D")
-				if direction != 0:
-					current_direction = direction
-					velocity.x = direction * SPEED
+		is_defending = false  # Para a defesa quando a tecla for solta
+	if not is_round: #logica de Movimenção
+		if not is_attacking and is_defending == false:
+			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
+			if direction != 0:
+				current_direction = direction
+				velocity.x = direction * SPEED
 					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
-					animation.scale.x = abs(animation.scale.x) * direction
-					if not is_jumping:
-						animation.play("walk")
-				elif is_jumping:
-					animation.play("jump")
-				else:
-					animation.play("idle")
-					velocity.x = move_toward(velocity.x, 0, SPEED)
-		else:
-			animation.play("idle")		
-					
-		if not is_on_floor() and not is_attacking:
-			animation.play("jump")
-		move_and_slide()
+				animation.scale.x = abs(animation.scale.x) * direction
+				if not is_jumping:
+					animation.play("walk")
+			elif is_jumping:
+				animation.play("jump")
+			else:
+				animation.play("idle")
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+	else:
+		animation.play("idle")
+			
+			
+	if not is_on_floor() and not is_attacking:
+		animation.play("jump")
+	move_and_slide()
 		
 	if current_direction == 1: 
 		$hitbox_michel/punch1e2.position.x = 161.109
@@ -337,6 +243,7 @@ func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
 	emit_signal("punch_activated", "state3")
 	
 func SoltarPoder():
+
 	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false

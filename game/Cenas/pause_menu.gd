@@ -40,3 +40,47 @@ func Despausar() -> void:
 	visible = false
 	get_tree().paused = false
 	pass # Replace with function body.
+
+
+func abrirOpcoesPause() -> void:
+	$PauseMenuMain.visible = false
+	$opcoes.visible = true
+	pass # Replace with function body.
+
+
+func voltarPauseMenuMain() -> void:
+	$PauseMenuMain.visible = true
+	$opcoes.visible = false
+	pass # Replace with function body.
+
+var master = AudioServer.get_bus_index("Master")
+var sfx = AudioServer.get_bus_index("SFX")
+var musica = AudioServer.get_bus_index("Musica")
+
+
+func _on_slider_master_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(master,value)
+	if value==-30:
+		AudioServer.set_bus_mute(master,true)
+	else:
+		AudioServer.set_bus_mute(master,false)
+
+	pass # Replace with function body.
+
+
+func _on_slider_sfx_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(sfx,value)
+	if value==-30:
+		AudioServer.set_bus_mute(sfx,true)
+	else:
+		AudioServer.set_bus_mute(sfx,false)
+	pass # Replace with function body.
+
+
+func _on_slider_music_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(musica,value)
+	if value==-30:
+		AudioServer.set_bus_mute(musica,true)
+	else:
+		AudioServer.set_bus_mute(musica,false)
+	pass # Replace with function body.
