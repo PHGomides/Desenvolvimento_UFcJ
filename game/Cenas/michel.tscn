@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=107 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -96,6 +96,7 @@
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
 [ext_resource type="Texture2D" uid="uid://o5w36fymfkcl" path="res://Assests/poderes/poder5.png" id="92_k443k"]
+[ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="97_7j4bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -605,5 +606,9 @@ script = ExtResource("91_vude1")
 position = Vector2(1.60913, -5.32672)
 shape = SubResource("RectangleShape2D_asr8p")
 debug_color = Color(8.18223e-07, 0.650299, 0.107491, 0.42)
+
+[node name="PoderOpicionalAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("97_7j4bh")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

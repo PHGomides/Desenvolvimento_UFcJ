@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://di4riu174okwk"]
+[gd_scene load_steps=37 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_oon58"]
@@ -23,8 +23,15 @@
 [ext_resource type="Texture2D" uid="uid://dsit3lip5ylig" path="res://Assests/hud/novahuf/poder vazio.png" id="22_uve6e"]
 [ext_resource type="Texture2D" uid="uid://djrcj7teqjiom" path="res://Assests/FachadaAccets/fumaça.png" id="22_x8vqu"]
 [ext_resource type="Texture2D" uid="uid://dplhss7bi5pqf" path="res://Assests/hud/novahuf/poder cheio.png" id="23_24h8a"]
+[ext_resource type="Script" path="res://Scripts/HUD/Infosplayers.gd" id="24_2hf5c"]
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="24_k6clw"]
 [ext_resource type="Texture2D" uid="uid://cmm54xk0ehm1d" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtn.png" id="25_2kehu"]
+[ext_resource type="Script" path="res://Scripts/HUD/Round.gd" id="27_es842"]
+[ext_resource type="Texture2D" uid="uid://dmcm5vdkghup1" path="res://Assests/hud/bolinha hud.png" id="28_b1dda"]
+[ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="29_b608r"]
+[ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="30_30ux1"]
+[ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="31_4kbf1"]
+[ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="32_hjee5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_geqs2"]
 size = Vector2(247, 992)
@@ -45,11 +52,23 @@ glow_hdr_scale = 4.0
 glow_hdr_luminance_cap = 93.19
 glow_map_strength = 0.71
 
+[sub_resource type="GDScript" id="GDScript_435yi"]
+script/source = "extends Label
+
+var already_added = false #verifica se o nome do player já foi inserido
+# Called when the node enters the scene tree for the first time.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = \"ROUND \" + str(Global.round)
+"
+
 [node name="fila_caj" type="Node2D"]
 script = ExtResource("1_nhtel")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1602, 440)
+position = Vector2(828, 682)
 offset = Vector2(0, -91.89)
 zoom = Vector2(1.085, 1.085)
 limit_left = -630
@@ -168,10 +187,10 @@ texture = ExtResource("22_x8vqu")
 script = ExtResource("22_lid6l")
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(-132, 475)
+position = Vector2(279, 731)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
-position = Vector2(1375, 480)
+position = Vector2(1381, 742)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -203,7 +222,6 @@ size_flags_vertical = 4
 script = ExtResource("11_edgwl")
 
 [node name="clocktimer" type="Timer" parent="HUD/Tempo"]
-autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Tempo"]
 layout_mode = 1
@@ -315,35 +333,36 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
-layout_mode = 0
-offset_left = 1476.0
-offset_top = 40.0
-offset_right = 1535.0
-offset_bottom = 79.0
-scale = Vector2(2.43823, 1.89691)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_hvm2u")
-theme_override_font_sizes/font_size = 10
-text = "Neemias
-
-"
+script = ExtResource("24_2hf5c")
 
 [node name="NomePlayer1" type="Label" parent="HUD/InfosPlayer"]
 layout_mode = 0
-offset_left = 368.0
-offset_top = 40.0
-offset_right = 427.0
-offset_bottom = 79.0
-scale = Vector2(2.43823, 1.89691)
+offset_left = 366.0
+offset_top = 43.0
+offset_right = 568.0
+offset_bottom = 85.0
+scale = Vector2(0.709, 0.552)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 35
 text = "Michel
 "
+
+[node name="NomePlayer2" type="Label" parent="HUD/InfosPlayer"]
+layout_mode = 0
+offset_left = 1401.0
+offset_top = 43.0
+offset_right = 1620.0
+offset_bottom = 124.0
+scale = Vector2(0.709, 0.552)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 35
+text = "Neemias
+"
+horizontal_alignment = 2
 
 [node name="FotoPlayer1" type="TextureRect" parent="HUD/InfosPlayer"]
 layout_mode = 0
@@ -362,5 +381,97 @@ offset_right = 1666.0
 offset_bottom = 121.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("25_2kehu")
+flip_h = true
+
+[node name="Round" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("27_es842")
+
+[node name="Round_player1_1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 17.0
+offset_right = 899.0
+offset_bottom = 57.0
+texture = ExtResource("28_b1dda")
+
+[node name="Round_player1_2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 17.0
+offset_right = 853.0
+offset_bottom = 57.0
+texture = ExtResource("28_b1dda")
+
+[node name="Round_player2_1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 17.0
+offset_right = 1063.0
+offset_bottom = 57.0
+texture = ExtResource("28_b1dda")
+
+[node name="Round_player2_2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 1070.0
+offset_top = 17.0
+offset_right = 1110.0
+offset_bottom = 57.0
+texture = ExtResource("28_b1dda")
+
+[node name="1" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 214.0
+offset_right = 1281.0
+offset_bottom = 714.0
+scale = Vector2(0.732345, 0.732345)
+texture = ExtResource("29_b608r")
+
+[node name="2" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 214.0
+offset_right = 1281.0
+offset_bottom = 714.0
+scale = Vector2(0.732345, 0.732345)
+texture = ExtResource("30_30ux1")
+
+[node name="3" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 214.0
+offset_right = 1281.0
+offset_bottom = 714.0
+scale = Vector2(0.732345, 0.732345)
+texture = ExtResource("31_4kbf1")
+
+[node name="Fight" type="TextureRect" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 214.0
+offset_right = 1281.0
+offset_bottom = 714.0
+scale = Vector2(0.732345, 0.732345)
+texture = ExtResource("32_hjee5")
+
+[node name="round" type="Label" parent="HUD/Round"]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 105.0
+offset_right = 1106.0
+offset_bottom = 186.0
+scale = Vector2(0.709, 0.552)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 35
+text = "ROUND 
+"
+horizontal_alignment = 1
+script = SubResource("GDScript_435yi")
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

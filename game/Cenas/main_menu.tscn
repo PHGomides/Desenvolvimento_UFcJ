@@ -1044,7 +1044,8 @@ stretch_mode = 5
 
 [node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_o3hul")
-volume_db = -9.254
+volume_db = -23.308
+pitch_scale = 1.54
 autoplay = true
 bus = &"Musica"
 

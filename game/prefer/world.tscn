@@ -485,12 +485,12 @@ texture = ExtResource("27_aymks")
 [node name="round" type="Label" parent="HUD/Round"]
 layout_mode = 0
 offset_left = 887.0
-offset_top = 105.0
+offset_top = 103.0
 offset_right = 1106.0
-offset_bottom = 186.0
+offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("16_ng82x")
 theme_override_font_sizes/font_size = 35
 text = "ROUND 
@@ -523,6 +523,7 @@ visibility_rect = Rect2(-100, -133.255, 200, 574.265)
 environment = SubResource("Environment_xcucr")
 
 [node name="Control" parent="." instance=ExtResource("22_vlji3")]
+visible = false
 
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("23_af463")

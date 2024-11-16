@@ -155,8 +155,13 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("punch3")
 				attack_state = 0
-				
-				emit_signal("punch_activated_p2", "state3_p2")  # Emite sinal para ativar colisões de punch3
+				# Cria e configura o Timer dinamicamente
+				var attack_timer = Timer.new()
+				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
+				attack_timer.wait_time = 0.3  # Define o tempo de espera
+				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
+				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
+				attack_timer.start()  # Inicia o Timer
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -178,9 +183,17 @@ func _physics_process(delta: float) -> void:
 				attack_state = 2
 				emit_signal("punch_activated_p2", "state2_p2")  # Emite sinal para ativar colisões de punch2
 			else:
+				# Função chamada quando o Timer termina
+
 				animation.play("punch3")
 				attack_state = 0
-				emit_signal("punch_activated_p2", "state3_p2")  # Emite sinal para ativar colisões de punch3
+				# Cria e configura o Timer dinamicamente
+				var attack_timer = Timer.new()
+				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
+				attack_timer.wait_time = 0.3  # Define o tempo de espera
+				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
+				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
+				attack_timer.start()  # Inicia o Timer
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -323,7 +336,10 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
 		$hitbox_neemias/especialShape.position.x = -988.66
+func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
+	emit_signal("punch_activated_p2", "state3_p2")
 func SoltarPoder():
+	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
 	var start_position = powerOptional.global_position

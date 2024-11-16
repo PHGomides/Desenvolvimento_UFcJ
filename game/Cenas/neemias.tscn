@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=113 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clvaubehivdxo" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0004_20240905_162052_025.png" id="3_hc6r8"]
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
 [ext_resource type="Texture2D" uid="uid://d2bj4uyxywasq" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0000_20240905_162052_032.png" id="5_7fgp8"]
-[ext_resource type="Texture2D" uid="uid://6wjw55824y1n" path="res://Assests/poderes/poder7.png" id="5_n1j5s"]
+[ext_resource type="Texture2D" uid="uid://ubctd033t7li" path="res://Assests/poderes/poder6.png" id="5_qjipn"]
 [ext_resource type="Texture2D" uid="uid://b4gvjhifpot24" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0001_20240905_162052_031.png" id="6_vxtlm"]
 [ext_resource type="Texture2D" uid="uid://d1ctrv23cefra" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0003_20240905_162052_027.png" id="7_5vfhg"]
 [ext_resource type="Texture2D" uid="uid://ck4d7bbjh5jl5" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0005_20240905_162052_023.png" id="8_d84mu"]
@@ -101,6 +101,7 @@
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_neemias.gd" id="95_wtsar"]
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="99_q8oon"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="100_tjfaj"]
+[ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="102_u5p3s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)
@@ -111,7 +112,7 @@ size = Vector2(91.0638, 283.404)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_n1j5s")
+"texture": ExtResource("5_qjipn")
 }],
 "loop": true,
 "name": &"default",
@@ -556,7 +557,7 @@ shape = SubResource("RectangleShape2D_17xdv")
 
 [node name="PoderOpicional" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-140.11, -85.79)
+position = Vector2(146.11, -85.79)
 scale = Vector2(0.24, 0.24)
 script = ExtResource("99_q8oon")
 
@@ -625,5 +626,9 @@ script = ExtResource("95_wtsar")
 position = Vector2(22.5, -19)
 shape = SubResource("RectangleShape2D_lp4cc")
 debug_color = Color(0, 0.65098, 0.105882, 0.419608)
+
+[node name="PoderOpicionalAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("102_u5p3s")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

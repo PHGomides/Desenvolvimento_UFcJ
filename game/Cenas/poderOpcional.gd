@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	if(visible == false):
 	
 		if(get_parent().current_direction == 1):
-			position.x = 142.54
+			position.x = 146.11
 			$AnimatedSprite2D.flip_h = false
 		else:
 			position.x = -140.11

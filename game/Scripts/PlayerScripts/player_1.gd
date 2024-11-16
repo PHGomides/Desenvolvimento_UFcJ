@@ -154,7 +154,12 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("punch3")
 				attack_state = 0
-				emit_signal("punch_activated", "state3")  # Emite sinal para ativar colisões de punch3
+				var attack_timer = Timer.new()
+				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
+				attack_timer.wait_time = 0.3  # Define o tempo de espera
+				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
+				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
+				attack_timer.start()  # Inicia o Timer
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -177,7 +182,12 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("punch3")
 				attack_state = 0
-				emit_signal("punch_activated", "state3")  # Emite sinal para ativar colisões de punch3
+				var attack_timer = Timer.new()
+				add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
+				attack_timer.wait_time = 0.3  # Define o tempo de espera
+				attack_timer.one_shot = true  # Garante que dispare apenas uma vez
+				attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
+				attack_timer.start()  # Inicia o Timer
 			
 			combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 			combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -322,9 +332,12 @@ func _physics_process(delta: float) -> void:
 		$hitbox_michel/punch1e2.position.x = -157
 		$hitbox_michel/punch3eopcional.position.x = -143
 		$hitbox_michel/especialShape.position.x = -1023.109
-
+		
+func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
+	emit_signal("punch_activated", "state3")
 	
 func SoltarPoder():
+	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
 	var start_position = powerOptional.global_position
