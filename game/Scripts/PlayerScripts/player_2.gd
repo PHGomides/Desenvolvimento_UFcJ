@@ -27,7 +27,7 @@ var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 var is_attacking = false
 var is_round = true
-var is_vitoria = false
+
 
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 # Variável para pulo
@@ -36,8 +36,6 @@ var can_jump = true      # Indica se o jogador pode pular
 var jump_cooldown_time = 1.0  # Tempo de cooldown para pular
 var jump_timer = 0.0    # Temporizador para controlar o cooldo
 # Variável booleana que indica se o personagem está atacando
-
-
 
 # Variável para decidir se o especial pode ser usado
 var using_special = false
@@ -109,7 +107,7 @@ func _physics_process(delta: float) -> void:
 	
 		velocity.y += GRAVITY * delta
 			# Lógica para o pulo 
-	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round and not is_vitoria:
+	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 		can_jump = false  # Impede pulos até que o cooldown termine
@@ -138,7 +136,7 @@ func _physics_process(delta: float) -> void:
 				animation.play("idle")  # Volta à animação idle
 				
 			
-	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_vitoria: # Lógica para ataque
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round: # Lógica para ataque
 		print("1 foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
@@ -167,7 +165,7 @@ func _physics_process(delta: float) -> void:
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
-	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round and not is_vitoria:
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round:
 		
 		animation.play("opcional")
 		emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_2
@@ -178,7 +176,7 @@ func _physics_process(delta: float) -> void:
 		is_attacking = true
 		opcional_attack = true  # Marca que o ataque opcional está em execução
 		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
-	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round and not is_vitoria:
+	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could:
 		print("3 foi pressionado")
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
 			if current_direction == 1:
@@ -196,7 +194,7 @@ func _physics_process(delta: float) -> void:
 			using_special = true  # Marca o especial como usado
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 			
-	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense == false and not is_round and not is_vitoria:
+	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense == false and not is_round:
 		is_defending = true
 		velocity.x = 0  # Impede movimento enquanto defende
 		animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -205,7 +203,7 @@ func _physics_process(delta: float) -> void:
 		
 
 		
-	if not is_round or not is_vitoria: # para funçao round
+	if not is_round: # para funçao round
 		if not is_attacking and is_defending == false:
 			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
 			if direction != 0:
@@ -344,7 +342,6 @@ func _start_round() -> void: is_round = true
 func _desativar_start_round() -> void: is_round = false
 
 func vitoria()-> void:
-	is_vitoria = true
 	animation.stop()
 	animation.play("comemoracao")
 	await get_tree().create_timer(2).timeout
