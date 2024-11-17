@@ -345,7 +345,11 @@ func _start_round() -> void: is_round = true
 
 func _desativar_start_round() -> void: is_round = false
 	
-
+func vitoria()-> void:
+	#is_round = true
+	await get_tree().create_timer(0.2).timeout
+	animation.stop()
+	animation.play("comemoracao")
 
 
 # Função que é chamada automaticamente quando a animação termina

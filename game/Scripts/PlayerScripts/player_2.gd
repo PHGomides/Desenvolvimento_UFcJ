@@ -338,11 +338,18 @@ func _start_round() -> void: is_round = true
 
 func _desativar_start_round() -> void: is_round = false
 
+func vitoria()-> void:
+	#is_round = true
+	await get_tree().create_timer(0.2).timeout
+	animation.stop()
+	animation.play("comemoracao")
+	
+
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
 	
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao"]:
 		if animation.animation == "especial":
 			print("special");
 			using_special = false  # Permite o uso do especial novamente
@@ -351,6 +358,7 @@ func _on_anim_animation_finished() -> void:
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
 		elif animation.animation == "damage":
 			break_defense = false
+			
 		if combo_window > 0:
 			combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
 			

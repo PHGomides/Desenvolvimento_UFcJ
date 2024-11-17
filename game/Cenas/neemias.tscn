@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=128 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -7,19 +7,31 @@
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
 [ext_resource type="Texture2D" uid="uid://d2bj4uyxywasq" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0000_20240905_162052_032.png" id="5_7fgp8"]
 [ext_resource type="Texture2D" uid="uid://ubctd033t7li" path="res://Assests/poderes/poder6.png" id="5_qjipn"]
+[ext_resource type="Texture2D" uid="uid://ne4ykfpx31k" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/1.png" id="6_402nc"]
 [ext_resource type="Texture2D" uid="uid://b4gvjhifpot24" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0001_20240905_162052_031.png" id="6_vxtlm"]
 [ext_resource type="Texture2D" uid="uid://d1ctrv23cefra" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0003_20240905_162052_027.png" id="7_5vfhg"]
+[ext_resource type="Texture2D" uid="uid://ka3sox2vg1dc" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/2.png" id="7_15ea7"]
 [ext_resource type="Texture2D" uid="uid://ck4d7bbjh5jl5" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0005_20240905_162052_023.png" id="8_d84mu"]
+[ext_resource type="Texture2D" uid="uid://mkm26306j0xj" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/3.png" id="8_qvqir"]
 [ext_resource type="Texture2D" uid="uid://bm80q03wldxbk" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0012_20240905_162028_015.png" id="9_moldr"]
+[ext_resource type="Texture2D" uid="uid://c6f5hcl8jck7u" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/4.png" id="9_wi1qh"]
+[ext_resource type="Texture2D" uid="uid://djvmwf7apwh5f" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/5.png" id="10_46e58"]
 [ext_resource type="Texture2D" uid="uid://cf3txtxcj2gmv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png" id="10_ww7dq"]
 [ext_resource type="Texture2D" uid="uid://c6f7vfw4exywa" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png" id="11_c5s53"]
+[ext_resource type="Texture2D" uid="uid://vw8xgu76jmg4" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/6.png" id="11_x6d7f"]
 [ext_resource type="Texture2D" uid="uid://cn5qgpdnlq2w" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png" id="12_866cl"]
+[ext_resource type="Texture2D" uid="uid://dywdkqw0m8l0s" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/7.png" id="12_yvogu"]
 [ext_resource type="Texture2D" uid="uid://b2dw31uhj1w3r" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png" id="13_dfldh"]
+[ext_resource type="Texture2D" uid="uid://cw3bbdx06c7bk" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/8.png" id="13_qgrqn"]
 [ext_resource type="Texture2D" uid="uid://3gwux5w5cgj0" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0004_5.png" id="13_sho6n"]
 [ext_resource type="Texture2D" uid="uid://dnydkktnkgqkx" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png" id="14_2v7xr"]
 [ext_resource type="Texture2D" uid="uid://c6gb2r0dhekv3" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0005_6.png" id="14_entv3"]
+[ext_resource type="Texture2D" uid="uid://ul2l5ryubt5e" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/9.png" id="14_hen1u"]
 [ext_resource type="Texture2D" uid="uid://d3vsr0hscl3j" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png" id="15_0uohf"]
+[ext_resource type="Texture2D" uid="uid://bhrv0uabn41gf" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/10.png" id="15_3ues5"]
+[ext_resource type="Texture2D" uid="uid://dlc6hfjtvj8fv" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/11.png" id="16_g0xs2"]
 [ext_resource type="Texture2D" uid="uid://duvx3033kunwv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png" id="16_laoff"]
+[ext_resource type="Texture2D" uid="uid://bp8es636e6myg" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/12.png" id="17_5w313"]
 [ext_resource type="Texture2D" uid="uid://b21557jbb3x7s" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png" id="17_j16d0"]
 [ext_resource type="Texture2D" uid="uid://bxp4rkhxnsl8x" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png" id="18_gwcqd"]
 [ext_resource type="Texture2D" uid="uid://cp4dr432ie8jy" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0002_20240905_162028_039.png" id="19_21y1g"]
@@ -124,6 +136,47 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_402nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_15ea7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvqir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wi1qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46e58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x6d7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yvogu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qgrqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hen1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3ues5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g0xs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5w313")
+}],
+"loop": true,
+"name": &"comemoracao",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_l8b6e")
@@ -583,7 +636,8 @@ root_node = NodePath("../..")
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"opcional"
+animation = &"comemoracao"
+frame_progress = 0.534324
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

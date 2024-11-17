@@ -1,18 +1,28 @@
-[gd_scene load_steps=110 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=120 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
 [ext_resource type="Texture2D" uid="uid://bpqqhalfqyafd" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0006_2.png" id="2_npba2"]
+[ext_resource type="Texture2D" uid="uid://cpn48jpynmsww" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0009_1.png" id="3_68qfp"]
 [ext_resource type="Texture2D" uid="uid://calvfust52scc" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0005_3.png" id="3_lxstc"]
+[ext_resource type="Texture2D" uid="uid://boyy48duv8euu" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0008_2.png" id="4_3crr6"]
 [ext_resource type="Texture2D" uid="uid://ygdt11fuw4gp" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0004_4.png" id="4_rqxy4"]
 [ext_resource type="Texture2D" uid="uid://dq5gcs5h8q5lo" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0003_5.png" id="5_7vioe"]
+[ext_resource type="Texture2D" uid="uid://cdtlo1kb0k5fu" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0007_3.png" id="5_j41dp"]
+[ext_resource type="Texture2D" uid="uid://brddku0rtomqa" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0006_4.png" id="6_wh1ms"]
 [ext_resource type="Texture2D" uid="uid://dhjqw6b3yhm06" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0002_6.png" id="6_wqky6"]
 [ext_resource type="Texture2D" uid="uid://bk22uujqrel6g" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0001_7.png" id="7_1tjbb"]
+[ext_resource type="Texture2D" uid="uid://bjypma5ewrtin" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0005_5.png" id="7_4m3yt"]
+[ext_resource type="Texture2D" uid="uid://c7y76r7l26r7i" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0004_6.png" id="8_4d78n"]
 [ext_resource type="Texture2D" uid="uid://bdts30urgbjhj" path="res://Assests/Michel Sprites Pronto/Michel dano/_0000s_0000_8.png" id="8_pewi2"]
 [ext_resource type="Texture2D" uid="uid://ya30f72xg0ab" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0000_7.png" id="9_na1um"]
+[ext_resource type="Texture2D" uid="uid://b5cmdwcgqsxex" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0003_7.png" id="9_t3x2m"]
+[ext_resource type="Texture2D" uid="uid://dtcw758a7x8va" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0002_8.png" id="10_6c5y2"]
 [ext_resource type="Texture2D" uid="uid://dq64vuan350t1" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0010_1.png" id="10_yulpp"]
 [ext_resource type="Texture2D" uid="uid://c51p20bsmgynd" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0009_2.png" id="11_icyyv"]
+[ext_resource type="Texture2D" uid="uid://tkdpw4116p6d" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0001_9.png" id="11_ip1qm"]
 [ext_resource type="Texture2D" uid="uid://ce3k0x6jnxgho" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0008_3.png" id="12_dk75m"]
+[ext_resource type="Texture2D" uid="uid://dduhfjqosix22" path="res://Assests/Michel Sprites Pronto/Michel comemoração/_0000s_0000_10.png" id="12_fr80c"]
 [ext_resource type="Texture2D" uid="uid://b6loebjjbs6ti" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0007_4.png" id="13_l02p1"]
 [ext_resource type="Texture2D" uid="uid://cwnqw7ng2ctst" path="res://Assests/Michel Sprites Pronto/Michel especial/_0000s_0006_5.png" id="14_gkj2m"]
 [ext_resource type="Texture2D" uid="uid://up2a710wr71v" path="res://Assests/Michel Sprites Pronto/Michel Defesa/_0000s_0001_6.png" id="14_lvmpy"]
@@ -106,6 +116,41 @@ size = Vector2(89, 288)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_16flq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_68qfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3crr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j41dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wh1ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4m3yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4d78n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t3x2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6c5y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ip1qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fr80c")
+}],
+"loop": true,
+"name": &"comemoracao",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_npba2")
@@ -545,7 +590,8 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"defesa"
+animation = &"comemoracao"
+frame_progress = 0.354412
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
