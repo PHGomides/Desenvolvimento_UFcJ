@@ -93,7 +93,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
 	
-	
 	scale.x = 1.2
 	scale.y = 1.2
 	if not can_launch_Opitional_Power:
@@ -109,7 +108,7 @@ func _physics_process(delta: float) -> void:
 	
 		velocity.y += GRAVITY * delta
 			# Lógica para o pulo 
-	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump:
+	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 		can_jump = false  # Impede pulos até que o cooldown termine
@@ -136,7 +135,7 @@ func _physics_process(delta: float) -> void:
 			attack_state = 0  # Reseta o estado de ataque
 			animation.play("idle")  # Volta à animação idle
 			
-	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready): # Lógica para ataque
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round: # Lógica para ataque
 		print("1 foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
@@ -165,7 +164,7 @@ func _physics_process(delta: float) -> void:
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
-	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power:
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round:
 		
 		animation.play("opcional")
 		emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_2
@@ -176,7 +175,7 @@ func _physics_process(delta: float) -> void:
 		is_attacking = true
 		opcional_attack = true  # Marca que o ataque opcional está em execução
 		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
-	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could:
+	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round:
 		print("3 foi pressionado")
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
 			if current_direction == 1:
@@ -194,7 +193,7 @@ func _physics_process(delta: float) -> void:
 			using_special = true  # Marca o especial como usado
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 			
-	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false:
+	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense == false and not is_round:
 		is_defending = true
 		velocity.x = 0  # Impede movimento enquanto defende
 		animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -212,7 +211,9 @@ func _physics_process(delta: float) -> void:
 					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
+					
 					animation.play("walk")
+					
 			elif is_jumping:
 				animation.play("jump")
 			else:

@@ -84,17 +84,23 @@ func _on_time_is_up():
 		Global.round -= 1	
 
 	if Global.player1_round == 2:
+
 		print("Player 1 Wins!")
 		#Global.player1.vitoria()
 		await get_tree().create_timer(5).timeout
 		control.voltarMenuPrincipal()
+		Global.round = 1
+		Global.player1_round = 0
+		Global.player2_round = 0
 		
 	elif Global.player2_round == 2:
 		print("Player 2 Wins!")
 		#Global.player2.vitoria()
 		await get_tree().create_timer(5).timeout
-		
 		control.voltarMenuPrincipal()
+		Global.round = 1
+		Global.player1_round = 0
+		Global.player2_round = 0
 		
 	else:
 		Global.round += 1
