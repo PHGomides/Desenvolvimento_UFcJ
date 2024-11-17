@@ -55,7 +55,7 @@ func _init_vida():
 func _set_vida1(nova_vida1 : int):
 	vida_1 = nova_vida1
 	move_tween(bv_player_1, vida_1, 0.1)
-	if vida_1 == 0: emit_signal("vida_zero")
+	if vida_1 <= 0: emit_signal("vida_zero")
 	timer_barra.start(1.0)
 	await timer_barra.timeout
 	move_tween(ef_bv_player_1, vida_1, 0.1)
@@ -64,7 +64,7 @@ func _set_vida1(nova_vida1 : int):
 func _set_vida2(nova_vida2 : int):
 	vida_2 = nova_vida2
 	move_tween(bv_player_2, vida_2, 0.1)
-	if vida_2 == 0: emit_signal("vida_zero")
+	if vida_2 <= 0: emit_signal("vida_zero")
 	timer_barra.start(1.0)
 	await timer_barra.timeout
 	move_tween(ef_bv_player_2, vida_2, 0.1)
