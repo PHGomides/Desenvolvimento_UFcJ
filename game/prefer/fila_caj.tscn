@@ -52,7 +52,7 @@ glow_hdr_scale = 4.0
 glow_hdr_luminance_cap = 93.19
 glow_map_strength = 0.71
 
-[sub_resource type="GDScript" id="GDScript_435yi"]
+[sub_resource type="GDScript" id="GDScript_jgvto"]
 script/source = "extends Label
 
 var already_added = false #verifica se o nome do player já foi inserido
@@ -461,17 +461,17 @@ texture = ExtResource("32_hjee5")
 [node name="round" type="Label" parent="HUD/Round"]
 layout_mode = 0
 offset_left = 887.0
-offset_top = 105.0
+offset_top = 103.0
 offset_right = 1106.0
-offset_bottom = 186.0
+offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
 theme_override_font_sizes/font_size = 35
 text = "ROUND 
 "
 horizontal_alignment = 1
-script = SubResource("GDScript_435yi")
+script = SubResource("GDScript_jgvto")
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]
