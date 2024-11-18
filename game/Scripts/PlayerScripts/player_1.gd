@@ -170,7 +170,7 @@ func _physics_process(delta: float) -> void:
 
 		
 		# Lógica para o ataque opcional com teclado numerico
-	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round:
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round and not is_defending: 
 		print("2 foi pressionado")
 		emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
 		animation.play("opcional")
@@ -281,7 +281,7 @@ func VirarDeLado() -> void:
 	animation.scale.x = abs(animation.scale.x) * current_direction
 
 func KnockBack(force: float = 500.0) -> void:
-	if(vida<=0):
+	if(vida<=0 || using_special):
 		return
 	# Define a direção contrária ao dano para aplicar o knockback
 	var knockback_direction = -current_direction
@@ -324,6 +324,8 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	if(using_special):
+		return
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue

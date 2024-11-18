@@ -165,7 +165,7 @@ func _physics_process(delta: float) -> void:
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
-	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round:
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round and not is_defending:
 		
 		animation.play("opcional")
 		emit_signal("punch_activated_p2", "opcional_p2") # Emite sinal para ativar colisões de opcional_2
@@ -289,7 +289,7 @@ func SoltarEspecial() -> void:
 	timer.start()
 
 func KnockBack(force: float = 500.0) -> void:
-	if(vida<=0):
+	if(vida<=0 || using_special):
 		return
 	# Define a direção contrária ao dano para aplicar o knockback
 	var knockback_direction = -current_direction
@@ -317,6 +317,8 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated_p2", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	if(using_special):
+		return
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue

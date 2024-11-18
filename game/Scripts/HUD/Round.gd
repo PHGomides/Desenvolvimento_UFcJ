@@ -48,15 +48,16 @@ func _init_round():
 	_3.visible = false
 	fight.visible = false
 	if(Global.round>1):#resetando os personagem para evitar bugs
+		Global.player1.parar_movimento()
+		Global.player2.parar_movimento()
+		desativar_controle_jogadores()
 		Global.player1.is_attacking = false
 		Global.player2.is_attacking = false
 		Global.player1.vida = 100
 		Global.player2.vida = 100
-		Global.player1.parar_movimento()
-		Global.player2.parar_movimento()
 		Global.player1.opcional_attack = false
 		Global.player2.opcional_attack = false
-		desativar_controle_jogadores()
+		
 	else:
 		
 		await get_tree().create_timer(0.5).timeout
