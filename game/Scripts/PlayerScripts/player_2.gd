@@ -88,9 +88,12 @@ func _ready() -> void:
 	else:
 		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = -1  # Define a direção atual para a direita
-	
+	VirarDeLado() 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
+
+	if(not is_attacking):
+		is_suffering_damage = false
 	# Adiciona a gravidade
 	scale.x = 1.2
 	scale.y = 1.2
@@ -147,11 +150,15 @@ func _physics_process(delta: float) -> void:
 			attack_state = 1 
 			
 			emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
+			is_suffering_damage = false
+			
 		elif attack_state == 1:
 			animation.play("punch2")
 			attack_state = 2
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("punch_activated_p2", "state2_p2")  # Emite sinal para ativar colisões de punch2
+			is_suffering_damage = false
+			
 		else:
 			animation.play("punch3")
 			attack_state = 0
@@ -162,6 +169,8 @@ func _physics_process(delta: float) -> void:
 			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
+			is_suffering_damage = false
+			
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
@@ -176,8 +185,10 @@ func _physics_process(delta: float) -> void:
 		is_attacking = true
 		opcional_attack = true  # Marca que o ataque opcional está em execução
 		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
+		is_suffering_damage = false
 	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_defending and not is_suffering_damage: 
 		print("3 foi pressionado")
+		
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
 			if current_direction == 1:
 				animationEspecial.position.x = 630
@@ -233,14 +244,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 		
 	if current_direction == 1: 
-		$hitbox_neemias/opcionalePunch1.position.x = 169
-		$hitbox_neemias/punch2.position.x = 191
-		$hitbox_neemias/punch3.position.x = 173
+		$hitbox_neemias/opcionalePunch1.position.x = 159
+		$hitbox_neemias/punch2.position.x = 169.875
+		$hitbox_neemias/punch3.position.x = 157.5
 		$hitbox_neemias/especialShape.position.x = 1030.109
 	elif current_direction == -1:
-		$hitbox_neemias/opcionalePunch1.position.x = -125
-		$hitbox_neemias/punch2.position.x = -150
-		$hitbox_neemias/punch3.position.x = -130
+		$hitbox_neemias/opcionalePunch1.position.x = -114
+		$hitbox_neemias/punch2.position.x = -125
+		$hitbox_neemias/punch3.position.x = -113
 		$hitbox_neemias/especialShape.position.x = -988.66
 func parar_movimento():
 	velocity = Vector2.ZERO
@@ -303,6 +314,7 @@ func KnockBack(force: float = 500.0) -> void:
 
 	knockback_timer.connect("timeout", Callable(self, "_reduce_knockback"))
 	knockback_timer.start()
+	
 
 func _reduce_knockback(timer: Timer) -> void:
 	# Diminui gradativamente a velocidade até que seja nula
@@ -317,7 +329,10 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated_p2", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	is_suffering_damage = false
+	opcional_attack = false
 	parar_movimento()
+	
 	if(using_special):
 		return
 	if(is_defending== false):
@@ -325,7 +340,6 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
-		
 		animation.play("damage")	
 		is_suffering_damage = true
 	elif(tipoGolpe == "punch3"):
@@ -352,6 +366,8 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		$DefesaSfx.play()
 		
 	
+	
+	
 func _start_round() -> void: is_round = true
 
 func _desativar_start_round() -> void: is_round = false
@@ -359,6 +375,7 @@ func _desativar_start_round() -> void: is_round = false
 func vitoria()-> void:
 	animation.stop()
 	animation.play("comemoracao")
+	$luz_vitoria.visible = true
 	await get_tree().create_timer(2).timeout
 	
 
@@ -369,13 +386,16 @@ func _on_anim_animation_finished() -> void:
 	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao","morrer"]:
 		if animation.animation == "especial":
 			print("special");
+			is_attacking = false
 			using_special = false  # Permite o uso do especial novamente
 			
 		elif animation.animation == "opcional":
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
 		elif animation.animation == "damage":
-			break_defense = false
 			is_suffering_damage = false
+			break_defense = false
+			is_attacking = false
+			
 		elif animation.animation == "morrer":
 			animation.play("invisivel")
 			is_alive = false
@@ -387,8 +407,9 @@ func _on_anim_animation_finished() -> void:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
 				COMBO_WINDOW_DURATION = 0.4
+				is_suffering_damage = false
 				#retirando as animações de particulas do personagem
-				
+		
 	for child in get_parent().get_children():
 		if child is Sprite2D:
 			for grandchild in child.get_children():  # Itera sobre os filhos do Sprite2D

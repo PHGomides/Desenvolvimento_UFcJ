@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=138 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -126,6 +126,7 @@
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="103_2r16o"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="103_mhko3"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="104_kqm50"]
+[ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="127_sst7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)
@@ -637,13 +638,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdl7y"]
-size = Vector2(148, 120)
+size = Vector2(128, 121)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfw2y"]
-size = Vector2(192.5, 40)
+size = Vector2(150.25, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa854"]
-size = Vector2(156, 159)
+size = Vector2(125, 159)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd8t8"]
 size = Vector2(1866, 1175)
@@ -705,17 +706,17 @@ frame_progress = 1.0
 script = ExtResource("93_vko2y")
 
 [node name="opcionalePunch1" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(169, -129)
+position = Vector2(159, -128.5)
 shape = SubResource("RectangleShape2D_bdl7y")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="punch2" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(191, -128)
+position = Vector2(169.875, -128)
 shape = SubResource("RectangleShape2D_hfw2y")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
 [node name="punch3" type="CollisionShape2D" parent="hitbox_neemias"]
-position = Vector2(173, 12)
+position = Vector2(157.5, 12)
 shape = SubResource("RectangleShape2D_aa854")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
@@ -748,5 +749,14 @@ bus = &"SFX"
 [node name="Dano2sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("103_mhko3")
 bus = &"SFX"
+
+[node name="luz_vitoria" type="TextureRect" parent="."]
+visible = false
+offset_left = -329.0
+offset_top = -1786.0
+offset_right = 1561.0
+offset_bottom = 6392.0
+scale = Vector2(0.365, 0.365)
+texture = ExtResource("127_sst7v")
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

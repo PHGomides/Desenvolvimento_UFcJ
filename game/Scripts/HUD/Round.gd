@@ -47,16 +47,24 @@ func _init_round():
 	_2.visible = false
 	_3.visible = false
 	fight.visible = false
-	if(Global.round>1):#resetando os personagem para evitar bugs
+	if(Global.round>1 && Global.round<4):#resetando os personagem para evitar bugs
 		Global.player1.parar_movimento()
 		Global.player2.parar_movimento()
 		desativar_controle_jogadores()
-		Global.player1.is_attacking = false
-		Global.player2.is_attacking = false
+		
 		Global.player1.vida = 100
 		Global.player2.vida = 100
+		await get_tree().create_timer(0.5).timeout
+		Global.player1.is_attacking = false
+		Global.player2.is_attacking = false
+		
 		Global.player1.opcional_attack = false
 		Global.player2.opcional_attack = false
+		Global.player1.is_suffering_damage = false
+		Global.player2.is_suffering_damage = false
+
+		
+		
 		
 	else:
 		
@@ -129,7 +137,8 @@ func _on_time_is_up():
 		Global.player1_round = 0
 		Global.player2_round = 0
 	else:
-		
+		if(Global.player2_round>=2 || Global.player1_round>=2):
+			return
 		Global.round += 1
 		_init_round()
 	

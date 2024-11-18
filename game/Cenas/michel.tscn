@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=130 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -119,6 +119,7 @@
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="98_uuvmu"]
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="99_olg41"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="100_lgwb5"]
+[ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="120_wk6ij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -615,10 +616,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn6g"]
-size = Vector2(145.555, 31)
+size = Vector2(105.778, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ly7"]
-size = Vector2(113, 195.087)
+size = Vector2(86.5001, 195.087)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lu7o5"]
 size = Vector2(1866, 1175)
@@ -650,8 +651,6 @@ position = Vector2(691.109, -406.827)
 scale = Vector2(2.212, 2.212)
 sprite_frames = SubResource("SpriteFrames_aku3l")
 animation = &"especialMichel"
-frame = 19
-frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 
@@ -681,12 +680,12 @@ root_node = NodePath("../..")
 script = ExtResource("89_4n31i")
 
 [node name="punch1e2" type="CollisionShape2D" parent="hitbox_michel"]
-position = Vector2(161.109, -85.8267)
+position = Vector2(141.22, -85.8267)
 shape = SubResource("RectangleShape2D_ewn6g")
 debug_color = Color(0.998937, 0, 0.128371, 0.42)
 
 [node name="punch3eopcional" type="CollisionShape2D" parent="hitbox_michel"]
-position = Vector2(145.109, 14.1733)
+position = Vector2(131.859, 20.173)
 shape = SubResource("RectangleShape2D_w0ly7")
 debug_color = Color(1, 0, 0.129412, 0.419608)
 
@@ -719,5 +718,14 @@ bus = &"SFX"
 [node name="Dano2sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("100_lgwb5")
 bus = &"SFX"
+
+[node name="luz_vitoria" type="TextureRect" parent="."]
+visible = false
+offset_left = -345.891
+offset_top = -1785.83
+offset_right = 1544.11
+offset_bottom = 6392.17
+scale = Vector2(0.365, 0.365)
+texture = ExtResource("120_wk6ij")
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

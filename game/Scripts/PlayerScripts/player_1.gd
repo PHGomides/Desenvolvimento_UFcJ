@@ -64,6 +64,7 @@ var controles
 @onready var particula := preload("res://Cenas/particula.tscn")  # Carrega a cena de fumaça
 
 func _ready() -> void:
+	
 	controles = {
 		"jump": "ui_cimaseta",
 		"move_left": "ui_left",
@@ -81,6 +82,7 @@ func _ready() -> void:
 		"optional": "ui_K",
 		"defense": "ui_U"
 	}
+	
 # Garante que o personagem esteja virado para a direita
 	if(type_player == 1):
 		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
@@ -88,11 +90,14 @@ func _ready() -> void:
 	else:
 		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = -1  # Define a direção atual para a direita
-	
+	VirarDeLado() 
 	
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
+	if(not is_attacking):
+		is_suffering_damage = false
+
 		# Atualiza o temporizador de cooldown do pulo
 	scale.x = 1.3
 	scale.y = 1.3
@@ -111,6 +116,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += GRAVITY * delta
 		# Lógica para o pulo 
 	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round and not is_suffering_damage and not is_defending:
+
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 		can_jump = false  # Impede pulos até que o cooldown termine
@@ -143,17 +149,21 @@ func _physics_process(delta: float) -> void:
 		print("j foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
-			
+
 			# Alterna entre as animações de punch
 		if attack_state == 0:
 			animation.play("punch1")
 			attack_state = 1 
 			emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
+			is_suffering_damage = false
+			
 		elif attack_state == 1:
 			animation.play("punch2")
 			attack_state = 2
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2 
+			is_suffering_damage = false
+			
 		else:
 			animation.play("punch3")
 			attack_state = 0
@@ -164,6 +174,8 @@ func _physics_process(delta: float) -> void:
 			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
+			is_suffering_damage = false
+			
 			
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
@@ -180,6 +192,7 @@ func _physics_process(delta: float) -> void:
 		is_attacking = true
 		opcional_attack = true  # Marca que o ataque opcional está em execução
 		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
+		is_suffering_damage = false
 			
 
 		#Logica para ataque especial com L
@@ -211,7 +224,7 @@ func _physics_process(delta: float) -> void:
 		is_defending = false  # Para a defesa quando a tecla for solta
 	if not is_round: #logica de Movimenção
 
-		if not is_attacking and is_defending == false and not opcional_attack:
+		if not is_attacking and not is_defending and not opcional_attack:
 			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
 			if direction != 0:
 				current_direction = direction
@@ -239,12 +252,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 		
 	if current_direction == 1: 
-		$hitbox_michel/punch1e2.position.x = 161.109
-		$hitbox_michel/punch3eopcional.position.x = 145.109
+		$hitbox_michel/punch1e2.position.x = 141.22
+		$hitbox_michel/punch3eopcional.position.x = 131.859
 		$hitbox_michel/especialShape.position.x = 1023.109
 	elif current_direction == -1:
-		$hitbox_michel/punch1e2.position.x = -157
-		$hitbox_michel/punch3eopcional.position.x = -143
+		$hitbox_michel/punch1e2.position.x = -137.891
+		$hitbox_michel/punch3eopcional.position.x = -128
 		$hitbox_michel/especialShape.position.x = -1023.109
 
 func parar_movimento():
@@ -292,21 +305,24 @@ func KnockBack(force: float = 500.0) -> void:
 	knockback_timer.wait_time = 0.1
 	knockback_timer.one_shot = false  # Timer contínuo para reduzir o knockback aos poucos
 	add_child(knockback_timer)
-
+	
 	knockback_timer.connect("timeout", Callable(self, "_reduce_knockback"))
 	knockback_timer.start()
 
 func _reduce_knockback(timer: Timer) -> void:
 	# Diminui gradativamente a velocidade até que seja nula
 	velocity.x = lerp(velocity.x, 0, 0.2)  # Suaviza a velocidade horizontal
+	
 
 	# Para o knockback quando a velocidade é quase zero
 	if abs(velocity.x) < 10:
 		velocity.x = 0
 		timer.stop()  # Para o Timer quando o knockback é reduzido totalmente
 		timer.queue_free()  # Remove o Timer
+		parar_movimento()
 
 func SoltarEspecial() -> void:
+	
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
 	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
@@ -324,7 +340,11 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	is_suffering_damage = false
 	parar_movimento()
+
+	opcional_attack = false
+	
 	if(using_special):
 		return
 	if(is_defending== false):
@@ -369,6 +389,7 @@ func _desativar_start_round() -> void: is_round = false
 func vitoria()-> void:
 	animation.stop()
 	animation.play("comemoracao")
+	$luz_vitoria.visible
 	await get_tree().create_timer(2).timeout
 
 # Função que é chamada automaticamente quando a animação termina
@@ -384,6 +405,8 @@ func _on_anim_animation_finished() -> void:
 		elif animation.animation == "damage":
 			is_suffering_damage = false
 			break_defense = false
+			is_attacking = false
+			
 		elif animation.animation == "morrer":
 			animation.play("invisivel")
 			is_alive = false
@@ -396,6 +419,8 @@ func _on_anim_animation_finished() -> void:
 				animation.play("idle")
 				COMBO_WINDOW_DURATION = 0.4
 				#retirando as animações de particulas do personagem
+				is_suffering_damage = false
+		
 	for child in get_parent().get_children():
 		if child is Sprite2D:
 			for grandchild in child.get_children():  # Itera sobre os filhos do Sprite2D
