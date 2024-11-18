@@ -29,7 +29,7 @@ var combo_window = 0.0 #tempo atual da janela de combo
 
 # Variável booleana que indica se o personagem está atacando
 var is_attacking = false
-
+var is_suffering_damage = false #está sofrendo dano
 var is_round = true #player não pode mecher se tiver verdadeiro, serve pra pausar os movimentos do player enquanto estiver passando os componentes de round na tela
 var combo_ready = false  # Indica se o próximo ataque do combo pode ser realizado
 
@@ -110,7 +110,7 @@ func _physics_process(delta: float) -> void:
 		
 		velocity.y += GRAVITY * delta
 		# Lógica para o pulo 
-	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round:
+	if Input.is_action_just_pressed(controles["jump"]) and is_on_floor() and not is_attacking and can_jump and not is_round and not is_suffering_damage and not is_defending:
 		is_jumping = true
 		velocity.y = JUMP_VELOCITY
 		can_jump = false  # Impede pulos até que o cooldown termine
@@ -139,7 +139,7 @@ func _physics_process(delta: float) -> void:
 				animation.play("idle")  # Volta à animação idle
 
 	
-	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round: # Lógica para ataque
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_suffering_damage and not is_defending: # Lógica para ataque
 		print("j foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
@@ -170,7 +170,7 @@ func _physics_process(delta: float) -> void:
 
 		
 		# Lógica para o ataque opcional com teclado numerico
-	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round and not is_defending: 
+	if Input.is_action_just_pressed(controles["optional"]) and not is_attacking and not opcional_attack and can_launch_Opitional_Power and not is_round and not is_defending and not is_suffering_damage: 
 		print("2 foi pressionado")
 		emit_signal("punch_activated", "opcional") # Emite sinal para ativar colisões de opcional
 		animation.play("opcional")
@@ -183,7 +183,7 @@ func _physics_process(delta: float) -> void:
 			
 
 		#Logica para ataque especial com L
-	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round:
+	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round and not is_suffering_damage and not is_defending:
 		print("L foi pressionado")
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
 			if current_direction == 1:
@@ -202,7 +202,7 @@ func _physics_process(delta: float) -> void:
 			using_special = true  # Marca o especial como usado
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 	# Lógica para animação de defesa
-	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false and not is_round:
+	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false and not is_round and not is_suffering_damage:
 
 		is_defending = true
 		velocity.x = 0  # Impede movimento enquanto defende
@@ -324,6 +324,7 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	parar_movimento()
 	if(using_special):
 		return
 	if(is_defending== false):
@@ -331,7 +332,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
-		animation.play("damage")	
+		animation.play("damage")
+		is_suffering_damage = true
+			
 	elif(tipoGolpe == "punch3"):
 		break_defense = true
 		is_defending = false
@@ -340,7 +343,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
-		animation.play("damage")	
+		animation.play("damage")
+		is_suffering_damage = true
+			
 	elif(tipoGolpe == "especialShape"):
 		break_defense = true
 		is_defending = false
@@ -350,6 +355,8 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		animation.play("damage")
+		is_suffering_damage = true
+		
 	else:
 		$DefesaSfx.play()
 		
@@ -375,6 +382,7 @@ func _on_anim_animation_finished() -> void:
 			
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
 		elif animation.animation == "damage":
+			is_suffering_damage = false
 			break_defense = false
 		elif animation.animation == "morrer":
 			animation.play("invisivel")
