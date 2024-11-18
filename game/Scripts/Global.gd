@@ -9,6 +9,7 @@ var player1 = null
 var player2 = null
 var pos_incial_round_player1 
 var pos_incial_round_player2
+var mapaEscolhido = "res://prefer/world.tscn"
 
 func reseta_round():
 	pass

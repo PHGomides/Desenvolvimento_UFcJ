@@ -50,6 +50,7 @@ var current_direction = -1 #direção do personagem olhando pra esquerda
 var is_defending = false
 var break_defense = false
 var is_suffering_damage = false
+var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 var controles
 
 @onready var especialHitbox = $hitbox_neemias/especialShape
@@ -340,6 +341,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")	
 		is_suffering_damage = true
 	elif(tipoGolpe == "punch3"):
@@ -350,6 +352,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
 	elif(tipoGolpe == "especialShape"):
@@ -360,12 +363,18 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue/2
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
 	else:
 		$DefesaSfx.play()
 		
 	
+func IncrementarEspecialInimigo():
+	if(type_player ==1):
+		Global.player1.power += 3
+	else:
+		Global.player2.power += 3
 	
 	
 func _start_round() -> void: is_round = true

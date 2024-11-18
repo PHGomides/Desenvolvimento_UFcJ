@@ -23,7 +23,9 @@ func _on_area_entered(area: Area2D) -> void:
 			get_parent().VirarDeLado()
 		print("esquerda")
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
-	
+	if(get_parent().can_take_damege == false):#verifica se o personagem pode levar dano
+		return
+		
 	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
 		get_parent()._damage(10,"poderOpicional")
 		$"../Dano1sfx".play()

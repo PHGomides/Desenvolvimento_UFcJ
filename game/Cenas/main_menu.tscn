@@ -233,7 +233,6 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -292,6 +291,7 @@ texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
 
 [node name="MenuOpcoes" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

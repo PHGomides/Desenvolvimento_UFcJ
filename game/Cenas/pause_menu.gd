@@ -87,3 +87,15 @@ func _on_slider_music_value_changed(value: float) -> void:
 	else:
 		AudioServer.set_bus_mute(musica,false)
 	pass # Replace with function body.
+
+
+func Reeniciar_Partida() -> void:
+	get_tree().paused = false
+	queue_free()  # Libera a cena de carregamento
+	Global.round = 1
+	var carregamento = load("res://Cenas/Carregamento.tscn").instantiate()
+	carregamento.cenaCarregada = Global.mapaEscolhido  # Passa o caminho do mapa
+	get_tree().root.add_child(carregamento)
+	
+	
+	pass # Replace with function body.

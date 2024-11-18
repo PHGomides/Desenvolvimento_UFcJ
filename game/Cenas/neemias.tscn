@@ -182,6 +182,66 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("17_5w313")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvqir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wi1qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46e58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x6d7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yvogu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qgrqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hen1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3ues5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g0xs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5w313")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvqir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wi1qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46e58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x6d7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yvogu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qgrqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hen1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3ues5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g0xs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5w313")
 }],
 "loop": true,
 "name": &"comemoracao",
@@ -687,7 +747,8 @@ z_index = 1
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"punch3"
+animation = &"comemoracao"
+frame_progress = 0.69757
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

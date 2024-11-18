@@ -1,7 +1,7 @@
 extends Control
 @export var mapa_atual = 1
 
-var cena_para_carregar = ""
+
 
 func _on_mapaBtn_pressed(mapa_id: int) -> void:
 	mapa_atual = mapa_id
@@ -9,20 +9,20 @@ func _on_mapaBtn_pressed(mapa_id: int) -> void:
 func IniciarMapa() -> void:
 	# Define o caminho da cena com base no mapa selecionado
 	if mapa_atual == 1:
-		cena_para_carregar = "res://prefer/world.tscn"
+		Global.mapaEscolhido = "res://prefer/world.tscn"
 	elif mapa_atual == 2:
-		cena_para_carregar = "res://prefer/fila_caj.tscn"
+		Global.mapaEscolhido = "res://prefer/fila_caj.tscn"
 	elif mapa_atual == 4:
-		cena_para_carregar = "res://prefer/frente_ufj.tscn"
+		Global.mapaEscolhido = "res://prefer/frente_ufj.tscn"
 	elif mapa_atual == 5:
-		cena_para_carregar = "res://prefer/restaurante.tscn"
+		Global.mapaEscolhido = "res://prefer/restaurante.tscn"
 	else:
 		print("Mapa aleatório selecionado")
 
 	# Muda para a cena de carregamento e passa o mapa selecionado como um argumento
-	if cena_para_carregar != "":
+	if Global.mapaEscolhido != "":
 		var carregamento = load("res://Cenas/Carregamento.tscn").instantiate()
-		carregamento.cenaCarregada = cena_para_carregar  # Passa o caminho do mapa
+		carregamento.cenaCarregada = Global.mapaEscolhido  # Passa o caminho do mapa
 		get_tree().root.add_child(carregamento)
 	else:
 		print("Erro: cena para carregar não definida.")

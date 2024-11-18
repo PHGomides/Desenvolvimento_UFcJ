@@ -1,7 +1,7 @@
 extends Control
 
 @onready var MenuMain = $MenuMain
-@onready var Menu1v1 = $MenuSelecaoPersonagens
+@onready var MenuSelecaoPersonagens = $MenuSelecaoPersonagens
 @onready var MenuOpcao = $MenuOpcoes
 @onready var MenuChaveamento = $MenuChaveamento
 @onready var MenuSelecaoMapa = $MenuSelecaoMapa
@@ -32,8 +32,11 @@ func _process(delta: float) -> void:
 
 
 func _on_btn_1_vs_1_pressed() -> void:
+	MenuOpcao.visible = false
+	MenuSelecaoPersonagens.visible = true
 	MenuMain.visible = false
-	Menu1v1.visible = true
+	MenuChaveamento.visible= false
+	MenuSelecaoMapa.visible = false
 	pass # Replace with function body.
 
 
@@ -54,19 +57,19 @@ func _on_btn_opcoes_pressed() -> void:
 
 func _on_btn_voltar_pressed() -> void:
 	MenuOpcao.visible = false
-	Menu1v1.visible = false
+	MenuSelecaoPersonagens.visible = false
 	MenuMain.visible = true
 	MenuChaveamento.visible= false
 	MenuSelecaoMapa.visible = false
 	pass # Replace with function body.
 
 func voltarSelecaoMapa() -> void:
-	Menu1v1.visible = true
+	MenuSelecaoPersonagens.visible = true
 	MenuSelecaoMapa.visible = false
 
 func _on_btnEscolherMapa() -> void:
 	if(Global.player1Diretorio != null && Global.player2Diretorio != null):
-		Menu1v1.visible = false
+		MenuSelecaoPersonagens.visible = false
 		MenuSelecaoMapa.visible = true
 	
 

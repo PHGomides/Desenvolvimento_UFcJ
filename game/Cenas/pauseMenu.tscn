@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckyh3xfiqt07t"]
+[gd_scene load_steps=20 format=3 uid="uid://ckyh3xfiqt07t"]
 
 [ext_resource type="Script" path="res://Cenas/pause_menu.gd" id="1_a7ykj"]
 [ext_resource type="Texture2D" uid="uid://c4o8kfaopdt33" path="res://Assests/PausedMenuAccets/pauseBG.png" id="2_aakyb"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://byoerchvpayqt" path="res://Assests/menu main/hover opções.png" id="4_slltx"]
 [ext_resource type="Texture2D" uid="uid://dgewi5jlh3y7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnVoltarHover.png" id="5_klea1"]
 [ext_resource type="AudioStream" uid="uid://5signxbsqjrd" path="res://audio/MenuBtnSoundEffectwav.wav" id="7_a0awh"]
+[ext_resource type="Texture2D" uid="uid://c5adqsj5cvxjg" path="res://Assests/PausedMenuAccets/ReeniciarPartidabtn.png" id="7_a6j2v"]
 [ext_resource type="Texture2D" uid="uid://cg15l3y3wekqu" path="res://Assests/PausedMenuAccets/sairDaPartidaBtn.png" id="7_qxwg0"]
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="8_03ib7"]
+[ext_resource type="Texture2D" uid="uid://4dp8l4irhjdc" path="res://Assests/PausedMenuAccets/ReeniciarPartidabtnHover.png" id="8_5lgyt"]
 [ext_resource type="Texture2D" uid="uid://11dx78x1yagq" path="res://Assests/PausedMenuAccets/sairDaPartidaBtnHover.png" id="8_wn5wr"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2088e"]
@@ -89,6 +91,13 @@ focus_neighbor_bottom = NodePath("../btnSair")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_pqm77")
 texture_hover = ExtResource("4_slltx")
+
+[node name="SairDaPartidaBTN2" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_a6j2v")
+texture_hover = ExtResource("8_5lgyt")
 
 [node name="SairDaPartidaBTN" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
 layout_mode = 2
@@ -207,10 +216,15 @@ bus = &"SFX"
 [connection signal="button_down" from="PauseMenuMain/VBoxContainer/btnOpcoes" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="PauseMenuMain/VBoxContainer/btnOpcoes" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="PauseMenuMain/VBoxContainer/btnOpcoes" to="." method="abrirOpcoesPause"]
+[connection signal="button_down" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN2" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN2" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN2" to="." method="Reeniciar_Partida"]
 [connection signal="button_down" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="PauseMenuMain/VBoxContainer/SairDaPartidaBTN" to="." method="voltarMenuPrincipal"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
+[connection signal="button_down" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="voltarPauseMenuMain"]

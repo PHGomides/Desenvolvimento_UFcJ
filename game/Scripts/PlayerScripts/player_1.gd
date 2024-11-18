@@ -15,7 +15,7 @@ var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
 var is_alive = true #verifica se está vivo
 var player_was_murder = false #variavel pra matar o player
-
+var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 #PODER
 var MaxPower: int = 60
 var power: int = 0
@@ -239,7 +239,6 @@ func _physics_process(delta: float) -> void:
 				animation.play("idle")
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 	elif is_round and vida <= 0 and is_alive:
-		print("desaparecer")
 		animation.play("morrer")
 	elif not is_alive:
 		animation.play("invisivel")
@@ -350,10 +349,12 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
-		power += 5
+		power += 7
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
+		
 			
 	elif(tipoGolpe == "punch3"):
 		break_defense = true
@@ -361,8 +362,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		print("sofri dano defendeeeeendo")
 		is_attacking = true
 		vida-= damegeValue
-		power += 5
+		power += 7
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
 			
@@ -372,24 +374,36 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		print("sofri dano defendeeeeendo")
 		is_attacking = true
 		vida-= damegeValue/2
-		power += 5
+		power += 7
 		power = clamp(power, 0, MaxPower)
+		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
+		
 		
 	else:
 		$DefesaSfx.play()
 		
 		
-	
-func _start_round() -> void: is_round = true
 
-func _desativar_start_round() -> void: is_round = false
-	
+func IncrementarEspecialInimigo():
+	if(type_player ==1):
+		Global.player1.power += 3
+	else:
+		Global.player2.power += 3
+
+func _start_round() -> void: 
+	is_round = true
+	can_take_damege = false
+
+func _desativar_start_round() -> void: 
+	is_round = false
+	can_take_damege = true
+
 func vitoria()-> void:
 	animation.stop()
 	animation.play("comemoracao")
-	$luz_vitoria.visible
+	$luz_vitoria.visible = true
 	await get_tree().create_timer(2).timeout
 
 # Função que é chamada automaticamente quando a animação termina
