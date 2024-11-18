@@ -422,34 +422,42 @@ script = ExtResource("23_kt74s")
 
 [node name="Round_player1_1" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 17.0
-offset_right = 899.0
-offset_bottom = 57.0
+offset_left = 860.0
+offset_top = 32.0
+offset_right = 900.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(20, 20)
 texture = ExtResource("25_taysr")
 
 [node name="Round_player1_2" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 813.0
-offset_top = 17.0
-offset_right = 853.0
-offset_bottom = 57.0
+offset_left = 835.0
+offset_top = 32.0
+offset_right = 875.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(20, 20)
 texture = ExtResource("25_taysr")
 
 [node name="Round_player2_1" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 1023.0
-offset_top = 17.0
-offset_right = 1063.0
-offset_bottom = 57.0
+offset_left = 1029.0
+offset_top = 32.0
+offset_right = 1069.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(20, 20)
 texture = ExtResource("25_taysr")
 
 [node name="Round_player2_2" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 1070.0
-offset_top = 17.0
-offset_right = 1110.0
-offset_bottom = 57.0
+offset_left = 1055.0
+offset_top = 32.0
+offset_right = 1095.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(20, 20)
 texture = ExtResource("25_taysr")
 
 [node name="1" type="TextureRect" parent="HUD/Round"]
