@@ -9,6 +9,7 @@ var name_player = "Neemias"
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
+var is_alive = true #verifica se está vivo
 
 @onready var powerOptional = $PoderOpicional
 var can_launch_Opitional_Power = true
@@ -91,7 +92,6 @@ func _ready() -> void:
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 	# Adiciona a gravidade
-	
 	scale.x = 1.2
 	scale.y = 1.2
 	if not can_launch_Opitional_Power:
@@ -204,7 +204,7 @@ func _physics_process(delta: float) -> void:
 
 		
 	if not is_round: # para funçao round
-		if not is_attacking and is_defending == false:
+		if not is_attacking and is_defending == false and not opcional_attack:
 			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
 			if direction != 0:
 				current_direction = direction
@@ -212,7 +212,6 @@ func _physics_process(delta: float) -> void:
 					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
-					
 					animation.play("walk")
 					
 			elif is_jumping:
@@ -220,6 +219,11 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("idle")
 				velocity.x = move_toward(velocity.x, 0, SPEED)
+	elif is_round and vida <= 0 and is_alive:
+		print("desaparecer")
+		animation.play("morrer")
+	elif not is_alive:
+		animation.play("invisivel")
 	else:
 		if animation.animation != "comemoracao":
 			animation.play("idle")			
@@ -238,9 +242,12 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/punch2.position.x = -150
 		$hitbox_neemias/punch3.position.x = -130
 		$hitbox_neemias/especialShape.position.x = -988.66
+func parar_movimento():
+	velocity = Vector2.ZERO
 func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
 	emit_signal("punch_activated_p2", "state3_p2")
 func SoltarPoder():
+	parar_movimento()
 	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
@@ -282,6 +289,8 @@ func SoltarEspecial() -> void:
 	timer.start()
 
 func KnockBack(force: float = 500.0) -> void:
+	if(vida<=0):
+		return
 	# Define a direção contrária ao dano para aplicar o knockback
 	var knockback_direction = -current_direction
 	velocity.x = knockback_direction * force  # Aplica a força de knockback inicial
@@ -351,7 +360,7 @@ func vitoria()-> void:
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
 	
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao","morrer"]:
 		if animation.animation == "especial":
 			print("special");
 			using_special = false  # Permite o uso do especial novamente
@@ -360,7 +369,10 @@ func _on_anim_animation_finished() -> void:
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
 		elif animation.animation == "damage":
 			break_defense = false
-			
+		elif animation.animation == "morrer":
+			animation.play("invisivel")
+			is_alive = false
+			return
 		if animation.animation != "comemoracao":
 			if combo_window > 0:
 				combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo

@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=129 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -59,15 +59,24 @@
 [ext_resource type="Texture2D" uid="uid://dlwdx3mmufc82" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png" id="45_3tkth"]
 [ext_resource type="Texture2D" uid="uid://b1ayeypy31dle" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png" id="46_yjxub"]
 [ext_resource type="Texture2D" uid="uid://b71fa4xv3dvul" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png" id="47_jhy1b"]
+[ext_resource type="Texture2D" uid="uid://bei8ldq1rx0sd" path="res://Assests/morrerParticula/_0000_Camada-2.png" id="48_0khay"]
 [ext_resource type="Texture2D" uid="uid://c83q5p17urtbn" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0000_5.png" id="48_6d13e"]
+[ext_resource type="Texture2D" uid="uid://cvxqun38icmhj" path="res://Assests/morrerParticula/_0001_Camada-3.png" id="49_4h0vb"]
 [ext_resource type="Texture2D" uid="uid://bl0v8xphaut7" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0004_1.png" id="49_jlu4a"]
 [ext_resource type="Texture2D" uid="uid://rqbdvpci64cd" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0003_2.png" id="50_rmflf"]
+[ext_resource type="Texture2D" uid="uid://dexg1hmn3jsl5" path="res://Assests/morrerParticula/_0002_Camada-4.png" id="50_xpxcv"]
+[ext_resource type="Texture2D" uid="uid://cwah25gg5plin" path="res://Assests/morrerParticula/_0003_Camada-5.png" id="51_6cp1d"]
 [ext_resource type="Texture2D" uid="uid://cl1t713c4otje" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0002_3.png" id="51_csfgs"]
 [ext_resource type="Texture2D" uid="uid://b5vlscthj1ami" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0001_4.png" id="52_3vw8d"]
+[ext_resource type="Texture2D" uid="uid://bg51fj5xn82b6" path="res://Assests/morrerParticula/_0004_Camada-6.png" id="52_5iiot"]
 [ext_resource type="Texture2D" uid="uid://dbavrmwtgt217" path="res://Assests/Michel Sprites Pronto/Michel golpe 2/_0000s_0000_5.png" id="53_8guea"]
+[ext_resource type="Texture2D" uid="uid://4var8mqii4sd" path="res://Assests/morrerParticula/_0005_Camada-7.png" id="53_li6rl"]
+[ext_resource type="Texture2D" uid="uid://cya8nav2x78nj" path="res://Assests/morrerParticula/_0006_Camada-8.png" id="54_hq3ra"]
 [ext_resource type="Texture2D" uid="uid://bcvusksbdbm2g" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0008_1.png" id="54_kovwr"]
+[ext_resource type="Texture2D" uid="uid://sxfx8vvvfvof" path="res://Assests/morrerParticula/_0007_Camada-9.png" id="55_5td5w"]
 [ext_resource type="Texture2D" uid="uid://bhp0yicc82dt1" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0007_2.png" id="55_row00"]
 [ext_resource type="Texture2D" uid="uid://4xqviberyej8" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0006_3.png" id="56_ifnt2"]
+[ext_resource type="Texture2D" uid="uid://c4ev5vw8b1ntq" path="res://Assests/morrerParticula/_0008_Camada-10.png" id="56_ydkkx"]
 [ext_resource type="Texture2D" uid="uid://bevenbrnm7ewv" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0005_4.png" id="57_qw3ne"]
 [ext_resource type="Texture2D" uid="uid://cd2ocbq0fu5wu" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0004_5.png" id="58_h5h5d"]
 [ext_resource type="Texture2D" uid="uid://s22h1nirpxl2" path="res://Assests/Michel Sprites Pronto/Michel golpe 3/_0000s_0003_6.png" id="59_xm20h"]
@@ -296,6 +305,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("76_e17a7")
+}],
+"loop": true,
+"name": &"invisivel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("30_fyif2")
 }, {
 "duration": 1.0,
@@ -334,6 +351,38 @@ animations = [{
 "loop": false,
 "name": &"jump",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_0khay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4h0vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_xpxcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6cp1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_5iiot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_li6rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hq3ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5td5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ydkkx")
+}],
+"loop": false,
+"name": &"morrer",
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -590,8 +639,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"comemoracao"
-frame_progress = 0.354412
+animation = &"idle"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=52 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -30,8 +30,12 @@
 [ext_resource type="Texture2D" uid="uid://dmcm5vdkghup1" path="res://Assests/hud/bolinha hud.png" id="25_taysr"]
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_vht3l"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_ndkkw"]
-[ext_resource type="Texture2D" uid="uid://c0e6n35pfuqfx" path="res://Assests/hud/FIGHT.png" id="27_aymks"]
+[ext_resource type="Texture2D" uid="uid://mv5ldj45cbca" path="res://Assests/hud/FIGHT2.png" id="29_eofp7"]
+[ext_resource type="Texture2D" uid="uid://rlllq2k8wyvc" path="res://Assests/player vencedor/player1vencedor.png" id="32_ci3ur"]
 [ext_resource type="AudioStream" uid="uid://b4w13ggmiaxht" path="res://audio/Musica Mapa 1.wav" id="32_l5p4x"]
+[ext_resource type="Texture2D" uid="uid://crohl0pattw7j" path="res://Assests/player vencedor/player2vencedor.png" id="32_li70s"]
+[ext_resource type="AudioStream" uid="uid://cwwjp67kthane" path="res://audio/CronometroSFX.wav" id="34_pggs3"]
+[ext_resource type="AudioStream" uid="uid://bc2rakbg2f5yw" path="res://audio/fightSFX.wav" id="35_8dir3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -218,6 +222,7 @@ scale = Vector2(1.97213, 1.97213)
 texture = ExtResource("8_2vacx")
 
 [node name="HUD" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
 anchors_preset = 5
@@ -476,12 +481,12 @@ texture = ExtResource("26_ndkkw")
 
 [node name="Fight" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 781.0
-offset_top = 214.0
-offset_right = 1281.0
-offset_bottom = 714.0
+offset_left = 726.0
+offset_top = 291.0
+offset_right = 1405.0
+offset_bottom = 566.0
 scale = Vector2(0.732345, 0.732345)
-texture = ExtResource("27_aymks")
+texture = ExtResource("29_eofp7")
 
 [node name="round" type="Label" parent="HUD/Round"]
 layout_mode = 0
@@ -526,18 +531,43 @@ environment = SubResource("Environment_xcucr")
 [node name="Control" parent="." instance=ExtResource("22_vlji3")]
 visible = false
 
+[node name="vitoriaplayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="VitoriaPlayer1Banner" type="TextureRect" parent="vitoriaplayer"]
+visible = false
+z_index = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("32_ci3ur")
+
+[node name="VitoriaPlayer2Banner" type="TextureRect" parent="vitoriaplayer"]
+visible = false
+z_index = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("32_li70s")
+
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("23_af463")
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(200, 513)
+position = Vector2(227, 623)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
-position = Vector2(1157, 512)
+position = Vector2(1180, 612)
+
+[node name="CronometroSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_pggs3")
+bus = &"SFX"
 
 [node name="MusicaMapa1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_l5p4x")
 volume_db = -20.613
 bus = &"Musica"
+
+[node name="FightSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_8dir3")
+bus = &"SFX"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

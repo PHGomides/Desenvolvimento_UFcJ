@@ -13,7 +13,8 @@ var poweropitional_timer = 0.0
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
-
+var is_alive = true #verifica se está vivo
+var player_was_murder = false #variavel pra matar o player
 
 #PODER
 var MaxPower: int = 60
@@ -209,7 +210,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		is_defending = false  # Para a defesa quando a tecla for solta
 	if not is_round: #logica de Movimenção
-		if not is_attacking and is_defending == false:
+
+		if not is_attacking and is_defending == false and not opcional_attack:
 			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
 			if direction != 0:
 				current_direction = direction
@@ -223,6 +225,11 @@ func _physics_process(delta: float) -> void:
 			else:
 				animation.play("idle")
 				velocity.x = move_toward(velocity.x, 0, SPEED)
+	elif is_round and vida <= 0 and is_alive:
+		print("desaparecer")
+		animation.play("morrer")
+	elif not is_alive:
+		animation.play("invisivel")
 	else:
 		if animation.animation != "comemoracao":
 			animation.play("idle")
@@ -239,12 +246,13 @@ func _physics_process(delta: float) -> void:
 		$hitbox_michel/punch1e2.position.x = -157
 		$hitbox_michel/punch3eopcional.position.x = -143
 		$hitbox_michel/especialShape.position.x = -1023.109
-		
+
+func parar_movimento():
+	velocity = Vector2.ZERO		
 func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
 	emit_signal("punch_activated", "state3")
 	
 func SoltarPoder():
-
 	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
@@ -273,6 +281,8 @@ func VirarDeLado() -> void:
 	animation.scale.x = abs(animation.scale.x) * current_direction
 
 func KnockBack(force: float = 500.0) -> void:
+	if(vida<=0):
+		return
 	# Define a direção contrária ao dano para aplicar o knockback
 	var knockback_direction = -current_direction
 	velocity.x = knockback_direction * force  # Aplica a força de knockback inicial
@@ -355,15 +365,19 @@ func vitoria()-> void:
 # Função que é chamada automaticamente quando a animação termina
 func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
-	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao"]:
+	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao","morrer"]:
 		if animation.animation == "especial":
 			print("special");
 			using_special = false  # Permite o uso do especial novamente
 		elif animation.animation == "opcional":
+			
 			opcional_attack = false  # Permite o uso do ataque opcional novamente
 		elif animation.animation == "damage":
 			break_defense = false
-			
+		elif animation.animation == "morrer":
+			animation.play("invisivel")
+			is_alive = false
+			return
 		if animation.animation != "comemoracao":
 			if combo_window > 0:
 				combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo

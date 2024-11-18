@@ -39,7 +39,7 @@ func _ready() -> void:
 
 	
 func _init_round():
-	
+
 	print("Round ", Global.round)
 	round.text = "ROUND " + str(Global.round)
 	emit_signal("reset_time")
@@ -47,28 +47,50 @@ func _init_round():
 	_2.visible = false
 	_3.visible = false
 	fight.visible = false
-	await get_tree().create_timer(0.5).timeout
-	Global.player1.vida = 100
-	Global.player2.vida = 100 
-	desativar_controle_jogadores()
+	if(Global.round>1):#resetando os personagem para evitar bugs
+		Global.player1.is_attacking = false
+		Global.player2.is_attacking = false
+		Global.player1.vida = 100
+		Global.player2.vida = 100
+		Global.player1.parar_movimento()
+		Global.player2.parar_movimento()
+		Global.player1.opcional_attack = false
+		Global.player2.opcional_attack = false
+		desativar_controle_jogadores()
+	else:
+		
+		await get_tree().create_timer(0.5).timeout
+
+		Global.player1.vida = 100
+		Global.player2.vida = 100
+		desativar_controle_jogadores()
+
+
+	
 	
 	_3.visible = true
+	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
 	_3.visible = false
 
 	_2.visible = true
+	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
 	_2.visible = false
 
 	_1.visible = true
+	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
 	_1.visible = false
 
 	fight.visible = true
+	$"../../FightSfx".play()
 	await get_tree().create_timer(1).timeout
 	fight.visible = false
 	emit_signal("iniciar_time")
 	ativar_controle_jogadores()
+	
+
 
 func _on_time_is_up():
 	if Global.player1.vida > Global.player2.vida:
@@ -85,6 +107,8 @@ func _on_time_is_up():
 
 	if Global.player1_round == 2:
 		print("Player 1 Wins!")
+		$"../../vitoriaplayer/VitoriaPlayer1Banner".visible = true
+		$"..".visible = false
 		desativar_controle_jogadores()
 		Global.player1.vitoria()
 		await get_tree().create_timer(5).timeout
@@ -94,6 +118,8 @@ func _on_time_is_up():
 		Global.player2_round = 0
 	elif Global.player2_round == 2:
 		print("Player 2 Wins!")
+		$"../../vitoriaplayer/VitoriaPlayer2Banner".visible = true
+		$"..".visible = false
 		desativar_controle_jogadores()
 		Global.player2.vitoria()
 		await get_tree().create_timer(5).timeout
@@ -102,8 +128,10 @@ func _on_time_is_up():
 		Global.player1_round = 0
 		Global.player2_round = 0
 	else:
+		
 		Global.round += 1
 		_init_round()
+	
 		Global.player1.global_position = Global.pos_incial_round_player1 
 		Global.player2.global_position = Global.pos_incial_round_player2
 	 

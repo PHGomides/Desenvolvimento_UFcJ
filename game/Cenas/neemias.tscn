@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=137 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -68,14 +68,23 @@
 [ext_resource type="Texture2D" uid="uid://bjbmnalxclaxl" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0007_20240905_161527_043.png" id="50_ohxty"]
 [ext_resource type="Texture2D" uid="uid://lrcp3om7p3fr" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 2/_0001s_0009_20240905_161527_047.png" id="51_6hslj"]
 [ext_resource type="Texture2D" uid="uid://2wwrtwolo66" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0000_20240905_161532_023.png" id="52_khk0g"]
+[ext_resource type="Texture2D" uid="uid://bei8ldq1rx0sd" path="res://Assests/morrerParticula/_0000_Camada-2.png" id="53_fug4u"]
 [ext_resource type="Texture2D" uid="uid://do7im6y1nt6c0" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0001_20240905_161532_027.png" id="53_y8mg1"]
+[ext_resource type="Texture2D" uid="uid://cvxqun38icmhj" path="res://Assests/morrerParticula/_0001_Camada-3.png" id="54_j60xr"]
 [ext_resource type="Texture2D" uid="uid://euqyys1b7dfc" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0002_20240905_161532_031.png" id="54_ky808"]
 [ext_resource type="Texture2D" uid="uid://dbrccmmpls4s3" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0003_20240905_161532_033.png" id="55_l4xea"]
+[ext_resource type="Texture2D" uid="uid://dexg1hmn3jsl5" path="res://Assests/morrerParticula/_0002_Camada-4.png" id="55_ukvbo"]
 [ext_resource type="Texture2D" uid="uid://b0ur6amye12xb" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0004_20240905_161532_037.png" id="56_0spcv"]
+[ext_resource type="Texture2D" uid="uid://cwah25gg5plin" path="res://Assests/morrerParticula/_0003_Camada-5.png" id="56_87p55"]
+[ext_resource type="Texture2D" uid="uid://bg51fj5xn82b6" path="res://Assests/morrerParticula/_0004_Camada-6.png" id="57_jkmta"]
 [ext_resource type="Texture2D" uid="uid://dte0epdi8f4ve" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0005_20240905_161532_041.png" id="57_r223s"]
+[ext_resource type="Texture2D" uid="uid://4var8mqii4sd" path="res://Assests/morrerParticula/_0005_Camada-7.png" id="58_rmkde"]
 [ext_resource type="Texture2D" uid="uid://covryx2htq6ib" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0006_20240905_161532_045.png" id="58_uffin"]
 [ext_resource type="Texture2D" uid="uid://ccma5lhcj587m" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0007_20240905_161532_047.png" id="59_6qann"]
+[ext_resource type="Texture2D" uid="uid://cya8nav2x78nj" path="res://Assests/morrerParticula/_0006_Camada-8.png" id="59_68bms"]
 [ext_resource type="Texture2D" uid="uid://cx5je4ci8ukln" path="res://Assests/Neemias Sprites Prontos/Neemias golpe 3/_0000s_0008_20240905_161532_049.png" id="60_owj6u"]
+[ext_resource type="Texture2D" uid="uid://sxfx8vvvfvof" path="res://Assests/morrerParticula/_0007_Camada-9.png" id="60_vnwy0"]
+[ext_resource type="Texture2D" uid="uid://c4ev5vw8b1ntq" path="res://Assests/morrerParticula/_0008_Camada-10.png" id="61_lcpoh"]
 [ext_resource type="Texture2D" uid="uid://b2kcn4oy7soyx" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0000_20240905_161346_073.png" id="61_qvv88"]
 [ext_resource type="Texture2D" uid="uid://dcnsg72lo2vy6" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0001_20240905_161346_071.png" id="62_etthw"]
 [ext_resource type="Texture2D" uid="uid://di0lstbb0l40j" path="res://Assests/Neemias Sprites Prontos/Neemias andando/_0000s_0002_20240905_161346_069.png" id="63_jmkhc"]
@@ -304,6 +313,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("74_k1sb5")
+}],
+"loop": true,
+"name": &"invisivel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("29_7j6qs")
 }, {
 "duration": 1.0,
@@ -345,6 +362,38 @@ animations = [{
 "loop": false,
 "name": &"jump",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_fug4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_j60xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ukvbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_87p55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_jkmta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_rmkde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_68bms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_vnwy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_lcpoh")
+}],
+"loop": false,
+"name": &"morrer",
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -390,7 +439,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 17.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -413,7 +462,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"punch2",
-"speed": 20.0
+"speed": 25.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -633,11 +682,11 @@ sprite_frames = SubResource("SpriteFrames_jdbsb")
 root_node = NodePath("../..")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"comemoracao"
-frame_progress = 0.534324
+animation = &"punch3"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 
