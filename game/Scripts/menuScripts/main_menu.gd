@@ -109,3 +109,15 @@ func _on_slider_music_value_changed(value: float) -> void:
 	else:
 		AudioServer.set_bus_mute(musica,false)
 	pass # Replace with function body.
+
+
+func mostrarControles() -> void:
+	$MenuOpcoes.visible = false
+	$MenuControles.visible = true
+	pass # Replace with function body.
+
+
+func mudar_de_controles_para_Opcoes() -> void:
+	$MenuOpcoes.visible = true
+	$MenuControles.visible = false
+	pass # Replace with function body.

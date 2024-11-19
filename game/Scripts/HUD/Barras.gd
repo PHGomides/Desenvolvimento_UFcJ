@@ -25,12 +25,24 @@ extends Control
 signal vida_zero()
 
 func _ready() -> void:
+	$"../Round/powerReadyP1".play("powerReady")
+	$"../Round/powerReadyP2".play("powerReady")
 	# Inicializa as barras de vida
 	_init_vida()
 
 func _process(delta: float) -> void:
 	# Atualiza as barras de vida com a vida atual dos jogadores
 	if Global.player1 and Global.player2:
+		if(Global.player1.power>=60):
+			$"../Round/powerReadyP1".visible = true
+		else:
+			$"../Round/powerReadyP1".visible = false
+		if(Global.player2.power>=60):
+			$"../Round/powerReadyP2".visible = true
+		else:
+			$"../Round/powerReadyP2".visible = false
+		
+		
 		if (Global.player1.vida != vida_1):
 			_set_vida1(Global.player1.vida)
 		if (Global.player2.vida != vida_2):

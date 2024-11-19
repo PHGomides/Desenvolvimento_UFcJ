@@ -142,6 +142,7 @@ func _physics_process(delta: float) -> void:
 			combo_ready = false  # Reseta a habilidade de encadear combos
 			if is_attacking and attack_state > 0:
 				is_attacking = false  # Se o combo não for finalizado, retorna ao estado idle
+				can_punch = true
 				attack_state = 0  # Reseta o estado de ataque
 				animation.play("idle")  # Volta à animação idle
 
@@ -219,7 +220,7 @@ func _physics_process(delta: float) -> void:
 			using_special = true  # Marca o especial como usado
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 	# Lógica para animação de defesa
-	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false and not is_round and not is_suffering_damage:
+	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false and not is_round and not is_suffering_damage and not is_attacking:
 		if(using_special or opcional_attack):
 			return
 		is_defending = true
@@ -230,7 +231,7 @@ func _physics_process(delta: float) -> void:
 	if not is_round: #logica de Movimenção
 
 		if not is_attacking and not is_defending and not opcional_attack:
-			var direction := Input.get_axis(controles["move_left"], controles["move_right"])
+			var direction: int = sign(Input.get_axis(controles["move_left"], controles["move_right"]))
 			if direction != 0:
 				current_direction = direction
 				velocity.x = direction * SPEED

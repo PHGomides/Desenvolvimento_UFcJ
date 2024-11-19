@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=103 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -10,16 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://caxd0w6bke5dv" path="res://Assests/menu main/_0002s_0000s_0002_opções.png" id="10_i4iwc"]
 [ext_resource type="Texture2D" uid="uid://byoerchvpayqt" path="res://Assests/menu main/hover opções.png" id="11_ek7e4"]
 [ext_resource type="Script" path="res://Cenas/menu_selecao_personagens.gd" id="12_n4jld"]
+[ext_resource type="Texture2D" uid="uid://uo4c0xv1b6ba" path="res://Assests/menu main/subMenuOpcoes/menuControles.png" id="12_q8s24"]
 [ext_resource type="Texture2D" uid="uid://cgibdukfg6s6n" path="res://Assests/menu main/_0002s_0000s_0003_sair.png" id="12_rjdkj"]
 [ext_resource type="AudioStream" uid="uid://5signxbsqjrd" path="res://audio/MenuBtnSoundEffectwav.wav" id="12_tjowc"]
 [ext_resource type="Texture2D" uid="uid://b5a4qc5cq6mdk" path="res://Assests/menu main/hover sair.png" id="13_6fd72"]
-[ext_resource type="Texture2D" uid="uid://t0bfd8edgial" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem.png" id="14_fidrd"]
 [ext_resource type="AudioStream" uid="uid://cp0aj4wficg3x" path="res://audio/menu main.wav" id="14_o3hul"]
-[ext_resource type="Texture2D" uid="uid://bexw55fgtu2wj" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagemHover.png" id="15_kgxfw"]
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="15_wmb0y"]
 [ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/p1.png" id="16_dve1p"]
+[ext_resource type="Texture2D" uid="uid://dojohpb0cbgd5" path="res://Assests/menu main/subMenuOpcoes/creditosbtn.png" id="16_xup2c"]
 [ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenuSelecaoDePersonagem/VS.png" id="17_56fj5"]
-[ext_resource type="Texture2D" uid="uid://mw0h4dd841jn" path="res://Assests/menu main/subMenuSelecaoDePersonagem/personagem2Hover.png" id="18_rp268"]
+[ext_resource type="Texture2D" uid="uid://dng0m1pefg0ah" path="res://Assests/menu main/subMenuOpcoes/creditosHoverbtn.png" id="17_hxj2n"]
+[ext_resource type="Texture2D" uid="uid://dswgu6818stb8" path="res://Assests/menu main/subMenuOpcoes/controlesbtn.png" id="17_opr63"]
+[ext_resource type="Texture2D" uid="uid://nclx06cmlxe0" path="res://Assests/menu main/subMenuOpcoes/controlesbtnHover.png" id="18_aeu5r"]
 [ext_resource type="Texture2D" uid="uid://dkr0c7os2ki81" path="res://Assests/menu main/subMenuSelecaoDePersonagem/p2.png" id="19_bj234"]
 [ext_resource type="ButtonGroup" uid="uid://bkt8mowuc0by1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnGrupLeft.tres" id="19_fh0ld"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="20_5id1b"]
@@ -62,7 +64,9 @@
 [ext_resource type="Texture2D" uid="uid://dngiyy4yabnnk" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtn.png" id="34_pab37"]
 [ext_resource type="Texture2D" uid="uid://c17jasxax5ek1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/neemBtnH.png" id="34_rmu8n"]
 [ext_resource type="Texture2D" uid="uid://cg3e2fpmropbi" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/okaBtnH.png" id="36_4jyqn"]
+[ext_resource type="Texture2D" uid="uid://bh58b32wi857e" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/wa.png" id="37_p6845"]
 [ext_resource type="Texture2D" uid="uid://bs4wab12dfchb" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/francBtnH.png" id="38_7k1bu"]
+[ext_resource type="Texture2D" uid="uid://cqugh3446a5h1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/walissonH.png" id="38_kcie0"]
 [ext_resource type="Texture2D" uid="uid://cmup1w1rgkbsm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtnH.png" id="40_1ekn0"]
 [ext_resource type="Texture2D" uid="uid://d337887r483vj" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtn.png" id="47_80f7l"]
 [ext_resource type="Texture2D" uid="uid://22bsb0beqfy2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtnH.png" id="48_y6dna"]
@@ -70,6 +74,7 @@
 [ext_resource type="Texture2D" uid="uid://b0yv4pmx6n1u7" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
 [ext_resource type="Texture2D" uid="uid://me8ssajbgtnh" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
 [ext_resource type="Texture2D" uid="uid://t7lk0n7q0dxn" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0003_20240916_161841_007.png" id="54_mjh0t"]
+[ext_resource type="Texture2D" uid="uid://bgdktsv355nma" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/walissonRH.png" id="54_snwm8"]
 [ext_resource type="Texture2D" uid="uid://ctvpkv7j7alsj" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0004_20240916_161841_011.png" id="55_sni0m"]
 [ext_resource type="Texture2D" uid="uid://dpv6fc3yihatt" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0005_20240916_161841_013.png" id="56_s1hmo"]
 [ext_resource type="Texture2D" uid="uid://cofpwp050imck" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0006_20240916_161841_017.png" id="57_wv1t7"]
@@ -102,6 +107,12 @@ thickness = 10
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_21j1v"]
 color = Color(1, 1, 1, 1)
 thickness = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y48a6"]
+bg_color = Color(0.921569, 0.615686, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2her8"]
+bg_color = Color(0.921569, 0.615686, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_htphl"]
 animations = [{
@@ -217,6 +228,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 script = ExtResource("1_r5t8c")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
@@ -233,6 +245,7 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -241,6 +254,7 @@ offset_left = -412.0
 offset_right = 412.0
 offset_bottom = 601.0
 grow_horizontal = 2
+focus_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MenuMain"]
 custom_minimum_size = Vector2(0, 550)
@@ -259,6 +273,7 @@ focus_neighbor_bottom = NodePath("../btnChaveamento")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_ch8as")
 texture_hover = ExtResource("6_s5ieo")
+texture_focused = ExtResource("6_s5ieo")
 
 [node name="btnChaveamento" type="TextureButton" parent="MenuMain"]
 layout_mode = 2
@@ -269,6 +284,7 @@ focus_neighbor_bottom = NodePath("../btnOpcoes")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_d01nw")
 texture_hover = ExtResource("9_55qhi")
+texture_focused = ExtResource("9_55qhi")
 
 [node name="btnOpcoes" type="TextureButton" parent="MenuMain"]
 layout_mode = 2
@@ -279,6 +295,7 @@ focus_neighbor_bottom = NodePath("../btnSair")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_i4iwc")
 texture_hover = ExtResource("11_ek7e4")
+texture_focused = ExtResource("11_ek7e4")
 
 [node name="btnSair" type="TextureButton" parent="MenuMain"]
 layout_mode = 2
@@ -289,6 +306,48 @@ focus_neighbor_bottom = NodePath("../btn1vs1")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("12_rjdkj")
 texture_hover = ExtResource("13_6fd72")
+texture_focused = ExtResource("13_6fd72")
+
+[node name="MenuControles" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuControles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -304.5
+offset_right = 304.5
+offset_bottom = 304.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_q8s24")
+
+[node name="btnVoltar" type="TextureButton" parent="MenuControles"]
+layout_mode = 2
+offset_left = -114.5
+offset_top = 153.735
+offset_right = 114.5
+offset_bottom = 223.735
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_6jpfk")
+texture_hover = ExtResource("22_qmwjn")
+stretch_mode = 5
 
 [node name="MenuOpcoes" type="Control" parent="."]
 visible = false
@@ -323,13 +382,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.23
-offset_top = -73.66
-offset_right = 138.23
-offset_bottom = 270.15
+offset_left = -162.5
+offset_top = -153.79
+offset_right = 162.5
+offset_bottom = 368.21
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0
+focus_mode = 2
 theme_override_constants/separation = 70
 
 [node name="sliderMaster" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
@@ -372,8 +432,31 @@ max_value = 0.0
 
 [node name="buttons" type="VBoxContainer" parent="MenuOpcoes/VBoxContainer"]
 layout_mode = 2
+focus_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
+
+[node name="btnControles" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("17_opr63")
+texture_hover = ExtResource("18_aeu5r")
+stretch_mode = 5
+
+[node name="btnCreditos" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16_xup2c")
+texture_hover = ExtResource("17_hxj2n")
+stretch_mode = 5
 
 [node name="btnVoltar" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
 layout_mode = 2
@@ -454,85 +537,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 316.0
-offset_right = 606.0
-offset_bottom = 347.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 4"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 251.0
-offset_right = 606.0
-offset_bottom = 282.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 3"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = 405.0
-offset_top = -99.0
-offset_right = 605.0
-offset_bottom = -68.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 1"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = 405.0
-offset_top = -35.0
-offset_right = 605.0
-offset_bottom = -4.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 2"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = -594.0
-offset_top = 314.0
-offset_right = -394.0
-offset_bottom = 345.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 4"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/Inputs"]
-layout_mode = 0
-offset_left = -594.0
-offset_top = 251.0
-offset_right = -394.0
-offset_bottom = 282.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 3"
-alignment = 1
-clear_button_enabled = true
-caret_blink_interval = 0.1
-
-[node name="LineEdit" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
 offset_left = -593.0
 offset_top = -98.0
@@ -558,7 +563,85 @@ alignment = 1
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit11" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -594.0
+offset_top = 251.0
+offset_right = -394.0
+offset_bottom = 282.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 3"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = -594.0
+offset_top = 314.0
+offset_right = -394.0
+offset_bottom = 345.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 4"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = -99.0
+offset_right = 605.0
+offset_bottom = -68.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 5"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = -35.0
+offset_right = 605.0
+offset_bottom = -4.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 6"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 251.0
+offset_right = 606.0
+offset_bottom = 282.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 7"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/Inputs"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 316.0
+offset_right = 606.0
+offset_bottom = 347.0
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+placeholder_text = "Player 8"
+alignment = 1
+clear_button_enabled = true
+caret_blink_interval = 0.1
+
+[node name="vencedor_chave1" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
 offset_left = -409.0
 offset_top = 81.0
@@ -566,13 +649,13 @@ offset_right = -209.0
 offset_bottom = 112.0
 theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 1"
+placeholder_text = "Vencedor C1"
 alignment = 1
 editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit12" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave2" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
 offset_left = -409.0
 offset_top = 126.0
@@ -580,13 +663,13 @@ offset_right = -209.0
 offset_bottom = 157.0
 theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 2"
+placeholder_text = "Vencedor C2"
 alignment = 1
 editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit9" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave3" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
 offset_left = 221.0
 offset_top = 80.0
@@ -594,13 +677,13 @@ offset_right = 421.0
 offset_bottom = 111.0
 theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 1"
+placeholder_text = "Vencedor C3"
 alignment = 1
 editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit10" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave4" type="LineEdit" parent="MenuChaveamento/Inputs"]
 layout_mode = 0
 offset_left = 222.0
 offset_top = 130.0
@@ -608,7 +691,7 @@ offset_right = 422.0
 offset_bottom = 161.0
 theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-placeholder_text = "Player 2"
+placeholder_text = "Vencedor C4"
 alignment = 1
 editable = false
 clear_button_enabled = true
@@ -620,7 +703,10 @@ offset_left = -121.0
 offset_top = 30.0
 offset_right = 129.0
 offset_bottom = 80.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_styles/read_only = SubResource("StyleBoxFlat_y48a6")
 placeholder_text = "Final Player 1"
 alignment = 1
 editable = false
@@ -633,8 +719,11 @@ offset_left = -120.0
 offset_top = 152.0
 offset_right = 130.0
 offset_bottom = 202.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_styles/read_only = SubResource("StyleBoxFlat_2her8")
 placeholder_text = "Final Player 2"
 alignment = 1
 editable = false
@@ -642,7 +731,6 @@ clear_button_enabled = true
 caret_blink_interval = 0.1
 
 [node name="MenuSelecaoPersonagens" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -666,12 +754,14 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 2
 alignment = 1
 
 [node name="Player1Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../Player1Neemias")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -684,6 +774,9 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Player1Michel")
+focus_neighbor_bottom = NodePath("../Player1Oka")
+focus_mode = 0
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -747,21 +840,9 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
-stretch_mode = 3
-
-[node name="Player1Thiago" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-toggle_mode = true
-button_group = ExtResource("19_fh0ld")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("15_kgxfw")
-texture_focused = ExtResource("15_kgxfw")
+texture_normal = ExtResource("37_p6845")
+texture_hover = ExtResource("38_kcie0")
+texture_focused = ExtResource("38_kcie0")
 stretch_mode = 3
 
 [node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -853,21 +934,11 @@ size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("29_jn2e5")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
+texture_normal = ExtResource("37_p6845")
+texture_hover = ExtResource("54_snwm8")
+texture_focused = ExtResource("54_snwm8")
 stretch_mode = 5
-
-[node name="Player2Thiago" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-toggle_mode = true
-button_group = ExtResource("29_jn2e5")
-texture_normal = ExtResource("14_fidrd")
-texture_hover = ExtResource("18_rp268")
-texture_focused = ExtResource("18_rp268")
-stretch_mode = 5
+flip_h = true
 
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
 layout_mode = 2
@@ -1069,9 +1140,18 @@ bus = &"SFX"
 [connection signal="button_down" from="MenuMain/btnSair" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuMain/btnSair" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuMain/btnSair" to="." method="_on_btn_sair_pressed"]
+[connection signal="button_down" from="MenuControles/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuControles/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuControles/btnVoltar" to="." method="mudar_de_controles_para_Opcoes"]
 [connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
 [connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
 [connection signal="value_changed" from="MenuOpcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
+[connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnControles" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnControles" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnControles" to="." method="mostrarControles"]
+[connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="_on_btn_voltar_pressed"]
 [connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
@@ -1094,8 +1174,6 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Thiago" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
@@ -1110,8 +1188,6 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Thiago" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]

@@ -75,22 +75,17 @@ func _init_round():
 		desativar_controle_jogadores()
 
 
-	
-	
-	_3.visible = true
+	$AnimatedSprite2D.visible = true
+	$AnimatedSprite2D.play("3")
 	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
-	_3.visible = false
-
-	_2.visible = true
+	$AnimatedSprite2D.play("2")
 	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
-	_2.visible = false
-
-	_1.visible = true
+	$AnimatedSprite2D.play("1")
 	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
-	_1.visible = false
+	$AnimatedSprite2D.visible = false
 
 	fight.visible = true
 	if(Global.round == 1):
