@@ -157,7 +157,6 @@ func _physics_process(delta: float) -> void:
 			
 			
 		elif attack_state == 1:
-			
 			can_punch = false
 			animation.play("punch2")
 			attack_state = 2
@@ -213,6 +212,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 			
 	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense == false and not is_round and not is_suffering_damage:
+		if(using_special or opcional_attack):
+			return
 		is_defending = true
 		velocity.x = 0  # Impede movimento enquanto defende
 		animation.play("defesa",false)  # Reproduz a animação de defesa sem looping
@@ -231,6 +232,7 @@ func _physics_process(delta: float) -> void:
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
 					animation.play("walk")
+					is_attacking = false
 					
 			elif is_jumping:
 				animation.play("jump")
@@ -397,6 +399,7 @@ func _desativar_start_round() -> void:
 	is_round = false
 	can_take_damege = true
 	can_punch = true
+	using_special = false
 
 func vitoria()-> void:
 	animation.stop()
@@ -437,7 +440,6 @@ func _on_anim_animation_finished() -> void:
 			else:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
-				COMBO_WINDOW_DURATION = 0.5
 				can_punch = true
 				is_suffering_damage = false
 				#retirando as animações de particulas do personagem

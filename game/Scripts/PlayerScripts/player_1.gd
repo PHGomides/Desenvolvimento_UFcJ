@@ -15,10 +15,11 @@ var vida_maxima: int = 100  # Saúde máxima
 var vida: int = 100  # Saúde máxima
 var is_alive = true #verifica se está vivo
 var player_was_murder = false #variavel pra matar o player
+var can_punch = true #faz com que o personagem só possa bater dps que terminar a animação
 var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 #PODER
 var MaxPower: int = 60
-var power: int = 0
+var power: int = 60
 
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
@@ -95,6 +96,7 @@ func _ready() -> void:
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
+	
 	if(not is_attacking):
 		is_suffering_damage = false
 
@@ -145,19 +147,21 @@ func _physics_process(delta: float) -> void:
 				animation.play("idle")  # Volta à animação idle
 
 	
-	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_suffering_damage and not is_defending: # Lógica para ataque
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_suffering_damage and not is_defending and can_punch: # Lógica para ataque
 		print("j foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
 
 			# Alterna entre as animações de punch
 		if attack_state == 0:
+			can_punch = false
 			animation.play("punch1")
 			attack_state = 1 
 			emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
 			is_suffering_damage = false
 			
 		elif attack_state == 1:
+			can_punch = false
 			animation.play("punch2")
 			attack_state = 2
 			await get_tree().create_timer(0.1).timeout
@@ -165,6 +169,7 @@ func _physics_process(delta: float) -> void:
 			is_suffering_damage = false
 			
 		else:
+			can_punch = false
 			animation.play("punch3")
 			attack_state = 0
 			#criando um Timer dinamicamente para o atack3 , esse foi o unico timer que funcionou
@@ -216,7 +221,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x = 0  # Para o movimento horizontal durante o ataque especial
 	# Lógica para animação de defesa
 	if Input.is_action_pressed(controles["defense"])and is_on_floor() and break_defense ==false and not is_round and not is_suffering_damage:
-
+		if(using_special or opcional_attack):
+			return
 		is_defending = true
 		velocity.x = 0  # Impede movimento enquanto defende
 		animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
@@ -233,6 +239,7 @@ func _physics_process(delta: float) -> void:
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
 					animation.play("walk")
+					is_attacking = false
 			elif is_jumping:
 				animation.play("jump")
 			else:
@@ -340,6 +347,7 @@ func _emit_special_signal() -> void:
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	is_suffering_damage = false
+	can_punch = true
 	parar_movimento()
 
 	opcional_attack = false
@@ -402,6 +410,8 @@ func _start_round() -> void:
 func _desativar_start_round() -> void: 
 	is_round = false
 	can_take_damege = true
+	can_punch = true
+	using_special = false
 
 func vitoria()-> void:
 	animation.stop()
@@ -431,10 +441,12 @@ func _on_anim_animation_finished() -> void:
 		if animation.animation != "comemoracao":
 			if combo_window > 0:
 				combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
+				can_punch = true
 			else:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
 				COMBO_WINDOW_DURATION = 0.4
+				can_punch = true
 				#retirando as animações de particulas do personagem
 				is_suffering_damage = false
 		

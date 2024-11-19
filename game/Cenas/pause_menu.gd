@@ -93,6 +93,8 @@ func Reeniciar_Partida() -> void:
 	get_tree().paused = false
 	queue_free()  # Libera a cena de carregamento
 	Global.round = 1
+	Global.player1_round = 0
+	Global.player2_round = 0
 	var carregamento = load("res://Cenas/Carregamento.tscn").instantiate()
 	carregamento.cenaCarregada = Global.mapaEscolhido  # Passa o caminho do mapa
 	get_tree().root.add_child(carregamento)
