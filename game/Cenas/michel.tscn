@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=137 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -114,12 +114,18 @@
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="90_ocib6"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
-[ext_resource type="Texture2D" uid="uid://o5w36fymfkcl" path="res://Assests/poderes/poder5.png" id="92_k443k"]
+[ext_resource type="Texture2D" uid="uid://o5w36fymfkcl" path="res://Assests/particulas/poderes/poder5.png" id="92_k443k"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="97_7j4bh"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="98_uuvmu"]
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="99_olg41"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="100_lgwb5"]
 [ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="120_wk6ij"]
+[ext_resource type="Texture2D" uid="uid://b05ow165dikan" path="res://Assests/particulas/sangue/_0000_Camada-2.png" id="121_ioh6i"]
+[ext_resource type="Texture2D" uid="uid://c6kab2owxeepa" path="res://Assests/particulas/sangue/_0001_Camada-3.png" id="122_5mm5k"]
+[ext_resource type="Texture2D" uid="uid://bth4mh3x4e3qx" path="res://Assests/particulas/sangue/_0002_Camada-4.png" id="123_dixtp"]
+[ext_resource type="Texture2D" uid="uid://c6amy7hr4idqf" path="res://Assests/particulas/sangue/_0003_Camada-5.png" id="124_0pysv"]
+[ext_resource type="Texture2D" uid="uid://b0foqlno3k2h7" path="res://Assests/particulas/sangue/_0004_Camada-6.png" id="125_vbyaf"]
+[ext_resource type="Texture2D" uid="uid://doy17ymhi78bx" path="res://Assests/particulas/sangue/_0005_Camada-7.png" id="126_00dnt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -753,6 +759,35 @@ size = Vector2(1866, 1175)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asr8p"]
 size = Vector2(171, 301)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sinp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("121_ioh6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_5mm5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_dixtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0pysv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_vbyaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_00dnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_e17a7")
+}],
+"loop": false,
+"name": &"sangrar",
+"speed": 20.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_61h00")
@@ -854,5 +889,14 @@ offset_right = 1544.11
 offset_bottom = 6392.17
 scale = Vector2(0.365, 0.365)
 texture = ExtResource("120_wk6ij")
+
+[node name="SangrarAnimationSprite" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(7.10913, -59.8267)
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_sinp4")
+animation = &"sangrar"
+frame = 6
+frame_progress = 1.0
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

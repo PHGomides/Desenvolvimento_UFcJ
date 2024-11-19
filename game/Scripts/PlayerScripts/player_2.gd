@@ -23,9 +23,10 @@ var power: int = 60
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo
 # Janela de combo (tempo permitido para encadear ataques)
-var COMBO_WINDOW_DURATION = 0.4  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var COMBO_WINDOW_DURATION = 0.5  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
+var can_punch = true #faz com que o personagem só possa bater dps que terminar a animação
 var is_attacking = false
 var is_round = true
 
@@ -92,7 +93,7 @@ func _ready() -> void:
 	VirarDeLado() 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
-
+	
 	if(not is_attacking):
 		is_suffering_damage = false
 	# Adiciona a gravidade
@@ -134,26 +135,30 @@ func _physics_process(delta: float) -> void:
 		else:
 			combo_ready = false  # Reseta a habilidade de encadear combos
 			if is_attacking and attack_state > 0:
-				COMBO_WINDOW_DURATION = 0.4#resetando a janela de combo
 				is_attacking = false  # Se o combo não for finalizado, retorna ao estado idle
 				attack_state = 0  # Reseta o estado de ataque
 				animation.play("idle")  # Volta à animação idle
 				
 			
-	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_defending and not is_suffering_damage: # Lógica para ataque
+	if Input.is_action_just_pressed(controles["punch"]) and (not is_attacking or combo_ready) and not is_round and not is_defending and not is_suffering_damage and can_punch: # Lógica para ataque
 		print("1 foi pressionado")
 		is_attacking = true  # Marca que o personagem está atacando
 		velocity.x = 0  # Para o movimento horizontal durante o ataque
 			
 			# Alterna entre as animações de punch
 		if attack_state == 0:
+			
+			can_punch = false
 			animation.play("punch1")
 			attack_state = 1 
 			
 			emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
 			is_suffering_damage = false
 			
+			
 		elif attack_state == 1:
+			
+			can_punch = false
 			animation.play("punch2")
 			attack_state = 2
 			await get_tree().create_timer(0.1).timeout
@@ -161,6 +166,7 @@ func _physics_process(delta: float) -> void:
 			is_suffering_damage = false
 			
 		else:
+			can_punch = false
 			animation.play("punch3")
 			attack_state = 0
 			# Cria e configura o Timer dinamicamente , esse foi o unico timer que funcionou para o atack 3
@@ -331,18 +337,21 @@ func _emit_special_signal() -> void:
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	is_suffering_damage = false
+	can_punch = true
 	opcional_attack = false
 	parar_movimento()
 	
 	if(using_special):
 		return
+	
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		IncrementarEspecialInimigo()
-		animation.play("damage")	
+		animation.play("damage")
+		$SangrarAnimationSprite.play("sangrar")
 		is_suffering_damage = true
 	elif(tipoGolpe == "punch3"):
 		break_defense = true
@@ -352,8 +361,10 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		vida-= damegeValue
 		power += 5
 		power = clamp(power, 0, MaxPower)
+		$SangrarAnimationSprite.play("sangrar")
 		IncrementarEspecialInimigo()
 		animation.play("damage")
+		
 		is_suffering_damage = true
 	elif(tipoGolpe == "especialShape"):
 		break_defense = true
@@ -365,6 +376,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		power = clamp(power, 0, MaxPower)
 		IncrementarEspecialInimigo()
 		animation.play("damage")
+		$SangrarAnimationSprite.play("sangrar")
 		is_suffering_damage = true
 	else:
 		$DefesaSfx.play()
@@ -377,9 +389,14 @@ func IncrementarEspecialInimigo():
 		Global.player2.power += 3
 	
 	
-func _start_round() -> void: is_round = true
+func _start_round() -> void: 
+	is_round = true
+	can_take_damege = false
 
-func _desativar_start_round() -> void: is_round = false
+func _desativar_start_round() -> void: 
+	is_round = false
+	can_take_damege = true
+	can_punch = true
 
 func vitoria()-> void:
 	animation.stop()
@@ -393,6 +410,7 @@ func _on_anim_animation_finished() -> void:
 	# Verifica se a animação que acabou de terminar é de ataque
 	
 	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao","morrer"]:
+		
 		if animation.animation == "especial":
 			print("special");
 			is_attacking = false
@@ -409,15 +427,21 @@ func _on_anim_animation_finished() -> void:
 			animation.play("invisivel")
 			is_alive = false
 			return
+		elif animation.animation == "punch3":
+			is_attacking = false
 		if animation.animation != "comemoracao":
 			if combo_window > 0:
 				combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo
+				can_punch = true
+				
 			else:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
-				COMBO_WINDOW_DURATION = 0.4
+				COMBO_WINDOW_DURATION = 0.5
+				can_punch = true
 				is_suffering_damage = false
 				#retirando as animações de particulas do personagem
+			
 		
 	for child in get_parent().get_children():
 		if child is Sprite2D:

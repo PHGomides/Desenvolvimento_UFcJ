@@ -30,6 +30,7 @@ func _on_area_entered(area: Area2D) -> void:
 		get_parent()._damage(10,"poderOpicional")
 		$"../Dano1sfx".play()
 		get_parent().KnockBack()
+		
 	
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()

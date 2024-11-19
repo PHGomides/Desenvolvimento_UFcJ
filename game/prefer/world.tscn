@@ -134,7 +134,7 @@ position = Vector2(19, 123)
 script = ExtResource("1_kywhc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(713, 506)
+position = Vector2(684, 491)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
@@ -489,11 +489,11 @@ texture = ExtResource("26_ndkkw")
 
 [node name="Fight" type="TextureRect" parent="HUD/Round"]
 layout_mode = 0
-offset_left = 726.0
-offset_top = 291.0
-offset_right = 1405.0
-offset_bottom = 566.0
-scale = Vector2(0.732345, 0.732345)
+offset_left = 645.0
+offset_top = 407.0
+offset_right = 1320.0
+offset_bottom = 696.0
+scale = Vector2(0.967, 0.967)
 texture = ExtResource("29_eofp7")
 
 [node name="round" type="Label" parent="HUD/Round"]
@@ -560,7 +560,7 @@ texture = ExtResource("32_li70s")
 script = ExtResource("23_af463")
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(227, 623)
+position = Vector2(154, 625)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
 position = Vector2(1180, 612)

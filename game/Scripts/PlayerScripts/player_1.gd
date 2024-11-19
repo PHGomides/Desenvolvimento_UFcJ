@@ -354,6 +354,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
+		$SangrarAnimationSprite.play("sangrar")
 		
 			
 	elif(tipoGolpe == "punch3"):
@@ -367,6 +368,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
+		$SangrarAnimationSprite.play("sangrar")
 			
 	elif(tipoGolpe == "especialShape"):
 		break_defense = true
@@ -379,6 +381,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		IncrementarEspecialInimigo()
 		animation.play("damage")
 		is_suffering_damage = true
+		$SangrarAnimationSprite.play("sangrar")
 		
 		
 	else:
