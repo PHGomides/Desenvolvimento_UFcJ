@@ -24,6 +24,7 @@ func _ready() -> void:
 	$MenuOpcoes/VBoxContainer/sliderSFX.value = AudioServer.get_bus_volume_db(sfx)
 	$MenuOpcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
 	pass # Replace with function body.
+	$MenuMain/btn1vs1.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,8 +52,11 @@ func _on_btn_sair_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_btn_opcoes_pressed() -> void:
+	
 	MenuOpcao.visible = true
 	MenuMain.visible = false
+	$MenuOpcoes/VBoxContainer/buttons/btnControles.grab_focus()
+	
 	pass # Replace with function body.
 
 func _on_btn_voltar_pressed() -> void:
@@ -61,6 +65,7 @@ func _on_btn_voltar_pressed() -> void:
 	MenuMain.visible = true
 	MenuChaveamento.visible= false
 	MenuSelecaoMapa.visible = false
+	$MenuMain/btn1vs1.grab_focus()
 	pass # Replace with function body.
 
 func voltarSelecaoMapa() -> void:

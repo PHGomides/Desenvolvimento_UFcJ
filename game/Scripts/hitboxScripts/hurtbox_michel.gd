@@ -33,7 +33,7 @@ func _on_area_entered(area: Area2D) -> void:
 
 		get_parent()._damage(10,"poderOpicional")
 		$"../Dano2sfx".play()
-		get_parent().KnockBack()
+		get_parent().KnockBack(1500)
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()
 		print("Colisão detectada com:", golpe_tipo)

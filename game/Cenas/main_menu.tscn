@@ -44,7 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
 [ext_resource type="Texture2D" uid="uid://2mbba26wydu2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtnF.png" id="28_ei1r6"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
-[ext_resource type="ButtonGroup" uid="uid://xj672sn0ymaw" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnGrupRight.tres" id="29_jn2e5"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
 [ext_resource type="Texture2D" uid="uid://e8ntb7u0v0tm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/michBtn.png" id="29_xd7ua"]
 [ext_resource type="Texture2D" uid="uid://txko7ukvfgy7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/AlissonBtn.png" id="30_1mfh3"]
@@ -113,6 +112,8 @@ bg_color = Color(0.921569, 0.615686, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2her8"]
 bg_color = Color(0.921569, 0.615686, 0, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_spe0o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_htphl"]
 animations = [{
@@ -440,33 +441,36 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_bottom = NodePath("../btnCreditos")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("17_opr63")
 texture_hover = ExtResource("18_aeu5r")
+texture_focused = ExtResource("18_aeu5r")
 stretch_mode = 5
 
 [node name="btnCreditos" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnControles")
+focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("16_xup2c")
 texture_hover = ExtResource("17_hxj2n")
+texture_focused = ExtResource("17_hxj2n")
 stretch_mode = 5
 
 [node name="btnVoltar" type="TextureButton" parent="MenuOpcoes/VBoxContainer/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnCreditos")
+focus_neighbor_bottom = NodePath("../btnControles")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
+texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="MenuChaveamento" type="Control" parent="."]
@@ -761,7 +765,6 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_bottom = NodePath("../Player1Neemias")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -770,20 +773,16 @@ texture_hover = ExtResource("22_4jfx2")
 texture_focused = ExtResource("22_4jfx2")
 stretch_mode = 3
 
-[node name="Player1Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+[node name="Player1Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_top = NodePath("../Player1Michel")
-focus_neighbor_bottom = NodePath("../Player1Oka")
-focus_mode = 0
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
 texture_normal = ExtResource("22_tgq14")
 texture_hover = ExtResource("24_goy5u")
 texture_focused = ExtResource("24_goy5u")
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="Player1Oka" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
 layout_mode = 2
@@ -867,7 +866,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("29_xd7ua")
 texture_hover = ExtResource("32_irdys")
 texture_focused = ExtResource("32_irdys")
@@ -878,7 +877,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("31_pj44o")
 texture_hover = ExtResource("34_rmu8n")
 texture_focused = ExtResource("34_rmu8n")
@@ -889,7 +888,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("32_18xtj")
 texture_hover = ExtResource("36_4jyqn")
 texture_focused = ExtResource("36_4jyqn")
@@ -900,7 +899,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("33_mh0us")
 texture_hover = ExtResource("38_7k1bu")
 texture_focused = ExtResource("38_7k1bu")
@@ -911,7 +910,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("34_pab37")
 texture_hover = ExtResource("40_1ekn0")
 texture_focused = ExtResource("40_1ekn0")
@@ -922,7 +921,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("47_80f7l")
 texture_hover = ExtResource("48_y6dna")
 texture_focused = ExtResource("48_y6dna")
@@ -933,7 +932,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 toggle_mode = true
-button_group = ExtResource("29_jn2e5")
+button_group = SubResource("ButtonGroup_spe0o")
 texture_normal = ExtResource("37_p6845")
 texture_hover = ExtResource("54_snwm8")
 texture_focused = ExtResource("54_snwm8")

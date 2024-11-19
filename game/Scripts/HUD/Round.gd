@@ -123,7 +123,7 @@ func _on_time_is_up():
 
 	if Global.player1_round == 2:
 		print("Player 1 Wins!")
-		$"../../vitoriaplayer/VitoriaPlayer1Banner".visible = true
+		$vitoriaplayer/VitoriaPlayer1Banner.visible = true
 		$"..".visible = false
 		desativar_controle_jogadores()
 		Global.player1.vitoria()
@@ -134,7 +134,7 @@ func _on_time_is_up():
 		Global.player2_round = 0
 	elif Global.player2_round == 2:
 		print("Player 2 Wins!")
-		$"../../vitoriaplayer/VitoriaPlayer2Banner".visible = true
+		$vitoriaplayer/VitoriaPlayer2Banner.visible = true
 		$"..".visible = false
 		desativar_controle_jogadores()
 		Global.player2.vitoria()

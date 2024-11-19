@@ -1054,6 +1054,23 @@ sprite_frames = SubResource("SpriteFrames_0ghie")
 animation = &"powerReady"
 frame_progress = 0.40398
 
+[node name="vitoriaplayer" type="CanvasLayer" parent="HUD/Round"]
+layer = -1
+
+[node name="VitoriaPlayer1Banner" type="TextureRect" parent="HUD/Round/vitoriaplayer"]
+visible = false
+z_index = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("32_ci3ur")
+
+[node name="VitoriaPlayer2Banner" type="TextureRect" parent="HUD/Round/vitoriaplayer"]
+visible = false
+z_index = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("32_li70s")
+
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)
 amount = 2000
@@ -1080,23 +1097,6 @@ environment = SubResource("Environment_xcucr")
 
 [node name="Control" parent="." instance=ExtResource("22_vlji3")]
 visible = false
-
-[node name="vitoriaplayer" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="VitoriaPlayer1Banner" type="TextureRect" parent="vitoriaplayer"]
-visible = false
-z_index = 1
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("32_ci3ur")
-
-[node name="VitoriaPlayer2Banner" type="TextureRect" parent="vitoriaplayer"]
-visible = false
-z_index = 1
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("32_li70s")
 
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("23_af463")

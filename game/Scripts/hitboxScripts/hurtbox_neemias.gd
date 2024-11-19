@@ -29,7 +29,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
 		get_parent()._damage(10,"poderOpicional")
 		$"../Dano1sfx".play()
-		get_parent().KnockBack()
+		get_parent().KnockBack(1500)
 		
 	
 	if area.has_method("get_hitbox_type"):
