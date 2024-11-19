@@ -24,7 +24,7 @@ var power: int = 60
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
 
-var COMBO_WINDOW_DURATION = 0.4  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
+var COMBO_WINDOW_DURATION = 0.5  # Tempo para apertar o botão para continuar o combo inicialmente baixo pro golpe 1
 var attack_state = 0  # Estado do ataque
 var combo_window = 0.0 #tempo atual da janela de combo
 
@@ -141,7 +141,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			combo_ready = false  # Reseta a habilidade de encadear combos
 			if is_attacking and attack_state > 0:
-				COMBO_WINDOW_DURATION = 0.4#resetando a janela de combo
 				is_attacking = false  # Se o combo não for finalizado, retorna ao estado idle
 				attack_state = 0  # Reseta o estado de ataque
 				animation.play("idle")  # Volta à animação idle
@@ -240,6 +239,7 @@ func _physics_process(delta: float) -> void:
 				if not is_jumping:
 					animation.play("walk")
 					is_attacking = false
+					
 			elif is_jumping:
 				animation.play("jump")
 			else:
@@ -425,6 +425,7 @@ func _on_anim_animation_finished() -> void:
 	if animation.animation in ["punch1", "punch2", "punch3", "especial", "opcional", "damage","comemoracao","morrer"]:
 		if animation.animation == "especial":
 			print("special");
+			is_attacking = false
 			using_special = false  # Permite o uso do especial novamente
 		elif animation.animation == "opcional":
 			
@@ -433,7 +434,8 @@ func _on_anim_animation_finished() -> void:
 			is_suffering_damage = false
 			break_defense = false
 			is_attacking = false
-			
+		elif animation.animation == "punch3":
+			is_attacking = false
 		elif animation.animation == "morrer":
 			animation.play("invisivel")
 			is_alive = false
@@ -445,7 +447,6 @@ func _on_anim_animation_finished() -> void:
 			else:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
-				COMBO_WINDOW_DURATION = 0.4
 				can_punch = true
 				#retirando as animações de particulas do personagem
 				is_suffering_damage = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=134 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -47,15 +47,12 @@
 [ext_resource type="Texture2D" uid="uid://cm1tbi2hlpuyl" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0001_6.png" id="33_ck5an"]
 [ext_resource type="Texture2D" uid="uid://cmgp684xp1ynu" path="res://Assests/Michel Sprites Pronto/Michel pulo/_0000s_0000_7.png" id="34_a11b2"]
 [ext_resource type="Texture2D" uid="uid://dpextd03iie42" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0010_11.png" id="35_fdwun"]
-[ext_resource type="Texture2D" uid="uid://d06mln2f5rcjs" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0009_10.png" id="36_yv7hw"]
 [ext_resource type="Texture2D" uid="uid://rrh76y74eon7" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0008_9.png" id="37_g00c3"]
 [ext_resource type="Texture2D" uid="uid://cmctuh3sj4tu6" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0007_8.png" id="38_qmqk6"]
 [ext_resource type="Texture2D" uid="uid://b1uyvk6f67fpc" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0006_7.png" id="39_tnali"]
 [ext_resource type="Texture2D" uid="uid://btvhihftey2in" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0005_6.png" id="40_gw4ga"]
-[ext_resource type="Texture2D" uid="uid://gy2o1b8ymngy" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0004_5.png" id="41_idf6g"]
 [ext_resource type="Texture2D" uid="uid://b3ndmjuuwgfd3" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0003_4.png" id="42_q5fl0"]
 [ext_resource type="Texture2D" uid="uid://hfgm7t4ovqe5" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0002_3.png" id="43_itvnp"]
-[ext_resource type="Texture2D" uid="uid://qnbxiiqj84cv" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0001_2.png" id="44_e0k0a"]
 [ext_resource type="Texture2D" uid="uid://dlwdx3mmufc82" path="res://Assests/Michel Sprites Pronto/michel chute/_0000s_0000_1.png" id="45_3tkth"]
 [ext_resource type="Texture2D" uid="uid://b1ayeypy31dle" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0004_1.png" id="46_yjxub"]
 [ext_resource type="Texture2D" uid="uid://b71fa4xv3dvul" path="res://Assests/Michel Sprites Pronto/Michel golpe 1/_0000s_0002_3.png" id="47_jhy1b"]
@@ -522,9 +519,6 @@ animations = [{
 "texture": ExtResource("35_fdwun")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_yv7hw")
-}, {
-"duration": 1.0,
 "texture": ExtResource("37_g00c3")
 }, {
 "duration": 1.0,
@@ -537,23 +531,17 @@ animations = [{
 "texture": ExtResource("40_gw4ga")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_idf6g")
-}, {
-"duration": 1.0,
 "texture": ExtResource("42_q5fl0")
 }, {
 "duration": 1.0,
 "texture": ExtResource("43_itvnp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_e0k0a")
-}, {
-"duration": 1.0,
 "texture": ExtResource("45_3tkth")
 }],
 "loop": false,
 "name": &"opcional",
-"speed": 40.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -564,10 +552,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("48_6d13e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6d13e")
 }],
 "loop": false,
 "name": &"punch1",
-"speed": 17.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -584,10 +575,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("53_8guea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_8guea")
 }],
 "loop": false,
 "name": &"punch2",
-"speed": 20.0
+"speed": 25.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -801,8 +795,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"comemoracao"
-frame_progress = 0.833324
+animation = &"opcional"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

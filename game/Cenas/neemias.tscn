@@ -791,9 +791,7 @@ z_index = 1
 position = Vector2(30, -17)
 scale = Vector2(1.02681, 0.863823)
 sprite_frames = SubResource("SpriteFrames_nn853")
-animation = &"punch1"
-frame = 3
-frame_progress = 1.0
+animation = &"opcional"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]
 

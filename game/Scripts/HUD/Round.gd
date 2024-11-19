@@ -93,6 +93,18 @@ func _init_round():
 	_1.visible = false
 
 	fight.visible = true
+	if(Global.round == 1):
+		$Fight/round1Image.visible = true
+		$Fight/round2Image.visible = false
+		$Fight/round3Image.visible = false
+	elif(Global.round == 2):
+		$Fight/round1Image.visible = false
+		$Fight/round2Image.visible = true
+		$Fight/round3Image.visible = false
+	else:
+		$Fight/round1Image.visible = false
+		$Fight/round2Image.visible = false
+		$Fight/round3Image.visible = true
 	$"../../FightSfx".play()
 	await get_tree().create_timer(1).timeout
 	fight.visible = false
