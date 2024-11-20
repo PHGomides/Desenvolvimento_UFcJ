@@ -57,13 +57,13 @@ func _on_area_entered(area: Area2D) -> void:
 
 			$"../Dano2sfx".play()
 			get_parent()._damage(10,golpe_tipo)
-			get_parent().KnockBack(800)
+			get_parent().KnockBack(1200)
 
 		elif golpe_tipo == "especialShape":
 			print("Player 2 acertou o Player 1 com o especial!")
 
 			get_parent()._damage(50,golpe_tipo)
 			$"../Dano2sfx".play()
-			get_parent().KnockBack(1200)
+			get_parent().KnockBack(2000)
 
 			

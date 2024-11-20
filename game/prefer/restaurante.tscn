@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://damkoxku2wqyk" path="res://Assests/mapa_RU_Accets/mapa-ru_0003_LuzFrente.png" id="9_tr0sr"]
 [ext_resource type="Texture2D" uid="uid://s4i015lcxgs4" path="res://Assests/mapa_RU_Accets/mapa-ru_0002_Cadeiras-tras.png" id="10_n6xjh"]
 [ext_resource type="Texture2D" uid="uid://csvi57huyhf3j" path="res://Assests/mapa_RU_Accets/mapa-ru_0001_cadeiras-Frente.png" id="11_gd43u"]
-[ext_resource type="Texture2D" uid="uid://dkooywpymfl4q" path="res://Assests/hud/novahuf/HUDPreta.png" id="12_xt4ks"]
+[ext_resource type="Texture2D" uid="uid://xbf1yvxddc00" path="res://Assests/hud/novahuf/HUDBranca.png" id="12_hfqw7"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="13_7sosk"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="14_0hccy"]
 [ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="15_qktex"]
@@ -560,6 +560,7 @@ script = ExtResource("1_ebi03")
 environment = SubResource("Environment_2sxed")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(729, 660)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.89, 0.89)
 limit_left = -630
@@ -686,10 +687,10 @@ visible = false
 script = ExtResource("27_qdop1")
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(-132, 475)
+position = Vector2(434, 646)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
-position = Vector2(1375, 480)
+position = Vector2(1443, 659)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 layer = 0
@@ -705,7 +706,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 scale = Vector2(1.02, 1.02)
 size_flags_horizontal = 4
-texture = ExtResource("12_xt4ks")
+texture = ExtResource("12_hfqw7")
 
 [node name="Tempo" type="Control" parent="HUD"]
 layout_mode = 3
@@ -746,7 +747,7 @@ size_flags_horizontal = 4
 [node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 70
 text = "90
@@ -842,7 +843,7 @@ offset_top = 43.0
 offset_right = 568.0
 offset_bottom = 85.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 35
@@ -856,7 +857,7 @@ offset_top = 43.0
 offset_right = 1620.0
 offset_bottom = 124.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 35
@@ -1014,8 +1015,7 @@ offset_top = 103.0
 offset_right = 1106.0
 offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 35
 text = "ROUND 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=141 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -121,8 +121,14 @@
 [ext_resource type="Texture2D" uid="uid://c6kab2owxeepa" path="res://Assests/particulas/sangue/_0001_Camada-3.png" id="122_5mm5k"]
 [ext_resource type="Texture2D" uid="uid://bth4mh3x4e3qx" path="res://Assests/particulas/sangue/_0002_Camada-4.png" id="123_dixtp"]
 [ext_resource type="Texture2D" uid="uid://c6amy7hr4idqf" path="res://Assests/particulas/sangue/_0003_Camada-5.png" id="124_0pysv"]
+[ext_resource type="AudioStream" uid="uid://dw334acuj3xew" path="res://audio/dash_SFX.wav" id="124_5mu70"]
 [ext_resource type="Texture2D" uid="uid://b0foqlno3k2h7" path="res://Assests/particulas/sangue/_0004_Camada-6.png" id="125_vbyaf"]
+[ext_resource type="Texture2D" uid="uid://cje7h5plqqv05" path="res://Assests/particulas/dash_sprite/_0000_Camada-1.png" id="125_vsma4"]
 [ext_resource type="Texture2D" uid="uid://doy17ymhi78bx" path="res://Assests/particulas/sangue/_0005_Camada-7.png" id="126_00dnt"]
+[ext_resource type="Texture2D" uid="uid://cdshk6nanu17n" path="res://Assests/particulas/dash_sprite/_0001_Camada-2.png" id="126_4oql2"]
+[ext_resource type="Texture2D" uid="uid://bwp2ndgoh73j0" path="res://Assests/particulas/dash_sprite/_0006_Camada-7.png" id="128_6aoe6"]
+[ext_resource type="Texture2D" uid="uid://cms3bpb8aqaum" path="res://Assests/particulas/dash_sprite/_0008_Camada-9.png" id="129_exaj4"]
+[ext_resource type="Texture2D" uid="uid://f18bvnn4sl6b" path="res://Assests/particulas/dash_sprite/_0009_Camada-10.png" id="130_ohty7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -782,6 +788,32 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_enpnm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125_vsma4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_4oql2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_6aoe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_exaj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_ohty7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_e17a7")
+}],
+"loop": false,
+"name": &"dash",
+"speed": 25.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_61h00")
@@ -892,4 +924,19 @@ animation = &"sangrar"
 frame = 6
 frame_progress = 1.0
 
+[node name="DashSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("124_5mu70")
+
+[node name="dash_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="dashAnimation" type="AnimatedSprite2D" parent="."]
+z_index = -2
+position = Vector2(185.109, -50.8267)
+sprite_frames = SubResource("SpriteFrames_enpnm")
+animation = &"dash"
+frame = 5
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]

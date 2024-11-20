@@ -13,6 +13,8 @@ func _ready() -> void:
 	Player1.add_to_group("players") #serve pra fazer a camera focar nele
 	Global.player1 = Player1  # Armazena a referência no script global
 	add_child(Player1)
+	Global.player1.scale.x = 1.5
+	Global.player1.scale.y = 1.5
 	
 	Player2 = load(Global.player2Diretorio).instantiate()
 	Player2.type_player = 1
@@ -21,3 +23,5 @@ func _ready() -> void:
 	Player2.add_to_group("players")
 	Global.player2 = Player2  # Armazena a referência no script global
 	add_child(Player2)
+	Global.player2.scale.x = 1.5
+	Global.player2.scale.y = 1.5

@@ -59,6 +59,14 @@ var current_direction #direção do personagem olhando pra direita
 
 var controles
 
+#DASH
+
+const DASH_SPEED = 2000.0
+var dashing = false
+var can_dash = true
+var dashing_cooldown_time = 0.7  # Tempo de cooldown para pular
+var dashing_timer = 0.0    # Temporizador para controlar o cooldown
+var isWalking = false
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
@@ -73,7 +81,8 @@ func _ready() -> void:
 		"punch": "ui_punch",
 		"special": "ui_especial",
 		"optional": "ui_opcional",
-		"defense": "ui_defesa"
+		"defense": "ui_defesa",
+		"dash": "dash_p2"
 	}if type_player == 1 else {
 		"jump": "ui_w",
 		"move_left": "ui_A",
@@ -81,7 +90,8 @@ func _ready() -> void:
 		"punch": "ui_J",
 		"special": "ui_L",
 		"optional": "ui_K",
-		"defense": "ui_U"
+		"defense": "ui_U",
+		"dash": "dash_p1"
 	}
 	
 # Garante que o personagem esteja virado para a direita
@@ -93,6 +103,9 @@ func _ready() -> void:
 		current_direction = -1  # Define a direção atual para a direita
 	VirarDeLado() 
 	
+
+
+
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
@@ -112,6 +125,11 @@ func _physics_process(delta: float) -> void:
 		jump_timer -= delta
 		if jump_timer <= 0:
 			can_jump = true  # Permite pular novamente após o cooldown
+
+	if not can_dash:
+		dashing_timer -= delta
+		if dashing_timer <= 0:
+			can_dash = true  # Permite pular novamente após o cooldown
 	# Adiciona a gravidade
 	if not is_on_floor():
 		
@@ -159,6 +177,7 @@ func _physics_process(delta: float) -> void:
 			attack_state = 1 
 			emit_signal("punch_activated", "state1")  # Emite sinal para ativar colisões de punch1
 			is_suffering_damage = false
+			isWalking = false
 			
 		elif attack_state == 1:
 			can_punch = false
@@ -167,6 +186,7 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("punch_activated", "state2")  # Emite sinal para ativar colisões de punch2 
 			is_suffering_damage = false
+			isWalking = false
 			
 		else:
 			can_punch = false
@@ -180,6 +200,7 @@ func _physics_process(delta: float) -> void:
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
 			is_suffering_damage = false
+			isWalking = false
 			
 			
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
@@ -228,22 +249,42 @@ func _physics_process(delta: float) -> void:
 		animation.play("defesa", false)  # Reproduz a animação de defesa sem looping
 	else:
 		is_defending = false  # Para a defesa quando a tecla for solta
+	
+	#logica de dash
+	if(Input.is_action_just_pressed(controles["dash"]) and can_dash and isWalking):
+		
+		$DashSfx.play()
+		$dashAnimation.play("dash")
+		dashing = true
+		can_dash = false
+		dashing_timer = dashing_cooldown_time
+		$dash_timer.start()
+		
+	
 	if not is_round: #logica de Movimenção
 
 		if not is_attacking and not is_defending and not opcional_attack:
 			var direction: int = sign(Input.get_axis(controles["move_left"], controles["move_right"]))
 			if direction != 0:
 				current_direction = direction
-				velocity.x = direction * SPEED
+				
+				if(dashing):
+					
+					velocity.x = direction * DASH_SPEED
+				else:
+					velocity.x = direction * SPEED
 					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
 					animation.play("walk")
 					is_attacking = false
+					isWalking = true
 					
 			elif is_jumping:
 				animation.play("jump")
+				isWalking = false
 			else:
+				isWalking = false
 				animation.play("idle")
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 	elif is_round and vida <= 0 and is_alive:
@@ -262,10 +303,14 @@ func _physics_process(delta: float) -> void:
 		$hitbox_michel/punch1e2.position.x = 141.22
 		$hitbox_michel/punch3eopcional.position.x = 131.859
 		$hitbox_michel/especialShape.position.x = 1023.109
+		$dashAnimation.position.x = -165.211
+		$dashAnimation.flip_h = true
 	elif current_direction == -1:
 		$hitbox_michel/punch1e2.position.x = -137.891
 		$hitbox_michel/punch3eopcional.position.x = -128
 		$hitbox_michel/especialShape.position.x = -1023.109
+		$dashAnimation.position.x = 185.109
+		$dashAnimation.flip_h = false
 
 func parar_movimento():
 	velocity = Vector2.ZERO		
@@ -273,6 +318,7 @@ func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
 	emit_signal("punch_activated", "state3")
 	
 func SoltarPoder():
+	isWalking = false
 	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
 	powerOptional.powerOpitionalArea.powerColision.disabled = false
@@ -301,6 +347,7 @@ func VirarDeLado() -> void:
 	animation.scale.x = abs(animation.scale.x) * current_direction
 
 func KnockBack(force: float = 500.0) -> void:
+	isWalking = false
 	if(vida<=0 || using_special):
 		return
 	# Define a direção contrária ao dano para aplicar o knockback
@@ -329,7 +376,7 @@ func _reduce_knockback(timer: Timer) -> void:
 		parar_movimento()
 
 func SoltarEspecial() -> void:
-	
+	isWalking = false
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
 	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
@@ -352,7 +399,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	parar_movimento()
 
 	opcional_attack = false
-	
+	isWalking = false
 	if(using_special):
 		return
 	if(is_defending== false):
@@ -396,6 +443,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	else:
 		$DefesaSfx.play()
 		
+	
 		
 
 func IncrementarEspecialInimigo():
@@ -407,6 +455,7 @@ func IncrementarEspecialInimigo():
 func _start_round() -> void: 
 	is_round = true
 	can_take_damege = false
+	isWalking = false
 
 func _desativar_start_round() -> void: 
 	is_round = false
@@ -461,3 +510,8 @@ func _on_anim_animation_finished() -> void:
 			child.queue_free()  # Remove a animação do mundo		
 			
 			
+
+
+func _on_dash_timer_timeout() -> void:
+	dashing = false
+	pass # Replace with function body.

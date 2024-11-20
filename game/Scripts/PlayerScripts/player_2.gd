@@ -54,6 +54,16 @@ var is_suffering_damage = false
 var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 var controles
 
+#DASH
+
+const DASH_SPEED = 2000.0
+var dashing = false
+var can_dash = true
+var dashing_cooldown_time = 0.7  # Tempo de cooldown para pular
+var dashing_timer = 0.0    # Temporizador para controlar o cooldown
+var isWalking = false
+
+
 @onready var especialHitbox = $hitbox_neemias/especialShape
 
 
@@ -73,7 +83,8 @@ func _ready() -> void:
 		"punch": "ui_punch",
 		"special": "ui_especial",
 		"optional": "ui_opcional",
-		"defense": "ui_defesa"
+		"defense": "ui_defesa",
+		"dash": "dash_p2"
 	}if type_player == 1 else {
 		"jump": "ui_w",
 		"move_left": "ui_A",
@@ -81,7 +92,8 @@ func _ready() -> void:
 		"punch": "ui_J",
 		"special": "ui_L",
 		"optional": "ui_K",
-		"defense": "ui_U"
+		"defense": "ui_U",
+		"dash": "dash_p1"
 	}
 # Garante que o personagem esteja virado para a direita
 	if(type_player == 1):
@@ -108,6 +120,10 @@ func _physics_process(delta: float) -> void:
 		jump_timer -= delta
 		if jump_timer <= 0:
 			can_jump = true  # Permite pular novamente após o cooldown
+	if not can_dash:
+		dashing_timer -= delta
+		if dashing_timer <= 0:
+			can_dash = true  # Permite pular novamente após o cooldown
 	if not is_on_floor():
 	
 		velocity.y += GRAVITY * delta
@@ -156,7 +172,7 @@ func _physics_process(delta: float) -> void:
 			
 			emit_signal("punch_activated_p2", "state1_p2")  # Emite sinal para ativar colisões de punch1
 			is_suffering_damage = false
-			
+			isWalking = false
 			
 		elif attack_state == 1:
 			can_punch = false
@@ -165,7 +181,7 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("punch_activated_p2", "state2_p2")  # Emite sinal para ativar colisões de punch2
 			is_suffering_damage = false
-			
+			isWalking = false
 		else:
 			can_punch = false
 			animation.play("punch3")
@@ -178,7 +194,7 @@ func _physics_process(delta: float) -> void:
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
 			is_suffering_damage = false
-			
+			isWalking = false
 		combo_window = COMBO_WINDOW_DURATION  # Reinicia a janela de combo
 		combo_ready = false  # Reseta combo_ready ao iniciar novo ataque
 			
@@ -222,24 +238,38 @@ func _physics_process(delta: float) -> void:
 	else:
 		is_defending = false  # Para a defesa quando a tecla for solta
 		
-
+	if(Input.is_action_just_pressed(controles["dash"]) and can_dash and isWalking):
+		
+		$DashSfx.play()
+		$dashAnimation.play("dash")
+		dashing = true
+		can_dash = false
+		dashing_timer = dashing_cooldown_time
+		$dash_timer.start()
 		
 	if not is_round: # para funçao round
 		if not is_attacking and not is_defending and not opcional_attack:
 			var direction: int = sign(Input.get_axis(controles["move_left"], controles["move_right"]))
 			if direction != 0:
 				current_direction = direction
-				velocity.x = direction * SPEED
+				if(dashing):
+					
+					velocity.x = direction * DASH_SPEED
+				else:
+					velocity.x = direction * SPEED
 					# Corrigir apenas o sinal da escala, mantendo o valor absoluto constante
 				animation.scale.x = abs(animation.scale.x) * direction
 				if not is_jumping:
 					animation.play("walk")
 					is_attacking = false
+					isWalking = true
 					
 			elif is_jumping:
 				animation.play("jump")
+				isWalking = false
 			else:
 				animation.play("idle")
+				isWalking = false
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 	elif is_round and vida <= 0 and is_alive:
 		print("desaparecer")
@@ -259,16 +289,21 @@ func _physics_process(delta: float) -> void:
 		$hitbox_neemias/punch2.position.x = 169.875
 		$hitbox_neemias/punch3.position.x = 157.5
 		$hitbox_neemias/especialShape.position.x = 1030.109
+		$dashAnimation.position.x = -165.211
+		$dashAnimation.flip_h = true
 	elif current_direction == -1:
 		$hitbox_neemias/opcionalePunch1.position.x = -114
 		$hitbox_neemias/punch2.position.x = -125
 		$hitbox_neemias/punch3.position.x = -113
 		$hitbox_neemias/especialShape.position.x = -988.66
+		$dashAnimation.position.x = 185.109
+		$dashAnimation.flip_h = false
 func parar_movimento():
 	velocity = Vector2.ZERO
 func _on_attack3_timer_timeout(): #função pra colocar delay de dano no attack3
 	emit_signal("punch_activated_p2", "state3_p2")
 func SoltarPoder():
+	isWalking = false
 	parar_movimento()
 	$PoderOpicionalAudio.play()
 	powerOptional.visible = true
@@ -298,6 +333,7 @@ func VirarDeLado() -> void:
 	animation.scale.x = abs(animation.scale.x) * current_direction
 
 func SoltarEspecial() -> void:
+	isWalking = false
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
 	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
@@ -311,6 +347,7 @@ func SoltarEspecial() -> void:
 	timer.start()
 
 func KnockBack(force: float = 500.0) -> void:
+	isWalking = false
 	if(vida<=0 || using_special):
 		return
 	# Define a direção contrária ao dano para aplicar o knockback
@@ -340,6 +377,7 @@ func _emit_special_signal() -> void:
 	emit_signal("punch_activated_p2", "state4")
 
 func _damage(damegeValue: int, tipoGolpe: String) -> void:
+	isWalking = false
 	is_suffering_damage = false
 	can_punch = true
 	opcional_attack = false
@@ -396,6 +434,7 @@ func IncrementarEspecialInimigo():
 func _start_round() -> void: 
 	is_round = true
 	can_take_damege = false
+	isWalking = false
 
 func _desativar_start_round() -> void: 
 	is_round = false
@@ -456,5 +495,7 @@ func _on_anim_animation_finished() -> void:
 			child.queue_free()  # Remove a animação do mundo		
 			
 			
-
+func _on_dash_timer_timeout() -> void:
+	dashing = false
+	pass # Replace with function body.
 			
