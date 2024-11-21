@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1lh4aucolbna"
-path="res://.godot/imported/transp_0000_Camada-1.png-a22fa12909d3d025fd21670748b0420a.ctex"
+uid="uid://becqw6kyyjjfa"
+path="res://.godot/imported/naoBtn.png-6d257cd13c658a8d2ac6d04d8cf845f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/dash_sprite/transp_0000_Camada-1.png"
-dest_files=["res://.godot/imported/transp_0000_Camada-1.png-a22fa12909d3d025fd21670748b0420a.ctex"]
+source_file="res://Assests/menu main/subMenuChaveamento/naoBtn.png"
+dest_files=["res://.godot/imported/naoBtn.png-6d257cd13c658a8d2ac6d04d8cf845f8.ctex"]
 
 [params]
 

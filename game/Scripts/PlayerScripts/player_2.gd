@@ -435,6 +435,8 @@ func _start_round() -> void:
 	is_round = true
 	can_take_damege = false
 	isWalking = false
+	poweropitional_timer = 6.0
+	can_launch_Opitional_Power = false
 
 func _desativar_start_round() -> void: 
 	is_round = false
@@ -473,6 +475,8 @@ func _on_anim_animation_finished() -> void:
 			return
 		elif animation.animation == "punch3":
 			is_attacking = false
+			
+			
 		if animation.animation != "comemoracao":
 			if combo_window > 0:
 				combo_ready = true  # Permite que o combo continue se o botão for pressionado no tempo certo

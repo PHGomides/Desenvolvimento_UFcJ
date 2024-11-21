@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ckyh3xfiqt07t"]
+[gd_scene load_steps=23 format=3 uid="uid://ckyh3xfiqt07t"]
 
 [ext_resource type="Script" path="res://Cenas/pause_menu.gd" id="1_a7ykj"]
 [ext_resource type="Texture2D" uid="uid://c4o8kfaopdt33" path="res://Assests/PausedMenuAccets/pauseBG.png" id="2_aakyb"]
@@ -16,6 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="8_03ib7"]
 [ext_resource type="Texture2D" uid="uid://4dp8l4irhjdc" path="res://Assests/PausedMenuAccets/ReeniciarPartidabtnHover.png" id="8_5lgyt"]
 [ext_resource type="Texture2D" uid="uid://11dx78x1yagq" path="res://Assests/PausedMenuAccets/sairDaPartidaBtnHover.png" id="8_wn5wr"]
+[ext_resource type="Texture2D" uid="uid://dswgu6818stb8" path="res://Assests/menu main/subMenuOpcoes/controlesbtn.png" id="15_8ajpb"]
+[ext_resource type="Texture2D" uid="uid://nclx06cmlxe0" path="res://Assests/menu main/subMenuOpcoes/controlesbtnHover.png" id="16_vc87x"]
+[ext_resource type="Texture2D" uid="uid://bciyytgyktvbd" path="res://Assests/PausedMenuAccets/pauseControllersBG.png" id="17_5ptec"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2088e"]
 color = Color(0, 0, 0, 0.21)
@@ -40,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="PauseMenuMain"]
 layout_mode = 1
@@ -73,38 +77,49 @@ offset_right = 221.0
 offset_bottom = 231.37
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 theme_override_constants/separation = 10
 
 [node name="RetornarBtn" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../SairDaPartidaBTN")
+focus_neighbor_bottom = NodePath("../btnOpcoes")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_d7adn")
 texture_hover = ExtResource("4_2gyf8")
+texture_focused = ExtResource("4_2gyf8")
 
 [node name="btnOpcoes" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../RetornarBtn")
+focus_neighbor_bottom = NodePath("../SairDaPartidaBTN2")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_pqm77")
 texture_hover = ExtResource("4_slltx")
+texture_focused = ExtResource("4_slltx")
 
 [node name="SairDaPartidaBTN2" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../btnOpcoes")
+focus_neighbor_bottom = NodePath("../SairDaPartidaBTN")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_a6j2v")
 texture_hover = ExtResource("8_5lgyt")
+texture_focused = ExtResource("8_5lgyt")
 
 [node name="SairDaPartidaBTN" type="TextureButton" parent="PauseMenuMain/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../SairDaPartidaBTN2")
+focus_neighbor_bottom = NodePath("../RetornarBtn")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_qxwg0")
 texture_hover = ExtResource("8_wn5wr")
+texture_focused = ExtResource("8_wn5wr")
 
 [node name="opcoes" type="Control" parent="."]
 visible = false
@@ -139,10 +154,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.23
-offset_top = 19.845
-offset_right = 138.23
-offset_bottom = 363.655
+offset_left = -162.5
+offset_top = 23.57
+offset_right = 162.5
+offset_bottom = 439.57
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0
@@ -202,6 +217,18 @@ texture_normal = ExtResource("4_sjgul")
 texture_hover = ExtResource("5_klea1")
 stretch_mode = 5
 
+[node name="btnControles" type="TextureButton" parent="opcoes/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_bottom = NodePath("../btnCreditos")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_8ajpb")
+texture_hover = ExtResource("16_vc87x")
+texture_focused = ExtResource("16_vc87x")
+stretch_mode = 5
+
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_a0awh")
 bus = &"SFX"
@@ -209,6 +236,64 @@ bus = &"SFX"
 [node name="clickmenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_03ib7")
 bus = &"SFX"
+
+[node name="Controles" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Controles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_5ptec")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.23
+offset_top = 327.965
+offset_right = 138.23
+offset_bottom = 671.775
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 65
+
+[node name="buttons" type="VBoxContainer" parent="Controles/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnVoltar" type="TextureButton" parent="Controles/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sjgul")
+texture_hover = ExtResource("5_klea1")
+stretch_mode = 5
 
 [connection signal="button_down" from="PauseMenuMain/VBoxContainer/RetornarBtn" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="PauseMenuMain/VBoxContainer/RetornarBtn" to="." method="sound_entered_btn"]
@@ -228,3 +313,7 @@ bus = &"SFX"
 [connection signal="button_down" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="voltarPauseMenuMain"]
+[connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnControles" to="." method="mostrarControles"]
+[connection signal="button_down" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sair_menu_Controles"]

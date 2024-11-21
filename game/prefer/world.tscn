@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=173 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -153,6 +153,8 @@
 [ext_resource type="Texture2D" uid="uid://b6e4walnmjg84" path="res://Assests/particulas/powerReady/power ready_00096.png" id="144_nfxqw"]
 [ext_resource type="Texture2D" uid="uid://bb51nsy51aol6" path="res://Assests/particulas/powerReady/power ready_00097.png" id="145_wjbpl"]
 [ext_resource type="Texture2D" uid="uid://csxrl1k2pvmpb" path="res://Assests/particulas/powerReady/power ready_00098.png" id="146_s3wc4"]
+[ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="149_qm3oh"]
+[ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="150_3144m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pt8k"]
 size = Vector2(247, 992)
@@ -707,6 +709,7 @@ scale = Vector2(1.97213, 1.97213)
 texture = ExtResource("8_2vacx")
 
 [node name="HUD" type="CanvasLayer" parent="."]
+process_mode = 1
 layer = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
@@ -899,6 +902,7 @@ texture = ExtResource("22_aadej")
 flip_h = true
 
 [node name="Round" type="Control" parent="HUD"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -1070,6 +1074,66 @@ z_index = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("32_li70s")
+
+[node name="PlayersChaveamento" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 188.105
+offset_bottom = 188.105
+grow_horizontal = 2
+script = ExtResource("149_qm3oh")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -22.0
+offset_right = 138.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("150_3144m")
+
+[node name="Confronto1" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.875
+offset_top = -18.235
+offset_right = -11.875
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_ng82x")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.565
+offset_top = -18.235
+offset_right = 118.565
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_ng82x")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
 position = Vector2(754, -173)

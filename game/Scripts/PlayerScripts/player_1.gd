@@ -7,7 +7,7 @@ var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor
 var name_player = "Michel"
 @export var ImageHud: Texture
 @onready var powerOptional = $PoderOpicional
-var can_launch_Opitional_Power = true
+var can_launch_Opitional_Power = false
 var powerOpitional_cooldown_time = 3.0
 var poweropitional_timer = 0.0
 #VIDA
@@ -109,6 +109,8 @@ func _ready() -> void:
 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
+
+
 	
 	if(not is_attacking):
 		is_suffering_damage = false
@@ -456,12 +458,16 @@ func _start_round() -> void:
 	is_round = true
 	can_take_damege = false
 	isWalking = false
+	poweropitional_timer = 6.0
+	can_launch_Opitional_Power = false
 
 func _desativar_start_round() -> void: 
 	is_round = false
 	can_take_damege = true
 	can_punch = true
 	using_special = false
+
+	
 
 func vitoria()-> void:
 	animation.stop()

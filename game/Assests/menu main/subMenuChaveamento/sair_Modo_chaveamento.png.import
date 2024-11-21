@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwp2ndgoh73j0"
-path="res://.godot/imported/_0006_Camada-7.png-668bc86e54b38c80d8c7f7bf9b074f97.ctex"
+uid="uid://8av5bw4ab4kq"
+path="res://.godot/imported/sair_Modo_chaveamento.png-580aae17510989a6e9941d6d3fc11641.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/dash_sprite/_0006_Camada-7.png"
-dest_files=["res://.godot/imported/_0006_Camada-7.png-668bc86e54b38c80d8c7f7bf9b074f97.ctex"]
+source_file="res://Assests/menu main/subMenuChaveamento/sair_Modo_chaveamento.png"
+dest_files=["res://.godot/imported/sair_Modo_chaveamento.png-580aae17510989a6e9941d6d3fc11641.ctex"]
 
 [params]
 

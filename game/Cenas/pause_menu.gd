@@ -29,8 +29,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		if(visible == false):
 			visible = true
 			get_tree().paused = true
+			$PauseMenuMain/VBoxContainer/RetornarBtn.grab_focus()
 		else:
 			visible = false
+			$Controles.visible = false
+			$opcoes.visible = false
+			$PauseMenuMain.visible = true
 			get_tree().paused = false
 
 func voltarMenuPrincipal() -> void:
@@ -100,4 +104,15 @@ func Reeniciar_Partida() -> void:
 	get_tree().root.add_child(carregamento)
 	
 	
+	pass # Replace with function body.
+
+
+func mostrarControles() -> void:
+	$opcoes.visible = false
+	$Controles.visible = true
+
+
+func sair_menu_Controles() -> void:
+	$opcoes.visible = true
+	$Controles.visible = false
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=146 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -122,13 +122,17 @@
 [ext_resource type="Texture2D" uid="uid://bth4mh3x4e3qx" path="res://Assests/particulas/sangue/_0002_Camada-4.png" id="123_dixtp"]
 [ext_resource type="Texture2D" uid="uid://c6amy7hr4idqf" path="res://Assests/particulas/sangue/_0003_Camada-5.png" id="124_0pysv"]
 [ext_resource type="AudioStream" uid="uid://dw334acuj3xew" path="res://audio/dash_SFX.wav" id="124_5mu70"]
+[ext_resource type="Texture2D" uid="uid://c1lh4aucolbna" path="res://Assests/particulas/dash_sprite/transp_0000_Camada-1.png" id="125_nbgcv"]
 [ext_resource type="Texture2D" uid="uid://b0foqlno3k2h7" path="res://Assests/particulas/sangue/_0004_Camada-6.png" id="125_vbyaf"]
-[ext_resource type="Texture2D" uid="uid://cje7h5plqqv05" path="res://Assests/particulas/dash_sprite/_0000_Camada-1.png" id="125_vsma4"]
 [ext_resource type="Texture2D" uid="uid://doy17ymhi78bx" path="res://Assests/particulas/sangue/_0005_Camada-7.png" id="126_00dnt"]
-[ext_resource type="Texture2D" uid="uid://cdshk6nanu17n" path="res://Assests/particulas/dash_sprite/_0001_Camada-2.png" id="126_4oql2"]
-[ext_resource type="Texture2D" uid="uid://bwp2ndgoh73j0" path="res://Assests/particulas/dash_sprite/_0006_Camada-7.png" id="128_6aoe6"]
-[ext_resource type="Texture2D" uid="uid://cms3bpb8aqaum" path="res://Assests/particulas/dash_sprite/_0008_Camada-9.png" id="129_exaj4"]
-[ext_resource type="Texture2D" uid="uid://f18bvnn4sl6b" path="res://Assests/particulas/dash_sprite/_0009_Camada-10.png" id="130_ohty7"]
+[ext_resource type="Texture2D" uid="uid://dyfrnyj7caivf" path="res://Assests/particulas/dash_sprite/transp_0001_Camada-2.png" id="126_r8iar"]
+[ext_resource type="Texture2D" uid="uid://qelmmiwhcdlk" path="res://Assests/particulas/dash_sprite/transp_0003_Camada-4.png" id="127_ggq8x"]
+[ext_resource type="Texture2D" uid="uid://cs2eyfkn7k3y2" path="res://Assests/particulas/dash_sprite/transp_0005_Camada-6.png" id="128_2wjr7"]
+[ext_resource type="Texture2D" uid="uid://bo07ale302pox" path="res://Assests/particulas/dash_sprite/transp_0007_Camada-8.png" id="129_jcs4w"]
+[ext_resource type="Texture2D" uid="uid://bfclx4x3it3cn" path="res://Assests/particulas/dash_sprite/transp_0008_Camada-9.png" id="130_xnc2x"]
+[ext_resource type="Texture2D" uid="uid://cg4mfcc1q4ppf" path="res://Assests/particulas/dash_sprite/transp_0009_Camada-10.png" id="131_nxhv2"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_michel.gd" id="132_6tqje"]
+[ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_esquerda_michel.gd" id="133_turu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -792,19 +796,25 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("125_vsma4")
+"texture": ExtResource("125_nbgcv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("126_4oql2")
+"texture": ExtResource("126_r8iar")
 }, {
 "duration": 1.0,
-"texture": ExtResource("128_6aoe6")
+"texture": ExtResource("127_ggq8x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("129_exaj4")
+"texture": ExtResource("128_2wjr7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("130_ohty7")
+"texture": ExtResource("129_jcs4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_xnc2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_nxhv2")
 }, {
 "duration": 1.0,
 "texture": ExtResource("76_e17a7")
@@ -814,13 +824,17 @@ animations = [{
 "speed": 25.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3erlb"]
+size = Vector2(1.5, 2)
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_61h00")
 ImageHud = ExtResource("2_8cp4u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6.60913, -7.82672)
+position = Vector2(6.609, 9.233)
+scale = Vector2(1, 0.95)
 shape = SubResource("RectangleShape2D_m024i")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
@@ -935,8 +949,26 @@ z_index = -2
 position = Vector2(185.109, -50.8267)
 sprite_frames = SubResource("SpriteFrames_enpnm")
 animation = &"dash"
-frame = 5
+frame = 7
 frame_progress = 1.0
+
+[node name="empurrarDireita" type="Area2D" parent="."]
+script = ExtResource("132_6tqje")
+
+[node name="empDir" type="CollisionShape2D" parent="empurrarDireita"]
+position = Vector2(-37.151, 147.058)
+shape = SubResource("RectangleShape2D_3erlb")
+
+[node name="empurrarEsquerda" type="Area2D" parent="."]
+script = ExtResource("133_turu2")
+
+[node name="empEsq" type="CollisionShape2D" parent="empurrarEsquerda"]
+position = Vector2(50.349, 147.058)
+shape = SubResource("RectangleShape2D_3erlb")
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="body_entered" from="empurrarDireita" to="empurrarDireita" method="_on_body_entered"]
+[connection signal="body_exited" from="empurrarDireita" to="empurrarDireita" method="_on_body_exited"]
+[connection signal="body_entered" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_entered"]
+[connection signal="body_exited" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_exited"]

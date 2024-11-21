@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=113 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -27,25 +27,33 @@
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="20_5id1b"]
 [ext_resource type="Texture2D" uid="uid://dm7q5sxcwioqh" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnIniciar.png" id="20_bn7yk"]
 [ext_resource type="Texture2D" uid="uid://d3g4g1s37w1el" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnVoltar.png" id="21_6jpfk"]
+[ext_resource type="Script" path="res://Scripts/menuScripts/menu_chaveamento.gd" id="21_bol0i"]
 [ext_resource type="Texture2D" uid="uid://cex78jqwrcrn1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michBtnF.png" id="22_4jfx2"]
 [ext_resource type="Texture2D" uid="uid://dgewi5jlh3y7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnVoltarHover.png" id="22_qmwjn"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="22_tgq14"]
+[ext_resource type="Texture2D" uid="uid://dvactoync7hnv" path="res://Assests/menu main/subMenuChaveamento/titulo.png" id="23_5tgct"]
 [ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
 [ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="23_r21ep"]
+[ext_resource type="Script" path="res://Cenas/menu_chaveamento_iniciado.gd" id="24_6t44t"]
 [ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="24_g4m7p"]
 [ext_resource type="Texture2D" uid="uid://bo1bcwadrspm4" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemBtnF.png" id="24_goy5u"]
 [ext_resource type="Texture2D" uid="uid://diajxj27uuw65" path="res://Assests/menu main/subMenuOpcoes/sliderGrab.png" id="24_s3mw3"]
 [ext_resource type="Texture2D" uid="uid://6xellc821ygn" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamento.png" id="25_pg731"]
+[ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="25_r6mne"]
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="25_rfm48"]
 [ext_resource type="Script" path="res://Scripts/menuScripts/menu_selecao_mapa.gd" id="26_f2vi0"]
 [ext_resource type="Texture2D" uid="uid://bjujio6jc6r7b" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtnF.png" id="26_ft5tc"]
+[ext_resource type="Texture2D" uid="uid://8av5bw4ab4kq" path="res://Assests/menu main/subMenuChaveamento/sair_Modo_chaveamento.png" id="26_ii2n3"]
 [ext_resource type="Texture2D" uid="uid://bxy8fhudg4pjg" path="res://Assests/menu main/MenuEscolhaMapa/mapa1Btn.png" id="27_e4bqd"]
+[ext_resource type="Texture2D" uid="uid://dso8iqxgtv7dp" path="res://Assests/menu main/subMenuChaveamento/AvisoSairChaveamento.png" id="27_kstg4"]
+[ext_resource type="Texture2D" uid="uid://bt1oxx6o2q5hs" path="res://Assests/menu main/subMenuChaveamento/simBtn.png" id="28_1pr2e"]
 [ext_resource type="Texture2D" uid="uid://daomouonbo1pg" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Aleatorio.png" id="28_535xv"]
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
 [ext_resource type="Texture2D" uid="uid://2mbba26wydu2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtnF.png" id="28_ei1r6"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
 [ext_resource type="Texture2D" uid="uid://k7terqehqw3" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Fachada.png" id="29_keom8"]
 [ext_resource type="Texture2D" uid="uid://e8ntb7u0v0tm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/michBtn.png" id="29_xd7ua"]
+[ext_resource type="Texture2D" uid="uid://becqw6kyyjjfa" path="res://Assests/menu main/subMenuChaveamento/naoBtn.png" id="29_y4gsn"]
 [ext_resource type="Texture2D" uid="uid://txko7ukvfgy7" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/AlissonBtn.png" id="30_1mfh3"]
 [ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
 [ext_resource type="Texture2D" uid="uid://dfnatagmv64da" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/pedrBtnF.png" id="30_6w850"]
@@ -94,6 +102,8 @@
 [ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
 [ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
 [ext_resource type="Texture2D" uid="uid://svkvfret00yc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/AddPersonIcon.png" id="74_thep2"]
+[ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="82_jpjh4"]
+[ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="82_vxd04"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -108,10 +118,10 @@ color = Color(1, 1, 1, 1)
 thickness = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y48a6"]
-bg_color = Color(0.921569, 0.615686, 0, 1)
+bg_color = Color(0.921569, 0.615686, 0, 0.588235)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2her8"]
-bg_color = Color(0.921569, 0.615686, 0, 1)
+bg_color = Color(0.921569, 0.615686, 0, 0.588235)
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_spe0o"]
 
@@ -338,9 +348,10 @@ texture = ExtResource("12_q8s24")
 [node name="btnVoltar" type="TextureButton" parent="MenuControles"]
 layout_mode = 2
 offset_left = -114.5
-offset_top = 153.735
+offset_top = 245.27
 offset_right = 114.5
-offset_bottom = 223.735
+offset_bottom = 315.27
+pivot_offset = Vector2(114, 35)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../btnChaveamento")
@@ -481,6 +492,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("21_bol0i")
 
 [node name="buttons" type="VBoxContainer" parent="MenuChaveamento"]
 layout_mode = 1
@@ -518,6 +530,93 @@ stretch_mode = 5
 
 [node name="TextureRect" type="TextureRect" parent="MenuChaveamento"]
 layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -438.5
+offset_top = 161.95
+offset_right = 438.5
+offset_bottom = 427.95
+grow_horizontal = 2
+texture = ExtResource("23_5tgct")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuChaveamento"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 832.0
+offset_top = 490.0
+offset_right = -821.0
+offset_bottom = 772.0
+grow_horizontal = 2
+
+[node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "a"
+placeholder_text = "Player 1"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "b"
+placeholder_text = "Player 2"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "c"
+placeholder_text = "Player 3"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "d"
+placeholder_text = "Player 4"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "e"
+placeholder_text = "Player 5"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "f"
+placeholder_text = "Player 6"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "g"
+placeholder_text = "Player 7"
+alignment = 1
+max_length = 10
+
+[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+layout_mode = 2
+text = "h"
+placeholder_text = "Player 8"
+alignment = 1
+max_length = 10
+
+[node name="MenuChaveamentoIniciado" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_6t44t")
+
+[node name="TextureRect" type="TextureRect" parent="MenuChaveamentoIniciado"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -531,7 +630,73 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("25_pg731")
 
-[node name="Inputs" type="Control" parent="MenuChaveamento"]
+[node name="Confronto1" type="Label" parent="MenuChaveamentoIniciado/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.466
+anchor_top = 0.363
+anchor_right = 0.466
+anchor_bottom = 0.363
+offset_left = -79.878
+offset_top = -12.413
+offset_right = 25.122
+offset_bottom = 10.587
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="MenuChaveamentoIniciado/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.466
+anchor_top = 0.363
+anchor_right = 0.466
+anchor_bottom = 0.363
+offset_left = 54.122
+offset_top = -12.413
+offset_right = 159.122
+offset_bottom = 10.587
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+
+[node name="buttons" type="VBoxContainer" parent="MenuChaveamentoIniciado"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -275.0
+offset_right = 213.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="btnIniciar" type="TextureButton" parent="MenuChaveamentoIniciado/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_bn7yk")
+
+[node name="btnSair" type="TextureButton" parent="MenuChaveamentoIniciado/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("26_ii2n3")
+texture_hover = ExtResource("26_ii2n3")
+texture_focused = ExtResource("26_ii2n3")
+stretch_mode = 5
+
+[node name="Inputs" type="Control" parent="MenuChaveamentoIniciado"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -541,7 +706,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit1" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -593.0
 offset_top = -98.0
@@ -551,10 +716,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 1"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit2" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -593.0
 offset_top = -35.0
@@ -564,10 +730,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 2"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit3" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -594.0
 offset_top = 251.0
@@ -577,10 +744,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 3"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit4" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -594.0
 offset_top = 314.0
@@ -590,10 +758,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 4"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit5" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 405.0
 offset_top = -99.0
@@ -603,10 +772,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 5"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit6" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 405.0
 offset_top = -35.0
@@ -616,10 +786,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 6"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit7" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 406.0
 offset_top = 251.0
@@ -629,10 +800,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 7"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="LineEdit8" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 406.0
 offset_top = 316.0
@@ -642,10 +814,11 @@ theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 placeholder_text = "Player 8"
 alignment = 1
+editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="vencedor_chave1" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave1" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -409.0
 offset_top = 81.0
@@ -659,7 +832,7 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="vencedor_chave2" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave2" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -409.0
 offset_top = 126.0
@@ -673,7 +846,7 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="vencedor_chave3" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave3" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 221.0
 offset_top = 80.0
@@ -687,7 +860,7 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="vencedor_chave4" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="vencedor_chave4" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = 222.0
 offset_top = 130.0
@@ -701,7 +874,7 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="Final1" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="Final1" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -121.0
 offset_top = 30.0
@@ -717,7 +890,7 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
-[node name="Final2" type="LineEdit" parent="MenuChaveamento/Inputs"]
+[node name="Final2" type="LineEdit" parent="MenuChaveamentoIniciado/Inputs"]
 layout_mode = 0
 offset_left = -120.0
 offset_top = 152.0
@@ -734,7 +907,54 @@ editable = false
 clear_button_enabled = true
 caret_blink_interval = 0.1
 
+[node name="SairChaveamento" type="TextureRect" parent="MenuChaveamentoIniciado/Inputs"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -454.0
+offset_top = -452.0
+offset_right = 209.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.365, 1.365)
+texture = ExtResource("27_kstg4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuChaveamentoIniciado/Inputs/SairChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -35.0
+offset_right = 231.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="btnSim" type="TextureButton" parent="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("28_1pr2e")
+
+[node name="btnNao" type="TextureButton" parent="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("29_y4gsn")
+
 [node name="MenuSelecaoPersonagens" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -992,6 +1212,70 @@ sprite_frames = SubResource("SpriteFrames_htphl")
 animation = &"addPerson"
 flip_h = true
 
+[node name="PlayersChaveamento" type="Control" parent="MenuSelecaoPersonagens"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 231.065
+offset_bottom = 231.065
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("82_vxd04")
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -22.0
+offset_right = 138.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("82_jpjh4")
+
+[node name="Confronto1" type="Label" parent="MenuSelecaoPersonagens/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.875
+offset_top = -18.235
+offset_right = -11.875
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="MenuSelecaoPersonagens/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.565
+offset_top = -18.235
+offset_right = 118.565
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+
 [node name="MenuSelecaoMapa" type="Control" parent="."]
 visible = false
 layout_mode = 1
@@ -1111,6 +1395,70 @@ texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
 stretch_mode = 5
 
+[node name="PlayersChaveamento" type="Control" parent="MenuSelecaoMapa"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 231.065
+offset_bottom = 231.065
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("82_vxd04")
+
+[node name="TextureRect" type="TextureRect" parent="MenuSelecaoMapa/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -22.0
+offset_right = 138.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("82_jpjh4")
+
+[node name="Confronto1" type="Label" parent="MenuSelecaoMapa/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.875
+offset_top = -18.235
+offset_right = -11.875
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="MenuSelecaoMapa/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.565
+offset_top = -18.235
+offset_right = 118.565
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("25_r6mne")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+
 [node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_o3hul")
 volume_db = -23.308
@@ -1156,9 +1504,23 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="button_down" from="MenuChaveamento/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamento/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamento/buttons/btnIniciar" to="MenuChaveamento" method="_on_btn_iniciar_pressed"]
 [connection signal="button_down" from="MenuChaveamento/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamento/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuChaveamento/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="button_down" from="MenuChaveamentoIniciado/buttons/btnIniciar" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamentoIniciado/buttons/btnIniciar" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/buttons/btnIniciar" to="." method="_on_btn_1_vs_1_pressed"]
+[connection signal="button_down" from="MenuChaveamentoIniciado/buttons/btnSair" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamentoIniciado/buttons/btnSair" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/buttons/btnSair" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
+[connection signal="button_down" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnSim" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnSim" to="MenuChaveamentoIniciado" method="_on_btn_sim_pressed"]
+[connection signal="button_down" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_button_down"]
+[connection signal="mouse_entered" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/Inputs/SairChaveamento/HBoxContainer/btnNao" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Neemias" to="." method="sound_entered_btn"]
@@ -1192,7 +1554,7 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnVoltar" to="." method="_on_btn_voltar_escolha_de_personagem_pressed"]
 [connection signal="button_down" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoMapa/HBoxContainer/mapa1" to="MenuSelecaoMapa" method="_on_mapaBtn_pressed" binds= [1]]

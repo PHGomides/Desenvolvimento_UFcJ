@@ -25,6 +25,10 @@ func _ready() -> void:
 	$MenuOpcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
 	pass # Replace with function body.
 	$MenuMain/btn1vs1.grab_focus()
+	
+	if(Global.chaveamento == true):
+		$MenuMain.visible = false
+		$MenuChaveamentoIniciado.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,6 +38,7 @@ func _process(delta: float) -> void:
 
 func _on_btn_1_vs_1_pressed() -> void:
 	MenuOpcao.visible = false
+	$MenuChaveamentoIniciado.visible = false
 	MenuSelecaoPersonagens.visible = true
 	MenuMain.visible = false
 	MenuChaveamento.visible= false
@@ -63,6 +68,7 @@ func _on_btn_voltar_pressed() -> void:
 	MenuOpcao.visible = false
 	MenuSelecaoPersonagens.visible = false
 	MenuMain.visible = true
+	$MenuChaveamentoIniciado.visible = false
 	MenuChaveamento.visible= false
 	MenuSelecaoMapa.visible = false
 	$MenuMain/btn1vs1.grab_focus()
@@ -125,4 +131,13 @@ func mostrarControles() -> void:
 func mudar_de_controles_para_Opcoes() -> void:
 	$MenuOpcoes.visible = true
 	$MenuControles.visible = false
+	pass # Replace with function body.
+
+
+func _on_btn_voltar_escolha_de_personagem_pressed() -> void:
+	if(Global.chaveamento):
+		$MenuSelecaoPersonagens.visible = false
+		$MenuChaveamentoIniciado.visible = true
+	else:
+		_on_btn_voltar_pressed()
 	pass # Replace with function body.

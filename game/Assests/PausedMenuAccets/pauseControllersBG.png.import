@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddaf2i23x5jx4"
-path="res://.godot/imported/_0004_Camada-5.png-5cf388768d50f2120c762b4e448c8700.ctex"
+uid="uid://bciyytgyktvbd"
+path="res://.godot/imported/pauseControllersBG.png-4fdb808d3f0217a4433c06d9aaa09a75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/dash_sprite/_0004_Camada-5.png"
-dest_files=["res://.godot/imported/_0004_Camada-5.png-5cf388768d50f2120c762b4e448c8700.ctex"]
+source_file="res://Assests/PausedMenuAccets/pauseControllersBG.png"
+dest_files=["res://.godot/imported/pauseControllersBG.png-4fdb808d3f0217a4433c06d9aaa09a75.ctex"]
 
 [params]
 

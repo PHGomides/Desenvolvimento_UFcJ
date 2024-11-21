@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdshk6nanu17n"
-path="res://.godot/imported/_0001_Camada-2.png-1809ded1ff3df8560e51d2ab4342c72a.ctex"
+uid="uid://bt1oxx6o2q5hs"
+path="res://.godot/imported/simBtn.png-30150a7b622ebf81d66452fdc772553d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/dash_sprite/_0001_Camada-2.png"
-dest_files=["res://.godot/imported/_0001_Camada-2.png-1809ded1ff3df8560e51d2ab4342c72a.ctex"]
+source_file="res://Assests/menu main/subMenuChaveamento/simBtn.png"
+dest_files=["res://.godot/imported/simBtn.png-30150a7b622ebf81d66452fdc772553d.ctex"]
 
 [params]
 
