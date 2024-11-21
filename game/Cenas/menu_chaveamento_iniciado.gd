@@ -13,12 +13,12 @@ func _process(delta: float) -> void:
 
 
 func _on_btn_Sair_pressed() -> void:
-	$Inputs/SairChaveamento.visible = not $Inputs/SairChaveamento.visible 
+	$SairChaveamento.visible = not $SairChaveamento.visible 
 	pass # Replace with function body.
 
 
 func _on_btn_sim_pressed() -> void:#acabar com o modo chaveamento
-	$Inputs/SairChaveamento.visible = not $Inputs/SairChaveamento.visible 
+	$SairChaveamento.visible = not $SairChaveamento.visible 
 	Global.chaveamento = false
 	
 	pass # Replace with function body.

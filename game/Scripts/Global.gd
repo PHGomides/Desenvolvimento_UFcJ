@@ -30,8 +30,31 @@ var vencerdor_c4 = ""
 var final_p1 =""
 var final_p2 =""
 
+func FimRodada(vencedor: String):
+	if(rodada == 1):
+		vencerdor_c1 = vencedor
+		rodada+=1
+	elif(rodada == 2):
+		vencerdor_c2 = vencedor
+		rodada+=1
+	elif(rodada == 3):
+		vencerdor_c3 = vencedor
+		rodada+=1
+	elif(rodada == 4):
+		vencerdor_c4 = vencedor
+		rodada+=1
+
 func _process(delta: float) -> void:
 	if(chaveamento):
 		if(rodada == 1):
 			rodada_players[0] = c_players[0]
 			rodada_players[1] = c_players[1]
+		elif(rodada == 2):
+			rodada_players[0] = c_players[2]
+			rodada_players[1] = c_players[3]
+		elif(rodada == 3):
+			rodada_players[0] = c_players[4]
+			rodada_players[1] = c_players[5]
+		elif(rodada == 4):
+			rodada_players[0] = c_players[6]
+			rodada_players[1] = c_players[7]

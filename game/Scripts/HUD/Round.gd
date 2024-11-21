@@ -123,6 +123,12 @@ func _on_time_is_up():
 
 	if Global.player1_round == 2:
 		print("Player 1 Wins!")
+		if(Global.chaveamento):# se estiver no modo chaveamento
+			Global.FimRodada(Global.rodada_players[0])
+			
+			
+			
+			
 		$vitoriaplayer/VitoriaPlayer1Banner.visible = true
 		$"..".visible = false
 		desativar_controle_jogadores()
@@ -133,6 +139,9 @@ func _on_time_is_up():
 		Global.player1_round = 0
 		Global.player2_round = 0
 	elif Global.player2_round == 2:
+		if(Global.chaveamento):# se estiver no modo chaveamento
+			Global.FimRodada(Global.rodada_players[1])
+			
 		print("Player 2 Wins!")
 		$vitoriaplayer/VitoriaPlayer2Banner.visible = true
 		$"..".visible = false

@@ -9,8 +9,8 @@ extends Control
 func _process(delta: float) -> void:
 	if(Global.chaveamento):
 		visible = true
-		$"../../MenuChaveamentoIniciado/TextureRect/Confronto1".text = Global.rodada_players[0]
-		$"../../MenuChaveamentoIniciado/TextureRect/Confronto2".text = Global.rodada_players[1]
+		$Confronto1.text = Global.rodada_players[0]
+		$Confronto2.text = Global.rodada_players[1]
 	else:
 		visible = false
 		
