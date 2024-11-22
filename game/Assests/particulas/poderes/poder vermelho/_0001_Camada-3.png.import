@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://omncl7r6msun"
-path="res://.godot/imported/4ca092beb9b20f34fdd3f22e6686462f.png-562f49f661bb048a006c3e9e6cc6667f.ctex"
+uid="uid://ci18qqdymnkpf"
+path="res://.godot/imported/_0001_Camada-3.png-941bd42db4215985a725cef9d824f8a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/poderes/4ca092beb9b20f34fdd3f22e6686462f.png"
-dest_files=["res://.godot/imported/4ca092beb9b20f34fdd3f22e6686462f.png-562f49f661bb048a006c3e9e6cc6667f.ctex"]
+source_file="res://Assests/particulas/poderes/poder vermelho/_0001_Camada-3.png"
+dest_files=["res://.godot/imported/_0001_Camada-3.png-941bd42db4215985a725cef9d824f8a2.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dri0xab4iq2cf"
-path="res://.godot/imported/poder1.png-d6cef43b66ef13b4e645801980c41a17.ctex"
+uid="uid://buqfq6cv3g7gv"
+path="res://.godot/imported/banner chaveamento.png-0295df94e70f0bcc5a9a0999f9edae16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/poderes/poder1.png"
-dest_files=["res://.godot/imported/poder1.png-d6cef43b66ef13b4e645801980c41a17.ctex"]
+source_file="res://Assests/menu main/subMenuChaveamento/banner chaveamento.png"
+dest_files=["res://.godot/imported/banner chaveamento.png-0295df94e70f0bcc5a9a0999f9edae16.ctex"]
 
 [params]
 

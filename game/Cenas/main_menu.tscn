@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=117 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
 [ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="23_r21ep"]
 [ext_resource type="Script" path="res://Cenas/menu_chaveamento_iniciado.gd" id="24_6t44t"]
+[ext_resource type="Texture2D" uid="uid://buqfq6cv3g7gv" path="res://Assests/menu main/subMenuChaveamento/banner chaveamento.png" id="24_eaylc"]
 [ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="24_g4m7p"]
 [ext_resource type="Texture2D" uid="uid://bo1bcwadrspm4" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemBtnF.png" id="24_goy5u"]
 [ext_resource type="Texture2D" uid="uid://diajxj27uuw65" path="res://Assests/menu main/subMenuOpcoes/sliderGrab.png" id="24_s3mw3"]
@@ -488,7 +489,6 @@ texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="MenuChaveamento" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -547,9 +547,9 @@ texture = ExtResource("23_5tgct")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 832.0
+offset_left = 687.11
 offset_top = 490.0
-offset_right = -821.0
+offset_right = -965.89
 offset_bottom = 772.0
 grow_horizontal = 2
 
@@ -609,7 +609,17 @@ placeholder_text = "Player 8"
 alignment = 1
 max_length = 10
 
+[node name="TextureRect2" type="TextureRect" parent="MenuChaveamento"]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 489.0
+offset_right = 1775.0
+offset_bottom = 1152.0
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("24_eaylc")
+
 [node name="MenuChaveamentoIniciado" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

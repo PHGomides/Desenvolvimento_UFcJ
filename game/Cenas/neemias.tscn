@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=163 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cglm52kmuisf1" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0002_20240905_162052_029.png" id="4_nwhii"]
 [ext_resource type="Texture2D" uid="uid://d2bj4uyxywasq" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0000_20240905_162052_032.png" id="5_7fgp8"]
 [ext_resource type="Texture2D" uid="uid://c6kab2owxeepa" path="res://Assests/particulas/sangue/_0001_Camada-3.png" id="5_oulrd"]
-[ext_resource type="Texture2D" uid="uid://ubctd033t7li" path="res://Assests/particulas/poderes/poder6.png" id="5_qjipn"]
 [ext_resource type="Texture2D" uid="uid://ne4ykfpx31k" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/1.png" id="6_402nc"]
 [ext_resource type="Texture2D" uid="uid://bth4mh3x4e3qx" path="res://Assests/particulas/sangue/_0002_Camada-4.png" id="6_hn2w7"]
 [ext_resource type="Texture2D" uid="uid://b4gvjhifpot24" path="res://Assests/Neemias Sprites Prontos/Neemias dano/_0000s_0001_20240905_162052_031.png" id="6_vxtlm"]
@@ -25,20 +24,27 @@
 [ext_resource type="Texture2D" uid="uid://cf3txtxcj2gmv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0011_20240905_162028_017.png" id="10_ww7dq"]
 [ext_resource type="Texture2D" uid="uid://c6f7vfw4exywa" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0010_20240905_162028_019.png" id="11_c5s53"]
 [ext_resource type="Texture2D" uid="uid://vw8xgu76jmg4" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/6.png" id="11_x6d7f"]
+[ext_resource type="Texture2D" uid="uid://cyqayep10tmr4" path="res://Assests/particulas/poderes/poder Azul/_0000_Matiz_Saturação-1.png" id="12_5dm7s"]
 [ext_resource type="Texture2D" uid="uid://cn5qgpdnlq2w" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0009_20240905_162028_023.png" id="12_866cl"]
 [ext_resource type="Texture2D" uid="uid://dywdkqw0m8l0s" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/7.png" id="12_yvogu"]
 [ext_resource type="Texture2D" uid="uid://b2dw31uhj1w3r" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0008_20240905_162028_025.png" id="13_dfldh"]
+[ext_resource type="Texture2D" uid="uid://ch05pi1cd14jc" path="res://Assests/particulas/poderes/poder Azul/_0001_Matiz_Saturação-1.png" id="13_p7oro"]
 [ext_resource type="Texture2D" uid="uid://cw3bbdx06c7bk" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/8.png" id="13_qgrqn"]
 [ext_resource type="Texture2D" uid="uid://3gwux5w5cgj0" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0004_5.png" id="13_sho6n"]
 [ext_resource type="Texture2D" uid="uid://dnydkktnkgqkx" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0007_20240905_162028_027.png" id="14_2v7xr"]
 [ext_resource type="Texture2D" uid="uid://c6gb2r0dhekv3" path="res://Assests/Neemias Sprites Prontos/Neemias defesa/_0000s_0005_6.png" id="14_entv3"]
+[ext_resource type="Texture2D" uid="uid://x84jme3dvlb7" path="res://Assests/particulas/poderes/poder Azul/_0002_Matiz_Saturação-1.png" id="14_fu0nl"]
 [ext_resource type="Texture2D" uid="uid://ul2l5ryubt5e" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/9.png" id="14_hen1u"]
 [ext_resource type="Texture2D" uid="uid://d3vsr0hscl3j" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0006_20240905_162028_029.png" id="15_0uohf"]
 [ext_resource type="Texture2D" uid="uid://bhrv0uabn41gf" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/10.png" id="15_3ues5"]
+[ext_resource type="Texture2D" uid="uid://cep50mrbe20o7" path="res://Assests/particulas/poderes/poder Azul/_0003_Matiz_Saturação-1.png" id="15_5umkc"]
+[ext_resource type="Texture2D" uid="uid://csvydq4aqbbpk" path="res://Assests/particulas/poderes/poder Azul/_0004_Matiz_Saturação-1.png" id="16_5sb3b"]
 [ext_resource type="Texture2D" uid="uid://dlc6hfjtvj8fv" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/11.png" id="16_g0xs2"]
 [ext_resource type="Texture2D" uid="uid://duvx3033kunwv" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0005_20240905_162028_031.png" id="16_laoff"]
 [ext_resource type="Texture2D" uid="uid://bp8es636e6myg" path="res://Assests/Neemias Sprites Prontos/Neemias vitória/12.png" id="17_5w313"]
+[ext_resource type="Texture2D" uid="uid://bj2orymqt87cd" path="res://Assests/particulas/poderes/poder Azul/_0005_Matiz_Saturação-1.png" id="17_bj3pk"]
 [ext_resource type="Texture2D" uid="uid://b21557jbb3x7s" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0004_20240905_162028_035.png" id="17_j16d0"]
+[ext_resource type="Texture2D" uid="uid://d1f2dxc728swx" path="res://Assests/particulas/poderes/poder Azul/_0006_Matiz_Saturação-1.png" id="18_6gw11"]
 [ext_resource type="Texture2D" uid="uid://bxp4rkhxnsl8x" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0003_20240905_162028_037.png" id="18_gwcqd"]
 [ext_resource type="Texture2D" uid="uid://cp4dr432ie8jy" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0002_20240905_162028_039.png" id="19_21y1g"]
 [ext_resource type="Texture2D" uid="uid://haryvft1dnif" path="res://Assests/Neemias Sprites Prontos/Neemias especial/_0000s_0001_20240905_162028_041.png" id="20_q4s55"]
@@ -182,11 +188,29 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_qjipn")
+"texture": ExtResource("12_5dm7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p7oro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fu0nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5umkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5sb3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bj3pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6gw11")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"fire",
+"speed": 15.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nn853"]
@@ -820,13 +844,15 @@ script = ExtResource("99_q8oon")
 script = ExtResource("100_tjfaj")
 
 [node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
-scale = Vector2(20.635, 20.635)
+scale = Vector2(7.91, 7.91)
 shape = SubResource("CircleShape2D_6ojiv")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PoderOpicional"]
 scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_jdbsb")
+animation = &"fire"
+autoplay = "fire"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PoderOpicional/AnimatedSprite2D"]
 root_node = NodePath("../..")
@@ -938,9 +964,13 @@ script = ExtResource("143_7y8xy")
 position = Vector2(50.349, 147.058)
 shape = SubResource("RectangleShape2D_r3xad")
 
+[node name="tomar_dano_power" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="empurrarDireita" to="empurrarDireita" method="_on_body_entered"]
 [connection signal="body_exited" from="empurrarDireita" to="empurrarDireita" method="_on_body_exited"]
 [connection signal="body_entered" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_entered"]
 [connection signal="body_exited" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_exited"]
+[connection signal="timeout" from="tomar_dano_power" to="hurtbox_neemias" method="_on_tomar_dano_power_timeout"]

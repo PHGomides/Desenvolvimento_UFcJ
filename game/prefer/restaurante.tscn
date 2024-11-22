@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=162 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_rpvgp"]
@@ -152,7 +152,9 @@
 [ext_resource type="Texture2D" uid="uid://rlllq2k8wyvc" path="res://Assests/player vencedor/player1vencedor.png" id="150_p4re5"]
 [ext_resource type="Texture2D" uid="uid://crohl0pattw7j" path="res://Assests/player vencedor/player2vencedor.png" id="151_nuc54"]
 [ext_resource type="AudioStream" uid="uid://cwwjp67kthane" path="res://audio/CronometroSFX.wav" id="152_qq0g0"]
+[ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="154_hjxp7"]
 [ext_resource type="AudioStream" uid="uid://bc2rakbg2f5yw" path="res://audio/fightSFX.wav" id="154_kl3rj"]
+[ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="155_5fbpx"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
 background_mode = 3
@@ -173,7 +175,7 @@ size = Vector2(247, 992)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aipy4"]
 size = Vector2(1727, 128)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vtfdy"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_61hoy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -407,7 +409,7 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_qteuq"]
+[sub_resource type="GDScript" id="GDScript_xos6o"]
 script/source = "extends Label
 
 var already_added = false #verifica se o nome do player já foi inserido
@@ -419,7 +421,7 @@ func _process(delta: float) -> void:
 	text = \"ROUND \" + str(Global.round)
 "
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4yvkv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0efyl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -694,7 +696,16 @@ position = Vector2(434, 646)
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
 position = Vector2(1443, 659)
 
+[node name="CronometroSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("152_qq0g0")
+bus = &"SFX"
+
+[node name="FightSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("154_kl3rj")
+bus = &"SFX"
+
 [node name="HUD" type="CanvasLayer" parent="."]
+process_mode = 1
 layer = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
@@ -887,6 +898,7 @@ texture = ExtResource("25_x3ugo")
 flip_h = true
 
 [node name="Round" type="Control" parent="HUD"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -966,7 +978,7 @@ texture = ExtResource("31_8ugex")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(966, 542)
-sprite_frames = SubResource("SpriteFrames_vtfdy")
+sprite_frames = SubResource("SpriteFrames_61hoy")
 animation = &"3"
 
 [node name="Fight" type="TextureRect" parent="HUD/Round"]
@@ -1018,25 +1030,26 @@ offset_right = 1106.0
 offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_0hccy")
 theme_override_font_sizes/font_size = 35
 text = "ROUND 
 "
 horizontal_alignment = 1
-script = SubResource("GDScript_qteuq")
+script = SubResource("GDScript_xos6o")
 
 [node name="powerReadyP2" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(1111.01, 141)
 scale = Vector2(0.65, 0.65)
-sprite_frames = SubResource("SpriteFrames_4yvkv")
+sprite_frames = SubResource("SpriteFrames_0efyl")
 animation = &"powerReady"
 
 [node name="powerReadyP1" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(818.475, 141)
 scale = Vector2(0.65, 0.65)
-sprite_frames = SubResource("SpriteFrames_4yvkv")
+sprite_frames = SubResource("SpriteFrames_0efyl")
 animation = &"powerReady"
 
 [node name="vitoriaplayer" type="CanvasLayer" parent="HUD/Round"]
@@ -1056,12 +1069,64 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("151_nuc54")
 
-[node name="CronometroSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("152_qq0g0")
-bus = &"SFX"
+[node name="PlayersChaveamento" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 188.105
+offset_bottom = 188.105
+grow_horizontal = 2
+script = ExtResource("154_hjxp7")
 
-[node name="FightSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("154_kl3rj")
-bus = &"SFX"
+[node name="TextureRect" type="TextureRect" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -22.0
+offset_right = 138.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("155_5fbpx")
+
+[node name="Confronto1" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.875
+offset_top = -18.235
+offset_right = -11.875
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_0hccy")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.565
+offset_top = -18.235
+offset_right = 118.565
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_0hccy")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

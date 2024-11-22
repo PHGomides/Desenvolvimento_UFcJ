@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=3 uid="uid://di4riu174okwk"]
+[gd_scene load_steps=162 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_oon58"]
@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cd2fgw4xqq5ho" path="res://Assests/MAPAFILACAJ/_0001_ponto-de-onibus.png" id="10_31ajt"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_edgwl"]
 [ext_resource type="AudioStream" uid="uid://cwwjp67kthane" path="res://audio/CronometroSFX.wav" id="12_aut0x"]
-[ext_resource type="Texture2D" uid="uid://dkooywpymfl4q" path="res://Assests/hud/novahuf/HUDPreta.png" id="12_me6oa"]
 [ext_resource type="AudioStream" uid="uid://bc2rakbg2f5yw" path="res://audio/fightSFX.wav" id="13_6c6cd"]
 [ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="13_e555b"]
+[ext_resource type="Texture2D" uid="uid://xbf1yvxddc00" path="res://Assests/hud/novahuf/HUDBranca.png" id="14_b8w1i"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="15_hvm2u"]
 [ext_resource type="Texture2D" uid="uid://by0g820gl2qjr" path="res://Assests/hud/novahuf/vida vazia left.png" id="16_cryll"]
 [ext_resource type="Texture2D" uid="uid://d4d1umvv60cht" path="res://Assests/hud/novahuf/efeito dano left.png" id="17_wk5v7"]
@@ -153,6 +153,8 @@
 [ext_resource type="Texture2D" uid="uid://csxrl1k2pvmpb" path="res://Assests/particulas/powerReady/power ready_00098.png" id="151_hn65l"]
 [ext_resource type="Texture2D" uid="uid://rlllq2k8wyvc" path="res://Assests/player vencedor/player1vencedor.png" id="152_wd0qd"]
 [ext_resource type="Texture2D" uid="uid://crohl0pattw7j" path="res://Assests/player vencedor/player2vencedor.png" id="153_52j07"]
+[ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="154_xj6ce"]
+[ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="155_miiip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_geqs2"]
 size = Vector2(247, 992)
@@ -173,7 +175,7 @@ glow_hdr_scale = 4.0
 glow_hdr_luminance_cap = 93.19
 glow_map_strength = 0.71
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gxj0e"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8ij5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -407,7 +409,7 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_7wkju"]
+[sub_resource type="GDScript" id="GDScript_ea10m"]
 script/source = "extends Label
 
 var already_added = false #verifica se o nome do player já foi inserido
@@ -419,7 +421,7 @@ func _process(delta: float) -> void:
 	text = \"ROUND \" + str(Global.round)
 "
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_a7ebx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_uobtg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -675,6 +677,7 @@ texture = ExtResource("22_x8vqu")
 
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("22_lid6l")
+altura_do_poder = 150
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
 position = Vector2(279, 731)
@@ -691,6 +694,7 @@ stream = ExtResource("13_6c6cd")
 bus = &"SFX"
 
 [node name="HUD" type="CanvasLayer" parent="."]
+process_mode = 1
 layer = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
@@ -704,7 +708,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 scale = Vector2(1.02, 1.02)
 size_flags_horizontal = 4
-texture = ExtResource("12_me6oa")
+texture = ExtResource("14_b8w1i")
 
 [node name="Tempo" type="Control" parent="HUD"]
 layout_mode = 3
@@ -745,7 +749,7 @@ size_flags_horizontal = 4
 [node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.176419, 0.176419, 0.176419, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
 theme_override_font_sizes/font_size = 70
 text = "90
@@ -841,7 +845,7 @@ offset_top = 43.0
 offset_right = 568.0
 offset_bottom = 85.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
 theme_override_font_sizes/font_size = 35
@@ -855,7 +859,7 @@ offset_top = 43.0
 offset_right = 1620.0
 offset_bottom = 124.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
 theme_override_font_sizes/font_size = 35
@@ -883,6 +887,7 @@ texture = ExtResource("25_2kehu")
 flip_h = true
 
 [node name="Round" type="Control" parent="HUD"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -962,7 +967,7 @@ texture = ExtResource("31_4kbf1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(966, 542)
-sprite_frames = SubResource("SpriteFrames_gxj0e")
+sprite_frames = SubResource("SpriteFrames_t8ij5")
 animation = &"3"
 
 [node name="Fight" type="TextureRect" parent="HUD/Round"]
@@ -1013,27 +1018,27 @@ offset_top = 103.0
 offset_right = 1106.0
 offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_hvm2u")
 theme_override_font_sizes/font_size = 35
 text = "ROUND 
 "
 horizontal_alignment = 1
-script = SubResource("GDScript_7wkju")
+script = SubResource("GDScript_ea10m")
 
 [node name="powerReadyP2" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(1111.01, 141)
 scale = Vector2(0.65, 0.65)
-sprite_frames = SubResource("SpriteFrames_a7ebx")
+sprite_frames = SubResource("SpriteFrames_uobtg")
 animation = &"powerReady"
 
 [node name="powerReadyP1" type="AnimatedSprite2D" parent="HUD/Round"]
 visible = false
 position = Vector2(818.475, 141)
 scale = Vector2(0.65, 0.65)
-sprite_frames = SubResource("SpriteFrames_a7ebx")
+sprite_frames = SubResource("SpriteFrames_uobtg")
 animation = &"powerReady"
 
 [node name="vitoriaplayer" type="CanvasLayer" parent="HUD/Round"]
@@ -1052,5 +1057,65 @@ z_index = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("153_52j07")
+
+[node name="PlayersChaveamento" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 188.105
+offset_bottom = 188.105
+grow_horizontal = 2
+script = ExtResource("154_xj6ce")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -22.0
+offset_right = 138.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("155_miiip")
+
+[node name="Confronto1" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.875
+offset_top = -18.235
+offset_right = -11.875
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
+horizontal_alignment = 2
+
+[node name="Confronto2" type="Label" parent="HUD/PlayersChaveamento"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.565
+offset_top = -18.235
+offset_right = 118.565
+offset_bottom = 4.765
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_hvm2u")
+theme_override_font_sizes/font_size = 19
+text = "AAAAAAAAAA"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

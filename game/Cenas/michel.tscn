@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=152 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -111,11 +111,17 @@
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="90_ocib6"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="90_wqmyl"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="91_vude1"]
-[ext_resource type="Texture2D" uid="uid://o5w36fymfkcl" path="res://Assests/particulas/poderes/poder5.png" id="92_k443k"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="97_7j4bh"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="98_uuvmu"]
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="99_olg41"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="100_lgwb5"]
+[ext_resource type="Texture2D" uid="uid://bjghrdvts8mgr" path="res://Assests/particulas/poderes/poder vermelho/_0000_Camada-2.png" id="108_2ini6"]
+[ext_resource type="Texture2D" uid="uid://ci18qqdymnkpf" path="res://Assests/particulas/poderes/poder vermelho/_0001_Camada-3.png" id="109_a6my4"]
+[ext_resource type="Texture2D" uid="uid://bhfooj4c7206n" path="res://Assests/particulas/poderes/poder vermelho/_0002_Camada-4.png" id="110_6inrb"]
+[ext_resource type="Texture2D" uid="uid://dxvttowf7kehp" path="res://Assests/particulas/poderes/poder vermelho/_0003_Camada-5.png" id="111_2q1hg"]
+[ext_resource type="Texture2D" uid="uid://bt5xv3rc68kwn" path="res://Assests/particulas/poderes/poder vermelho/_0004_Camada-6.png" id="112_fykpb"]
+[ext_resource type="Texture2D" uid="uid://dhwn0ae214qw1" path="res://Assests/particulas/poderes/poder vermelho/_0005_Camada-7.png" id="113_hwajh"]
+[ext_resource type="Texture2D" uid="uid://d2oli0qdyu8hc" path="res://Assests/particulas/poderes/poder vermelho/_0006_Camada-8.png" id="114_i0b46"]
 [ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="120_wk6ij"]
 [ext_resource type="Texture2D" uid="uid://b05ow165dikan" path="res://Assests/particulas/sangue/_0000_Camada-2.png" id="121_ioh6i"]
 [ext_resource type="Texture2D" uid="uid://c6kab2owxeepa" path="res://Assests/particulas/sangue/_0001_Camada-3.png" id="122_5mm5k"]
@@ -744,11 +750,29 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("92_k443k")
+"texture": ExtResource("108_2ini6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_a6my4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_6inrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_2q1hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_fykpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_hwajh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_i0b46")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"fire",
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn6g"]
@@ -866,13 +890,16 @@ script = ExtResource("90_4kq8a")
 script = ExtResource("90_ocib6")
 
 [node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
-scale = Vector2(20.635, 20.635)
+scale = Vector2(7.91, 7.91)
 shape = SubResource("CircleShape2D_j3dqd")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PoderOpicional"]
 scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_1eke4")
+animation = &"fire"
+autoplay = "fire"
+frame_progress = 0.697
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PoderOpicional/AnimatedSprite2D"]
 root_node = NodePath("../..")
@@ -966,9 +993,13 @@ script = ExtResource("133_turu2")
 position = Vector2(50.349, 147.058)
 shape = SubResource("RectangleShape2D_3erlb")
 
+[node name="tomar_dano_power" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="empurrarDireita" to="empurrarDireita" method="_on_body_entered"]
 [connection signal="body_exited" from="empurrarDireita" to="empurrarDireita" method="_on_body_exited"]
 [connection signal="body_entered" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_entered"]
 [connection signal="body_exited" from="empurrarEsquerda" to="empurrarEsquerda" method="_on_body_exited"]
+[connection signal="timeout" from="tomar_dano_power" to="hurtbox_michel" method="_on_tomar_dano_power_timeout"]

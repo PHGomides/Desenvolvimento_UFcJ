@@ -3,6 +3,7 @@ extends Area2D
 @onready var hurtbox_area = self
 @onready var player: CharacterBody2D = $".."
 @onready var anim: AnimatedSprite2D = $"../anim"
+var can_take_damage_power = true # pra verificar se pode tomar dano do poder, pq senão ele fica tomando varios danos em um mesmo poder
 
 
 func _ready():
@@ -30,10 +31,14 @@ func _on_area_entered(area: Area2D) -> void:
 		return
 	# Verifica se o nó de área tem o método para obter o tipo de golpe
 	if area.has_method("poderNome"):#ADICIONANDO HURTBOX DO PODER OPICIONAL
-
-		get_parent()._damage(7,"poderOpicional")
-		$"../Dano2sfx".play()
-		get_parent().KnockBack(2000)
+		if(can_take_damage_power):
+			$"../tomar_dano_power".start()
+			can_take_damage_power = false
+			get_parent()._damage(5,"poderOpicional")
+			$"../Dano2sfx".play()
+			get_parent().KnockBack(1700)
+		else:
+			return
 	if area.has_method("get_hitbox_type"):
 		var golpe_tipo = area.get_hitbox_type()
 		print("Colisão detectada com:", golpe_tipo)
@@ -44,19 +49,19 @@ func _on_area_entered(area: Area2D) -> void:
 
 			$"../Dano1sfx".play()
 			
-			get_parent()._damage(5,golpe_tipo)
+			get_parent()._damage(4,golpe_tipo)
 			
 		elif golpe_tipo == "punch2":
 
 			$"../Dano1sfx".play()
 			print("Player 2 acertou o Player 1 com um soco girando!")
-			get_parent()._damage(5,golpe_tipo)
+			get_parent()._damage(4,golpe_tipo)
 			#
 		elif golpe_tipo == "punch3":
 			print("Player 2 acertou o Player 1 com um gancho!")
 
 			$"../Dano2sfx".play()
-			get_parent()._damage(7,golpe_tipo)
+			get_parent()._damage(5,golpe_tipo)
 			get_parent().KnockBack(1700)
 
 		elif golpe_tipo == "especialShape":
@@ -67,3 +72,7 @@ func _on_area_entered(area: Area2D) -> void:
 			get_parent().KnockBack(2500)
 
 			
+
+func _on_tomar_dano_power_timeout() -> void:
+	can_take_damage_power = true
+	pass # Replace with function body.

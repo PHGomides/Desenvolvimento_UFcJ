@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b73euog5peny5"
-path="res://.godot/imported/poder2.png-400768ba239a215fac723b02adef3390.ctex"
+uid="uid://csvydq4aqbbpk"
+path="res://.godot/imported/_0004_Matiz_Saturação-1.png-92fb58d5c93464e765710a085b5655f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/particulas/poderes/poder2.png"
-dest_files=["res://.godot/imported/poder2.png-400768ba239a215fac723b02adef3390.ctex"]
+source_file="res://Assests/particulas/poderes/poder Azul/_0004_Matiz_Saturação-1.png"
+dest_files=["res://.godot/imported/_0004_Matiz_Saturação-1.png-92fb58d5c93464e765710a085b5655f7.ctex"]
 
 [params]
 
