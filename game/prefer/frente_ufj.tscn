@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b7swi5iuevqdd" path="res://Assests/FachadaAccets/_0001_arbustos.png" id="8_cyaxd"]
 [ext_resource type="Texture2D" uid="uid://b4ebwytx7q875" path="res://Assests/FachadaAccets/arvores2.png" id="8_o04ym"]
 [ext_resource type="Script" path="res://Scripts/HUD/Tempo.gd" id="11_8pfj4"]
-[ext_resource type="Texture2D" uid="uid://dkooywpymfl4q" path="res://Assests/hud/novahuf/HUDPreta.png" id="12_hm731"]
 [ext_resource type="FontFile" uid="uid://0yoxe4ykxfco" path="res://Assests/Fontes/DeltaBlock-Regular.ttf" id="12_oq0dl"]
+[ext_resource type="Texture2D" uid="uid://xbf1yvxddc00" path="res://Assests/hud/novahuf/HUDBranca.png" id="12_uh6hy"]
 [ext_resource type="Script" path="res://Scripts/HUD/Barras.gd" id="13_gjx0e"]
 [ext_resource type="Texture2D" uid="uid://by0g820gl2qjr" path="res://Assests/hud/novahuf/vida vazia left.png" id="16_vtxw7"]
 [ext_resource type="Texture2D" uid="uid://d4d1umvv60cht" path="res://Assests/hud/novahuf/efeito dano left.png" id="17_is2bg"]
@@ -559,7 +559,7 @@ script = ExtResource("1_h0k4u")
 environment = SubResource("Environment_sc6fg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1511, 459)
+position = Vector2(1086, 561)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
@@ -705,12 +705,13 @@ texture = ExtResource("23_ogu0r")
 
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("22_chvk4")
+altura_do_poder = 150
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(-132, 475)
+position = Vector2(501, 606)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
-position = Vector2(1375, 480)
+position = Vector2(1656, 613)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 layer = 0
@@ -726,7 +727,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 scale = Vector2(1.02, 1.02)
 size_flags_horizontal = 4
-texture = ExtResource("12_hm731")
+texture = ExtResource("12_uh6hy")
 
 [node name="Tempo" type="Control" parent="HUD"]
 layout_mode = 3
@@ -767,7 +768,7 @@ size_flags_horizontal = 4
 [node name="Tempo_label" type="Label" parent="HUD/Tempo/MarginContainer/Tempo_container"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("12_oq0dl")
 theme_override_font_sizes/font_size = 70
 text = "90
@@ -1035,7 +1036,7 @@ offset_top = 103.0
 offset_right = 1106.0
 offset_bottom = 184.0
 scale = Vector2(0.709, 0.552)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_oq0dl")
 theme_override_font_sizes/font_size = 35

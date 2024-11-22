@@ -19,7 +19,7 @@ var poweropitional_timer = 0.0
 #PODER
 var MaxPower: int = 60
 var power: int = 60
-
+var altura_Poder = 0  #alguns mapas o poder fica mais em baixo então aqui dá pra aumentar a altura
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo
 # Janela de combo (tempo permitido para encadear ataques)
@@ -63,6 +63,7 @@ var dashing_cooldown_time = 0.7  # Tempo de cooldown para pular
 var dashing_timer = 0.0    # Temporizador para controlar o cooldown
 var isWalking = false
 
+var escala_personagem = 1.2 #tamanho do personagem
 
 @onready var especialHitbox = $hitbox_neemias/especialShape
 
@@ -105,12 +106,18 @@ func _ready() -> void:
 	VirarDeLado() 
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
-	
+	if(using_special and not is_attacking):
+		using_special = false
+
+
+	if(opcional_attack and not is_attacking):
+		opcional_attack = false
+
 	if(not is_attacking):
 		is_suffering_damage = false
 	# Adiciona a gravidade
-	scale.x = 1.2
-	scale.y = 1.2
+	scale.x = escala_personagem
+	scale.y = escala_personagem
 	if not can_launch_Opitional_Power:
 		poweropitional_timer -= delta
 		if poweropitional_timer <= 0:
@@ -210,7 +217,7 @@ func _physics_process(delta: float) -> void:
 		opcional_attack = true  # Marca que o ataque opcional está em execução
 		velocity.x = 0  # Para o movimento horizontal durante o ataque opcional
 		is_suffering_damage = false
-	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_defending and not is_suffering_damage: 
+	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round and not is_defending and not is_suffering_damage: 
 		print("3 foi pressionado")
 		
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
@@ -238,7 +245,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		is_defending = false  # Para a defesa quando a tecla for solta
 		
-	if(Input.is_action_just_pressed(controles["dash"]) and can_dash and isWalking):
+	if(Input.is_action_just_pressed(controles["dash"]) and can_dash and isWalking and not using_special):
 		
 		$DashSfx.play()
 		$dashAnimation.play("dash")
@@ -248,7 +255,7 @@ func _physics_process(delta: float) -> void:
 		$dash_timer.start()
 		
 	if not is_round: # para funçao round
-		if not is_attacking and not is_defending and not opcional_attack:
+		if not is_attacking and not is_defending and not opcional_attack and not using_special:
 			var direction: int = sign(Input.get_axis(controles["move_left"], controles["move_right"]))
 			if direction != 0:
 				current_direction = direction
@@ -320,10 +327,11 @@ func SoltarPoder():
 	var tween = create_tween()
 	# Move para a posição final usando `global_position`
 	tween.tween_property(powerOptional, "global_position", end_position, 1.0)
-	tween.finished.connect(func(): reset_power(start_position))
+	tween.finished.connect(func(): reset_power())
 
-func reset_power(start_position: Vector2):
-	powerOptional.global_position = position
+func reset_power():
+	# Ajuste a altura, somando um valor no eixo Y
+	powerOptional.global_position = position + Vector2(0, altura_Poder)  # Deslocando na direção Y
 	powerOptional.visible = false
 	powerOptional.powerOpitionalArea.powerColision.disabled = true
 	
@@ -385,7 +393,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 	
 	if(using_special):
 		return
-	
+	if(attack_state >= 1):
+		attack_state = 0
+		KnockBack(1000)
 	if(is_defending== false):
 		is_attacking = true
 		vida-= damegeValue
@@ -395,6 +405,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		animation.play("damage")
 		$SangrarAnimationSprite.play("sangrar")
 		is_suffering_damage = true
+		if(attack_state >= 0):
+			attack_state = 0
+			KnockBack(1300)
 	elif(tipoGolpe == "punch3"):
 		break_defense = true
 		is_defending = false
@@ -406,6 +419,9 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		$SangrarAnimationSprite.play("sangrar")
 		IncrementarEspecialInimigo()
 		animation.play("damage")
+		if(attack_state >= 0):
+			attack_state = 0
+			KnockBack(1300)
 		
 		is_suffering_damage = true
 	elif(tipoGolpe == "especialShape"):
@@ -437,12 +453,14 @@ func _start_round() -> void:
 	isWalking = false
 	poweropitional_timer = 6.0
 	can_launch_Opitional_Power = false
+	parar_movimento()
 
 func _desativar_start_round() -> void: 
 	is_round = false
 	can_take_damege = true
 	can_punch = true
 	using_special = false
+	parar_movimento()
 
 func vitoria()-> void:
 	animation.stop()

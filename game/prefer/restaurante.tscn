@@ -685,6 +685,8 @@ visible = false
 
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("27_qdop1")
+aumentar_escala = 0.3
+altura_do_poder = 150
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
 position = Vector2(434, 646)

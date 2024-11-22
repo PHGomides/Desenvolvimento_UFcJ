@@ -1,9 +1,11 @@
 extends Node2D
-
+@export var aumentar_escala:float = 0
+@export var altura_do_poder = 0 #0 é normal
 @onready var Player1Position = $MarkPlayer1
 @onready var Player2Position = $MarkPlayer2
 var Player1: CharacterBody2D = null
 var Player2: CharacterBody2D = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Player1 = load(Global.player1Diretorio).instantiate()
@@ -13,9 +15,10 @@ func _ready() -> void:
 	Player1.add_to_group("players") #serve pra fazer a camera focar nele
 	Global.player1 = Player1  # Armazena a referência no script global
 	add_child(Player1)
-	Global.player1.scale.x = 1.5
-	Global.player1.scale.y = 1.5
-	
+	if Global.player1:
+		Global.player1.escala_personagem += aumentar_escala
+		Global.player1.altura_Poder -= altura_do_poder
+
 	Player2 = load(Global.player2Diretorio).instantiate()
 	Player2.type_player = 1
 	Player2.global_position = Player2Position.global_position
@@ -23,5 +26,6 @@ func _ready() -> void:
 	Player2.add_to_group("players")
 	Global.player2 = Player2  # Armazena a referência no script global
 	add_child(Player2)
-	Global.player2.scale.x = 1.5
-	Global.player2.scale.y = 1.5
+	if Global.player2:
+		Global.player2.escala_personagem += aumentar_escala
+		Global.player2.altura_Poder -= altura_do_poder
