@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=123 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="15_wmb0y"]
 [ext_resource type="Texture2D" uid="uid://c8edt864hgstm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/p1.png" id="16_dve1p"]
 [ext_resource type="Texture2D" uid="uid://dojohpb0cbgd5" path="res://Assests/menu main/subMenuOpcoes/creditosbtn.png" id="16_xup2c"]
+[ext_resource type="Texture2D" uid="uid://7crms3gs3la1" path="res://Assests/menu main/subMenuOpcoes/sliderGrabHover.png" id="17_3uexw"]
 [ext_resource type="Texture2D" uid="uid://crhxta14is3it" path="res://Assests/menu main/subMenuSelecaoDePersonagem/VS.png" id="17_56fj5"]
 [ext_resource type="Texture2D" uid="uid://dng0m1pefg0ah" path="res://Assests/menu main/subMenuOpcoes/creditosHoverbtn.png" id="17_hxj2n"]
 [ext_resource type="Texture2D" uid="uid://dswgu6818stb8" path="res://Assests/menu main/subMenuOpcoes/controlesbtn.png" id="17_opr63"]
@@ -34,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dvactoync7hnv" path="res://Assests/menu main/subMenuChaveamento/titulo.png" id="23_5tgct"]
 [ext_resource type="Texture2D" uid="uid://b17d54hgcxd2b" path="res://Assests/menu main/subMenuOpcoes/menuOpcoes.png" id="23_f2fev"]
 [ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="23_r21ep"]
+[ext_resource type="Texture2D" uid="uid://lw5mgjg6kovv" path="res://Assests/menu main/subMenuSelecaoDePersonagem/btnIniciarHover.png" id="23_wmsge"]
 [ext_resource type="Script" path="res://Cenas/menu_chaveamento_iniciado.gd" id="24_6t44t"]
 [ext_resource type="Texture2D" uid="uid://buqfq6cv3g7gv" path="res://Assests/menu main/subMenuChaveamento/banner chaveamento.png" id="24_eaylc"]
 [ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="24_g4m7p"]
@@ -60,6 +62,7 @@
 [ext_resource type="Texture2D" uid="uid://cudgep3jspc5x" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_FilaCaj.png" id="30_2i3ja"]
 [ext_resource type="Texture2D" uid="uid://dfnatagmv64da" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/pedrBtnF.png" id="30_6w850"]
 [ext_resource type="Texture2D" uid="uid://4epbitym2ywt" path="res://Assests/menu main/MenuEscolhaMapa/mapa2Btn.png" id="30_ax1sj"]
+[ext_resource type="Texture2D" uid="uid://kk45rfem0tqq" path="res://Assests/menu main/subMenuChaveamento/sair_Modo_chaveamentoHover.png" id="30_e3doh"]
 [ext_resource type="Texture2D" uid="uid://c3wftd31cuj8r" path="res://Assests/menu main/subMenuChaveamento/simHoverBtn.png" id="30_ntnul"]
 [ext_resource type="Texture2D" uid="uid://d4cd4cqyqttdg" path="res://Assests/menu main/MenuEscolhaMapa/mapa5Btn.png" id="30_qvnfu"]
 [ext_resource type="Texture2D" uid="uid://chqyxwmrjoy28" path="res://Assests/menu main/MenuEscolhaMapa/mapaRandomBtn.png" id="30_urfyc"]
@@ -81,8 +84,10 @@
 [ext_resource type="Texture2D" uid="uid://cmup1w1rgkbsm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/pedrBtnH.png" id="40_1ekn0"]
 [ext_resource type="Texture2D" uid="uid://d337887r483vj" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtn.png" id="47_80f7l"]
 [ext_resource type="Texture2D" uid="uid://22bsb0beqfy2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsR/AlissonBtnH.png" id="48_y6dna"]
+[ext_resource type="Texture2D" uid="uid://d1geti6c15jnm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoBtn.png" id="51_fv8m3"]
 [ext_resource type="Texture2D" uid="uid://bwhduxy73k767" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0000_Layer-7.png" id="51_nbvc6"]
 [ext_resource type="Texture2D" uid="uid://b0yv4pmx6n1u7" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
+[ext_resource type="Texture2D" uid="uid://iw7wor223iuy" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoHoverBtn.png" id="52_ii6ps"]
 [ext_resource type="Texture2D" uid="uid://me8ssajbgtnh" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
 [ext_resource type="Texture2D" uid="uid://t7lk0n7q0dxn" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0003_20240916_161841_007.png" id="54_mjh0t"]
 [ext_resource type="Texture2D" uid="uid://bgdktsv355nma" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/walissonRH.png" id="54_snwm8"]
@@ -126,6 +131,8 @@ bg_color = Color(1, 0.678431, 0, 0.760784)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2her8"]
 bg_color = Color(1, 0.678431, 0, 0.760784)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_a7g3i"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_spe0o"]
 
@@ -362,6 +369,7 @@ focus_neighbor_bottom = NodePath("../btnSair")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
+texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="MenuOpcoes" type="Control" parent="."]
@@ -411,8 +419,11 @@ theme_override_constants/separation = 70
 layout_mode = 2
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../buttons/btnVoltar")
+focus_neighbor_bottom = NodePath("../sliderSFX")
+mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("24_s3mw3")
-theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("17_3uexw")
 theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
 theme_override_icons/tick = ExtResource("24_s3mw3")
 theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
@@ -423,8 +434,11 @@ max_value = 0.0
 
 [node name="sliderSFX" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../sliderMaster")
+focus_neighbor_bottom = NodePath("../sliderMusic")
+mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("24_s3mw3")
-theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("17_3uexw")
 theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
 theme_override_icons/tick = ExtResource("24_s3mw3")
 theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
@@ -435,8 +449,11 @@ max_value = 0.0
 
 [node name="sliderMusic" type="HSlider" parent="MenuOpcoes/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../sliderSFX")
+focus_neighbor_bottom = NodePath("../buttons/btnControles")
+mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("24_s3mw3")
-theme_override_icons/grabber_highlight = ExtResource("24_s3mw3")
+theme_override_icons/grabber_highlight = ExtResource("17_3uexw")
 theme_override_icons/grabber_disabled = ExtResource("24_s3mw3")
 theme_override_icons/tick = ExtResource("24_s3mw3")
 theme_override_styles/slider = SubResource("StyleBoxLine_nmeqs")
@@ -455,7 +472,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_top = NodePath("../../sliderMusic")
 focus_neighbor_bottom = NodePath("../btnCreditos")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("17_opr63")
@@ -480,7 +497,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../btnCreditos")
-focus_neighbor_bottom = NodePath("../btnControles")
+focus_neighbor_bottom = NodePath("../../sliderMaster")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
@@ -517,18 +534,23 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("20_bn7yk")
+texture_hover = ExtResource("23_wmsge")
+texture_focused = ExtResource("23_wmsge")
 
 [node name="btnVoltar" type="TextureButton" parent="MenuChaveamento/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnIniciar")
+focus_neighbor_bottom = NodePath("../btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
+texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="TextureRect" type="TextureRect" parent="MenuChaveamento"]
@@ -536,73 +558,98 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -438.5
-offset_top = 161.95
-offset_right = 438.5
-offset_bottom = 427.95
+offset_left = -438.0
+offset_top = 86.29
+offset_right = 439.0
+offset_bottom = 352.29
 grow_horizontal = 2
 texture = ExtResource("23_5tgct")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuChaveamento"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuChaveamento"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 687.11
-offset_top = 490.0
-offset_right = -965.89
-offset_bottom = 772.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.513
+offset_top = 154.06
+offset_right = 339.512
+offset_bottom = 245.335
 grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(33, 138)
 
-[node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "a"
 placeholder_text = "Player 1"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "b"
 placeholder_text = "Player 2"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MenuChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "c"
 placeholder_text = "Player 3"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "d"
 placeholder_text = "Player 4"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MenuChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 text = "e"
 placeholder_text = "Player 5"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 text = "f"
 placeholder_text = "Player 6"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="MenuChaveamento/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 text = "g"
 placeholder_text = "Player 7"
 alignment = 1
 max_length = 10
 
-[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/VBoxContainer"]
+[node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 text = "h"
 placeholder_text = "Player 8"
@@ -610,11 +657,18 @@ alignment = 1
 max_length = 10
 
 [node name="TextureRect2" type="TextureRect" parent="MenuChaveamento"]
-layout_mode = 0
-offset_left = 964.0
-offset_top = 489.0
-offset_right = 1775.0
-offset_bottom = 1152.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -158.19
+offset_right = 690.0
+offset_bottom = 504.81
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("24_eaylc")
 
@@ -694,19 +748,23 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnSair")
+focus_neighbor_bottom = NodePath("../btnSair")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("20_bn7yk")
+texture_hover = ExtResource("23_wmsge")
+texture_focused = ExtResource("23_wmsge")
 
 [node name="btnSair" type="TextureButton" parent="MenuChaveamentoIniciado/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnIniciar")
+focus_neighbor_bottom = NodePath("../btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("26_ii2n3")
-texture_hover = ExtResource("26_ii2n3")
-texture_focused = ExtResource("26_ii2n3")
+texture_hover = ExtResource("30_e3doh")
+texture_focused = ExtResource("30_e3doh")
 stretch_mode = 5
 
 [node name="Inputs" type="Control" parent="MenuChaveamentoIniciado"]
@@ -1015,6 +1073,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1086,12 +1145,26 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
 texture_normal = ExtResource("37_p6845")
 texture_hover = ExtResource("38_kcie0")
 texture_focused = ExtResource("38_kcie0")
+stretch_mode = 3
+
+[node name="ProntoBtn" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../Player1Michel")
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_a7g3i")
+texture_normal = ExtResource("51_fv8m3")
+texture_hover = ExtResource("52_ii6ps")
+texture_focused = ExtResource("52_ii6ps")
 stretch_mode = 3
 
 [node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -1114,6 +1187,7 @@ size_flags_vertical = 4
 [node name="Player2Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1189,6 +1263,19 @@ texture_focused = ExtResource("54_snwm8")
 stretch_mode = 5
 flip_h = true
 
+[node name="ProntoBtn" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP1"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../Player2Michel")
+mouse_default_cursor_shape = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_a7g3i")
+texture_normal = ExtResource("51_fv8m3")
+texture_hover = ExtResource("52_ii6ps")
+texture_focused = ExtResource("52_ii6ps")
+stretch_mode = 3
+
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1216,18 +1303,23 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("20_bn7yk")
+texture_hover = ExtResource("23_wmsge")
+texture_focused = ExtResource("23_wmsge")
 
 [node name="btnVoltar" type="TextureButton" parent="MenuSelecaoPersonagens/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnIniciar")
+focus_neighbor_bottom = NodePath("../btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
+texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="AnimacaoP1Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
@@ -1350,8 +1442,12 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../mapa5")
+focus_neighbor_right = NodePath("../mapa2")
+focus_neighbor_bottom = NodePath("../../buttons/btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_e4bqd")
+texture_hover = ExtResource("32_baqie")
 texture_focused = ExtResource("32_baqie")
 script = SubResource("GDScript_gdy4j")
 
@@ -1359,14 +1455,21 @@ script = SubResource("GDScript_gdy4j")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../mapa1")
+focus_neighbor_right = NodePath("../mapa3")
+focus_neighbor_bottom = NodePath("../../buttons/btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_ax1sj")
+texture_hover = ExtResource("32_baqie")
 texture_focused = ExtResource("32_baqie")
 
 [node name="mapa3" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../mapa2")
+focus_neighbor_right = NodePath("../mapa4")
+focus_neighbor_bottom = NodePath("../../buttons/btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_urfyc")
 texture_focused = ExtResource("32_baqie")
@@ -1375,16 +1478,24 @@ texture_focused = ExtResource("32_baqie")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../mapa3")
+focus_neighbor_right = NodePath("../mapa5")
+focus_neighbor_bottom = NodePath("../../buttons/btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("32_iq5tj")
+texture_hover = ExtResource("32_baqie")
 texture_focused = ExtResource("32_baqie")
 
 [node name="mapa5" type="TextureButton" parent="MenuSelecaoMapa/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../mapa4")
+focus_neighbor_right = NodePath("../mapa1")
+focus_neighbor_bottom = NodePath("../../buttons/btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("30_qvnfu")
+texture_hover = ExtResource("32_baqie")
 texture_focused = ExtResource("32_baqie")
 
 [node name="buttons" type="VBoxContainer" parent="MenuSelecaoMapa"]
@@ -1407,18 +1518,23 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../HBoxContainer/mapa3")
+focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("20_bn7yk")
+texture_hover = ExtResource("23_wmsge")
+texture_focused = ExtResource("23_wmsge")
 
 [node name="btnVoltar" type="TextureButton" parent="MenuSelecaoMapa/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnIniciar")
+focus_neighbor_bottom = NodePath("../btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
 texture_hover = ExtResource("22_qmwjn")
+texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="PlayersChaveamento" type="Control" parent="MenuSelecaoMapa"]
@@ -1557,6 +1673,8 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="button_down" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="ProntoPlayer1"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="sound_entered_btn"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
@@ -1571,6 +1689,8 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
+[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="sound_entered_btn"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="ProntoPlayer2"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]
@@ -1597,4 +1717,4 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuSelecaoMapa/buttons/btnIniciar" to="MenuSelecaoMapa" method="IniciarMapa"]
 [connection signal="button_down" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="voltarSelecaoMapa"]
+[connection signal="pressed" from="MenuSelecaoMapa/buttons/btnVoltar" to="." method="_on_btn_1_vs_1_pressed"]

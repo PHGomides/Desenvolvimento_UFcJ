@@ -25,11 +25,12 @@ func _ready() -> void:
 	$MenuOpcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
 	pass # Replace with function body.
 	$MenuMain/btn1vs1.grab_focus()
-	
+	Global.player1Diretorio = null
+	Global.player2Diretorio = null
 	if(Global.chaveamento == true):
 		$MenuMain.visible = false
 		$MenuChaveamentoIniciado.visible = true
-
+		$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -43,12 +44,14 @@ func _on_btn_1_vs_1_pressed() -> void:
 	MenuMain.visible = false
 	MenuChaveamento.visible= false
 	MenuSelecaoMapa.visible = false
+	$MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Michel.grab_focus()
 	pass # Replace with function body.
 
 
 func _on_btn_chaveamento_pressed() -> void:
 	MenuMain.visible = false
 	MenuChaveamento.visible= true
+	$MenuChaveamento/buttons/btnIniciar.grab_focus()
 	pass # Replace with function body.
 
 
@@ -74,12 +77,11 @@ func _on_btn_voltar_pressed() -> void:
 	$MenuMain/btn1vs1.grab_focus()
 	pass # Replace with function body.
 
-func voltarSelecaoMapa() -> void:
-	MenuSelecaoPersonagens.visible = true
-	MenuSelecaoMapa.visible = false
+
 
 func _on_btnEscolherMapa() -> void:
 	if(Global.player1Diretorio != null && Global.player2Diretorio != null):
+		$MenuSelecaoMapa/HBoxContainer/mapa1.grab_focus()
 		MenuSelecaoPersonagens.visible = false
 		MenuSelecaoMapa.visible = true
 	
@@ -125,12 +127,14 @@ func _on_slider_music_value_changed(value: float) -> void:
 func mostrarControles() -> void:
 	$MenuOpcoes.visible = false
 	$MenuControles.visible = true
+	$MenuControles/btnVoltar.grab_focus()
 	pass # Replace with function body.
 
 
 func mudar_de_controles_para_Opcoes() -> void:
 	$MenuOpcoes.visible = true
 	$MenuControles.visible = false
+	$MenuOpcoes/VBoxContainer/buttons/btnControles.grab_focus()
 	pass # Replace with function body.
 
 
@@ -138,6 +142,19 @@ func _on_btn_voltar_escolha_de_personagem_pressed() -> void:
 	if(Global.chaveamento):
 		$MenuSelecaoPersonagens.visible = false
 		$MenuChaveamentoIniciado.visible = true
+		$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
 	else:
 		_on_btn_voltar_pressed()
+	pass # Replace with function body.
+
+
+func ProntoPlayer1() -> void:
+	if(Global.player1Diretorio):
+		$MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel.grab_focus()
+	pass # Replace with function body.
+
+
+func ProntoPlayer2() -> void:
+	if(Global.player2Diretorio):
+		$MenuSelecaoPersonagens/buttons/btnIniciar.grab_focus()
 	pass # Replace with function body.

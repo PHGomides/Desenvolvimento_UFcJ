@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ckyh3xfiqt07t"]
+[gd_scene load_steps=24 format=3 uid="uid://ckyh3xfiqt07t"]
 
 [ext_resource type="Script" path="res://Cenas/pause_menu.gd" id="1_a7ykj"]
 [ext_resource type="Texture2D" uid="uid://c4o8kfaopdt33" path="res://Assests/PausedMenuAccets/pauseBG.png" id="2_aakyb"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dc07g67m4x62p" path="res://audio/btnMenuclick.wav" id="8_03ib7"]
 [ext_resource type="Texture2D" uid="uid://4dp8l4irhjdc" path="res://Assests/PausedMenuAccets/ReeniciarPartidabtnHover.png" id="8_5lgyt"]
 [ext_resource type="Texture2D" uid="uid://11dx78x1yagq" path="res://Assests/PausedMenuAccets/sairDaPartidaBtnHover.png" id="8_wn5wr"]
+[ext_resource type="Texture2D" uid="uid://7crms3gs3la1" path="res://Assests/menu main/subMenuOpcoes/sliderGrabHover.png" id="13_4f2bi"]
 [ext_resource type="Texture2D" uid="uid://dswgu6818stb8" path="res://Assests/menu main/subMenuOpcoes/controlesbtn.png" id="15_8ajpb"]
 [ext_resource type="Texture2D" uid="uid://nclx06cmlxe0" path="res://Assests/menu main/subMenuOpcoes/controlesbtnHover.png" id="16_vc87x"]
 [ext_resource type="Texture2D" uid="uid://bciyytgyktvbd" path="res://Assests/PausedMenuAccets/pauseControllersBG.png" id="17_5ptec"]
@@ -167,8 +168,10 @@ theme_override_constants/separation = 65
 layout_mode = 2
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../buttons/btnVoltar")
+focus_neighbor_bottom = NodePath("../sliderSFX")
 theme_override_icons/grabber = ExtResource("3_q8xee")
-theme_override_icons/grabber_highlight = ExtResource("3_q8xee")
+theme_override_icons/grabber_highlight = ExtResource("13_4f2bi")
 theme_override_icons/grabber_disabled = ExtResource("3_q8xee")
 theme_override_icons/tick = ExtResource("3_q8xee")
 theme_override_styles/slider = SubResource("StyleBoxLine_2088e")
@@ -179,8 +182,10 @@ max_value = 0.0
 
 [node name="sliderSFX" type="HSlider" parent="opcoes/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../sliderMaster")
+focus_neighbor_bottom = NodePath("../sliderMusic")
 theme_override_icons/grabber = ExtResource("3_q8xee")
-theme_override_icons/grabber_highlight = ExtResource("3_q8xee")
+theme_override_icons/grabber_highlight = ExtResource("13_4f2bi")
 theme_override_icons/grabber_disabled = ExtResource("3_q8xee")
 theme_override_icons/tick = ExtResource("3_q8xee")
 theme_override_styles/slider = SubResource("StyleBoxLine_2088e")
@@ -191,8 +196,10 @@ max_value = 0.0
 
 [node name="sliderMusic" type="HSlider" parent="opcoes/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../sliderSFX")
+focus_neighbor_bottom = NodePath("../buttons/btnControles")
 theme_override_icons/grabber = ExtResource("3_q8xee")
-theme_override_icons/grabber_highlight = ExtResource("3_q8xee")
+theme_override_icons/grabber_highlight = ExtResource("13_4f2bi")
 theme_override_icons/grabber_disabled = ExtResource("3_q8xee")
 theme_override_icons/tick = ExtResource("3_q8xee")
 theme_override_styles/slider = SubResource("StyleBoxLine_2088e")
@@ -210,8 +217,8 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnVoltar")
-focus_neighbor_bottom = NodePath("../btnCreditos")
+focus_neighbor_top = NodePath("../../sliderMusic")
+focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_8ajpb")
 texture_hover = ExtResource("16_vc87x")
@@ -222,11 +229,12 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
+focus_neighbor_top = NodePath("../btnControles")
+focus_neighbor_bottom = NodePath("../../sliderMaster")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_sjgul")
 texture_hover = ExtResource("5_klea1")
+texture_focused = ExtResource("5_klea1")
 stretch_mode = 5
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
@@ -293,6 +301,7 @@ focus_neighbor_bottom = NodePath("../btnSair")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_sjgul")
 texture_hover = ExtResource("5_klea1")
+texture_focused = ExtResource("5_klea1")
 stretch_mode = 5
 
 [connection signal="button_down" from="PauseMenuMain/VBoxContainer/RetornarBtn" to="." method="sound_button_down"]

@@ -54,12 +54,14 @@ func Despausar() -> void:
 func abrirOpcoesPause() -> void:
 	$PauseMenuMain.visible = false
 	$opcoes.visible = true
+	$opcoes/VBoxContainer/buttons/btnVoltar.grab_focus()
 	pass # Replace with function body.
 
 
 func voltarPauseMenuMain() -> void:
 	$PauseMenuMain.visible = true
 	$opcoes.visible = false
+	$PauseMenuMain/VBoxContainer/RetornarBtn.grab_focus()
 	pass # Replace with function body.
 
 
@@ -110,9 +112,11 @@ func Reeniciar_Partida() -> void:
 func mostrarControles() -> void:
 	$opcoes.visible = false
 	$Controles.visible = true
+	$Controles/VBoxContainer/buttons/btnVoltar.grab_focus()
 
 
 func sair_menu_Controles() -> void:
 	$opcoes.visible = true
 	$Controles.visible = false
+	$opcoes/VBoxContainer/buttons/btnVoltar.grab_focus()
 	pass # Replace with function body.

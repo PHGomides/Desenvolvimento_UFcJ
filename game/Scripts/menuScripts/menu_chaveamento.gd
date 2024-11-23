@@ -15,14 +15,14 @@ func _process(delta: float) -> void:
 func _on_btn_iniciar_pressed() -> void:
 	randomize()
 	var players = [
-		$VBoxContainer/LineEdit1.text,
-		$VBoxContainer/LineEdit2.text,
-		$VBoxContainer/LineEdit3.text,
-		$VBoxContainer/LineEdit4.text,
-		$VBoxContainer/LineEdit5.text,
-		$VBoxContainer/LineEdit6.text,
-		$VBoxContainer/LineEdit7.text,
-		$VBoxContainer/LineEdit8.text
+		$HBoxContainer/VBoxContainer/LineEdit1.text,
+		$HBoxContainer/VBoxContainer/LineEdit2.text,
+		$HBoxContainer/VBoxContainer2/LineEdit3.text,
+		$HBoxContainer/VBoxContainer2/LineEdit4.text,
+		$HBoxContainer/VBoxContainer3/LineEdit5.text,
+		$HBoxContainer/VBoxContainer3/LineEdit6.text,
+		$HBoxContainer/VBoxContainer4/LineEdit7.text,
+		$HBoxContainer/VBoxContainer4/LineEdit8.text
 	]
 	for player in players:
 		if player.strip_edges() == "":
@@ -49,4 +49,5 @@ func _on_btn_iniciar_pressed() -> void:
 	Global.chaveamento = true
 	
 	$"../MenuChaveamentoIniciado".visible = true
+	$"../MenuChaveamentoIniciado/buttons/btnIniciar".grab_focus()
 	visible = false

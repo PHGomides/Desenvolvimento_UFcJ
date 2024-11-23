@@ -79,8 +79,8 @@ func _ready() -> void:
 	
 	controles = {
 		"jump": "ui_cimaseta",
-		"move_left": "ui_left",
-		"move_right": "ui_right",
+		"move_left": "ui_esquerda_P2",
+		"move_right": "ui_direita_P2",
 		"punch": "ui_punch",
 		"special": "ui_especial",
 		"optional": "ui_opcional",
@@ -522,9 +522,11 @@ func _on_anim_animation_finished() -> void:
 			else:
 				is_attacking = false  # Permite que o personagem volte a se mover após o ataque, se o combo não foi encadeado
 				animation.play("idle")
-				can_punch = true
 				#retirando as animações de particulas do personagem
 				is_suffering_damage = false
+				
+				can_punch = true
+
 		
 	for child in get_parent().get_children():
 		if child is Sprite2D:

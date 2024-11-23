@@ -79,8 +79,8 @@ var escala_personagem = 1.2 #tamanho do personagem
 func _ready() -> void:
 	controles = {
 		"jump": "ui_cimaseta",
-		"move_left": "ui_left",
-		"move_right": "ui_right",
+		"move_left": "ui_esquerda_P2",
+		"move_right": "ui_direita_P2",
 		"punch": "ui_punch",
 		"special": "ui_especial",
 		"optional": "ui_opcional",
