@@ -1107,14 +1107,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.875
-offset_top = -18.235
-offset_right = -11.875
-offset_bottom = 4.765
+offset_left = -121.89
+offset_top = -8.26
+offset_right = -16.89
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("16_ng82x")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
@@ -1125,14 +1125,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 13.565
-offset_top = -18.235
-offset_right = 118.565
-offset_bottom = 4.765
+offset_left = 17.165
+offset_top = -8.26
+offset_right = 122.165
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("16_ng82x")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 
 [node name="GPUParticles2DChuva" type="GPUParticles2D" parent="."]
@@ -1175,9 +1175,10 @@ position = Vector2(1180, 612)
 stream = ExtResource("34_pggs3")
 bus = &"SFX"
 
-[node name="MusicaMapa1" type="AudioStreamPlayer" parent="."]
+[node name="MusicaMapa" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_l5p4x")
 volume_db = -20.613
+autoplay = true
 bus = &"Musica"
 
 [node name="FightSfx" type="AudioStreamPlayer" parent="."]

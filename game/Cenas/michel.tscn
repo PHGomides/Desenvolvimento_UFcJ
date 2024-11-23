@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=3 uid="uid://bqe2va7eeqr7s"]
+[gd_scene load_steps=153 format=3 uid="uid://bqe2va7eeqr7s"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_1.gd" id="1_61h00"]
 [ext_resource type="Texture2D" uid="uid://b13k6yobqk6by" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/michelBtn.png" id="2_8cp4u"]
@@ -139,6 +139,7 @@
 [ext_resource type="Texture2D" uid="uid://cg4mfcc1q4ppf" path="res://Assests/particulas/dash_sprite/transp_0009_Camada-10.png" id="131_nxhv2"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_michel.gd" id="132_6tqje"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_esquerda_michel.gd" id="133_turu2"]
+[ext_resource type="AudioStream" uid="uid://cga2pp7f2088j" path="res://audio/especial_activete_SFX.wav" id="140_hx6pw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -967,6 +968,7 @@ frame_progress = 1.0
 
 [node name="DashSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("124_5mu70")
+bus = &"SFX"
 
 [node name="dash_timer" type="Timer" parent="."]
 wait_time = 0.2
@@ -995,6 +997,10 @@ shape = SubResource("RectangleShape2D_3erlb")
 
 [node name="tomar_dano_power" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("140_hx6pw")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]

@@ -20,6 +20,10 @@ func _ready() -> void:
 		$vencedor_chave3.text = Global.vencerdor_c3
 	if(Global.rodada >= 4):
 		$vencedor_chave4.text = Global.vencerdor_c4
+	if(Global.rodada >= 5):
+		$Final1.text = Global.final_p1
+	if(Global.rodada >= 6):
+		$Final2.text = Global.final_p2
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

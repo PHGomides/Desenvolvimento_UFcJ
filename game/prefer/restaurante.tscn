@@ -1,4 +1,4 @@
-[gd_scene load_steps=162 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=163 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_rpvgp"]
@@ -155,6 +155,7 @@
 [ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="154_hjxp7"]
 [ext_resource type="AudioStream" uid="uid://bc2rakbg2f5yw" path="res://audio/fightSFX.wav" id="154_kl3rj"]
 [ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="155_5fbpx"]
+[ext_resource type="AudioStream" uid="uid://05aw0430ljq2" path="res://audio/Musica Mapa 2.wav" id="156_jphuy"]
 
 [sub_resource type="Environment" id="Environment_2sxed"]
 background_mode = 3
@@ -688,6 +689,7 @@ visible = false
 [node name="Players" type="Node2D" parent="."]
 script = ExtResource("27_qdop1")
 aumentar_escala = 0.3
+Aumentar_pulo = -150
 altura_do_poder = 150
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
@@ -1101,14 +1103,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.875
-offset_top = -18.235
-offset_right = -11.875
-offset_bottom = 4.765
+offset_left = -121.89
+offset_top = -8.26
+offset_right = -16.89
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("14_0hccy")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
@@ -1119,14 +1121,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 13.565
-offset_top = -18.235
-offset_right = 118.565
-offset_bottom = 4.765
+offset_left = 16.395
+offset_top = -8.26
+offset_right = 121.395
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("14_0hccy")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
+
+[node name="MusicaMapa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("156_jphuy")
+volume_db = -5.0
+autoplay = true
+bus = &"Musica"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

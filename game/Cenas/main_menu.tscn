@@ -260,7 +260,6 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -489,6 +488,7 @@ texture_focused = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="MenuChaveamento" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -650,10 +650,10 @@ anchor_left = 0.466
 anchor_top = 0.363
 anchor_right = 0.466
 anchor_bottom = 0.363
-offset_left = -79.878
-offset_top = -12.413
-offset_right = 25.122
-offset_bottom = 10.587
+offset_left = -86.648
+offset_top = -10.868
+offset_right = 18.352
+offset_bottom = 12.132
 theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 19
 text = "AAAAAAAAAA"
@@ -666,10 +666,10 @@ anchor_left = 0.466
 anchor_top = 0.363
 anchor_right = 0.466
 anchor_bottom = 0.363
-offset_left = 54.122
-offset_top = -12.413
-offset_right = 159.122
-offset_bottom = 10.587
+offset_left = 60.977
+offset_top = -10.868
+offset_right = 165.977
+offset_bottom = 12.132
 theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 19
 text = "AAAAAAAAAA"
@@ -1243,17 +1243,13 @@ animation = &"addPerson"
 flip_h = true
 
 [node name="PlayersChaveamento" type="Control" parent="MenuSelecaoPersonagens"]
-visible = false
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_top = 231.065
-offset_bottom = 231.065
+offset_top = 767.665
+offset_bottom = 767.665
 grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("82_vxd04")
 
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/PlayersChaveamento"]
@@ -1278,14 +1274,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.875
-offset_top = -18.235
-offset_right = -11.875
-offset_bottom = 4.765
+offset_left = -121.89
+offset_top = -8.26
+offset_right = -17.465
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("25_r6mne")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
@@ -1296,14 +1292,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 13.565
-offset_top = -18.235
-offset_right = 118.565
-offset_bottom = 4.765
+offset_left = 18.39
+offset_top = -8.26
+offset_right = 123.39
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("25_r6mne")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 
 [node name="MenuSelecaoMapa" type="Control" parent="."]
@@ -1426,17 +1422,13 @@ texture_hover = ExtResource("22_qmwjn")
 stretch_mode = 5
 
 [node name="PlayersChaveamento" type="Control" parent="MenuSelecaoMapa"]
-visible = false
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_top = 231.065
-offset_bottom = 231.065
+offset_top = 767.665
+offset_bottom = 767.665
 grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("82_vxd04")
 
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoMapa/PlayersChaveamento"]
@@ -1461,14 +1453,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.875
-offset_top = -18.235
-offset_right = -11.875
-offset_bottom = 4.765
+offset_left = -121.89
+offset_top = -8.26
+offset_right = -17.465
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("25_r6mne")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
@@ -1479,14 +1471,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 13.565
-offset_top = -18.235
-offset_right = 118.565
-offset_bottom = 4.765
+offset_left = 18.39
+offset_top = -8.26
+offset_right = 123.39
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("25_r6mne")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 
 [node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]

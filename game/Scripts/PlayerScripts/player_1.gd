@@ -113,7 +113,10 @@ func _ready() -> void:
 # Função que processa a física do personagem a cada frame
 func _physics_process(delta: float) -> void:
 
-
+	if(using_special and not is_attacking):
+		using_special = false
+	if(opcional_attack and not is_attacking):
+		opcional_attack = false
 	
 	if(not is_attacking):
 		is_suffering_damage = false
@@ -229,7 +232,9 @@ func _physics_process(delta: float) -> void:
 		#Logica para ataque especial com L
 	if Input.is_action_just_pressed(controles["special"]) and is_on_floor() and not using_special and not is_attacking and special_could and not is_round and not is_suffering_damage and not is_defending:
 		print("L foi pressionado")
+		
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
+			$EspecialActiveteSfx.play()
 			if current_direction == 1:
 				animationEspecial.position.x = 630
 				animationEspecial.flip_h = false
@@ -331,9 +336,9 @@ func SoltarPoder():
 	var end_position
 
 	if current_direction == 1:
-		end_position = start_position + Vector2(2000, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(2300, 0)  # Ajuste a distância conforme necessário
 	else:
-		end_position = start_position + Vector2(-2000, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(-2300, 0)  # Ajuste a distância conforme necessário
 
 	# Cria o Tween para movimentação suave
 	var tween = create_tween()

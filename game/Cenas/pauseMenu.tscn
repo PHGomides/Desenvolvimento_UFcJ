@@ -206,17 +206,6 @@ layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="btnVoltar" type="TextureButton" parent="opcoes/VBoxContainer/buttons"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_top = NodePath("../btnChaveamento")
-focus_neighbor_bottom = NodePath("../btnSair")
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("4_sjgul")
-texture_hover = ExtResource("5_klea1")
-stretch_mode = 5
-
 [node name="btnControles" type="TextureButton" parent="opcoes/VBoxContainer/buttons"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -227,6 +216,17 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_8ajpb")
 texture_hover = ExtResource("16_vc87x")
 texture_focused = ExtResource("16_vc87x")
+stretch_mode = 5
+
+[node name="btnVoltar" type="TextureButton" parent="opcoes/VBoxContainer/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../btnChaveamento")
+focus_neighbor_bottom = NodePath("../btnSair")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sjgul")
+texture_hover = ExtResource("5_klea1")
 stretch_mode = 5
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
@@ -310,10 +310,10 @@ stretch_mode = 5
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderMaster" to="." method="_on_slider_master_value_changed"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderSFX" to="." method="_on_slider_sfx_value_changed"]
 [connection signal="value_changed" from="opcoes/VBoxContainer/sliderMusic" to="." method="_on_slider_music_value_changed"]
+[connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnControles" to="." method="mostrarControles"]
 [connection signal="button_down" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnVoltar" to="." method="voltarPauseMenuMain"]
-[connection signal="pressed" from="opcoes/VBoxContainer/buttons/btnControles" to="." method="mostrarControles"]
 [connection signal="button_down" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="Controles/VBoxContainer/buttons/btnVoltar" to="." method="sair_menu_Controles"]

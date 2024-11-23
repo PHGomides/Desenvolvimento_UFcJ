@@ -1,4 +1,4 @@
-[gd_scene load_steps=162 format=3 uid="uid://di4riu174okwk"]
+[gd_scene load_steps=163 format=3 uid="uid://di4riu174okwk"]
 
 [ext_resource type="Script" path="res://Scripts/fila_caj.gd" id="1_nhtel"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_oon58"]
@@ -153,6 +153,7 @@
 [ext_resource type="Texture2D" uid="uid://csxrl1k2pvmpb" path="res://Assests/particulas/powerReady/power ready_00098.png" id="151_hn65l"]
 [ext_resource type="Texture2D" uid="uid://rlllq2k8wyvc" path="res://Assests/player vencedor/player1vencedor.png" id="152_wd0qd"]
 [ext_resource type="Texture2D" uid="uid://crohl0pattw7j" path="res://Assests/player vencedor/player2vencedor.png" id="153_52j07"]
+[ext_resource type="AudioStream" uid="uid://b5au2qew5l2ke" path="res://audio/Musica Mapa 3.wav" id="154_qktxf"]
 [ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="154_xj6ce"]
 [ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="155_miiip"]
 
@@ -1058,6 +1059,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("153_52j07")
 
+[node name="MusicaMapa" type="AudioStreamPlayer" parent="HUD"]
+stream = ExtResource("154_qktxf")
+volume_db = -9.885
+autoplay = true
+bus = &"Musica"
+
 [node name="PlayersChaveamento" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 5
@@ -1090,14 +1097,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.875
-offset_top = -18.235
-offset_right = -11.875
-offset_bottom = 4.765
+offset_left = -121.89
+offset_top = -8.26
+offset_right = -16.89
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_hvm2u")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
@@ -1108,14 +1115,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 13.565
-offset_top = -18.235
-offset_right = 118.565
-offset_bottom = 4.765
+offset_left = 16.395
+offset_top = -8.26
+offset_right = 121.395
+offset_bottom = 14.74
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_hvm2u")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 
 [connection signal="timeout" from="HUD/Tempo/clocktimer" to="HUD/Tempo" method="_on_clocktimer_timeout"]

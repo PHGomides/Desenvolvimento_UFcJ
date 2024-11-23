@@ -1,5 +1,6 @@
 extends Node2D
 @export var aumentar_escala:float = 0
+@export var Aumentar_pulo = 0
 @export var altura_do_poder = 0 #0 é normal
 @onready var Player1Position = $MarkPlayer1
 @onready var Player2Position = $MarkPlayer2
@@ -18,6 +19,7 @@ func _ready() -> void:
 	if Global.player1:
 		Global.player1.escala_personagem += aumentar_escala
 		Global.player1.altura_Poder -= altura_do_poder
+		Global.player1.JUMP_VELOCITY += Aumentar_pulo
 
 	Player2 = load(Global.player2Diretorio).instantiate()
 	Player2.type_player = 1
@@ -29,3 +31,4 @@ func _ready() -> void:
 	if Global.player2:
 		Global.player2.escala_personagem += aumentar_escala
 		Global.player2.altura_Poder -= altura_do_poder
+		Global.player2.JUMP_VELOCITY += Aumentar_pulo

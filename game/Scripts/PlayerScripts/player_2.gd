@@ -221,6 +221,7 @@ func _physics_process(delta: float) -> void:
 		print("3 foi pressionado")
 		
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
+			$EspecialActiveteSfx.play()
 			if current_direction == 1:
 				animationEspecial.position.x = 630
 				animationEspecial.flip_h = false
@@ -319,9 +320,9 @@ func SoltarPoder():
 	var end_position
 
 	if current_direction == 1:
-		end_position = start_position + Vector2(2000, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(2300, 0)  # Ajuste a distância conforme necessário
 	else:
-		end_position = start_position + Vector2(-2000, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(-2300, 0)  # Ajuste a distância conforme necessário
 
 	# Cria o Tween para movimentação suave
 	var tween = create_tween()
@@ -398,7 +399,7 @@ func _damage(damegeValue: int, tipoGolpe: String) -> void:
 		KnockBack(1000)
 	if(is_defending== false):
 		is_attacking = true
-		vida-= damegeValue
+		vida-= damegeValue 
 		power += 5
 		power = clamp(power, 0, MaxPower)
 		IncrementarEspecialInimigo()

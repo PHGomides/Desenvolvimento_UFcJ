@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=164 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -145,6 +145,7 @@
 [ext_resource type="Texture2D" uid="uid://qelmmiwhcdlk" path="res://Assests/particulas/dash_sprite/transp_0003_Camada-4.png" id="137_708f7"]
 [ext_resource type="Texture2D" uid="uid://cs2eyfkn7k3y2" path="res://Assests/particulas/dash_sprite/transp_0005_Camada-6.png" id="138_jmy2t"]
 [ext_resource type="Texture2D" uid="uid://bo07ale302pox" path="res://Assests/particulas/dash_sprite/transp_0007_Camada-8.png" id="139_0rwmo"]
+[ext_resource type="AudioStream" uid="uid://cga2pp7f2088j" path="res://audio/especial_activete_SFX.wav" id="139_qx8jj"]
 [ext_resource type="Texture2D" uid="uid://bfclx4x3it3cn" path="res://Assests/particulas/dash_sprite/transp_0008_Camada-9.png" id="140_ua7tm"]
 [ext_resource type="Texture2D" uid="uid://cg4mfcc1q4ppf" path="res://Assests/particulas/dash_sprite/transp_0009_Camada-10.png" id="141_wedoq"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_neemias.gd" id="142_x1tyr"]
@@ -925,6 +926,10 @@ bus = &"SFX"
 stream = ExtResource("103_mhko3")
 bus = &"SFX"
 
+[node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("139_qx8jj")
+bus = &"SFX"
+
 [node name="luz_vitoria" type="TextureRect" parent="."]
 visible = false
 offset_left = -329.0
@@ -936,6 +941,7 @@ texture = ExtResource("127_sst7v")
 
 [node name="DashSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("134_3scy1")
+bus = &"SFX"
 
 [node name="dash_timer" type="Timer" parent="."]
 wait_time = 0.2
