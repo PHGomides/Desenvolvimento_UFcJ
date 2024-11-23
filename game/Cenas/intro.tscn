@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbbou8qewrcax"]
+
+[ext_resource type="VideoStream" path="res://Assests/Creditos/Intro_AnimaSoft.ogv" id="1_viass"]
+[ext_resource type="Script" path="res://Scripts/intro.gd" id="2_bhn2l"]
+
+[node name="Intro" type="VideoStreamPlayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_viass")
+volume_db = -12.87
+autoplay = true
+script = ExtResource("2_bhn2l")

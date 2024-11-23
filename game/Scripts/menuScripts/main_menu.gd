@@ -32,8 +32,24 @@ func _ready() -> void:
 		$MenuChaveamentoIniciado.visible = true
 		$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("back_menu"):  # Verifica se a ação 'ui_b' foi pressionada.
+		if $MenuSelecaoPersonagens.visible == true:
+			if(Global.chaveamento == true):
+				$MenuMain.visible = false
+				$MenuChaveamentoIniciado.visible = true
+				$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
+				sound_button_down()
+			else:
+				$MenuMain.visible = true
+				$MenuSelecaoPersonagens.visible = false
+				$MenuMain/btn1vs1.grab_focus()
+				sound_button_down()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if($Creditos.is_playing()):
+		$MenuOpcoes/VBoxContainer/buttons/btnCreditos.grab_focus()
 	pass
 
 
@@ -157,4 +173,14 @@ func ProntoPlayer1() -> void:
 func ProntoPlayer2() -> void:
 	if(Global.player2Diretorio):
 		$MenuSelecaoPersonagens/buttons/btnIniciar.grab_focus()
+	pass # Replace with function body.
+
+
+func Mostrar_Creditos() -> void:
+	if($Creditos.visible==false):
+		$Creditos.visible = true
+		$Creditos.play()
+	else:
+		$Creditos.visible = false
+		$Creditos.stop()
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=124 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -113,6 +113,7 @@
 [ext_resource type="Texture2D" uid="uid://svkvfret00yc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/AddPersonIcon.png" id="74_thep2"]
 [ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="82_jpjh4"]
 [ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="82_vxd04"]
+[ext_resource type="VideoStream" path="res://Assests/Creditos/CreditosJogo.ogv" id="111_4ggc5"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -1074,6 +1075,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../ProntoBtn")
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1085,6 +1087,7 @@ stretch_mode = 3
 [node name="Player1Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1097,6 +1100,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1109,6 +1113,7 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1121,6 +1126,7 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1133,6 +1139,7 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
@@ -1145,6 +1152,7 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
@@ -1158,6 +1166,7 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../Player1Michel")
 mouse_default_cursor_shape = 2
 toggle_mode = true
@@ -1187,6 +1196,7 @@ size_flags_vertical = 4
 [node name="Player2Michel" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
@@ -1199,6 +1209,7 @@ stretch_mode = 5
 [node name="Player2Neemias" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1210,6 +1221,7 @@ stretch_mode = 5
 [node name="Player2Oka" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1221,6 +1233,7 @@ stretch_mode = 5
 [node name="Player2Frances" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1232,6 +1245,7 @@ stretch_mode = 5
 [node name="Player2Pedro" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1243,6 +1257,7 @@ stretch_mode = 5
 [node name="Player2Alisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1254,6 +1269,7 @@ stretch_mode = 5
 [node name="Player2Walisson" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP2"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -1267,6 +1283,7 @@ flip_h = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
 focus_neighbor_bottom = NodePath("../Player2Michel")
 mouse_default_cursor_shape = 2
 toggle_mode = true
@@ -1303,7 +1320,9 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../btnVoltar")
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../btnVoltar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("20_bn7yk")
@@ -1314,7 +1333,9 @@ texture_focused = ExtResource("23_wmsge")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../btnIniciar")
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../btnIniciar")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_6jpfk")
@@ -1597,6 +1618,19 @@ theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 17
 text = "AAAAAAAAAA"
 
+[node name="Creditos" type="VideoStreamPlayer" parent="."]
+visible = false
+z_index = 8
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("111_4ggc5")
+volume_db = -80.0
+expand = true
+
 [node name="MainMenuAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_o3hul")
 volume_db = -23.308
@@ -1636,7 +1670,7 @@ bus = &"SFX"
 [connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnControles" to="." method="mostrarControles"]
 [connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnCreditos" to="." method="Mostrar_Creditos"]
 [connection signal="button_down" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuOpcoes/VBoxContainer/buttons/btnVoltar" to="." method="_on_btn_voltar_pressed"]
