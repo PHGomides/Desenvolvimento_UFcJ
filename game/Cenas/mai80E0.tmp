@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=124 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -52,7 +52,6 @@
 [ext_resource type="Script" path="res://Scripts/ChaveamentoScripts/NamePainelsChaveamento.gd" id="28_0fsnw"]
 [ext_resource type="Texture2D" uid="uid://bt1oxx6o2q5hs" path="res://Assests/menu main/subMenuChaveamento/simBtn.png" id="28_1pr2e"]
 [ext_resource type="Texture2D" uid="uid://daomouonbo1pg" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Aleatorio.png" id="28_535xv"]
-[ext_resource type="Texture2D" uid="uid://cuc5u6x4fde1v" path="res://Assests/menu main/subMenuChaveamento/MenuModoChaveamentoFINAL.png" id="28_cofaw"]
 [ext_resource type="Texture2D" uid="uid://cdlfmhp6uvtpn" path="res://Assests/menu main/MenuEscolhaMapa/Preview/Preview_Estacionamento.png" id="28_cwpyb"]
 [ext_resource type="Texture2D" uid="uid://2mbba26wydu2" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtnF.png" id="28_ei1r6"]
 [ext_resource type="Script" path="res://Cenas/texture_rect.gd" id="28_wglia"]
@@ -269,6 +268,7 @@ expand = true
 loop = true
 
 [node name="MenuMain" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -675,7 +675,6 @@ scale = Vector2(0.42, 0.42)
 texture = ExtResource("24_eaylc")
 
 [node name="MenuChaveamentoIniciado" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -698,7 +697,7 @@ offset_right = 516.5
 offset_bottom = 346.235
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("28_cofaw")
+texture = ExtResource("25_pg731")
 
 [node name="bgNormal" type="TextureRect" parent="MenuChaveamentoIniciado"]
 layout_mode = 1

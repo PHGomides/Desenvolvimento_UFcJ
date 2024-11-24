@@ -37,8 +37,11 @@ func _input(event: InputEvent) -> void:
 		if $MenuSelecaoPersonagens.visible == true:
 			if(Global.chaveamento == true):
 				$MenuMain.visible = false
+				$MenuSelecaoPersonagens.visible = false
+				
 				$MenuChaveamentoIniciado.visible = true
 				$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
+
 				sound_button_down()
 			else:
 				$MenuMain.visible = true

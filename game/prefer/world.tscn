@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://bq14wiqv14l8v"]
+[gd_scene load_steps=172 format=3 uid="uid://bq14wiqv14l8v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_kywhc"]
 [ext_resource type="Texture2D" uid="uid://cu4w02wlugy63" path="res://Assests/MapaEstacionamento/_0005_chão.png" id="1_q68sy"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://ckyh3xfiqt07t" path="res://Cenas/pauseMenu.tscn" id="22_vlji3"]
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="23_af463"]
 [ext_resource type="Script" path="res://Scripts/HUD/Round.gd" id="23_kt74s"]
-[ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="24_1k0r8"]
 [ext_resource type="Texture2D" uid="uid://dmcm5vdkghup1" path="res://Assests/hud/bolinha hud.png" id="25_taysr"]
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="25_vht3l"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="26_ndkkw"]
@@ -621,7 +620,7 @@ position = Vector2(-48, 123)
 script = ExtResource("1_kywhc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(626, 483)
+position = Vector2(380, 567)
 offset = Vector2(0, -91.89)
 zoom = Vector2(0.955, 0.955)
 limit_left = -630
@@ -957,7 +956,6 @@ offset_top = 293.225
 offset_right = 1218.0
 offset_bottom = 793.225
 pivot_offset = Vector2(250, 250)
-texture = ExtResource("24_1k0r8")
 
 [node name="2" type="TextureRect" parent="HUD/Round"]
 visible = false
@@ -1166,10 +1164,10 @@ visible = false
 script = ExtResource("23_af463")
 
 [node name="MarkPlayer1" type="Marker2D" parent="Players"]
-position = Vector2(154, 625)
+position = Vector2(354.575, 625)
 
 [node name="MarkPlayer2" type="Marker2D" parent="Players"]
-position = Vector2(1180, 612)
+position = Vector2(1274.08, 612)
 
 [node name="CronometroSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_pggs3")
