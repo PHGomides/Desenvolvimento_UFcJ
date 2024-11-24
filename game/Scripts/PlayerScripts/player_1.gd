@@ -336,9 +336,9 @@ func SoltarPoder():
 	var end_position
 
 	if current_direction == 1:
-		end_position = start_position + Vector2(2300, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(2500, 0)  # Ajuste a distância conforme necessário
 	else:
-		end_position = start_position + Vector2(-2300, 0)  # Ajuste a distância conforme necessário
+		end_position = start_position + Vector2(-2500, 0)  # Ajuste a distância conforme necessário
 
 	# Cria o Tween para movimentação suave
 	var tween = create_tween()

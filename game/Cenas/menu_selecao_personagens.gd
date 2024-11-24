@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 
 func SelecionarPersonagem1(number: int)-> void:
 	Personagem1 = number
+	$HBoxContainer/PersonagensP1/ProntoBtn.grab_focus()
 	if(Personagem1 == 1):
 		Global.player1Diretorio = Player1
 		AnimacaoP1Menu.play("Michel")
@@ -34,6 +35,7 @@ func SelecionarPersonagem1(number: int)-> void:
 
 func SelecionarPersonagem2(number: int)-> void:
 	Personagem2 = number
+	$HBoxContainer/PersonagensP2/ProntoBtn.grab_focus()
 	if(Personagem2 == 1):
 		Global.player2Diretorio = Player1
 		AnimacaoP2Menu.play("Michel")
