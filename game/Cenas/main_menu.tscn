@@ -1,4 +1,4 @@
-[gd_scene load_steps=302 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=327 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -99,52 +99,52 @@
 [ext_resource type="Texture2D" uid="uid://dp3cca57nh8oj" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00011.png" id="50_qs4ox"]
 [ext_resource type="Texture2D" uid="uid://bk45rec7uu0gp" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00012.png" id="51_5m31w"]
 [ext_resource type="Texture2D" uid="uid://d1geti6c15jnm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoBtn.png" id="51_fv8m3"]
-[ext_resource type="Texture2D" uid="uid://bwhduxy73k767" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0000_Layer-7.png" id="51_nbvc6"]
-[ext_resource type="Texture2D" uid="uid://b0yv4pmx6n1u7" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
+[ext_resource type="Texture2D" uid="uid://bwhduxy73k767" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0000_Layer-7.png" id="51_nbvc6"]
+[ext_resource type="Texture2D" uid="uid://b0yv4pmx6n1u7" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
 [ext_resource type="Texture2D" uid="uid://iw7wor223iuy" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoHoverBtn.png" id="52_ii6ps"]
 [ext_resource type="Texture2D" uid="uid://bfyaljb301u6" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00013.png" id="52_ya4n3"]
-[ext_resource type="Texture2D" uid="uid://me8ssajbgtnh" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
+[ext_resource type="Texture2D" uid="uid://me8ssajbgtnh" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
 [ext_resource type="Texture2D" uid="uid://cvamlsx7wse4y" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00014.png" id="53_i3083"]
 [ext_resource type="Texture2D" uid="uid://cv0wk5hlgmbrc" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00015.png" id="54_8jbqu"]
-[ext_resource type="Texture2D" uid="uid://t7lk0n7q0dxn" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0003_20240916_161841_007.png" id="54_mjh0t"]
+[ext_resource type="Texture2D" uid="uid://t7lk0n7q0dxn" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0003_20240916_161841_007.png" id="54_mjh0t"]
 [ext_resource type="Texture2D" uid="uid://bgdktsv355nma" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/walissonRH.png" id="54_snwm8"]
 [ext_resource type="Texture2D" uid="uid://0mjrf03nv348" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00016.png" id="55_7krn8"]
-[ext_resource type="Texture2D" uid="uid://ctvpkv7j7alsj" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0004_20240916_161841_011.png" id="55_sni0m"]
+[ext_resource type="Texture2D" uid="uid://ctvpkv7j7alsj" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0004_20240916_161841_011.png" id="55_sni0m"]
 [ext_resource type="Texture2D" uid="uid://dj6v5guclevcm" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00017.png" id="56_o0vxd"]
-[ext_resource type="Texture2D" uid="uid://dpv6fc3yihatt" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0005_20240916_161841_013.png" id="56_s1hmo"]
+[ext_resource type="Texture2D" uid="uid://dpv6fc3yihatt" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0005_20240916_161841_013.png" id="56_s1hmo"]
 [ext_resource type="Texture2D" uid="uid://l3pvqi0v2q40" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00018.png" id="57_dlh3v"]
-[ext_resource type="Texture2D" uid="uid://cofpwp050imck" path="res://Assests/Alisson Sprites Prontos/Alisson Idle/_0000s_0006_20240916_161841_017.png" id="57_wv1t7"]
-[ext_resource type="Texture2D" uid="uid://pxxtu6fq0w7t" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png" id="58_eo6hh"]
+[ext_resource type="Texture2D" uid="uid://cofpwp050imck" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0006_20240916_161841_017.png" id="57_wv1t7"]
+[ext_resource type="Texture2D" uid="uid://pxxtu6fq0w7t" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0000_9.png" id="58_eo6hh"]
 [ext_resource type="Texture2D" uid="uid://co5w5x62sx5w6" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00019.png" id="58_wf13t"]
 [ext_resource type="Texture2D" uid="uid://bdvduudym2w5k" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00020.png" id="59_g2p5h"]
-[ext_resource type="Texture2D" uid="uid://qd455g1remr3" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png" id="59_gyoxc"]
+[ext_resource type="Texture2D" uid="uid://qd455g1remr3" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0001_8.png" id="59_gyoxc"]
 [ext_resource type="Texture2D" uid="uid://dumsaqjfpouvw" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00021.png" id="60_lhrbs"]
-[ext_resource type="Texture2D" uid="uid://c2fqwdbbxtgmh" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png" id="60_o1n1v"]
-[ext_resource type="Texture2D" uid="uid://ccil2enkh6vtg" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png" id="61_0k7mt"]
+[ext_resource type="Texture2D" uid="uid://c2fqwdbbxtgmh" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0002_7.png" id="60_o1n1v"]
+[ext_resource type="Texture2D" uid="uid://ccil2enkh6vtg" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0003_6.png" id="61_0k7mt"]
 [ext_resource type="Texture2D" uid="uid://cvg5cf8verb55" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00022.png" id="61_woulv"]
 [ext_resource type="Texture2D" uid="uid://d2qr2n3t45k55" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00023.png" id="62_gfb47"]
-[ext_resource type="Texture2D" uid="uid://bb3ltido73l78" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png" id="62_voqgb"]
+[ext_resource type="Texture2D" uid="uid://bb3ltido73l78" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0004_5.png" id="62_voqgb"]
 [ext_resource type="Texture2D" uid="uid://cj0b17hyrmjwn" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00024.png" id="63_7m8ca"]
-[ext_resource type="Texture2D" uid="uid://dkbco23w5krbx" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png" id="63_v68ew"]
+[ext_resource type="Texture2D" uid="uid://dkbco23w5krbx" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0005_4.png" id="63_v68ew"]
 [ext_resource type="Texture2D" uid="uid://c0rx0fs4wh01c" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00025.png" id="64_82toj"]
-[ext_resource type="Texture2D" uid="uid://blcotdbte6b5d" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png" id="64_bl46r"]
-[ext_resource type="Texture2D" uid="uid://hx2syxuny46m" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png" id="65_6r3qd"]
+[ext_resource type="Texture2D" uid="uid://blcotdbte6b5d" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0006_3.png" id="64_bl46r"]
+[ext_resource type="Texture2D" uid="uid://hx2syxuny46m" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0007_2.png" id="65_6r3qd"]
 [ext_resource type="Texture2D" uid="uid://iqlolgr6jk41" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00026.png" id="65_jdj5s"]
-[ext_resource type="Texture2D" uid="uid://cy4gbn0dld1w4" path="res://Assests/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png" id="66_778qi"]
+[ext_resource type="Texture2D" uid="uid://cy4gbn0dld1w4" path="res://Assests/Players/Michel Sprites Pronto/Michel idle/_0000s_0008_1.png" id="66_778qi"]
 [ext_resource type="Texture2D" uid="uid://ej12wxhbpay3" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00027.png" id="66_bkyh6"]
-[ext_resource type="Texture2D" uid="uid://colsn6kt8f52h" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png" id="67_sueid"]
+[ext_resource type="Texture2D" uid="uid://colsn6kt8f52h" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0000_20240905_161311_058.png" id="67_sueid"]
 [ext_resource type="Texture2D" uid="uid://dg2fx8cuof8lw" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00028.png" id="67_thupn"]
-[ext_resource type="Texture2D" uid="uid://b7jv1745jkkhm" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png" id="68_cm6nd"]
+[ext_resource type="Texture2D" uid="uid://b7jv1745jkkhm" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0001_20240905_161311_056.png" id="68_cm6nd"]
 [ext_resource type="Texture2D" uid="uid://b053yut7gk64r" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00029.png" id="68_e4beb"]
-[ext_resource type="Texture2D" uid="uid://djkuuknwljpxg" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png" id="69_72jtn"]
+[ext_resource type="Texture2D" uid="uid://djkuuknwljpxg" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0002_20240905_161311_052.png" id="69_72jtn"]
 [ext_resource type="Texture2D" uid="uid://0pdlarmjk0s7" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00030.png" id="69_k2ayg"]
 [ext_resource type="Texture2D" uid="uid://boo1gjf2j4kqi" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00031.png" id="70_17kby"]
-[ext_resource type="Texture2D" uid="uid://c0mk7742ign6b" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png" id="70_61ihb"]
+[ext_resource type="Texture2D" uid="uid://c0mk7742ign6b" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0003_20240905_161311_044.png" id="70_61ihb"]
 [ext_resource type="Texture2D" uid="uid://bi1j17xt8uk3f" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00032.png" id="71_6buvk"]
-[ext_resource type="Texture2D" uid="uid://g4e64by52k63" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png" id="71_kblb0"]
-[ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
+[ext_resource type="Texture2D" uid="uid://g4e64by52k63" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0004_20240905_161311_034.png" id="71_kblb0"]
+[ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
 [ext_resource type="Texture2D" uid="uid://bml5gm3j6mjv6" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00033.png" id="72_fv5rv"]
-[ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
+[ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Players/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
 [ext_resource type="Texture2D" uid="uid://c16s17bsggnss" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00034.png" id="73_qgfk8"]
 [ext_resource type="Texture2D" uid="uid://svkvfret00yc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/AddPersonIcon.png" id="74_thep2"]
 [ext_resource type="Texture2D" uid="uid://b0o2gh3hd4m82" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00035.png" id="74_wk5jn"]
@@ -153,51 +153,51 @@
 [ext_resource type="Texture2D" uid="uid://t4pheyl67428" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00038.png" id="77_36w5l"]
 [ext_resource type="Texture2D" uid="uid://dag4k1vvscbva" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00039.png" id="78_mmoub"]
 [ext_resource type="Texture2D" uid="uid://chnx5los8cloq" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00040.png" id="79_61mkr"]
-[ext_resource type="Texture2D" uid="uid://ibyqj6m7eecc" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/1.png" id="80_ctuql"]
+[ext_resource type="Texture2D" uid="uid://ibyqj6m7eecc" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/1.png" id="80_ctuql"]
 [ext_resource type="Texture2D" uid="uid://w1iq0v0g2nw" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00041.png" id="80_jf2ih"]
-[ext_resource type="Texture2D" uid="uid://1ygonymei8xk" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/2.png" id="81_3cg8m"]
+[ext_resource type="Texture2D" uid="uid://1ygonymei8xk" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/2.png" id="81_3cg8m"]
 [ext_resource type="Texture2D" uid="uid://i2y0s40mw6fk" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00042.png" id="81_plnb3"]
 [ext_resource type="Texture2D" uid="uid://d3ktj5jji3lub" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00043.png" id="82_d3w85"]
 [ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="82_jpjh4"]
-[ext_resource type="Texture2D" uid="uid://c56msjpddvcb" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/3.png" id="82_piw03"]
+[ext_resource type="Texture2D" uid="uid://c56msjpddvcb" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/3.png" id="82_piw03"]
 [ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="82_vxd04"]
 [ext_resource type="Texture2D" uid="uid://dndh4wpkac76q" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00044.png" id="83_7xhi4"]
-[ext_resource type="Texture2D" uid="uid://11v0ejrqig2" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/4.png" id="83_e8lbh"]
+[ext_resource type="Texture2D" uid="uid://11v0ejrqig2" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/4.png" id="83_e8lbh"]
 [ext_resource type="Texture2D" uid="uid://cx6n0s7cgspug" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00045.png" id="84_ebqdl"]
-[ext_resource type="Texture2D" uid="uid://qkxy53rua6fs" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/5.png" id="84_om1f8"]
+[ext_resource type="Texture2D" uid="uid://qkxy53rua6fs" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/5.png" id="84_om1f8"]
 [ext_resource type="Texture2D" uid="uid://xdebw03ufjwo" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00046.png" id="85_3bcaq"]
-[ext_resource type="Texture2D" uid="uid://ctoc65sf48htp" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/6.png" id="85_6fwt6"]
-[ext_resource type="Texture2D" uid="uid://bf18vh84bfjx7" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/7.png" id="86_c7h28"]
+[ext_resource type="Texture2D" uid="uid://ctoc65sf48htp" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/6.png" id="85_6fwt6"]
+[ext_resource type="Texture2D" uid="uid://bf18vh84bfjx7" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/7.png" id="86_c7h28"]
 [ext_resource type="Texture2D" uid="uid://cef3smofo72lh" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00047.png" id="86_x4cgn"]
-[ext_resource type="Texture2D" uid="uid://bt7u8gxo5tpwk" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/8.png" id="87_l612q"]
+[ext_resource type="Texture2D" uid="uid://bt7u8gxo5tpwk" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/8.png" id="87_l612q"]
 [ext_resource type="Texture2D" uid="uid://cyisyv6uvplwa" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00048.png" id="87_skowd"]
 [ext_resource type="Texture2D" uid="uid://doa6o4liuyjxo" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00049.png" id="88_chtys"]
-[ext_resource type="Texture2D" uid="uid://b2x86sr5uceep" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/9.png" id="88_hpv15"]
-[ext_resource type="Texture2D" uid="uid://day1ycxls3h1m" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/10.png" id="89_lctsu"]
+[ext_resource type="Texture2D" uid="uid://b2x86sr5uceep" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/9.png" id="88_hpv15"]
+[ext_resource type="Texture2D" uid="uid://day1ycxls3h1m" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/10.png" id="89_lctsu"]
 [ext_resource type="Texture2D" uid="uid://dsux2lxr5d7a5" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00050.png" id="89_msdgc"]
 [ext_resource type="Texture2D" uid="uid://bmiyuasvvg2wb" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00051.png" id="90_lfxso"]
-[ext_resource type="Texture2D" uid="uid://bg7j6o0krwd3y" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/11.png" id="90_w1u4m"]
+[ext_resource type="Texture2D" uid="uid://bg7j6o0krwd3y" path="res://Assests/Players/Gabriel Sprites Pronto/Gabriel Parado/11.png" id="90_w1u4m"]
 [ext_resource type="Texture2D" uid="uid://crd6di17wwqji" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00052.png" id="91_g04q2"]
 [ext_resource type="Texture2D" uid="uid://bbakdi233g7b8" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00053.png" id="92_q07ox"]
 [ext_resource type="Texture2D" uid="uid://b0psu25fp1mxb" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00054.png" id="93_a0r5u"]
 [ext_resource type="Texture2D" uid="uid://bpgw0p4yjvebf" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00055.png" id="94_j47mj"]
 [ext_resource type="Texture2D" uid="uid://cdglcavrytipl" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00056.png" id="95_a2hd1"]
-[ext_resource type="Texture2D" uid="uid://cc421bx2q8xxg" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/1.png" id="96_4xnyb"]
+[ext_resource type="Texture2D" uid="uid://cc421bx2q8xxg" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/1.png" id="96_4xnyb"]
 [ext_resource type="Texture2D" uid="uid://lwimlvp4244v" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00057.png" id="96_l38hu"]
-[ext_resource type="Texture2D" uid="uid://h11wxkk2mwwl" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/2.png" id="97_htsoj"]
+[ext_resource type="Texture2D" uid="uid://h11wxkk2mwwl" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/2.png" id="97_htsoj"]
 [ext_resource type="Texture2D" uid="uid://cxvgsa5wjg64g" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00058.png" id="97_pju2y"]
 [ext_resource type="Texture2D" uid="uid://d186g5cmlasd3" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00059.png" id="98_67hy8"]
-[ext_resource type="Texture2D" uid="uid://wb5odwdsaotb" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/3.png" id="98_dqibi"]
+[ext_resource type="Texture2D" uid="uid://wb5odwdsaotb" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/3.png" id="98_dqibi"]
 [ext_resource type="Texture2D" uid="uid://ocagetqc78r3" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00060.png" id="99_ju14v"]
-[ext_resource type="Texture2D" uid="uid://blkfe0i24qadl" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/4.png" id="99_xd6je"]
+[ext_resource type="Texture2D" uid="uid://blkfe0i24qadl" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/4.png" id="99_xd6je"]
 [ext_resource type="Texture2D" uid="uid://bs770dr7l0knc" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00061.png" id="100_sldg7"]
-[ext_resource type="Texture2D" uid="uid://ce1l6mgod6lj2" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/5.png" id="100_xmy77"]
-[ext_resource type="Texture2D" uid="uid://bsajqnsbot5ui" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/6.png" id="101_v4nxb"]
+[ext_resource type="Texture2D" uid="uid://ce1l6mgod6lj2" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/5.png" id="100_xmy77"]
+[ext_resource type="Texture2D" uid="uid://bsajqnsbot5ui" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/6.png" id="101_v4nxb"]
 [ext_resource type="Texture2D" uid="uid://dqa88qh8a5wuf" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00062.png" id="101_yf1ff"]
-[ext_resource type="Texture2D" uid="uid://c3xgdfs2kteqg" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/7.png" id="102_io833"]
+[ext_resource type="Texture2D" uid="uid://c3xgdfs2kteqg" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/7.png" id="102_io833"]
 [ext_resource type="Texture2D" uid="uid://c86pbrjgvq7sl" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00063.png" id="102_nhtn8"]
 [ext_resource type="Texture2D" uid="uid://ceqf2ine4dq3k" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00064.png" id="103_1ln21"]
-[ext_resource type="Texture2D" uid="uid://bu4hgvocelvfr" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/8.png" id="103_do823"]
+[ext_resource type="Texture2D" uid="uid://bu4hgvocelvfr" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro parado/8.png" id="103_do823"]
 [ext_resource type="Texture2D" uid="uid://55irdxcsjdhp" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00065.png" id="104_3ei7i"]
 [ext_resource type="Texture2D" uid="uid://clhmlq5yk0uxb" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00066.png" id="105_atr2f"]
 [ext_resource type="Texture2D" uid="uid://dsmgk3fa3nwrv" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00067.png" id="106_p7v7x"]
@@ -291,6 +291,31 @@
 [ext_resource type="Texture2D" uid="uid://biylqbnrgpff" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00154.png" id="193_2qgu5"]
 [ext_resource type="Texture2D" uid="uid://y1sqcobnrajk" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00155.png" id="194_id6li"]
 [ext_resource type="Texture2D" uid="uid://dcjvu74vvudkw" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00156.png" id="195_rbfbu"]
+[ext_resource type="Texture2D" uid="uid://dthpato1t6mdw" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/1.png" id="237_q2q8a"]
+[ext_resource type="Texture2D" uid="uid://bsjb0s4rmw25h" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/2.png" id="238_our1v"]
+[ext_resource type="Texture2D" uid="uid://n5jre363dmi" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/3.png" id="239_yyqle"]
+[ext_resource type="Texture2D" uid="uid://bk5qa378drg4f" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/4.png" id="240_o3jf7"]
+[ext_resource type="Texture2D" uid="uid://ddgjndcal27s3" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/5.png" id="241_sb8hs"]
+[ext_resource type="Texture2D" uid="uid://k8usc523rqp4" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/6.png" id="242_3r445"]
+[ext_resource type="Texture2D" uid="uid://crc5re5i14p3x" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/7.png" id="243_nvmd2"]
+[ext_resource type="Texture2D" uid="uid://b6j2hxgfg2iy4" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/8.png" id="244_74mir"]
+[ext_resource type="Texture2D" uid="uid://b6jqvl6ljo4e1" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/9.png" id="245_ue1bk"]
+[ext_resource type="Texture2D" uid="uid://3ng7wgqhq02h" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/10.png" id="246_xd5bu"]
+[ext_resource type="Texture2D" uid="uid://8q844n7pjhf1" path="res://Assests/Players/Francês Sprites Pronto/Francês/Parado/11.png" id="247_a0fct"]
+[ext_resource type="Texture2D" uid="uid://da42orcwr0v8y" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/1.png" id="272_tisyp"]
+[ext_resource type="Texture2D" uid="uid://cwt8gl58hwjqx" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/2.png" id="273_n2drs"]
+[ext_resource type="Texture2D" uid="uid://bmw00wfg6via2" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/3.png" id="274_pv8pr"]
+[ext_resource type="Texture2D" uid="uid://capssxf1mvqwb" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/4.png" id="275_vmsqj"]
+[ext_resource type="Texture2D" uid="uid://cjqkbdkyosjsc" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/5.png" id="276_7awxj"]
+[ext_resource type="Texture2D" uid="uid://brgm3tjxsk8vr" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/6.png" id="277_aen2a"]
+[ext_resource type="Texture2D" uid="uid://dn7dvbn7gyqvl" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/7.png" id="278_ltlqr"]
+[ext_resource type="Texture2D" uid="uid://bub1b6acmdk64" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/8.png" id="279_uxra8"]
+[ext_resource type="Texture2D" uid="uid://dr83ftmiei3p8" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/9.png" id="280_kjo5h"]
+[ext_resource type="Texture2D" uid="uid://jtl1lxhugg75" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/10.png" id="281_gxk16"]
+[ext_resource type="Texture2D" uid="uid://bq7hxf7oq58cc" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/11.png" id="282_q3idx"]
+[ext_resource type="Texture2D" uid="uid://dsum27n3vkx3v" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/12.png" id="283_8yg2m"]
+[ext_resource type="Texture2D" uid="uid://dnqmgyvtm0xe6" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/13.png" id="284_fheel"]
+[ext_resource type="Texture2D" uid="uid://ch6v4mwufq6vb" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/14.png" id="285_d16d5"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -823,6 +848,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("237_q2q8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_our1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_yyqle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_o3jf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_sb8hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_3r445")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_nvmd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_74mir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_ue1bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_xd5bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_a0fct")
+}],
+"loop": true,
+"name": &"Franch",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("80_ctuql")
 }, {
 "duration": 1.0,
@@ -944,6 +1007,53 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pedro",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("272_tisyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_n2drs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_pv8pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_vmsqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_7awxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_aen2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_ltlqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_uxra8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_kjo5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_gxk16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_q3idx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_8yg2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_fheel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_d16d5")
+}],
+"loop": true,
+"name": &"Walisson",
 "speed": 10.0
 }, {
 "frames": [{
@@ -2139,11 +2249,13 @@ stretch_mode = 5
 position = Vector2(676, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
 animation = &"addPerson"
+frame_progress = 0.490296
 
 [node name="AnimacaoP2Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
 position = Vector2(1256.09, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
 animation = &"addPerson"
+frame_progress = 0.239078
 flip_h = true
 
 [node name="PlayersChaveamento" type="Control" parent="MenuSelecaoPersonagens"]
@@ -2496,8 +2608,8 @@ horizontal_alignment = 1
 [connection signal="pressed" from="MenuChaveamentoIniciado/buttons/btnSair" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
@@ -2511,13 +2623,13 @@ horizontal_alignment = 1
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [4]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Pedro" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [5]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [7]]
 [connection signal="button_down" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="ProntoPlayer1"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="sound_entered_btn"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
@@ -2527,13 +2639,13 @@ horizontal_alignment = 1
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [4]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [5]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="ProntoPlayer2"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
