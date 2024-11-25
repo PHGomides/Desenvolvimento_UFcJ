@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=3 uid="uid://b207sblnnbtdw"]
+[gd_scene load_steps=144 format=3 uid="uid://b207sblnnbtdw"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/walisson.gd" id="1_bf5fm"]
 [ext_resource type="Texture2D" uid="uid://bh58b32wi857e" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/wa.png" id="2_81kd5"]
@@ -39,29 +39,18 @@
 [ext_resource type="Texture2D" uid="uid://c1eb8y07nar78" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson especial/14.png" id="37_u2m7i"]
 [ext_resource type="Texture2D" uid="uid://bu7rbhfs63o8s" path="res://Assests/Players/Neemias Sprites Prontos/especial NeemiasChinela/Empty.png" id="38_1i17p"]
 [ext_resource type="Texture2D" uid="uid://84pq3o0nluyl" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson especial/15.png" id="38_p8wnv"]
-[ext_resource type="Texture2D" uid="uid://da42orcwr0v8y" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/1.png" id="39_gwuq8"]
-[ext_resource type="Texture2D" uid="uid://cwt8gl58hwjqx" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/2.png" id="40_cjnm8"]
-[ext_resource type="Texture2D" uid="uid://bmw00wfg6via2" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/3.png" id="41_ugf8j"]
-[ext_resource type="Texture2D" uid="uid://capssxf1mvqwb" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/4.png" id="42_w7rkq"]
-[ext_resource type="Texture2D" uid="uid://cjqkbdkyosjsc" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/5.png" id="43_kvu8o"]
 [ext_resource type="Texture2D" uid="uid://bei8ldq1rx0sd" path="res://Assests/morrerParticula/_0000_Camada-2.png" id="43_yito8"]
-[ext_resource type="Texture2D" uid="uid://brgm3tjxsk8vr" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/6.png" id="44_0oimy"]
 [ext_resource type="Texture2D" uid="uid://cvxqun38icmhj" path="res://Assests/morrerParticula/_0001_Camada-3.png" id="44_vbfuj"]
 [ext_resource type="Texture2D" uid="uid://dexg1hmn3jsl5" path="res://Assests/morrerParticula/_0002_Camada-4.png" id="45_c8cya"]
-[ext_resource type="Texture2D" uid="uid://dn7dvbn7gyqvl" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/7.png" id="45_dqcq0"]
-[ext_resource type="Texture2D" uid="uid://bub1b6acmdk64" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/8.png" id="46_f5l1q"]
 [ext_resource type="Texture2D" uid="uid://cwah25gg5plin" path="res://Assests/morrerParticula/_0003_Camada-5.png" id="46_txwb8"]
 [ext_resource type="Texture2D" uid="uid://bg51fj5xn82b6" path="res://Assests/morrerParticula/_0004_Camada-6.png" id="47_uyppb"]
-[ext_resource type="Texture2D" uid="uid://dr83ftmiei3p8" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/9.png" id="47_vne4l"]
 [ext_resource type="Texture2D" uid="uid://4var8mqii4sd" path="res://Assests/morrerParticula/_0005_Camada-7.png" id="48_vgdvu"]
 [ext_resource type="Texture2D" uid="uid://jtl1lxhugg75" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/10.png" id="48_y8d4v"]
 [ext_resource type="Texture2D" uid="uid://cya8nav2x78nj" path="res://Assests/morrerParticula/_0006_Camada-8.png" id="49_i30mw"]
 [ext_resource type="Texture2D" uid="uid://bq7hxf7oq58cc" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/11.png" id="49_lb4q1"]
 [ext_resource type="Texture2D" uid="uid://sxfx8vvvfvof" path="res://Assests/morrerParticula/_0007_Camada-9.png" id="50_fk83m"]
 [ext_resource type="Texture2D" uid="uid://dsum27n3vkx3v" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/12.png" id="50_go3l8"]
-[ext_resource type="Texture2D" uid="uid://dnqmgyvtm0xe6" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/13.png" id="51_md4ia"]
 [ext_resource type="Texture2D" uid="uid://c4ev5vw8b1ntq" path="res://Assests/morrerParticula/_0008_Camada-10.png" id="51_yyihk"]
-[ext_resource type="Texture2D" uid="uid://ch6v4mwufq6vb" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/14.png" id="52_6v0p5"]
 [ext_resource type="Texture2D" uid="uid://21sq1yni3j8a" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson pulo/3.png" id="54_j10a5"]
 [ext_resource type="Texture2D" uid="uid://c1l2pyobp4bdw" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson pulo/4.png" id="55_gueh5"]
 [ext_resource type="Texture2D" uid="uid://b0sapqnuwwab0" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson pulo/5.png" id="56_3cole"]
@@ -407,33 +396,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_gwuq8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_cjnm8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_ugf8j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_w7rkq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_kvu8o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_0oimy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_dqcq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_f5l1q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_vne4l")
-}, {
-"duration": 1.0,
 "texture": ExtResource("48_y8d4v")
 }, {
 "duration": 1.0,
@@ -441,16 +403,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("50_go3l8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_md4ia")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_6v0p5")
 }],
-"loop": false,
+"loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -829,10 +785,10 @@ scale = Vector2(1, 0.95)
 shape = SubResource("RectangleShape2D_m024i")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(16.1091, -7.82671)
-scale = Vector2(0.734, 0.785)
+position = Vector2(16.109, 12.008)
+scale = Vector2(0.785, 0.785)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"opcional"
+animation = &"comemoracao"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

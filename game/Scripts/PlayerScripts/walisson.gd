@@ -69,7 +69,7 @@ var dashing_timer = 0.0    # Temporizador para controlar o cooldown
 var isWalking = false
 
 
-var escala_personagem = 1.2
+var escala_personagem = 1.35
  #tamanho do personagem
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
@@ -392,7 +392,7 @@ func SoltarEspecial() -> void:
 	isWalking = false
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
-	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
+	timer.wait_time = 0.5  # Define o tempo de espera para 1 segundo
 	timer.one_shot = true  # O timer deve disparar apenas uma vez
 	add_child(timer)
 	

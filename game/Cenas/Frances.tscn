@@ -1,6 +1,7 @@
-[gd_scene load_steps=143 format=3 uid="uid://brp8kps5g5vlt"]
+[gd_scene load_steps=144 format=3 uid="uid://brp8kps5g5vlt"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/frances.gd" id="1_6noeo"]
+[ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="2_oue8k"]
 [ext_resource type="Texture2D" uid="uid://x2t4md8qjxce" path="res://Assests/Players/Francês Sprites Pronto/Francês/Vitória/1.png" id="2_q5l0j"]
 [ext_resource type="Texture2D" uid="uid://bh38l8vyywhrw" path="res://Assests/Players/Francês Sprites Pronto/Francês/Vitória/2.png" id="3_kamm2"]
 [ext_resource type="Texture2D" uid="uid://klqex4p0hxhg" path="res://Assests/Players/Francês Sprites Pronto/Francês/Vitória/3.png" id="4_j2xuy"]
@@ -812,6 +813,7 @@ size = Vector2(1.5, 2)
 [node name="player" type="CharacterBody2D"]
 position = Vector2(7.89087, -0.173279)
 script = ExtResource("1_6noeo")
+ImageHud = ExtResource("2_oue8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.891, 29.433)

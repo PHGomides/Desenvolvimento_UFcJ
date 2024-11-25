@@ -61,12 +61,13 @@ func SelecionarPersonagem2(number: int)-> void:
 	elif Personagem2 == 3:
 		Global.player2Diretorio = Gabriel
 		AnimacaoP2Menu.play("Gabriel")
+
+	elif Personagem2 == 4:
+		Global.player2Diretorio = Franch
+		AnimacaoP2Menu.play("Franch")
 	elif Personagem2 == 5:
 		Global.player2Diretorio = Pedro
 		AnimacaoP2Menu.play("Pedro")
-	elif Personagem1 == 4:
-		Global.player2Diretorio = Franch
-		AnimacaoP2Menu.play("Franch")
 	elif Personagem2 == 6:
 		Global.player2Diretorio = Alisson
 		AnimacaoP2Menu.play("Alisson")
