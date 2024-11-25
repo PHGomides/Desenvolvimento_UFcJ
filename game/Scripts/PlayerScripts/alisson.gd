@@ -1,10 +1,10 @@
 extends CharacterBody2D
-#Gabriel
+#michel
 const SPEED = 700.0
 @export var JUMP_VELOCITY=-2000
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player: int = 2
-var name_player = "Gabriel"
+var name_player = "Alisson"
 @export var ImageHud: Texture
 @onready var powerOptional = $PoderOpicional
 var can_launch_Opitional_Power = false
@@ -69,8 +69,7 @@ var dashing_timer = 0.0    # Temporizador para controlar o cooldown
 var isWalking = false
 
 
-var escala_personagem = 1.2
- #tamanho do personagem
+var escala_personagem = 1.3 #tamanho do personagem
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
@@ -124,7 +123,7 @@ func _physics_process(delta: float) -> void:
 
 		# Atualiza o temporizador de cooldown do pulo
 	scale.x = escala_personagem
-	scale.y = escala_personagem 
+	scale.y = escala_personagem
 	if not can_launch_Opitional_Power:
 		poweropitional_timer -= delta
 		if poweropitional_timer <= 0:
@@ -204,7 +203,7 @@ func _physics_process(delta: float) -> void:
 			#criando um Timer dinamicamente para o atack3 , esse foi o unico timer que funcionou
 			var attack_timer = Timer.new()
 			add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
-			attack_timer.wait_time = 0.2  # Define o tempo de espera
+			attack_timer.wait_time = 0.3  # Define o tempo de espera
 			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
@@ -240,7 +239,7 @@ func _physics_process(delta: float) -> void:
 				animationEspecial.position.x = 577.669
 				animationEspecial.flip_h = false
 			else:
-				animationEspecial.position.x = -599.175
+				animationEspecial.position.x = -532.856
 				animationEspecial.flip_h = true
 				
 			power = 0
@@ -311,15 +310,15 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 		
 	if current_direction == 1: 
-		$hitbox/punch1e2.position.x = 95.109
-		$hitbox/punch3eopcional.position.x = 95.484
-		$hitbox/especialShape.position.x = 1023.109
+		$hitbox/punch1e2.position.x = 141.22
+		$hitbox/punch3eopcional.position.x = 131.859
+		$hitbox/especialShape.position.x = 1031.455
 		$dashAnimation.position.x = -165.211
 		$dashAnimation.flip_h = true
 	elif current_direction == -1:
-		$hitbox/punch1e2.position.x = -109.891
-		$hitbox/punch3eopcional.position.x = -108.891
-		$hitbox/especialShape.position.x = -1023.109
+		$hitbox/punch1e2.position.x = -137.891
+		$hitbox/punch3eopcional.position.x = -128
+		$hitbox/especialShape.position.x = -1026.41
 		$dashAnimation.position.x = 185.109
 		$dashAnimation.flip_h = false
 
@@ -392,7 +391,7 @@ func SoltarEspecial() -> void:
 	isWalking = false
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
-	timer.wait_time = 1.0  # Define o tempo de espera para 1 segundo
+	timer.wait_time = 0.5  # Define o tempo de espera para 1 segundo
 	timer.one_shot = true  # O timer deve disparar apenas uma vez
 	add_child(timer)
 	

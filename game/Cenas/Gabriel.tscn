@@ -813,9 +813,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.734, 0.785)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"especial"
-frame = 22
-frame_progress = 1.0
+animation = &"idle"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

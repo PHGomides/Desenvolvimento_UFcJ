@@ -1306,14 +1306,12 @@ size_flags_vertical = 4
 
 [node name="LineEdit1" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "a"
 placeholder_text = "Player 1"
 alignment = 1
 max_length = 10
 
 [node name="LineEdit2" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "b"
 placeholder_text = "Player 2"
 alignment = 1
 max_length = 10
@@ -1325,14 +1323,12 @@ size_flags_vertical = 4
 
 [node name="LineEdit3" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "c"
 placeholder_text = "Player 3"
 alignment = 1
 max_length = 10
 
 [node name="LineEdit4" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "d"
 placeholder_text = "Player 4"
 alignment = 1
 max_length = 10
@@ -1344,14 +1340,12 @@ size_flags_vertical = 4
 
 [node name="LineEdit5" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
-text = "e"
 placeholder_text = "Player 5"
 alignment = 1
 max_length = 10
 
 [node name="LineEdit6" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
-text = "f"
 placeholder_text = "Player 6"
 alignment = 1
 max_length = 10
@@ -1363,14 +1357,12 @@ size_flags_vertical = 4
 
 [node name="LineEdit7" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
-text = "g"
 placeholder_text = "Player 7"
 alignment = 1
 max_length = 10
 
 [node name="LineEdit8" type="LineEdit" parent="MenuChaveamento/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
-text = "h"
 placeholder_text = "Player 8"
 alignment = 1
 max_length = 10
@@ -1445,7 +1437,6 @@ offset_right = 196.135
 offset_bottom = 8.50497
 theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 19
-text = "AAAAAAAAAA"
 
 [node name="Confronto1" type="Label" parent="MenuChaveamentoIniciado"]
 layout_mode = 1
@@ -1460,7 +1451,6 @@ offset_right = 48.51
 offset_bottom = 8.50497
 theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 19
-text = "AAAAAAAAAA"
 horizontal_alignment = 2
 
 [node name="buttons" type="VBoxContainer" parent="MenuChaveamentoIniciado"]
@@ -2457,6 +2447,7 @@ offset_left = 971.28
 offset_top = 649.96
 offset_right = 1008.28
 offset_bottom = 672.96
+theme_override_colors/font_color = Color(1, 1, 1, 0.141176)
 theme_override_fonts/font = ExtResource("25_r6mne")
 theme_override_font_sizes/font_size = 19
 text = "v1.0"
@@ -2505,8 +2496,8 @@ horizontal_alignment = 1
 [connection signal="pressed" from="MenuChaveamentoIniciado/buttons/btnSair" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]

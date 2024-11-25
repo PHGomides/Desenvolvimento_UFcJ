@@ -446,7 +446,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("29_7fke6")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 6.0
 }, {
@@ -866,7 +866,7 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"especial"
+animation = &"punch2"
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

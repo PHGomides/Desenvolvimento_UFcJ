@@ -7,6 +7,7 @@ var Player1 = "res://Cenas/michel.tscn"
 var Player2 = "res://Cenas/neemias.tscn"
 var Pedro = "res://Cenas/Pedro.tscn"
 var Gabriel = "res://Cenas/Gabriel.tscn"
+var Alisson = "res://Cenas/alisson.tscn"
 @onready var AnimacaoP1Menu = $AnimacaoP1Menu
 @onready var AnimacaoP2Menu = $AnimacaoP2Menu
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +38,7 @@ func SelecionarPersonagem1(number: int)-> void:
 		Global.player1Diretorio = Pedro
 		AnimacaoP1Menu.play("Pedro")
 	elif Personagem1 == 6:
-		Global.player1Diretorio = Player2
+		Global.player1Diretorio = Alisson
 		AnimacaoP1Menu.play("Alisson")
 	
 
@@ -57,5 +58,5 @@ func SelecionarPersonagem2(number: int)-> void:
 		Global.player2Diretorio = Pedro
 		AnimacaoP2Menu.play("Pedro")
 	elif Personagem2 == 6:
-		Global.player2Diretorio = Player2
+		Global.player2Diretorio = Alisson
 		AnimacaoP2Menu.play("Alisson")

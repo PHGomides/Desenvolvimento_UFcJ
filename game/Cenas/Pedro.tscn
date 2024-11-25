@@ -96,34 +96,34 @@
 [ext_resource type="Texture2D" uid="uid://dbshryfli08dt" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/15.png" id="107_guqn5"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="107_ueicg"]
 [ext_resource type="Texture2D" uid="uid://bouh28bgumqp2" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/16.png" id="108_73ib7"]
-[ext_resource type="Texture2D" uid="uid://bjghrdvts8mgr" path="res://Assests/particulas/poderes/poder vermelho/_0000_Camada-2.png" id="108_g5hcf"]
 [ext_resource type="Texture2D" uid="uid://bmhr37ym631yr" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/17.png" id="109_f2oql"]
-[ext_resource type="Texture2D" uid="uid://ci18qqdymnkpf" path="res://Assests/particulas/poderes/poder vermelho/_0001_Camada-3.png" id="109_npit1"]
-[ext_resource type="Texture2D" uid="uid://bhfooj4c7206n" path="res://Assests/particulas/poderes/poder vermelho/_0002_Camada-4.png" id="110_2rnrq"]
 [ext_resource type="Texture2D" uid="uid://jks4ookklhub" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/18.png" id="110_ofbjm"]
 [ext_resource type="Texture2D" uid="uid://bukixvporc787" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/19.png" id="111_ilslv"]
-[ext_resource type="Texture2D" uid="uid://dxvttowf7kehp" path="res://Assests/particulas/poderes/poder vermelho/_0003_Camada-5.png" id="111_yr06c"]
-[ext_resource type="Texture2D" uid="uid://bt5xv3rc68kwn" path="res://Assests/particulas/poderes/poder vermelho/_0004_Camada-6.png" id="112_c2mt4"]
 [ext_resource type="Texture2D" uid="uid://cdur28iilh5fb" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/20.png" id="112_y6c12"]
-[ext_resource type="Texture2D" uid="uid://dhwn0ae214qw1" path="res://Assests/particulas/poderes/poder vermelho/_0005_Camada-7.png" id="113_3rh47"]
 [ext_resource type="Texture2D" uid="uid://62yaht1xnq2r" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/21.png" id="113_afu3e"]
 [ext_resource type="Texture2D" uid="uid://3v5fu5fdvkmw" path="res://Assests/Pedro_Sprites_Pronto/Pedro andando/22.png" id="114_20bk2"]
-[ext_resource type="Texture2D" uid="uid://d2oli0qdyu8hc" path="res://Assests/particulas/poderes/poder vermelho/_0006_Camada-8.png" id="114_fw4ik"]
 [ext_resource type="Texture2D" uid="uid://b1enpfa4ag527" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png.png" id="115_173ye"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="115_fyy63"]
+[ext_resource type="Texture2D" uid="uid://3838skqmv8su" path="res://Assests/particulas/poderes/poder Verde/_0000_Agrupar-1.png" id="116_hsd68"]
 [ext_resource type="Texture2D" uid="uid://nclq3h5hgj6m" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy.png" id="116_lifg0"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="116_s8fo6"]
 [ext_resource type="Texture2D" uid="uid://dv2b8subd1n0b" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #1.png" id="117_ctf0i"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="117_pl7fl"]
+[ext_resource type="Texture2D" uid="uid://dkufsdoihsfsd" path="res://Assests/particulas/poderes/poder Verde/_0001_Agrupar-2.png" id="117_y4w70"]
 [ext_resource type="Texture2D" uid="uid://c38y5uf6hj2j8" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #2.png" id="118_7adnk"]
+[ext_resource type="Texture2D" uid="uid://cfwgavtw1loha" path="res://Assests/particulas/poderes/poder Verde/_0002_Agrupar-3.png" id="118_f2stm"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="118_ihtye"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="119_gm4en"]
+[ext_resource type="Texture2D" uid="uid://86ldklw328xg" path="res://Assests/particulas/poderes/poder Verde/_0003_Agrupar-4.png" id="119_r3d30"]
 [ext_resource type="Texture2D" uid="uid://clvov3j5oawva" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #3.png" id="119_sq2my"]
+[ext_resource type="Texture2D" uid="uid://b0nfl1aubiiut" path="res://Assests/particulas/poderes/poder Verde/_0004_Agrupar-5.png" id="120_186wd"]
 [ext_resource type="Texture2D" uid="uid://bs4o5x4riqvw4" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #4.png" id="120_aiub3"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="120_elb8w"]
 [ext_resource type="Texture2D" uid="uid://dvtjy47g08kun" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #5.png" id="121_7e2t2"]
+[ext_resource type="Texture2D" uid="uid://cmp0a4vo1p2ra" path="res://Assests/particulas/poderes/poder Verde/_0005_Agrupar-6.png" id="121_kjnfo"]
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="121_nim00"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="122_bvmfw"]
+[ext_resource type="Texture2D" uid="uid://cwy5tekndpu63" path="res://Assests/particulas/poderes/poder Verde/_0006_Agrupar-7.png" id="122_hj6ji"]
 [ext_resource type="Texture2D" uid="uid://8rcrd4rt0dut" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #6.png" id="122_sjwcd"]
 [ext_resource type="Texture2D" uid="uid://1x513t3mgpct" path="res://Assests/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #7.png" id="123_5kxn7"]
 [ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="123_nfxha"]
@@ -756,25 +756,25 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("108_g5hcf")
+"texture": ExtResource("116_hsd68")
 }, {
 "duration": 1.0,
-"texture": ExtResource("109_npit1")
+"texture": ExtResource("117_y4w70")
 }, {
 "duration": 1.0,
-"texture": ExtResource("110_2rnrq")
+"texture": ExtResource("118_f2stm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("111_yr06c")
+"texture": ExtResource("119_r3d30")
 }, {
 "duration": 1.0,
-"texture": ExtResource("112_c2mt4")
+"texture": ExtResource("120_186wd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("113_3rh47")
+"texture": ExtResource("121_kjnfo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("114_fw4ik")
+"texture": ExtResource("122_hj6ji")
 }],
 "loop": true,
 "name": &"fire",
