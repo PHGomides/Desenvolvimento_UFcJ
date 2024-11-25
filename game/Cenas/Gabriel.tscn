@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=3 uid="uid://b5egembltssw7"]
+[gd_scene load_steps=137 format=3 uid="uid://b5egembltssw7"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Gabriel.gd" id="1_08kh8"]
 [ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="2_sjt4m"]
@@ -94,15 +94,10 @@
 [ext_resource type="Texture2D" uid="uid://biup63nb2i6kp" path="res://Assests/Gabriel Sprites Pronto/Animação_especial_gabriel/7..png" id="90_ptj4a"]
 [ext_resource type="Texture2D" uid="uid://cbawwmqghilp6" path="res://Assests/Gabriel Sprites Pronto/Animação_especial_gabriel/8..png" id="91_koppl"]
 [ext_resource type="Texture2D" uid="uid://yuc40yttiju5" path="res://Assests/Gabriel Sprites Pronto/Animação_especial_gabriel/9..png" id="92_emxjs"]
+[ext_resource type="Texture2D" uid="uid://bx3p3u3r4egnp" path="res://Assests/particulas/poderes/Oka/x_0000_やあパ---.png" id="97_0wfmw"]
+[ext_resource type="Texture2D" uid="uid://c8l3wdo83aa58" path="res://Assests/particulas/poderes/Oka/x_0001_ガブリ---.png" id="98_ljdiq"]
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="114_ridwf"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="115_05f6n"]
-[ext_resource type="Texture2D" uid="uid://bjghrdvts8mgr" path="res://Assests/particulas/poderes/poder vermelho/_0000_Camada-2.png" id="116_arwny"]
-[ext_resource type="Texture2D" uid="uid://ci18qqdymnkpf" path="res://Assests/particulas/poderes/poder vermelho/_0001_Camada-3.png" id="117_k72vt"]
-[ext_resource type="Texture2D" uid="uid://bhfooj4c7206n" path="res://Assests/particulas/poderes/poder vermelho/_0002_Camada-4.png" id="118_e2u1u"]
-[ext_resource type="Texture2D" uid="uid://dxvttowf7kehp" path="res://Assests/particulas/poderes/poder vermelho/_0003_Camada-5.png" id="119_hvfay"]
-[ext_resource type="Texture2D" uid="uid://bt5xv3rc68kwn" path="res://Assests/particulas/poderes/poder vermelho/_0004_Camada-6.png" id="120_lylds"]
-[ext_resource type="Texture2D" uid="uid://dhwn0ae214qw1" path="res://Assests/particulas/poderes/poder vermelho/_0005_Camada-7.png" id="121_6wbmb"]
-[ext_resource type="Texture2D" uid="uid://d2oli0qdyu8hc" path="res://Assests/particulas/poderes/poder vermelho/_0006_Camada-8.png" id="122_5j3dk"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="123_nqrxe"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="124_tjl21"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="125_44tbo"]
@@ -698,29 +693,14 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("116_arwny")
+"texture": ExtResource("97_0wfmw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("117_k72vt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("118_e2u1u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("119_hvfay")
-}, {
-"duration": 1.0,
-"texture": ExtResource("120_lylds")
-}, {
-"duration": 1.0,
-"texture": ExtResource("121_6wbmb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("122_5j3dk")
+"texture": ExtResource("98_ljdiq")
 }],
 "loop": true,
 "name": &"fire",
-"speed": 15.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn6g"]
@@ -849,7 +829,7 @@ scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_1eke4")
 animation = &"fire"
 autoplay = "fire"
-frame_progress = 0.697
+frame_progress = 0.909117
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PoderOpicional/AnimatedSprite2D"]
 root_node = NodePath("../..")

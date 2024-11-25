@@ -708,7 +708,6 @@ scale = Vector2(1.97213, 1.97213)
 texture = ExtResource("8_2vacx")
 
 [node name="HUD" type="CanvasLayer" parent="."]
-process_mode = 1
 layer = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
@@ -901,7 +900,7 @@ texture = ExtResource("22_aadej")
 flip_h = true
 
 [node name="Round" type="Control" parent="HUD"]
-process_mode = 1
+physics_interpolation_mode = 0
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
