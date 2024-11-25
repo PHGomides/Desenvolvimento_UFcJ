@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://b5egembltssw7"]
+[gd_scene load_steps=138 format=3 uid="uid://b5egembltssw7"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Gabriel.gd" id="1_08kh8"]
 [ext_resource type="Texture2D" uid="uid://cx2aouigip0j1" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/okaBtn.png" id="2_sjt4m"]
@@ -101,6 +101,7 @@
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="123_nqrxe"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="124_tjl21"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="125_44tbo"]
+[ext_resource type="AudioStream" uid="uid://dydrmggx2g0ha" path="res://audio/efeito sonoros especiais/oka.wav" id="125_qou2x"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="126_3nejw"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="127_ymkh6"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="128_i77gk"]
@@ -929,6 +930,10 @@ wait_time = 2.0
 
 [node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("148_si447")
+bus = &"SFX"
+
+[node name="Especial_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("125_qou2x")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

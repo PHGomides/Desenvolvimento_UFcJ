@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://brp8kps5g5vlt"]
+[gd_scene load_steps=145 format=3 uid="uid://brp8kps5g5vlt"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/frances.gd" id="1_6noeo"]
 [ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="2_oue8k"]
@@ -121,6 +121,7 @@
 [ext_resource type="Texture2D" uid="uid://b0foqlno3k2h7" path="res://Assests/particulas/sangue/_0004_Camada-6.png" id="130_qi37x"]
 [ext_resource type="Texture2D" uid="uid://doy17ymhi78bx" path="res://Assests/particulas/sangue/_0005_Camada-7.png" id="131_7485x"]
 [ext_resource type="AudioStream" uid="uid://dw334acuj3xew" path="res://audio/dash_SFX.wav" id="132_e5omd"]
+[ext_resource type="AudioStream" uid="uid://bj3tto2dqgx13" path="res://audio/efeito sonoros especiais/frances.wav" id="132_o05ge"]
 [ext_resource type="Texture2D" uid="uid://c1lh4aucolbna" path="res://Assests/particulas/dash_sprite/transp_0000_Camada-1.png" id="133_oeimi"]
 [ext_resource type="Texture2D" uid="uid://dyfrnyj7caivf" path="res://Assests/particulas/dash_sprite/transp_0001_Camada-2.png" id="134_05ay0"]
 [ext_resource type="Texture2D" uid="uid://qelmmiwhcdlk" path="res://Assests/particulas/dash_sprite/transp_0003_Camada-4.png" id="135_03i8h"]
@@ -960,6 +961,10 @@ wait_time = 2.0
 
 [node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("142_721ws")
+bus = &"SFX"
+
+[node name="Especial_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("132_o05ge")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

@@ -48,31 +48,32 @@ func _init_round():
 	_3.visible = false
 	fight.visible = false
 	if(Global.round>1 && Global.round<4):#resetando os personagem para evitar bugs
+		if(Global.player1 ||Global.player2 ):
+			
+			Global.player1.parar_movimento()
+			Global.player2.parar_movimento()
+			desativar_controle_jogadores()
 		
-		Global.player1.parar_movimento()
-		Global.player2.parar_movimento()
-		desativar_controle_jogadores()
-		
-		Global.player1.vida = 100
-		Global.player2.vida = 100
-		await get_tree().create_timer(0.5).timeout
-		Global.player1.is_attacking = false
-		Global.player2.is_attacking = false
-		Global.player1.opcional_attack = false
-		Global.player2.opcional_attack = false
-		Global.player1.is_suffering_damage = false
-		Global.player2.is_suffering_damage = false
+			Global.player1.vida = 100
+			Global.player2.vida = 100
+			await get_tree().create_timer(0.5).timeout
+			Global.player1.is_attacking = false
+			Global.player2.is_attacking = false
+			Global.player1.opcional_attack = false
+			Global.player2.opcional_attack = false
+			Global.player1.is_suffering_damage = false
+			Global.player2.is_suffering_damage = false
 
 		
 		
 		
 	else:
-		
-		await get_tree().create_timer(0.5).timeout
+		if(Global.player1 ||Global.player2 ):
+			await get_tree().create_timer(0.5).timeout
 
-		Global.player1.vida = 100
-		Global.player2.vida = 100
-		desativar_controle_jogadores()
+			Global.player1.vida = 100
+			Global.player2.vida = 100
+			desativar_controle_jogadores()
 
 
 	$AnimatedSprite2D.visible = true

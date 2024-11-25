@@ -149,7 +149,7 @@
 [ext_resource type="Texture2D" uid="uid://cg4mfcc1q4ppf" path="res://Assests/particulas/dash_sprite/transp_0009_Camada-10.png" id="137_5fy7h"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_michel.gd" id="138_1bim2"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_esquerda_michel.gd" id="139_ily8a"]
-[ext_resource type="AudioStream" uid="uid://cga2pp7f2088j" path="res://audio/especial_activete_SFX.wav" id="140_4tr7r"]
+[ext_resource type="AudioStream" uid="uid://f1l0qvymxxpd" path="res://audio/efeito sonoros especiais/alisson.wav" id="150_bt75h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(89, 288)
@@ -994,11 +994,16 @@ script = ExtResource("139_ily8a")
 position = Vector2(50.349, 147.058)
 shape = SubResource("RectangleShape2D_3erlb")
 
+[node name="Especial_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("150_bt75h")
+volume_db = -6.559
+bus = &"SFX"
+
 [node name="tomar_dano_power" type="Timer" parent="."]
 wait_time = 2.0
 
 [node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("140_4tr7r")
+stream = ExtResource("150_bt75h")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

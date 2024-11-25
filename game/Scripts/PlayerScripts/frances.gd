@@ -246,6 +246,7 @@ func _physics_process(delta: float) -> void:
 			power = 0
 			animation.play("especial")
 			SoltarEspecial()
+			$Especial_SFX.play()
 
 			animationEspecial.play("especial")
 			is_attacking = true
@@ -492,6 +493,7 @@ func _desativar_start_round() -> void:
 func vitoria()-> void:
 	animation.stop()
 	animation.play("comemoracao")
+	$especial.visible = false
 	$luz_vitoria.visible = true
 	await get_tree().create_timer(2).timeout
 

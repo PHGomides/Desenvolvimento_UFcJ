@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=3 uid="uid://msmkx04o1khs"]
+[gd_scene load_steps=165 format=3 uid="uid://msmkx04o1khs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/player_2.gd" id="1_ytebf"]
 [ext_resource type="Texture2D" uid="uid://cf761v1oyt3lq" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/neemiasBtn.png" id="2_ajicn"]
@@ -150,6 +150,7 @@
 [ext_resource type="Texture2D" uid="uid://cg4mfcc1q4ppf" path="res://Assests/particulas/dash_sprite/transp_0009_Camada-10.png" id="141_wedoq"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_neemias.gd" id="142_x1tyr"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_esquerda_neemias.gd" id="143_7y8xy"]
+[ext_resource type="AudioStream" uid="uid://bk7op2qy1fn1a" path="res://audio/efeito sonoros especiais/neemias.wav" id="151_v6d7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xdv"]
 size = Vector2(91.0638, 283.404)
@@ -972,6 +973,10 @@ shape = SubResource("RectangleShape2D_r3xad")
 
 [node name="tomar_dano_power" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="Especial_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("151_v6d7u")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]

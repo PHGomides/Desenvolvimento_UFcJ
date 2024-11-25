@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://b207sblnnbtdw"]
+[gd_scene load_steps=145 format=3 uid="uid://b207sblnnbtdw"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/walisson.gd" id="1_bf5fm"]
 [ext_resource type="Texture2D" uid="uid://bh58b32wi857e" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/wa.png" id="2_81kd5"]
@@ -131,6 +131,7 @@
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_direita_michel.gd" id="122_rsdw5"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/empurrar_esquerda_michel.gd" id="123_lxmqb"]
 [ext_resource type="AudioStream" uid="uid://cga2pp7f2088j" path="res://audio/especial_activete_SFX.wav" id="124_yt1w0"]
+[ext_resource type="AudioStream" uid="uid://clys8h6vosi5g" path="res://audio/efeito sonoros especiais/walisson.wav" id="132_eiwcg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m024i"]
 size = Vector2(76, 288)
@@ -924,6 +925,10 @@ wait_time = 2.0
 
 [node name="EspecialActiveteSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("124_yt1w0")
+bus = &"SFX"
+
+[node name="Especial_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("132_eiwcg")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

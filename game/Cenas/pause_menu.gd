@@ -23,8 +23,22 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
+
+
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("back_menu"):  # Verifica se a ação 'ui_b' foi pressionada.
+		if(visible == true):
+			if($opcoes.visible):
+				voltarPauseMenuMain()
+			elif($Controles.visible):
+				sair_menu_Controles()
+			else:
+				Despausar()
+			sound_button_down()
 	if event.is_action_pressed("ui_cancel"):
+		if(Global.player2_round == 2 or Global.player1_round == 2):
+			return
 		sound_button_down()
 		if(visible == false):
 			visible = true
@@ -38,6 +52,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_tree().paused = false
 
 func voltarMenuPrincipal() -> void:
+
+
 	get_tree().paused = false
 	queue_free()  # Libera a cena de carregamento
 	var carregamento = load("res://Cenas/Carregamento.tscn").instantiate()
@@ -113,6 +129,7 @@ func mostrarControles() -> void:
 	$opcoes.visible = false
 	$Controles.visible = true
 	$Controles/VBoxContainer/buttons/btnVoltar.grab_focus()
+	sound_button_down()
 
 
 func sair_menu_Controles() -> void:
