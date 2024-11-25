@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=144 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -112,8 +112,19 @@
 [ext_resource type="Texture2D" uid="uid://dy03lgbfd72gq" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0005_20240905_161311_030.png" id="72_31080"]
 [ext_resource type="Texture2D" uid="uid://c62i6i56v20ya" path="res://Assests/Neemias Sprites Prontos/Neemias parado/_0000s_0006_20240905_161311_026.png" id="73_4f2kh"]
 [ext_resource type="Texture2D" uid="uid://svkvfret00yc" path="res://Assests/menu main/subMenuSelecaoDePersonagem/AddPersonIcon.png" id="74_thep2"]
+[ext_resource type="Texture2D" uid="uid://dc8xijs4fkb3l" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/1.png" id="80_ctuql"]
+[ext_resource type="Texture2D" uid="uid://dooppg1q5yens" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/2.png" id="81_3cg8m"]
 [ext_resource type="Texture2D" uid="uid://rn2lw3gewms5" path="res://Assests/menu main/subMenuChaveamento/p1 vs p2.png" id="82_jpjh4"]
+[ext_resource type="Texture2D" uid="uid://bl31wfie5l04p" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/3.png" id="82_piw03"]
 [ext_resource type="Script" path="res://Cenas/players_chaveamento.gd" id="82_vxd04"]
+[ext_resource type="Texture2D" uid="uid://b8wmmahgpnlqk" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/4.png" id="83_e8lbh"]
+[ext_resource type="Texture2D" uid="uid://h618jcwkg3k7" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/5.png" id="84_om1f8"]
+[ext_resource type="Texture2D" uid="uid://c81q5v3cwg2th" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/6.png" id="85_6fwt6"]
+[ext_resource type="Texture2D" uid="uid://b1aloes72eind" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/7.png" id="86_c7h28"]
+[ext_resource type="Texture2D" uid="uid://b04f2emc630b8" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/8.png" id="87_l612q"]
+[ext_resource type="Texture2D" uid="uid://cxuswrf7hgdq1" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/9.png" id="88_hpv15"]
+[ext_resource type="Texture2D" uid="uid://ghstnn5v44l1" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/10.png" id="89_lctsu"]
+[ext_resource type="Texture2D" uid="uid://bcv7ogv284d80" path="res://Assests/Gabriel Sprites Pronto/Gabriel Parado/11.png" id="90_w1u4m"]
 [ext_resource type="Texture2D" uid="uid://bv6dqrxqduq87" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/1.png" id="96_4xnyb"]
 [ext_resource type="Texture2D" uid="uid://d2ggwq5y2euhy" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/2.png" id="97_htsoj"]
 [ext_resource type="Texture2D" uid="uid://gq50lnho65wv" path="res://Assests/Pedro_Sprites_Pronto/Pedro parado/3.png" id="98_dqibi"]
@@ -172,6 +183,44 @@ animations = [{
 }],
 "loop": true,
 "name": &"Alisson",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_ctuql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3cg8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_piw03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_e8lbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_om1f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_6fwt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_c7h28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_l612q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_hpv15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_lctsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_w1u4m")
+}],
+"loop": true,
+"name": &"Gabriel",
 "speed": 10.0
 }, {
 "frames": [{
@@ -1404,13 +1453,11 @@ stretch_mode = 5
 position = Vector2(676, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
 animation = &"addPerson"
-frame_progress = 0.77742
 
 [node name="AnimacaoP2Menu" type="AnimatedSprite2D" parent="MenuSelecaoPersonagens"]
 position = Vector2(1256.09, 540)
 sprite_frames = SubResource("SpriteFrames_htphl")
 animation = &"addPerson"
-frame_progress = 0.730925
 flip_h = true
 
 [node name="PlayersChaveamento" type="Control" parent="MenuSelecaoPersonagens"]
@@ -1756,7 +1803,7 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Neemias" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Neemias" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [2]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Pedro" to="." method="sound_entered_btn"]
@@ -1772,7 +1819,7 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [2]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
+[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Oka" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [3]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Frances" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Pedro" to="." method="sound_entered_btn"]
