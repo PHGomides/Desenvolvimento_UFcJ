@@ -20,6 +20,9 @@ func sound_button_down() -> void:
 
 
 func _ready() -> void:
+	#get_tree().root.mode = Window.MODE_FULLSCREEN
+	#get_tree().root.borderless = true
+	
 	$MenuOpcoes/VBoxContainer/sliderMaster.value = AudioServer.get_bus_volume_db(master)
 	$MenuOpcoes/VBoxContainer/sliderSFX.value = AudioServer.get_bus_volume_db(sfx)
 	$MenuOpcoes/VBoxContainer/sliderMusic.value = AudioServer.get_bus_volume_db(musica)
@@ -30,7 +33,13 @@ func _ready() -> void:
 	if(Global.chaveamento == true):
 		$MenuMain.visible = false
 		$MenuChaveamentoIniciado.visible = true
-		$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
+		if(Global.vencedor_chaveamento != ""):
+			$MenuChaveamentoIniciado/vencedorTela.visible = true
+			$MenuChaveamentoIniciado/vencedorTela/vencedorTela/Confronto1.text = Global.vencedor_chaveamento
+			$MenuChaveamentoIniciado/vencedorTela/vencedorTela/btnSair.grab_focus()
+		else:
+			
+			$MenuChaveamentoIniciado/buttons/btnIniciar.grab_focus()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("back_menu"):  # Verifica se a ação 'ui_b' foi pressionada.
@@ -186,4 +195,20 @@ func Mostrar_Creditos() -> void:
 	else:
 		$Creditos.visible = false
 		$Creditos.stop()
+	pass # Replace with function body.
+
+
+func sairChaveamento() -> void:
+	_on_btn_voltar_pressed()
+	Global.Resetar_Chaveamento()
+	$MenuChaveamentoIniciado/vencedorTela.visible = false
+	$MenuChaveamentoIniciado/SairChaveamento.visible = false
+	$MenuChaveamentoIniciado/Inputs/vencedor_chave1.text = ""
+	$MenuChaveamentoIniciado/Inputs/vencedor_chave2.text = ""
+	$MenuChaveamentoIniciado/Inputs/vencedor_chave3.text = ""
+	$MenuChaveamentoIniciado/Inputs/vencedor_chave4.text = ""
+	$MenuChaveamentoIniciado/Inputs/Final1.text = ""
+	$MenuChaveamentoIniciado/Inputs/Final2.text = ""
+	$MenuChaveamentoIniciado/bgFinal.visible = false 
+	$MenuChaveamentoIniciado/bgNormal.visible = true
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=3 uid="uid://b5rud87wpls6h"]
+[gd_scene load_steps=162 format=3 uid="uid://b5rud87wpls6h"]
 
 [ext_resource type="Script" path="res://Scripts/restaurante.gd" id="1_ebi03"]
 [ext_resource type="Script" path="res://Scripts/CameraScripts/camera_2d.gd" id="1_rpvgp"]
@@ -28,7 +28,6 @@
 [ext_resource type="Script" path="res://Scripts/HUD/Round.gd" id="27_jsho8"]
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Player1Spawner.gd" id="27_qdop1"]
 [ext_resource type="Texture2D" uid="uid://dmcm5vdkghup1" path="res://Assests/hud/bolinha hud.png" id="28_ueybg"]
-[ext_resource type="Texture2D" uid="uid://dev6f2e7hn7n8" path="res://Assests/hud/1.png" id="29_bgmht"]
 [ext_resource type="Texture2D" uid="uid://bgflf8qn73ijt" path="res://Assests/hud/2.png" id="30_64nkc"]
 [ext_resource type="Texture2D" uid="uid://dlixrapcpje7" path="res://Assests/hud/3.png" id="31_8ugex"]
 [ext_resource type="Texture2D" uid="uid://bcmsbnrwv6f8y" path="res://Assests/hud/1/1_00000.png" id="32_uovro"]
@@ -579,7 +578,7 @@ position = Vector2(-222, 11)
 position = Vector2(-234, -77)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(2340.36, 466)
+position = Vector2(2215.79, 466)
 shape = SubResource("RectangleShape2D_geqs2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -955,7 +954,6 @@ offset_top = 293.225
 offset_right = 1218.0
 offset_bottom = 793.225
 pivot_offset = Vector2(250, 250)
-texture = ExtResource("29_bgmht")
 
 [node name="2" type="TextureRect" parent="HUD/Round"]
 visible = false

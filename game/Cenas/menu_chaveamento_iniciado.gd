@@ -3,12 +3,14 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.rodada == 7:
+	if Global.rodada >= 7:
 		$bgFinal.visible = true
 		$bgNormal.visible = false
 	else:
 		$bgNormal.visible = true
 		$bgFinal.visible = false
+		
+
 		
 	pass # Replace with function body.
 
@@ -25,11 +27,4 @@ func _on_btn_Sair_pressed() -> void:
 		$SairChaveamento/HBoxContainer/btnSim.grab_focus()
 	else:
 		$buttons/btnSair.grab_focus()
-	pass # Replace with function body.
-
-
-func _on_btn_sim_pressed() -> void:#acabar com o modo chaveamento
-	$SairChaveamento.visible = not $SairChaveamento.visible 
-	Global.chaveamento = false
-	
 	pass # Replace with function body.

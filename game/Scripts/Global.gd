@@ -1,6 +1,6 @@
 extends Node
 
-var player1Diretorio = "res://Cenas/michel.tscn" # depois tirar pois é pra teste só a variavel
+var player1Diretorio = "res://Cenas/Gabriel.tscn" # depois tirar pois é pra teste só a variavel
 var player2Diretorio = "res://Cenas/neemias.tscn"# depois tirar pois é pra teste manter só a variavel
 var round = 1
 var player2_round = 0
@@ -17,7 +17,7 @@ func reseta_round():
 #modo chaveamento
 
 var chaveamento = false
-var rodada = 1
+var rodada = 7
 var rodada_players = ["",""]
 #nome dos players
 var c_players = ["", "", "", "", "", "", "", ""]
@@ -27,8 +27,8 @@ var vencerdor_c2 = ""
 var vencerdor_c3 = ""
 var vencerdor_c4 = ""
 
-var final_p1 =""
-var final_p2 =""
+var final_p1 ="neemias"
+var final_p2 ="a"
 
 var vencedor_chaveamento = ""
 
@@ -53,21 +53,21 @@ func FimRodada(vencedor: String):
 		rodada+=1
 	elif(rodada == 7):
 		vencedor_chaveamento = vencedor
-
+		
 func Resetar_Chaveamento():
 	chaveamento = false
 	rodada = 1
-	rodada_players = ["",""]
-#nome dos players
 	c_players = ["", "", "", "", "", "", "", ""]
-
+	vencedor_chaveamento = ""
+	final_p1 =""
+	final_p2 =""
+	rodada_players = ["",""]
 	vencerdor_c1 = ""
 	vencerdor_c2 = ""
 	vencerdor_c3 = ""
 	vencerdor_c4 = ""
-	vencedor_chaveamento = ""
-	final_p1 =""
-	final_p2 =""		
+	
+		
 
 func _process(delta: float) -> void:
 	if(chaveamento):

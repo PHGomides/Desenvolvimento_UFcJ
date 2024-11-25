@@ -69,7 +69,8 @@ var dashing_timer = 0.0    # Temporizador para controlar o cooldown
 var isWalking = false
 
 
-var escala_personagem = 1.3 #tamanho do personagem
+var escala_personagem = 1.2
+ #tamanho do personagem
 # Referência ao nó AnimatedSrite2D, que controla as animações do personagem
 @onready var animation := $anim as AnimatedSprite2D
 @onready var animationEspecial := $especial as AnimatedSprite2D
@@ -123,7 +124,7 @@ func _physics_process(delta: float) -> void:
 
 		# Atualiza o temporizador de cooldown do pulo
 	scale.x = escala_personagem
-	scale.y = escala_personagem
+	scale.y = escala_personagem 
 	if not can_launch_Opitional_Power:
 		poweropitional_timer -= delta
 		if poweropitional_timer <= 0:
@@ -203,7 +204,7 @@ func _physics_process(delta: float) -> void:
 			#criando um Timer dinamicamente para o atack3 , esse foi o unico timer que funcionou
 			var attack_timer = Timer.new()
 			add_child(attack_timer)  # Adiciona o Timer como filho do nó atual
-			attack_timer.wait_time = 0.1  # Define o tempo de espera
+			attack_timer.wait_time = 0.2  # Define o tempo de espera
 			attack_timer.one_shot = true  # Garante que dispare apenas uma vez
 			attack_timer.connect("timeout", Callable(self, "_on_attack3_timer_timeout"))
 			attack_timer.start()  # Inicia o Timer
