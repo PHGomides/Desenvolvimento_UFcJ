@@ -344,7 +344,7 @@ func SoltarPoder():
 	# Cria o Tween para movimentação suave
 	var tween = create_tween()
 	# Move para a posição final usando `global_position`
-	tween.tween_property(powerOptional, "global_position", end_position, 1.0)
+	tween.tween_property(powerOptional, "global_position", end_position, 1.5)
 	tween.finished.connect(func(): reset_power())
 
 func reset_power():
