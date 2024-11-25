@@ -836,7 +836,6 @@ frame = 6
 frame_progress = 1.0
 
 [node name="PoderOpicional" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(146.11, -85.79)
 scale = Vector2(0.24, 0.24)
 script = ExtResource("99_q8oon")
@@ -845,7 +844,7 @@ script = ExtResource("99_q8oon")
 script = ExtResource("100_tjfaj")
 
 [node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
-scale = Vector2(7.91, 7.91)
+scale = Vector2(19.055, 19.055)
 shape = SubResource("CircleShape2D_6ojiv")
 disabled = true
 

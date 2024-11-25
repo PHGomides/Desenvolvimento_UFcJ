@@ -54,7 +54,20 @@ func FimRodada(vencedor: String):
 	elif(rodada == 7):
 		vencedor_chaveamento = vencedor
 
-		
+func Resetar_Chaveamento():
+	chaveamento = false
+	rodada = 1
+	rodada_players = ["",""]
+#nome dos players
+	c_players = ["", "", "", "", "", "", "", ""]
+
+	vencerdor_c1 = ""
+	vencerdor_c2 = ""
+	vencerdor_c3 = ""
+	vencerdor_c4 = ""
+	vencedor_chaveamento = ""
+	final_p1 =""
+	final_p2 =""		
 
 func _process(delta: float) -> void:
 	if(chaveamento):

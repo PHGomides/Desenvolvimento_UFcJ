@@ -891,7 +891,7 @@ script = ExtResource("90_4kq8a")
 script = ExtResource("90_ocib6")
 
 [node name="powerColision" type="CollisionShape2D" parent="PoderOpicional/powerOpitionalArea"]
-scale = Vector2(7.91, 7.91)
+scale = Vector2(19.055, 19.055)
 shape = SubResource("CircleShape2D_j3dqd")
 disabled = true
 
