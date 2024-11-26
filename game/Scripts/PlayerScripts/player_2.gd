@@ -8,7 +8,7 @@ var name_player = "Neemias"
 @export var ImageHud: Texture
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
-var vida: int = 100  # Saúde máxima
+var vida: int = 10  # Saúde máxima
 var is_alive = true #verifica se está vivo
 
 @onready var powerOptional = $PoderOpicional

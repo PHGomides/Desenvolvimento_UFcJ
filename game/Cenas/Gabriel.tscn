@@ -714,7 +714,7 @@ size = Vector2(103, 195.087)
 size = Vector2(1866, 1175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asr8p"]
-size = Vector2(71.25, 301)
+size = Vector2(87.625, 301)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sinp4"]
 animations = [{
@@ -858,7 +858,7 @@ one_way_collision_margin = 0.0
 script = ExtResource("126_3nejw")
 
 [node name="areadano" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(-3.89087, -4.82672)
+position = Vector2(-12.0784, -4.82672)
 shape = SubResource("RectangleShape2D_asr8p")
 debug_color = Color(8.18223e-07, 0.650299, 0.107491, 0.42)
 

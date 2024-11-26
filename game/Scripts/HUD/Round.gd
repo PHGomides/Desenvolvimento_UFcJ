@@ -49,10 +49,7 @@ func _init_round():
 	fight.visible = false
 	if(Global.round>1 && Global.round<4):#resetando os personagem para evitar bugs
 		if(Global.player1 ||Global.player2 ):
-			if(Global.player1.current_direction == -1):
-				Global.player1.VirarDeLado()
-			if(Global.player2.current_direction == 1):
-				Global.player2.VirarDeLado()
+
 			Global.player1.parar_movimento()
 			Global.player2.parar_movimento()
 			desativar_controle_jogadores()
@@ -60,6 +57,10 @@ func _init_round():
 			Global.player1.vida = 100
 			Global.player2.vida = 100
 			await get_tree().create_timer(0.5).timeout
+			if(Global.player1.current_direction == -1):
+				Global.player1.VirarDeLado()
+			if(Global.player2.current_direction == 1):
+				Global.player2.VirarDeLado()
 			Global.player1.is_attacking = false
 			Global.player2.is_attacking = false
 			Global.player1.opcional_attack = false
@@ -83,6 +84,7 @@ func _init_round():
 	$AnimatedSprite2D.play("3")
 	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
+
 	$AnimatedSprite2D.play("2")
 	$"../../CronometroSfx".play()
 	await get_tree().create_timer(1).timeout
