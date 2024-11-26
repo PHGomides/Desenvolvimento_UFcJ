@@ -7,7 +7,7 @@ const NEXT_SCENE_PATH = "res://Cenas/main_menu.tscn"
 func _ready() -> void:
 	# Conecta o sinal `finished` para detectar o término do vídeo.
 	connect("finished",Callable(self, "_on_video_finished"))
-
+	$IntroAudio.play()
 # Função chamada quando o vídeo termina.
 func _on_video_finished() -> void:
 	# Muda para a próxima cena.

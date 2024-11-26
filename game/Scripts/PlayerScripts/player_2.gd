@@ -101,7 +101,7 @@ func _ready() -> void:
 		animation.scale.x = -abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
 		current_direction = 1  # Define a direção atual para a direita
 	else:
-		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a direita
+		animation.scale.x = abs(animation.scale.x)  # Define a escala positiva, garantindo que olhe para a esquerda
 		current_direction = -1  # Define a direção atual para a direita
 	VirarDeLado() 
 # Função que processa a física do personagem a cada frame

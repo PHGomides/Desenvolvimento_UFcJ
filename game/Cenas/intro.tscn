@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbbou8qewrcax"]
+[gd_scene load_steps=4 format=3 uid="uid://cbbou8qewrcax"]
 
 [ext_resource type="VideoStream" path="res://Assests/Creditos/Intro_AnimaSoft.ogv" id="1_viass"]
 [ext_resource type="Script" path="res://Scripts/intro.gd" id="2_bhn2l"]
+[ext_resource type="AudioStream" uid="uid://dkjbww2cv2x8m" path="res://audio/intro audio.wav" id="3_pr2ks"]
 
 [node name="Intro" type="VideoStreamPlayer"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_viass")
-volume_db = -12.87
+volume_db = -80.0
 autoplay = true
 script = ExtResource("2_bhn2l")
+
+[node name="IntroAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pr2ks")

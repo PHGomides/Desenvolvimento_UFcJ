@@ -49,7 +49,10 @@ func _init_round():
 	fight.visible = false
 	if(Global.round>1 && Global.round<4):#resetando os personagem para evitar bugs
 		if(Global.player1 ||Global.player2 ):
-			
+			if(Global.player1.current_direction == -1):
+				Global.player1.VirarDeLado()
+			if(Global.player2.current_direction == 1):
+				Global.player2.VirarDeLado()
 			Global.player1.parar_movimento()
 			Global.player2.parar_movimento()
 			desativar_controle_jogadores()
