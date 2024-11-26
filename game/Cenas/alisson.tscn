@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://bhy7v2l5ld0mv" path="res://Assests/Players/Alisson Sprites Prontos/Alisson dano/_0000s_0001_20240916_162635_019.png" id="31_7bt7q"]
 [ext_resource type="Texture2D" uid="uid://vha6k0uupmo0" path="res://Assests/Players/Alisson Sprites Prontos/Alisson dano/_0000s_0002_20240916_162635_017.png" id="32_p3o8q"]
 [ext_resource type="Texture2D" uid="uid://br80qrxb27g82" path="res://Assests/Players/Alisson Sprites Prontos/Alisson dano/_0000s_0003_20240916_162635_013.png" id="33_78axh"]
-[ext_resource type="Texture2D" uid="uid://dp4xdynggrnru" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Defesa/_0000s_0000_20240916_162533_020.png" id="34_e7hm5"]
+[ext_resource type="Texture2D" uid="uid://g3colbljur4i" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Defesa/_0000s_0000_20240916_162533_020.png" id="34_e7hm5"]
 [ext_resource type="Texture2D" uid="uid://dpxltok40ntig" path="res://Assests/Players/Alisson Sprites Prontos/Especial/_0000s_0000__0032_Layer-3.png" id="35_v14rm"]
 [ext_resource type="Texture2D" uid="uid://bfdnf5agqio7i" path="res://Assests/Players/Alisson Sprites Prontos/Especial/_0000s_0001__0028_Layer-7.png" id="36_hl4p3"]
 [ext_resource type="Texture2D" uid="uid://b4sxq7sbcytrr" path="res://Assests/Players/Alisson Sprites Prontos/Especial/_0000s_0002__0024_Layer-11.png" id="37_if750"]
@@ -861,9 +861,9 @@ shape = SubResource("RectangleShape2D_m024i")
 position = Vector2(16.1091, -7.82671)
 scale = Vector2(0.933618, 0.785424)
 sprite_frames = SubResource("SpriteFrames_16flq")
-animation = &"opcional"
-frame = 6
-frame_progress = 1.0
+animation = &"defesa"
+frame = 1
+frame_progress = 0.96368
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="anim"]

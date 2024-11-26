@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://brp8kps5g5vlt"]
+[gd_scene load_steps=168 format=3 uid="uid://brp8kps5g5vlt"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/frances.gd" id="1_6noeo"]
 [ext_resource type="Texture2D" uid="uid://cqqqcot1e8r8w" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/francBtn.png" id="2_oue8k"]
@@ -82,32 +82,55 @@
 [ext_resource type="Texture2D" uid="uid://dj6yqfvyvwk5t" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem5.png" id="87_175ct"]
 [ext_resource type="Texture2D" uid="uid://47v260f7ub8l" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem6.png" id="88_vj7hc"]
 [ext_resource type="Texture2D" uid="uid://btcwf5m6avnq6" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem7.png" id="89_3evng"]
+[ext_resource type="Texture2D" uid="uid://dnhjvgqyapio0" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0030_1-copiar-2.png" id="89_mmu6i"]
 [ext_resource type="Texture2D" uid="uid://dr2riinv8r0mf" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem8.png" id="90_iliov"]
+[ext_resource type="Texture2D" uid="uid://bqopynufje01v" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0029_1.png" id="90_jdbfd"]
+[ext_resource type="Texture2D" uid="uid://cprnxlrjw0t40" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0028_1-copiar.png" id="91_ib30d"]
 [ext_resource type="Texture2D" uid="uid://bcre52egagjme" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem9.png" id="91_tksh1"]
 [ext_resource type="Texture2D" uid="uid://b4wao0ilsr8qt" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem10.png" id="92_3twaq"]
+[ext_resource type="Texture2D" uid="uid://o8xly0a1sek3" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0027_2.png" id="92_rl2m1"]
 [ext_resource type="Texture2D" uid="uid://cv3dlbo1hkngq" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem11.png" id="93_dskbj"]
+[ext_resource type="Texture2D" uid="uid://cwbqv7il22ccc" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0026_2-copiar.png" id="93_j42jm"]
 [ext_resource type="Texture2D" uid="uid://dj6uty5oek211" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem12.png" id="94_3l2fx"]
+[ext_resource type="Texture2D" uid="uid://cqkil4g6mfhm" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0025_Camada-1.png" id="94_pgxx6"]
 [ext_resource type="Texture2D" uid="uid://b1gogkjha6ivu" path="res://Assests/Players/Francês Sprites Pronto/Francês/Andando/Imagem13.png" id="95_lu66k"]
-[ext_resource type="Texture2D" uid="uid://2t3dmicrw0se" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/1.png" id="96_8xw2k"]
-[ext_resource type="Texture2D" uid="uid://c7ecxfwcmp5uu" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2.png" id="97_b87tp"]
-[ext_resource type="Texture2D" uid="uid://bg5o3d47yn4k3" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/3.png" id="98_np0ec"]
-[ext_resource type="Texture2D" uid="uid://lbbnura3r4im" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/4.png" id="99_gbxml"]
-[ext_resource type="Texture2D" uid="uid://ctavn8ak4tafj" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/5.png" id="100_qmx35"]
-[ext_resource type="Texture2D" uid="uid://csi3gwjfax2ld" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/6.png" id="101_nym44"]
-[ext_resource type="Texture2D" uid="uid://dsya4wbsr5502" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/7.png" id="102_okevu"]
-[ext_resource type="Texture2D" uid="uid://bfqqk07h8q2r5" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/8.png" id="103_8fqd4"]
+[ext_resource type="Texture2D" uid="uid://b26exv5c13kv" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0024_Camada-1-copiar.png" id="95_v7542"]
+[ext_resource type="Texture2D" uid="uid://2ydo535hq3g" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0023_Camada-1-copiar-2.png" id="96_cdnw1"]
+[ext_resource type="Texture2D" uid="uid://b70tocjvxmv0w" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0022_Camada-1-copiar-3.png" id="97_qr4ex"]
+[ext_resource type="Texture2D" uid="uid://dext2m5w8j3a" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0021_Camada-1-copiar-4.png" id="98_dmwcd"]
+[ext_resource type="Texture2D" uid="uid://b5b4esaynpxbq" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0020_Camada-1-copiar-5.png" id="99_fntgf"]
+[ext_resource type="Texture2D" uid="uid://colu6v15l8eci" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0019_Camada-1-copiar-6.png" id="100_t0x0a"]
+[ext_resource type="Texture2D" uid="uid://dk5fuleuw5yws" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0018_Camada-1-copiar-7.png" id="101_qiumv"]
+[ext_resource type="Texture2D" uid="uid://h4ecxiotb04y" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0017_Camada-1-copiar-8.png" id="102_wbu31"]
+[ext_resource type="Texture2D" uid="uid://dw1d5klhtixey" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0016_Camada-1-copiar-9.png" id="103_3nt50"]
+[ext_resource type="Texture2D" uid="uid://d4gsy36my0qu6" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0015_Camada-1-copiar-10.png" id="104_6iqsy"]
+[ext_resource type="Texture2D" uid="uid://cxjmdxniwfnpw" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0014_Camada-1-copiar-11.png" id="105_e6p7f"]
 [ext_resource type="Texture2D" uid="uid://bjghrdvts8mgr" path="res://Assests/particulas/poderes/poder vermelho/_0000_Camada-2.png" id="106_epvkm"]
+[ext_resource type="Texture2D" uid="uid://co3v2jqxs8qf3" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0013_Camada-1-copiar-12.png" id="106_re474"]
+[ext_resource type="Texture2D" uid="uid://cu1a4mjq0nhie" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0012_Camada-1-copiar-13.png" id="107_fykh0"]
 [ext_resource type="Texture2D" uid="uid://ci18qqdymnkpf" path="res://Assests/particulas/poderes/poder vermelho/_0001_Camada-3.png" id="107_y23wh"]
+[ext_resource type="Texture2D" uid="uid://b5tit7s8264u2" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0011_Camada-1-copiar-14.png" id="108_ajf2b"]
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="108_asfn3"]
 [ext_resource type="Texture2D" uid="uid://bhfooj4c7206n" path="res://Assests/particulas/poderes/poder vermelho/_0002_Camada-4.png" id="108_fihem"]
 [ext_resource type="Texture2D" uid="uid://dxvttowf7kehp" path="res://Assests/particulas/poderes/poder vermelho/_0003_Camada-5.png" id="109_1au3d"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="109_t1n6e"]
+[ext_resource type="Texture2D" uid="uid://cjr3stawl5khb" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0010_Camada-1-copiar-15.png" id="109_tc1li"]
 [ext_resource type="Texture2D" uid="uid://bt5xv3rc68kwn" path="res://Assests/particulas/poderes/poder vermelho/_0004_Camada-6.png" id="110_1w6ao"]
+[ext_resource type="Texture2D" uid="uid://d022lnvksgaem" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0009_Camada-1-copiar-16.png" id="110_w40m3"]
 [ext_resource type="Texture2D" uid="uid://dhwn0ae214qw1" path="res://Assests/particulas/poderes/poder vermelho/_0005_Camada-7.png" id="111_ng2oe"]
+[ext_resource type="Texture2D" uid="uid://bttx21qit8pr6" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0008_Camada-1-copiar-17.png" id="111_sgump"]
+[ext_resource type="Texture2D" uid="uid://cpq5l5132a5o2" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0007_Camada-1-copiar-18.png" id="112_0bw3b"]
 [ext_resource type="Texture2D" uid="uid://d2oli0qdyu8hc" path="res://Assests/particulas/poderes/poder vermelho/_0006_Camada-8.png" id="112_aksyv"]
+[ext_resource type="Texture2D" uid="uid://djbfs7tnfd4de" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0006_Camada-1-copiar-19.png" id="113_rhlpw"]
+[ext_resource type="Texture2D" uid="uid://dth7m16itr6vs" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0005_Camada-1-copiar-20.png" id="114_rul1a"]
+[ext_resource type="Texture2D" uid="uid://bgnnxdeqccr8k" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0004_Camada-1-copiar-21.png" id="115_metsw"]
+[ext_resource type="Texture2D" uid="uid://dd3bue8tjyf08" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0003_Camada-1-copiar-22.png" id="116_tp2iq"]
+[ext_resource type="Texture2D" uid="uid://e1dr6ikpdf8j" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0002_Camada-1-copiar-23.png" id="117_3ol7d"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="117_sfiu2"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="118_arkbm"]
+[ext_resource type="Texture2D" uid="uid://kvuude0tldp" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0001_Camada-1-copiar-24.png" id="118_t1yhd"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="119_0gn6x"]
+[ext_resource type="Texture2D" uid="uid://b0tv0wrdctnbx" path="res://Assests/Players/Francês Sprites Pronto/Poder_Especial Francês/Especial Francês/2._0000_Camada-1-copiar-25.png" id="119_reayx"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="120_arwyh"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="121_14ila"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="122_02ah4"]
@@ -670,38 +693,137 @@ animations = [{
 "texture": ExtResource("53_cxwa5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("96_8xw2k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("97_b87tp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("98_np0ec")
-}, {
-"duration": 1.0,
-"texture": ExtResource("99_gbxml")
-}, {
-"duration": 1.0,
-"texture": ExtResource("100_qmx35")
-}, {
-"duration": 1.0,
-"texture": ExtResource("101_nym44")
-}, {
-"duration": 1.0,
-"texture": ExtResource("102_okevu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("103_8fqd4")
+"texture": ExtResource("53_cxwa5")
 }, {
 "duration": 1.0,
 "texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cxwa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_mmu6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_jdbfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ib30d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_rl2m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_j42jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_pgxx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_v7542")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_cdnw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_qr4ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_dmwcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_fntgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_t0x0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_qiumv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wbu31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_3nt50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_6iqsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_e6p7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_re474")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_fykh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ajf2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_tc1li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_w40m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_sgump")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_0bw3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_rhlpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_rul1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_metsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_tp2iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_3ol7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_t1yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_reayx")
 }, {
 "duration": 1.0,
 "texture": ExtResource("53_cxwa5")
 }],
 "loop": false,
 "name": &"especial",
-"speed": 10.0
+"speed": 24.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3dqd"]
@@ -834,12 +956,13 @@ metadata/_edit_group_ = true
 
 [node name="especial" type="AnimatedSprite2D" parent="."]
 z_index = 4
-position = Vector2(221.109, -107.827)
-scale = Vector2(2.212, 2.212)
+position = Vector2(-1795, -587.797)
+scale = Vector2(7.187, 7.187)
 sprite_frames = SubResource("SpriteFrames_aku3l")
 animation = &"especial"
-frame = 15
+frame = 48
 frame_progress = 1.0
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 

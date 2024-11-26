@@ -1,7 +1,7 @@
 extends Node
 
-var player1Diretorio = "res://Cenas/Gabriel.tscn" # depois tirar pois é pra teste só a variavel
-var player2Diretorio = "res://Cenas/neemias.tscn"# depois tirar pois é pra teste manter só a variavel
+var player1Diretorio = "res://Cenas/alisson.tscn" # depois tirar pois é pra teste só a variavel
+var player2Diretorio = "res://Cenas/alisson.tscn"# depois tirar pois é pra teste manter só a variavel
 var round = 1
 var player2_round = 0
 var player1_round = 0

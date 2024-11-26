@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=3 uid="uid://blv2skcd074ph"]
+[gd_scene load_steps=180 format=3 uid="uid://blv2skcd074ph"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScripts/Pedro.gd" id="1_wkhd7"]
 [ext_resource type="Texture2D" uid="uid://bycv44yhknle8" path="res://Assests/menu main/subMenuSelecaoDePersonagem/selecaoDePersongemBtns/BtnsL/PedroBtn.png" id="2_nj6on"]
@@ -87,58 +87,74 @@
 [ext_resource type="Texture2D" uid="uid://bqn8rmc2w25ur" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro golpe 3/9.png" id="99_xsit3"]
 [ext_resource type="Texture2D" uid="uid://bts6lalx0w1sv" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/8.png" id="100_jnbtx"]
 [ext_resource type="Texture2D" uid="uid://eojhktakgeqc" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/9.png" id="101_b3d6c"]
+[ext_resource type="Texture2D" uid="uid://ctsy6f2h7ho4g" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0029_Camada-1-copiar-28.png" id="101_jkoer"]
+[ext_resource type="Texture2D" uid="uid://uf10li3y700x" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0027_Camada-1-copiar-27.png" id="102_psxog"]
 [ext_resource type="Texture2D" uid="uid://bvg8tribko24x" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/10.png" id="102_x1pwt"]
+[ext_resource type="Texture2D" uid="uid://b3olxqjdchp6k" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0028_Camada-1-copiar-27.png" id="103_2nyrf"]
 [ext_resource type="Texture2D" uid="uid://p3ajtd5vyjsr" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/11.png" id="103_cluid"]
 [ext_resource type="Texture2D" uid="uid://j65u6303uero" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/12.png" id="104_8xgnu"]
+[ext_resource type="Texture2D" uid="uid://br4tbcdpfv7j2" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0026_Camada-1-copiar-26.png" id="104_un4pl"]
 [ext_resource type="Texture2D" uid="uid://dm5a7xbxh3hfx" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/13.png" id="105_apkdl"]
+[ext_resource type="Texture2D" uid="uid://dou1j2dgrbloh" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0025_Camada-1.png" id="105_ijb66"]
+[ext_resource type="Texture2D" uid="uid://dlgufnhge0im0" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0024_Camada-1-copiar-11.png" id="106_g8ot4"]
 [ext_resource type="Texture2D" uid="uid://crnjlg5lm2ipk" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/14.png" id="106_n54cu"]
 [ext_resource type="Script" path="res://Cenas/poderOpcional.gd" id="106_pfrai"]
+[ext_resource type="Texture2D" uid="uid://byv4di2qypc0h" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0023_Camada-1-copiar-4.png" id="107_46yrp"]
 [ext_resource type="Texture2D" uid="uid://dbshryfli08dt" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/15.png" id="107_guqn5"]
 [ext_resource type="Script" path="res://Cenas/powerOptional.gd" id="107_ueicg"]
 [ext_resource type="Texture2D" uid="uid://bouh28bgumqp2" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/16.png" id="108_73ib7"]
+[ext_resource type="Texture2D" uid="uid://df0v8secu0fek" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0022_Camada-1-copiar-12.png" id="108_xfw2y"]
 [ext_resource type="Texture2D" uid="uid://bmhr37ym631yr" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/17.png" id="109_f2oql"]
+[ext_resource type="Texture2D" uid="uid://co3o2wrue6r1v" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0021_Camada-1-copiar-25.png" id="109_kcs51"]
+[ext_resource type="Texture2D" uid="uid://dwq3qhtt7buj2" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0020_Camada-1-copiar.png" id="110_n1fua"]
 [ext_resource type="Texture2D" uid="uid://jks4ookklhub" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/18.png" id="110_ofbjm"]
 [ext_resource type="Texture2D" uid="uid://bukixvporc787" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/19.png" id="111_ilslv"]
+[ext_resource type="Texture2D" uid="uid://y76og8jagc2r" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0019_Camada-1-copiar-13.png" id="111_wx3et"]
+[ext_resource type="Texture2D" uid="uid://ccxhqvk55sgx5" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0018_Camada-1-copiar-2.png" id="112_gg26h"]
 [ext_resource type="Texture2D" uid="uid://cdur28iilh5fb" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/20.png" id="112_y6c12"]
 [ext_resource type="Texture2D" uid="uid://62yaht1xnq2r" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/21.png" id="113_afu3e"]
+[ext_resource type="Texture2D" uid="uid://j806tpts665m" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0017_Camada-1-copiar-14.png" id="113_esn14"]
 [ext_resource type="Texture2D" uid="uid://3v5fu5fdvkmw" path="res://Assests/Players/Pedro_Sprites_Pronto/Pedro andando/22.png" id="114_20bk2"]
-[ext_resource type="Texture2D" uid="uid://b1enpfa4ag527" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png.png" id="115_173ye"]
+[ext_resource type="Texture2D" uid="uid://cv487efa262jm" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0016_Camada-1-copiar-3.png" id="114_e6gvf"]
 [ext_resource type="PackedScene" uid="uid://c10jmh4yjt7wh" path="res://prefer/hitbox.tscn" id="115_fyy63"]
+[ext_resource type="Texture2D" uid="uid://bosmkqjpv3xf7" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0015_Camada-1-copiar-5.png" id="115_patfb"]
+[ext_resource type="Texture2D" uid="uid://cur107j6amlx5" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0014_Camada-1-copiar-15.png" id="116_7t4sw"]
 [ext_resource type="Texture2D" uid="uid://xdgm73nm2spd" path="res://Assests/particulas/poderes/roda_pedro/_0008_Agrupar-1.png" id="116_cf45a"]
-[ext_resource type="Texture2D" uid="uid://nclq3h5hgj6m" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy.png" id="116_lifg0"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hitbox_michel.gd" id="116_s8fo6"]
 [ext_resource type="Texture2D" uid="uid://dci1brykanmoe" path="res://Assests/particulas/poderes/roda_pedro/_0007_Agrupar-1-copiar.png" id="117_cq7db"]
-[ext_resource type="Texture2D" uid="uid://dv2b8subd1n0b" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #1.png" id="117_ctf0i"]
+[ext_resource type="Texture2D" uid="uid://b8168pq5qfcdk" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0013_Camada-1-copiar-6.png" id="117_ktafw"]
 [ext_resource type="PackedScene" uid="uid://tp6jehlwu5uy" path="res://prefer/hurtbox.tscn" id="117_pl7fl"]
-[ext_resource type="Texture2D" uid="uid://c38y5uf6hj2j8" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #2.png" id="118_7adnk"]
+[ext_resource type="Texture2D" uid="uid://dv6upkg81km2b" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0012_Camada-1-copiar-16.png" id="118_8iqfs"]
 [ext_resource type="Texture2D" uid="uid://da6y5pcxpxpam" path="res://Assests/particulas/poderes/roda_pedro/_0006_Agrupar-1-copiar-2.png" id="118_bq5go"]
 [ext_resource type="Script" path="res://Scripts/hitboxScripts/hurtbox_michel.gd" id="118_ihtye"]
+[ext_resource type="Texture2D" uid="uid://blka8c6guvgeg" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0011_Camada-1-copiar-7.png" id="119_ftco3"]
 [ext_resource type="AudioStream" uid="uid://u1l2qmk7irhf" path="res://audio/OpicionalAudioFX.wav" id="119_gm4en"]
-[ext_resource type="Texture2D" uid="uid://clvov3j5oawva" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #3.png" id="119_sq2my"]
 [ext_resource type="Texture2D" uid="uid://ds0h2euwqbna3" path="res://Assests/particulas/poderes/roda_pedro/_0005_Agrupar-1-copiar-3.png" id="119_uhdbb"]
 [ext_resource type="Texture2D" uid="uid://b5qg1knmfo46r" path="res://Assests/particulas/poderes/roda_pedro/_0004_Agrupar-1-copiar-4.png" id="120_38hpm"]
-[ext_resource type="Texture2D" uid="uid://bs4o5x4riqvw4" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #4.png" id="120_aiub3"]
 [ext_resource type="AudioStream" uid="uid://b1hpit7ngvr66" path="res://audio/defesaSFX.wav" id="120_elb8w"]
-[ext_resource type="Texture2D" uid="uid://dvtjy47g08kun" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #5.png" id="121_7e2t2"]
+[ext_resource type="Texture2D" uid="uid://dsbkseqskqx25" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0010_Camada-1-copiar-17.png" id="120_nqb8t"]
+[ext_resource type="Texture2D" uid="uid://70ieifc7pryj" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0009_Camada-1-copiar-8.png" id="121_6scwf"]
 [ext_resource type="Texture2D" uid="uid://c84ws02fiolb" path="res://Assests/particulas/poderes/roda_pedro/_0003_Agrupar-1-copiar-5.png" id="121_e6bt1"]
 [ext_resource type="AudioStream" uid="uid://dqekagpcdj1k8" path="res://audio/dano1SFX.wav" id="121_nim00"]
+[ext_resource type="Texture2D" uid="uid://bqodld1y5hau1" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0008_Camada-1-copiar-18.png" id="122_5jv1l"]
 [ext_resource type="AudioStream" uid="uid://cwt6yfvw5h2hh" path="res://audio/dano2SFX.wav" id="122_bvmfw"]
 [ext_resource type="Texture2D" uid="uid://cintsx7ibrw46" path="res://Assests/particulas/poderes/roda_pedro/_0002_Agrupar-1-copiar-6.png" id="122_nqkpc"]
-[ext_resource type="Texture2D" uid="uid://8rcrd4rt0dut" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #6.png" id="122_sjwcd"]
-[ext_resource type="Texture2D" uid="uid://1x513t3mgpct" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #7.png" id="123_5kxn7"]
+[ext_resource type="Texture2D" uid="uid://d0qupw7x43y7r" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0007_Camada-1-copiar-9.png" id="123_7hsj3"]
 [ext_resource type="Texture2D" uid="uid://cctd8i4jx773s" path="res://Assests/particulas/poderes/roda_pedro/_0001_Agrupar-1-copiar-7.png" id="123_ib415"]
 [ext_resource type="Texture2D" uid="uid://dpp6q4o0h8qno" path="res://Assests/player vencedor/Sem Título-1.png" id="123_nfxha"]
+[ext_resource type="Texture2D" uid="uid://imd88h3vugxf" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0006_Camada-1-copiar-19.png" id="124_0et0u"]
 [ext_resource type="Texture2D" uid="uid://b1e7rwh5xg6wr" path="res://Assests/particulas/poderes/roda_pedro/_0000_Agrupar-1-copiar-8.png" id="124_4h0d5"]
 [ext_resource type="Texture2D" uid="uid://b05ow165dikan" path="res://Assests/particulas/sangue/_0000_Camada-2.png" id="124_66dbw"]
-[ext_resource type="Texture2D" uid="uid://dx13sqtxo387g" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #8.png" id="124_drqbm"]
 [ext_resource type="Texture2D" uid="uid://c6kab2owxeepa" path="res://Assests/particulas/sangue/_0001_Camada-3.png" id="125_25t82"]
-[ext_resource type="Texture2D" uid="uid://brml7n0peh3hf" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #9.png" id="125_bp8r4"]
-[ext_resource type="Texture2D" uid="uid://cn1m6ch1oog04" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #10.png" id="126_jq4x8"]
+[ext_resource type="Texture2D" uid="uid://daaa7qomhtekn" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0005_Camada-1-copiar-10.png" id="125_bqk51"]
 [ext_resource type="Texture2D" uid="uid://bth4mh3x4e3qx" path="res://Assests/particulas/sangue/_0002_Camada-4.png" id="126_rqaxw"]
-[ext_resource type="Texture2D" uid="uid://b6tyhiv0ngepe" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/especial_pedro.png copy #11.png" id="127_ouqhl"]
+[ext_resource type="Texture2D" uid="uid://btd5vd8ue4885" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0004_Camada-1-copiar-20.png" id="126_y64f5"]
+[ext_resource type="Texture2D" uid="uid://b2xg1r2xn6l45" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0003_Camada-1-copiar-21.png" id="127_e08pr"]
 [ext_resource type="Texture2D" uid="uid://c6amy7hr4idqf" path="res://Assests/particulas/sangue/_0003_Camada-5.png" id="127_pwvlg"]
 [ext_resource type="Texture2D" uid="uid://b0foqlno3k2h7" path="res://Assests/particulas/sangue/_0004_Camada-6.png" id="128_n7vfv"]
+[ext_resource type="Texture2D" uid="uid://5ppgurduicxc" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0002_Camada-1-copiar-22.png" id="128_tv4j1"]
 [ext_resource type="Texture2D" uid="uid://doy17ymhi78bx" path="res://Assests/particulas/sangue/_0005_Camada-7.png" id="129_2ewqh"]
+[ext_resource type="Texture2D" uid="uid://bu0v4w8yqsrx3" path="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0001_Camada-1-copiar-23.png" id="129_n8g5o"]
 [ext_resource type="AudioStream" uid="uid://dw334acuj3xew" path="res://audio/dash_SFX.wav" id="130_ofllr"]
 [ext_resource type="Texture2D" uid="uid://c1lh4aucolbna" path="res://Assests/particulas/dash_sprite/transp_0000_Camada-1.png" id="131_hupvx"]
 [ext_resource type="Texture2D" uid="uid://dyfrnyj7caivf" path="res://Assests/particulas/dash_sprite/transp_0001_Camada-2.png" id="132_lrawh"]
@@ -704,53 +720,98 @@ animations = [{
 "texture": ExtResource("42_dg6pn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_dg6pn")
+"texture": ExtResource("101_jkoer")
 }, {
 "duration": 1.0,
-"texture": ExtResource("115_173ye")
+"texture": ExtResource("102_psxog")
 }, {
 "duration": 1.0,
-"texture": ExtResource("116_lifg0")
+"texture": ExtResource("103_2nyrf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("117_ctf0i")
+"texture": ExtResource("104_un4pl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("118_7adnk")
+"texture": ExtResource("105_ijb66")
 }, {
 "duration": 1.0,
-"texture": ExtResource("119_sq2my")
+"texture": ExtResource("106_g8ot4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("120_aiub3")
+"texture": ExtResource("107_46yrp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("121_7e2t2")
+"texture": ExtResource("108_xfw2y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("122_sjwcd")
+"texture": ExtResource("109_kcs51")
 }, {
 "duration": 1.0,
-"texture": ExtResource("123_5kxn7")
+"texture": ExtResource("110_n1fua")
 }, {
 "duration": 1.0,
-"texture": ExtResource("124_drqbm")
+"texture": ExtResource("111_wx3et")
 }, {
 "duration": 1.0,
-"texture": ExtResource("125_bp8r4")
+"texture": ExtResource("112_gg26h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("126_jq4x8")
+"texture": ExtResource("113_esn14")
 }, {
 "duration": 1.0,
-"texture": ExtResource("127_ouqhl")
+"texture": ExtResource("114_e6gvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_patfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_7t4sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_ktafw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_8iqfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ftco3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_nqb8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_6scwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_5jv1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_7hsj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0et0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_bqk51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_y64f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_e08pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_tv4j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_n8g5o")
 }, {
 "duration": 1.0,
 "texture": ExtResource("42_dg6pn")
 }],
 "loop": false,
 "name": &"especial",
-"speed": 10.0
+"speed": 24.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3dqd"]
@@ -887,10 +948,12 @@ metadata/_edit_group_ = true
 
 [node name="especial" type="AnimatedSprite2D" parent="."]
 z_index = 4
-position = Vector2(619.109, -157.827)
-scale = Vector2(2.212, 2.212)
+position = Vector2(619.109, -752.337)
+scale = Vector2(10.172, 10.172)
 sprite_frames = SubResource("SpriteFrames_aku3l")
 animation = &"especial"
+frame = 37
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="especial"]
 

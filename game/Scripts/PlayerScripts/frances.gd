@@ -4,7 +4,7 @@ const SPEED = 700.0
 @export var JUMP_VELOCITY=-2000
 var GRAVITY = 5000.0 # Valor padrão da gravidade (você pode ajustar este valor)
 @export var type_player: int = 2
-var name_player = "Frances"
+var name_player = "Francês"
 @export var ImageHud: Texture
 @onready var powerOptional = $PoderOpicional
 var can_launch_Opitional_Power = false
@@ -237,10 +237,10 @@ func _physics_process(delta: float) -> void:
 		if(power >= MaxPower): #Verificar se a barra de power ta cheia
 			$EspecialActiveteSfx.play()
 			if current_direction == 1:
-				animationEspecial.position.x = 577.669
+				animationEspecial.position.x = 1689.149
 				animationEspecial.flip_h = false
 			else:
-				animationEspecial.position.x = -599.175
+				animationEspecial.position.x = -1794.999
 				animationEspecial.flip_h = true
 				
 			power = 0

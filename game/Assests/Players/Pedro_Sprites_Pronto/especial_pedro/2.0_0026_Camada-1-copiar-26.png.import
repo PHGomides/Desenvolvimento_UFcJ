@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g3colbljur4i"
-path="res://.godot/imported/_0000s_0000_20240916_162533_020.png-de8db5b402bc8f6b4e38c0366be6a257.ctex"
+uid="uid://br4tbcdpfv7j2"
+path="res://.godot/imported/2.0_0026_Camada-1-copiar-26.png-88093f93c59b7b8920900e6cbea033e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/Players/Alisson Sprites Prontos/Alisson Defesa/_0000s_0000_20240916_162533_020.png"
-dest_files=["res://.godot/imported/_0000s_0000_20240916_162533_020.png-de8db5b402bc8f6b4e38c0366be6a257.ctex"]
+source_file="res://Assests/Players/Pedro_Sprites_Pronto/especial_pedro/2.0_0026_Camada-1-copiar-26.png"
+dest_files=["res://.godot/imported/2.0_0026_Camada-1-copiar-26.png-88093f93c59b7b8920900e6cbea033e4.ctex"]
 
 [params]
 
