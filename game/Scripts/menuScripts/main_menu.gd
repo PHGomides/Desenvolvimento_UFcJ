@@ -177,12 +177,14 @@ func _on_btn_voltar_escolha_de_personagem_pressed() -> void:
 
 
 func ProntoPlayer1() -> void:
+	sound_button_down()
 	if(Global.player1Diretorio):
 		$MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel.grab_focus()
 	pass # Replace with function body.
 
 
 func ProntoPlayer2() -> void:
+	sound_button_down()
 	if(Global.player2Diretorio):
 		$MenuSelecaoPersonagens/buttons/btnIniciar.grab_focus()
 	pass # Replace with function body.
