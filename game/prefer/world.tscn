@@ -616,7 +616,7 @@ glow_hdr_scale = 1.27
 glow_hdr_luminance_cap = 114.2
 
 [node name="world" type="Node2D"]
-position = Vector2(-48, 123)
+position = Vector2(-52, 121)
 script = ExtResource("1_kywhc")
 
 [node name="Camera2D" type="Camera2D" parent="."]

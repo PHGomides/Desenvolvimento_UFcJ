@@ -8,7 +8,7 @@ var name_player = "Neemias"
 @export var ImageHud: Texture
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
-var vida: int = 10  # Saúde máxima
+var vida: int = 100  # Saúde máxima
 var is_alive = true #verifica se está vivo
 
 @onready var powerOptional = $PoderOpicional
@@ -18,7 +18,7 @@ var poweropitional_timer = 0.0
 
 #PODER
 var MaxPower: int = 60
-var power: int = 60
+var power: int = 0
 var altura_Poder = 0  #alguns mapas o poder fica mais em baixo então aqui dá pra aumentar a altura
 
 signal punch_activated_p2(state: String)  # Definindo um sinal para cada estado de ataque do combo

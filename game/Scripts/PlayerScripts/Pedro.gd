@@ -19,7 +19,7 @@ var can_punch = true #faz com que o personagem só possa bater dps que terminar 
 var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 #PODER
 var MaxPower: int = 60
-var power: int = 60
+var power: int = 0
 var altura_Poder = 0  # O valor de deslocamento que você deseja na direção vertical
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
