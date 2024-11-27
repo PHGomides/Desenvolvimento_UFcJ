@@ -11,7 +11,12 @@ var pos_incial_round_player1
 var pos_incial_round_player2
 var mapaEscolhido = "res://prefer/world.tscn"
 
-func reseta_round():
+func resetar_round():
+	round = 1
+	player2_round = 0
+	player1_round = 0
+	player1 = null
+	player2 = null
 	pass
 
 #modo chaveamento

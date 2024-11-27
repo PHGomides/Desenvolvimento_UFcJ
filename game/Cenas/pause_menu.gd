@@ -53,7 +53,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func voltarMenuPrincipal() -> void:
 
-
+	Global.resetar_round()
 	get_tree().paused = false
 	queue_free()  # Libera a cena de carregamento
 	var carregamento = load("res://Cenas/Carregamento.tscn").instantiate()

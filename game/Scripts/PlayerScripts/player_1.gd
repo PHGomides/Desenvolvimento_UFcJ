@@ -479,6 +479,7 @@ func _start_round() -> void:
 	poweropitional_timer = 6.0
 	can_launch_Opitional_Power = false
 	parar_movimento()
+	animationEspecial.stop()
 
 func _desativar_start_round() -> void: 
 	is_round = false

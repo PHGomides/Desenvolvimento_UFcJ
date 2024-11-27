@@ -141,9 +141,7 @@ func _on_time_is_up():
 		Global.player1.vitoria()
 		await get_tree().create_timer(5).timeout
 		control.voltarMenuPrincipal()
-		Global.round = 1
-		Global.player1_round = 0
-		Global.player2_round = 0
+		Global.resetar_round()
 	elif Global.player2_round == 2:
 		if(Global.chaveamento):# se estiver no modo chaveamento
 			Global.FimRodada(Global.rodada_players[1])
@@ -155,9 +153,7 @@ func _on_time_is_up():
 		Global.player2.vitoria()
 		await get_tree().create_timer(5).timeout
 		control.voltarMenuPrincipal()
-		Global.round = 1
-		Global.player1_round = 0
-		Global.player2_round = 0
+		Global.resetar_round()
 	else:
 		if(Global.player2_round>=2 || Global.player1_round>=2):
 			return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=327 format=3 uid="uid://dfvg2pyu3s1nt"]
+[gd_scene load_steps=325 format=3 uid="uid://dfvg2pyu3s1nt"]
 
 [ext_resource type="Script" path="res://Scripts/menuScripts/main_menu.gd" id="1_r5t8c"]
 [ext_resource type="VideoStream" path="res://Assests/menu main/menuvideo/VideoMenuMain.ogv" id="2_f7gkh"]
@@ -98,10 +98,8 @@
 [ext_resource type="Texture2D" uid="uid://cg32aksrpgdw1" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00010.png" id="49_sbrhx"]
 [ext_resource type="Texture2D" uid="uid://dp3cca57nh8oj" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00011.png" id="50_qs4ox"]
 [ext_resource type="Texture2D" uid="uid://bk45rec7uu0gp" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00012.png" id="51_5m31w"]
-[ext_resource type="Texture2D" uid="uid://d1geti6c15jnm" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoBtn.png" id="51_fv8m3"]
 [ext_resource type="Texture2D" uid="uid://bwhduxy73k767" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0000_Layer-7.png" id="51_nbvc6"]
 [ext_resource type="Texture2D" uid="uid://b0yv4pmx6n1u7" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0001_20240916_161841_003.png" id="52_ct74j"]
-[ext_resource type="Texture2D" uid="uid://iw7wor223iuy" path="res://Assests/menu main/subMenuSelecaoDePersonagem/prontoHoverBtn.png" id="52_ii6ps"]
 [ext_resource type="Texture2D" uid="uid://bfyaljb301u6" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00013.png" id="52_ya4n3"]
 [ext_resource type="Texture2D" uid="uid://me8ssajbgtnh" path="res://Assests/Players/Alisson Sprites Prontos/Alisson Idle/_0000s_0002_20240916_161841_005.png" id="53_ha4yi"]
 [ext_resource type="Texture2D" uid="uid://cvamlsx7wse4y" path="res://Assests/menu main/subMenuChaveamento/campeao_chaveamento/Comp 1_00014.png" id="53_i3083"]
@@ -316,6 +314,7 @@
 [ext_resource type="Texture2D" uid="uid://dsum27n3vkx3v" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/12.png" id="283_8yg2m"]
 [ext_resource type="Texture2D" uid="uid://dnqmgyvtm0xe6" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/13.png" id="284_fheel"]
 [ext_resource type="Texture2D" uid="uid://ch6v4mwufq6vb" path="res://Assests/Players/Walisson_Sprites_Pronto/Walisson parado/14.png" id="285_d16d5"]
+[ext_resource type="AudioStream" uid="uid://bg7evvrw4xfd" path="res://audio/yeah_ganhador_chaveamento.wav" id="315_laphq"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmeqs"]
 color = Color(0, 0, 0, 0.21)
@@ -813,8 +812,6 @@ animations = [{
 "name": &"vitoria",
 "speed": 20.0
 }]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_a7g3i"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_spe0o"]
 
@@ -1976,7 +1973,6 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../ProntoBtn")
 focus_neighbor_right = NodePath(".")
 mouse_default_cursor_shape = 2
 toggle_mode = true
@@ -2055,27 +2051,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_right = NodePath(".")
-focus_neighbor_bottom = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("19_fh0ld")
 texture_normal = ExtResource("37_p6845")
 texture_hover = ExtResource("38_kcie0")
 texture_focused = ExtResource("38_kcie0")
-stretch_mode = 3
-
-[node name="ProntoBtn" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1" groups=["btnsP1"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_right = NodePath(".")
-focus_neighbor_bottom = NodePath("../Player1Michel")
-mouse_default_cursor_shape = 2
-toggle_mode = true
-button_group = SubResource("ButtonGroup_a7g3i")
-texture_normal = ExtResource("51_fv8m3")
-texture_hover = ExtResource("52_ii6ps")
-texture_focused = ExtResource("52_ii6ps")
 stretch_mode = 3
 
 [node name="TextureRect2" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1"]
@@ -2099,7 +2080,6 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath("../ProntoBtn")
 mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_spe0o")
@@ -2180,20 +2160,6 @@ texture_hover = ExtResource("54_snwm8")
 texture_focused = ExtResource("54_snwm8")
 stretch_mode = 5
 flip_h = true
-
-[node name="ProntoBtn" type="TextureButton" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2" groups=["btnsP1"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_neighbor_left = NodePath(".")
-focus_neighbor_bottom = NodePath("../Player2Michel")
-mouse_default_cursor_shape = 2
-toggle_mode = true
-button_group = SubResource("ButtonGroup_a7g3i")
-texture_normal = ExtResource("51_fv8m3")
-texture_hover = ExtResource("52_ii6ps")
-texture_focused = ExtResource("52_ii6ps")
-stretch_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2"]
 layout_mode = 2
@@ -2548,6 +2514,10 @@ bus = &"SFX"
 stream = ExtResource("15_wmb0y")
 bus = &"SFX"
 
+[node name="YeahGanhadorChaveamento" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("315_laphq")
+volume_db = -5.667
+
 [node name="versão_jogo" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -2608,8 +2578,8 @@ horizontal_alignment = 1
 [connection signal="pressed" from="MenuChaveamentoIniciado/buttons/btnSair" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnSim" to="." method="sairChaveamento"]
 [connection signal="button_down" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuChaveamentoIniciado/SairChaveamento/HBoxContainer/btnNao" to="MenuChaveamentoIniciado" method="_on_btn_Sair_pressed"]
@@ -2630,8 +2600,6 @@ horizontal_alignment = 1
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/Player1Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem1" binds= [7]]
-[connection signal="button_down" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="ProntoPlayer1"]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP1/ProntoBtn" to="." method="sound_entered_btn"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Michel" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [1]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Neemias" to="." method="sound_entered_btn"]
@@ -2646,8 +2614,6 @@ horizontal_alignment = 1
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Alisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [6]]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/Player2Walisson" to="MenuSelecaoPersonagens" method="SelecionarPersonagem2" binds= [7]]
-[connection signal="mouse_entered" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="sound_entered_btn"]
-[connection signal="pressed" from="MenuSelecaoPersonagens/HBoxContainer/PersonagensP2/ProntoBtn" to="." method="ProntoPlayer2"]
 [connection signal="button_down" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_button_down"]
 [connection signal="mouse_entered" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="sound_entered_btn"]
 [connection signal="pressed" from="MenuSelecaoPersonagens/buttons/btnIniciar" to="." method="_on_btnEscolherMapa"]

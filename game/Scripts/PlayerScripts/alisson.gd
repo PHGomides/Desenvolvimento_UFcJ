@@ -12,14 +12,14 @@ var powerOpitional_cooldown_time = 3.0
 var poweropitional_timer = 0.0
 #VIDA
 var vida_maxima: int = 100  # Saúde máxima
-var vida: int = 100  # Saúde máxima
+var vida: int = 20  # Saúde máxima
 var is_alive = true #verifica se está vivo
 var player_was_murder = false #variavel pra matar o player
 var can_punch = true #faz com que o personagem só possa bater dps que terminar a animação
 var can_take_damege = false # o jogador não vai conseguir tomar dano, é usado pra evitar que o player tome 2 danos quando a partida reenicia
 #PODER
 var MaxPower: int = 60
-var power: int = 0
+var power: int = 60
 var altura_Poder = 0  # O valor de deslocamento que você deseja na direção vertical
 
 signal punch_activated(state: String)  # Definindo um sinal para cada estado de ataque do combo
@@ -391,7 +391,7 @@ func SoltarEspecial() -> void:
 	isWalking = false
 	# Cria um timer temporário e adiciona ao personagem
 	var timer = Timer.new()
-	timer.wait_time = 0.5  # Define o tempo de espera para 1 segundo
+	timer.wait_time = 0.7  # Define o tempo de espera para 1 segundo
 	timer.one_shot = true  # O timer deve disparar apenas uma vez
 	add_child(timer)
 	
@@ -478,6 +478,8 @@ func _start_round() -> void:
 	poweropitional_timer = 6.0
 	can_launch_Opitional_Power = false
 	parar_movimento()
+	animationEspecial.stop()
+
 
 func _desativar_start_round() -> void: 
 	is_round = false
